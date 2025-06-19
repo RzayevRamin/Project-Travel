@@ -20,14 +20,14 @@
 }
 
 .LoginPageContainer {
-      position: relative;
+  position: relative;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
 }
 
 .LogFormContainer {
-    position: absolute;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -78,4 +78,86 @@
 
 .signUpButton:hover {
   background-color: #218838 !important;
+}
+
+.sendCodeButton {
+  width: 15rem;
+  height: 3rem;
+  background-color: #007bff !important;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.sendCodeButton:hover {
+  background-color: #0056b3 !important;
+}
+
+.verificationBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.verificationInput {
+  width: 15rem;
+}
+.verificationInputBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.verificationText {
+ text-align: center !important;
+}
+
+.verificationHeading {
+  text-align: center !important;
+  margin-bottom: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #D53F48;
+}
+
+.verifyCode {
+  width: 15rem;
+  height: 3rem;
+  background-color: #007bff !important;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.verifyCode:hover {
+  background-color: #0056b3 !important;
+}
+
+.verifyCodeEntryBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.verifyCodeText {
+  text-align: center !important;
+}
+
+.verifyCodeHeading {
+  text-align: center !important;
+  margin-bottom: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #D53F48;
 }
