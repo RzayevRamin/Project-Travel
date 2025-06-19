@@ -1,0 +1,14 @@
+body{
+  margin: 0 !important
+}
+
+
+body.dark {
+  background: #181818;
+  color: #fff;
+}
+
+body.light {
+  background: #fff;
+  color: #181818;
+}

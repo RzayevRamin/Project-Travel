@@ -1,0 +1,5 @@
+.languageSelect, .eng, .aze, .rus {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}

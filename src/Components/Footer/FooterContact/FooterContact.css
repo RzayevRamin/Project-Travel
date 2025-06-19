@@ -1,0 +1,49 @@
+.footerContactListItems li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+}
+
+.footerContactListItems li a svg {
+    width: 24px;
+    height: 24px;
+    margin-right: 32px;
+}
+
+.footerContactListItems li a p {
+    font-size: 20px;
+    line-height: 24px;
+    margin: 0;
+}
+
+.footerContactListItems li {
+    margin: 0 0 20px 0;
+    list-style: none;
+    padding: 0;
+}
+
+.footerContactHeading h2 {
+    font-size: 32px;
+    margin: 0;
+    color: #fff;
+}
+
+.footerContactListItems {
+    padding-left: 0;
+    margin: 0;
+}
+
+.footerContactHeading {
+    margin-bottom: 25px;
+}
+
+.footerContactContainer {
+    padding-left: 3rem;
+    border-left: 2px solid #fff;
+    min-width: 27rem;
+}
+
+.footerContactListItems :last-child {
+    margin-bottom: 0;
+}

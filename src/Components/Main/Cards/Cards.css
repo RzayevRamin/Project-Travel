@@ -1,0 +1,115 @@
+.locationPreview {
+  position: relative;
+  display: inline-block;
+}
+
+.locationMapPreview {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 260px;
+  height: 180px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  background: #fff;
+  z-index: 100;
+  margin-top: 8px;
+  overflow: hidden;
+}
+
+.locationPreview:hover .locationMapPreview {
+  display: block;
+}
+
+.cardContentBox {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cardButtonBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardButton {
+  border-radius: 26px !important;
+  background-color: #0123FF !important;
+  color: #FDFBF8 !important;
+  height: 40px !important;
+  padding: 10px 10px !important;
+  width: 14.86rem !important;
+}
+
+.cardContentFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #F1FAFA !important;
+}
+
+.cardContentContainer {
+  background-color: #F1FAFA !important;
+}
+
+.cardContent {
+  background-color: #F1FAFA !important;
+}
+
+.firstTypeCard {
+  background-color: #F1FAFA !important;
+}
+
+.rateIconBox {
+  display: inline-flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  background-color: #F1FAFA !important;
+  z-index: 3;
+  width: auto !important;
+  flex: none !important;
+  margin-right: auto;
+  margin-left: -8px;
+  margin-top: -8px;
+  border-radius: 25% !important;
+}
+
+.secondCardContentContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.secondRateIconButton {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.71) !important;
+  border-radius: 25% !important;
+}
+
+.rateIconBox:hover,
+.secondRateIconButton:hover {
+  background: none !important;
+  box-shadow: none !important;
+}
+
+.cardsContainer {
+  display: flex;
+}
+
+.firstTypeCard {
+  display: flex;
+}
+
+.secondTypeCard {
+  display: flex;
+}
+
+.rateIconBox {
+  position: relative;
+  display: inline-block;
+}

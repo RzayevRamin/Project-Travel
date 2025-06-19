@@ -1,0 +1,39 @@
+.searchButton {
+  background: transparent !important;
+  border: none;
+  box-shadow: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  --Icon-color: black !important;
+}
+
+body.dark .searchButton {
+  --Icon-color: white !important;
+}
+
+.css-1sp0hsh-JoyButton-root {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.searchButton svg {
+    color: black !important;
+}
+
+body.dark .searchButton svg {
+    color: white !important;
+}   
+
+.searchInputForm {
+  animation: fadeIn 0.2s;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateX(20px);}
+  to { opacity: 1; transform: translateX(0);}
+}

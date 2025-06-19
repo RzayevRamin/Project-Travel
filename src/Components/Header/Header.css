@@ -1,0 +1,84 @@
+.header.light {
+  background: #fff;
+  color: #222;
+}
+
+.header.dark {
+  background: #222;
+  color: #fff;
+}
+
+.modeToggle {
+  margin: 10px;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.header {
+  display: flex;
+  align-items: center; 
+  justify-content: space-around;
+  width: calc(100% - 10rem);
+  height: 58px;
+  background-color: rgba(255, 255, 255, 0.29);
+  margin-top: 23px;
+  border-radius: 26px;
+  
+}
+
+body.dark .header {
+  background-color: rgba(0, 0, 0, 0.29);
+}
+
+.headerContainer {
+  position: relative;
+  width: 100%;
+  height: 51rem;
+  overflow: hidden;
+}
+
+.logo {
+  margin: 0;
+  padding: 0;
+}
+
+.headerRightSection {
+  display: flex;
+  align-items: center;
+}
+
+.navContainer {
+  display: flex;
+  align-items: center;
+}
+
+.carouselContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.headerContent {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+}
+
+.searchDestinationContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

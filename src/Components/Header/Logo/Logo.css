@@ -1,0 +1,46 @@
+.logoSvg {
+  width: 2.6rem;
+  height: 2.6rem;
+}
+
+body.dark .logoSvg {
+  filter: invert(1) contrast(2);
+}
+
+.logoContainer {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+.logoBox {
+    margin: 0;
+    padding: 0;
+}
+.logoText {
+display: flex;
+flex-direction: column;
+justify-content: center;
+height: 2.6rem;
+margin: 0;
+padding: 0;
+}
+
+.logoText h1, h3 {
+    margin: 0;
+    padding: 0;
+}
+
+.logoText h1 {
+  font-size: 16px;
+  font-weight: bolder;
+}
+
+.logoText h3 {
+  font-size: 12px;
+}
+

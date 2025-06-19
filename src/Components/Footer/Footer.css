@@ -1,0 +1,30 @@
+.footerContainer {
+    background-color: #0123FF;
+    padding: 40px 40px 20px 40px;
+}
+
+.contentContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.copyright span {
+    color: #fff;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.copyright svg {
+    width: 18px;
+    height: 18px;
+    margin: 0 12px;
+}
+
+.copyright {
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    border-top: 2px solid #fff;
+    padding-top: 15px;
+}

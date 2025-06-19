@@ -1,0 +1,67 @@
+.logoForFooter .logoSvg {
+  width: 4.2rem;
+  height: 4.2rem;
+  filter: invert(1) contrast(2);
+}
+
+.logoForFooter .logoContainer {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.logoForFooter .logoBox {
+  margin: 0;
+  padding: 0;
+}
+.logoForFooter .logoText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 2.6rem;
+  margin: 0;
+  padding: 0;
+}
+
+.logoForFooter .logoText h1 {
+  font-size: 40px;
+  font-weight: bolder;
+  line-height: 48px;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+}
+
+.logoForFooter .logoText h3 {
+  font-size: 24px;
+  line-height: 29px;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+}
+
+.socialNetworksLogo a svg {
+  width: 34px;
+  height: 34px;
+  margin-right: 34px;
+}
+
+.socialNetworksContainer {
+  margin: 25px 0;
+}
+
+.socialNetworksLogo {
+  margin-top: 21px;
+}
+
+.socialNetworksContainer h3 {
+  font-size: 24px;
+  color: #fff;
+}
+
+.footerLogoAndSocialNetworksContainer {
+  min-width: 27rem;
+}

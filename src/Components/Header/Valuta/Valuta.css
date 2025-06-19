@@ -1,0 +1,40 @@
+.valutaSelect, .azn, .usd, .try, .eur, .rub, .gel {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.valutaSelect svg {
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.valutaSelect, .valutaSelect .MuiOption-root {
+  min-width: 120px !important;
+}
+.valutaSelect .MuiListItemDecorator-root {
+  min-width: 32px;
+  min-height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.valutaSelect svg {
+  color: #222;
+}
+
+body.dark .valutaSelect svg {
+  color: #fff;
+}
+
+.valutaSelect .MuiSelect-button,
+.valutaSelect [role="button"] {
+  color: #222 !important;
+}
+body.dark .valutaSelect .MuiSelect-button,
+body.dark .valutaSelect [role="button"] {
+  color: #fff !important;
+}

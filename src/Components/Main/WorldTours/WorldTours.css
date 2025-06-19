@@ -1,0 +1,36 @@
+.customArrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 6px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.nextArrow {
+  right: -20px;
+}
+
+.prevArrow {
+  left: -20px;
+}
+
+.customArrow:hover {
+  background-color: rgba(200, 200, 200, 0.9);
+}
+
+.worldToursContainer {
+  position: relative;
+  padding: 40px;
+}
+
+.slick-slider {
+  overflow: visible;
+}
+
+.worldToursContainer .slick-slide {
+  transform: translateX(-50%);
+}
