@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import React, { useState } from "react";
 import "./Login.css";
 import LoginCarousel from "./LoginCarousel/LoginCarousel";
 import Button from "@mui/joy/Button";
@@ -18,6 +18,9 @@ import {
 } from "../../../firebase-config";
 import { signInWithPopup } from "firebase/auth";
 import VerificationInput from "react-verification-input";
+import IconButton from "@mui/joy/IconButton";
+import Visibility from "@mui/icons-material/Visibility";
+import VisibilityOff from "@mui/icons-material/VisibilityOff";
 
 const handleGoogleLogin = async () => {
   try {
@@ -55,6 +58,45 @@ const handleAppleLogin = async () => {
 function Login() {
   const [mode, setMode] = useState("login");
   const [showSignUp, setShowSignUp] = useState(false);
+  const loginFormik = useFormik({
+    initialValues: {
+      email: "",
+      username: "",
+      password: "",
+      confirmPassword: "",
+    },
+    validationSchema: Yup.object({
+      email: Yup.string()
+        .required("Email və ya telefon daxil edilməlidir")
+        .test(
+          "emailOrPhoneCheck",
+          "Email or phone format is incorrect.",
+          (value) =>
+            /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value) ||
+            /^\+\d{10,15}$/.test(value)
+        ),
+      username: Yup.string()
+        .required("Username cannot be empty.")
+        .min(3, "At least 3 characters"),
+      password: Yup.string()
+        .required("Password cannot be empty.")
+        .min(8, "At least 8 characters")
+        .matches(/[A-Z]/, "Enter a capital letter.")
+        .matches(/[a-z]/, "Enter a lowercase letter.")
+        .matches(/\d/, "Enter a number")
+        .matches(/[!@#$%^&*(),.?":{}|<>]/, "Enter a character"),
+      confirmPassword: Yup.string()
+        .required("Confirmation cannot be empty.")
+        .oneOf([Yup.ref("password"), null], "Password not compatible"),
+    }),
+    onSubmit: (values) => {
+      alert(
+        "Registration completed successfully!\n" +
+          JSON.stringify(values, null, 2)
+      );
+    },
+  });
+
   const signFormik = useFormik({
     initialValues: {
       email: "",
@@ -94,6 +136,18 @@ function Login() {
     },
   });
 
+  const [showPassword, setShowPassword] = React.useState(false);
+
+  const handleClickShowPassword = () => setShowPassword((show) => !show);
+
+  const handleMouseDownPassword = (event) => {
+    event.preventDefault();
+  };
+
+  const handleMouseUpPassword = (event) => {
+    event.preventDefault();
+  };
+
   return (
     <div className="LoginPageContainer">
       <LoginCarousel />
@@ -115,7 +169,7 @@ function Login() {
           }}
         >
           <div className="loginContainer">
-            {mode !== "verification" && mode !== "verificationCode" && (
+            {mode !== "verification" && mode !== "verificationCode" && mode !== "newPassword" && (
               <>
                 <div className="signupLoginButtonsContainer">
                   <Button
@@ -148,33 +202,33 @@ function Login() {
             {mode === "login" && !showSignUp && (
               <div className="loginBox">
                 <form
-                  onSubmit={signFormik.handleSubmit}
+                  onSubmit={loginFormik.handleSubmit}
                   className="signUpInputsContainer"
                 >
                   <div className="inputsContainer">
                     <FormControl
                       error={
-                        signFormik.touched.email && !!signFormik.errors.email
+                        loginFormik.touched.email && !!loginFormik.errors.email
                       }
                     >
                       <FormLabel>Email or phone</FormLabel>
                       <Input
                         name="email"
                         placeholder="email@email.com or +994501234567"
-                        value={signFormik.values.email}
-                        onChange={signFormik.handleChange}
-                        onBlur={signFormik.handleBlur}
+                        value={loginFormik.values.email}
+                        onChange={loginFormik.handleChange}
+                        onBlur={loginFormik.handleBlur}
                       />
-                      {signFormik.touched.email && signFormik.errors.email && (
+                      {loginFormik.touched.email && loginFormik.errors.email && (
                         <div style={{ color: "red", fontSize: "0.8rem" }}>
-                          {signFormik.errors.email}
+                          {loginFormik.errors.email}
                         </div>
                       )}
                     </FormControl>
                     <FormControl
                       error={
-                        signFormik.touched.password &&
-                        !!signFormik.errors.password
+                        loginFormik.touched.password &&
+                        !!loginFormik.errors.password
                       }
                     >
                       <FormLabel>Password</FormLabel>
@@ -182,14 +236,14 @@ function Login() {
                         name="password"
                         type="password"
                         placeholder="Password"
-                        value={signFormik.values.password}
-                        onChange={signFormik.handleChange}
-                        onBlur={signFormik.handleBlur}
+                        value={loginFormik.values.password}
+                        onChange={loginFormik.handleChange}
+                        onBlur={loginFormik.handleBlur}
                       />
-                      {signFormik.touched.password &&
-                        signFormik.errors.password && (
+                      {loginFormik.touched.password &&
+                        loginFormik.errors.password && (
                           <div style={{ color: "red", fontSize: "0.8rem" }}>
-                            {signFormik.errors.password}
+                            {loginFormik.errors.password}
                           </div>
                         )}
                     </FormControl>
@@ -325,7 +379,7 @@ function Login() {
                 </div>
               </div>
             )}
-            {mode !== "verification" && mode !== "verificationCode" && (
+            {mode !== "verification" && mode !== "verificationCode" && mode!== "newPassword" && (
               <div className="otherSignMethodsContainer">
                 <div className="signUMethodText">
                   <p>Or continue with</p>
@@ -449,10 +503,96 @@ function Login() {
               <Link className="verifyCodeAgain">
                 I didn't receive the code? Send again
               </Link>
-              <Button className="verifyCode">Verify</Button>
+              <Button
+                className="verifyCode"
+                onClick={() => setMode("newPassword")}
+              >
+                Verify
+              </Button>
             </div>
           )}
-          <div className="NewPasswordBox"></div>
+          {mode === "newPassword" && (
+            <div className="newPasswordBox">
+              <h3 className="newPassHeading">Create new password</h3>
+              <FormControl
+                className="newPassInputBox"
+                error={
+                  signFormik.touched.password && !!signFormik.errors.password
+                }
+              >
+                <FormLabel>Password</FormLabel>
+                <Input
+                  className="newPassInput"
+                  type={showPassword ? "text" : "password"}
+                  name="password"
+                  placeholder="Confirm password"
+                  value={signFormik.values.password}
+                  onChange={signFormik.handleChange}
+                  onBlur={signFormik.handleBlur}
+                  endDecorator={
+                    <IconButton
+                      onClick={handleClickShowPassword}
+                      onMouseDown={handleMouseDownPassword}
+                      onMouseUp={handleMouseUpPassword}
+                      variant="plain"
+                    >
+                      {showPassword ? <VisibilityOff /> : <Visibility />}
+                    </IconButton>
+                  }
+                />
+                {signFormik.touched.confirmPassword &&
+                  signFormik.errors.password && (
+                    <div style={{ color: "red", fontSize: "0.8rem" }}>
+                      {signFormik.errors.password}
+                    </div>
+                  )}
+              </FormControl>
+              <FormControl
+                className="newPassInputBox"
+                error={
+                  signFormik.touched.confirmPassword &&
+                  !!signFormik.errors.confirmPassword
+                }
+              >
+                <FormLabel>Confirm password</FormLabel>
+                <Input
+                  className="newPassInput"
+                  name="confirmPassword"
+                  type={showPassword ? "text" : "password"}
+                  placeholder="Confirm password"
+                  value={signFormik.values.confirmPassword}
+                  onChange={signFormik.handleChange}
+                  onBlur={signFormik.handleBlur}
+                  endDecorator={
+                    <IconButton
+                      onClick={handleClickShowPassword}
+                      onMouseDown={handleMouseDownPassword}
+                      onMouseUp={handleMouseUpPassword}
+                      variant="plain"
+                    >
+                      {showPassword ? <VisibilityOff /> : <Visibility />}
+                    </IconButton>
+                  }
+                />
+                {signFormik.touched.confirmPassword &&
+                  signFormik.errors.confirmPassword && (
+                    <div style={{ color: "red", fontSize: "0.8rem" }}>
+                      {signFormik.errors.confirmPassword}
+                    </div>
+                  )}
+              </FormControl>
+              <Button
+                className="newPassButton"
+                variant="solid"
+                onClick={() => {
+                  alert("New password created successfully!");
+                  setMode("login");
+                }}
+              >
+                Create new password
+              </Button>
+            </div>
+          )}
         </Sheet>
       </div>
     </div>

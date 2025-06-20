@@ -5,6 +5,7 @@ import Main from "./Components/Main/Main";
 import Footer from "./Components/Footer/Footer";
 import { Routes, Route, useLocation } from "react-router-dom";
 import Login from "./Components/Main/Login/Login";
+import MainLoading from "./Components/Main/LoadingComponents/MainLoading";
 
 function App() {
   const [darkMode, setDarkMode] = useState(() => {
@@ -13,12 +14,25 @@ function App() {
   });
 
   const location = useLocation();
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     document.body.classList.remove("dark", "light");
     document.body.classList.add(darkMode ? "dark" : "light");
     localStorage.setItem("darkMode", darkMode);
   }, [darkMode]);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 9000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return <MainLoading />;
+  }
 
   if (location.pathname === "/login") {
     return <Login />;
