@@ -26,7 +26,6 @@ import {
   signInWithPopup,
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
-  sendPasswordResetEmail,
 } from "firebase/auth";
 
 function Login() {
@@ -84,6 +83,7 @@ function Login() {
       email: Yup.string()
         .required("Email or phone number must be entered.")
         .test(
+          "emailOrPhoneCheck",
           "Email or phone format is incorrect.",
           (value) =>
             /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value) ||
@@ -162,23 +162,6 @@ function Login() {
     },
   });
 
-  const handleSendResetEmail = async () => {
-    const emailOrPhoneValid =
-      /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(signFormik.values.email) ||
-      /^\+\d{10,15}$/.test(signFormik.values.email);
-    if (!signFormik.values.email || !emailOrPhoneValid) {
-      alert("Please enter a valid email or phone number");
-      return;
-    }
-    try {
-      await sendPasswordResetEmail(auth, signFormik.values.email);
-      alert("Password reset email sent!");
-      navigate("/login/verify");
-    } catch (error) {
-      alert("Error sending reset email: " + error.message);
-    }
-  };
-
   const [showPassword, setShowPassword] = React.useState(false);
 
   const handleClickShowPassword = () => setShowPassword((show) => !show);
@@ -189,6 +172,81 @@ function Login() {
 
   const handleMouseUpPassword = (event) => {
     event.preventDefault();
+  };
+
+  const [verificationCode, setVerificationCode] = React.useState("");
+
+  const handleSendVerificationCode = async () => {
+  if (!signFormik.values.email) {
+    alert("Please enter your email or phone");
+    return;
+  }
+  try {
+    const response = await fetch("https://backtest-2-pm0t.onrender.com/send-code", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ emailOrPhone: signFormik.values.email }),
+    });
+    const data = await response.json();
+    if (response.ok) {
+      alert("Verification code sent! Please check your email or phone.");
+      navigate("/login/verify");
+    } else {
+      alert(data.message || "Failed to send verification code");
+    }
+  } catch (error) {
+    alert("Network error: " + error.message);
+  }
+};
+
+  const handleVerifyCode = async () => {
+    if (verificationCode.length !== 4) {
+      alert("Please enter the 4-digit verification code");
+      return;
+    }
+    try {
+      const response = await fetch("http://localhost:3001/verify-code", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          emailOrPhone: signFormik.values.email,
+          code: verificationCode,
+        }),
+      });
+      const data = await response.json();
+      if (data.success) {
+        alert("Code verified successfully!");
+        navigate("/login/new-password"); // yeni şifrə yaratmaq üçün
+      } else {
+        alert("Invalid verification code.");
+      }
+    } catch (error) {
+      alert("Network error: " + error.message);
+    }
+  };
+
+  const handleCreateNewPassword = async () => {
+    try {
+      // Backend endpoint-də müvafiq parol yeniləmə route olmalıdır, məsələn:
+      const response = await fetch("http://localhost:3001/reset-password", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          emailOrPhone: signFormik.values.email,
+          password: signFormik.values.password,
+          // əgər lazım olsa, verification code əlavə etmək
+        }),
+      });
+      const data = await response.json();
+      if (response.ok) {
+        alert("Password changed successfully!");
+        navigate("/login");
+      } else {
+        alert(data.message || "Failed to change password");
+      }
+    } catch (error) {
+      alert("Network error: " + error.message);
+    }
   };
 
   return (
@@ -516,7 +574,7 @@ function Login() {
                 <Button
                   className="sendCodeButton"
                   variant="solid"
-                  nClick={handleSendResetEmail}
+                  onClick={handleSendVerificationCode}
                 >
                   Send
                 </Button>
@@ -537,6 +595,7 @@ function Login() {
                   characterFilled: "character--filled",
                 }}
                 length={4}
+                onChange={setVerificationCode}
               />
               <FormLabel className="verifyCodeText">
                 {signFormik.values.email
@@ -546,7 +605,7 @@ function Login() {
               <Link className="verifyCodeAgain">
                 I didn't receive the code? Send again
               </Link>
-              <Button className="verifyCode">Verify</Button>
+              <Button className="verifyCode" onClick={handleVerifyCode} >Verify</Button>
             </div>
           )}
           {mode === "newPassword" && (
@@ -621,10 +680,7 @@ function Login() {
               <Button
                 className="newPassButton"
                 variant="solid"
-                onClick={() => {
-                  alert("New password created successfully!");
-                  navigate("/login/new-password");
-                }}
+                onClick={handleCreateNewPassword}
               >
                 Create new password
               </Button>
