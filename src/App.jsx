@@ -1,19 +1,17 @@
 import React, { useState, useEffect } from "react";
-import "./App.css";
-import Header from "./Components/Header/Header";
+import { Routes, Route } from "react-router-dom";
+import MainLayout from "./Components/Main/MainLayout";
 import Main from "./Components/Main/Main";
-import Footer from "./Components/Footer/Footer";
-import { Routes, Route, useLocation } from "react-router-dom";
 import Login from "./Components/Main/Login/Login";
 import MainLoading from "./Components/Main/LoadingComponents/MainLoading";
+import { AuthProvider } from "./Components/AuthContext/AuthContext";
 
-function App() {
+function App() {  
   const [darkMode, setDarkMode] = useState(() => {
     const saved = localStorage.getItem("darkMode");
     return saved === "true";
   });
 
-  const location = useLocation();
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -23,30 +21,25 @@ function App() {
   }, [darkMode]);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 9000);
-
+    const timer = setTimeout(() => setLoading(false), 9000);
     return () => clearTimeout(timer);
   }, []);
 
-  if (loading) {
-    return <MainLoading />;
-  }
-
-  if (location.pathname === "/login") {
-    return <Login />;
-  }
+  if (loading) return <MainLoading />;
 
   return (
-    <>
-      <Header darkMode={darkMode} setDarkMode={setDarkMode} />
-      <Main />
-      <Footer />
+    <AuthProvider>
       <Routes>
-        <Route path="/login" element={<Login />} />
+        <Route path="/login/*" element={<Login />} />
+
+        <Route
+          path="/*"
+          element={<MainLayout darkMode={darkMode} setDarkMode={setDarkMode} />}
+        >
+          <Route index element={<Main />} />
+        </Route>
       </Routes>
-    </>
+    </AuthProvider>
   );
 }
 

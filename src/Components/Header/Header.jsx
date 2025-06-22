@@ -8,7 +8,7 @@ import Language from "./Language/Language";
 import Valuta from "./Valuta/Valuta";
 import CarouselBox from "./Carousel/CarouselBox";
 import Search from "./Search/Search";
-import HeaderLogin from "./headerLogin/headerLogin";
+import HeaderLogin from "./HeaderLogin/HeaderLogin";
 
 function Header({ darkMode, setDarkMode }) {
   const toggleDarkMode = () => setDarkMode((prev) => !prev);
