@@ -205,7 +205,7 @@ function Login() {
       return;
     }
     try {
-      const response = await fetch("http://localhost:3001/verify-code", {
+      const response = await fetch("https://backtest-2-pm0t.onrender.com/verify-code", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -228,7 +228,7 @@ function Login() {
   const handleCreateNewPassword = async () => {
     try {
       // Backend endpoint-də müvafiq parol yeniləmə route olmalıdır, məsələn:
-      const response = await fetch("http://localhost:3001/reset-password", {
+      const response = await fetch("https://backtest-2-pm0t.onrender.com/reset-password", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -602,7 +602,7 @@ function Login() {
                   ? `We sent a four-digit verification code to your email ${signFormik.values.email}. You can check your inbox.`
                   : "We sent a four-digit verification code to your email. You can check your inbox."}
               </FormLabel>
-              <Link className="verifyCodeAgain">
+              <Link className="verifyCodeAgain" onClick={() => handleSendVerificationCode()}>
                 I didn't receive the code? Send again
               </Link>
               <Button className="verifyCode" onClick={handleVerifyCode} >Verify</Button>
