@@ -1,0 +1,29 @@
+.rounded {
+    border-radius: 50%;
+}
+
+.dashCardsbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 21rem;
+}
+
+.dashCardsContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 26.75rem;
+}
+
+.dashCardsHeading h4 {
+    font-size: 20px;
+    line-height: 24px;
+    margin: 0;
+    padding: 0;
+}
+
+.dashCardsHeading {
+    margin: 0;
+    padding: 0;
+}

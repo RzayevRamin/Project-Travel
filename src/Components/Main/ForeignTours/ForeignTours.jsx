@@ -224,7 +224,8 @@ function ForeignTours({ filter }) {
               <CardContent sx={{ justifyContent: "flex-end" }}>
                 <div className="secondCardContentContainer">
                   <div className="secondCardContentBox">
-                    <Typography
+                    <Typography 
+                      as="div"
                       startDecorator={<LocationOnRoundedIcon />}
                       textColor="neutral.300"
                     >
@@ -236,17 +237,17 @@ function ForeignTours({ filter }) {
                         >
                           {card.locationLabel}
                         </Link>
-                        <div className="locationMapPreview">
+                        <span className="locationMapPreview">
                           <iframe
                             src={`https://maps.google.com/maps?q=${encodeURIComponent(
                               card.locationLabel
                             )}&output=embed`}
                             title="Google Map Preview"
                           ></iframe>
-                        </div>
+                        </span>
                       </span>
                     </Typography>
-                    <Typography level="title-lg" textColor="#fff">
+                    <Typography as="div" level="title-lg" textColor="#fff">
                       {card.title}
                     </Typography>
                   </div>

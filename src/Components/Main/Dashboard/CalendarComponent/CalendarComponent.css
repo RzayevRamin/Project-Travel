@@ -1,0 +1,14 @@
+.calendar {
+  transform: scale(1.275);
+  transform-origin: top left;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.calendarContainer {
+  min-height: 29rem; 
+  width: 100%;
+  width: 28rem;
+  box-sizing: border-box;
+}

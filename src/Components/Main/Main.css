@@ -1,0 +1,19 @@
+.homeContainer {
+    display: flex;
+    flex-direction: row;
+    width: 100rem;
+    padding: 2rem 4rem;
+    gap: 2rem;
+}
+
+.homeContext {
+    display: flex;
+    flex-direction: column;
+    width: 80rem;
+}
+
+.dashboardContainer {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.5rem;
+}

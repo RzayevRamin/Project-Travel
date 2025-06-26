@@ -149,7 +149,7 @@ function FirstTypeCards({ filter }) {
                         >
                           {card.locationLabel}
                         </Link>
-                        <div
+                        <span
                           className="locationMapPreview"
                           style={{
                             position: "absolute",
@@ -169,7 +169,7 @@ function FirstTypeCards({ filter }) {
                             )}&output=embed`}
                             title="Google Map Preview"
                           ></iframe>
-                        </div>
+                        </span>
                       </span>
                     </Typography>
                   </div>

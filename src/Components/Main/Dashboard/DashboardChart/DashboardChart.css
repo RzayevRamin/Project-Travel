@@ -1,0 +1,21 @@
+.MuiChartsAxis-tickLabel {
+    font-size: 20px !important;
+}
+
+body.dark .MuiChartsAxis-tickLabel {
+  fill: #fff !important;
+  font-size: 20px !important;
+}
+
+.MuiBarLabel-root {
+  fill: white !important;
+  font-size: 20px !important;
+}
+
+.dashboardHeading {
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: bold;
+    margin-top: 2rem;
+    margin-bottom: 0;
+}

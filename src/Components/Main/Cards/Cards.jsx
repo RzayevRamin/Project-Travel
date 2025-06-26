@@ -125,14 +125,14 @@ function Cards({ type, filter }) {
                         >
                           {card.locationLabel}
                         </Link>
-                        <div className="locationMapPreview">
+                        <span className="locationMapPreview">
                           <iframe
                             src={`https://maps.google.com/maps?q=${encodeURIComponent(
                               card.locationLabel
                             )}&output=embed`}
                             title="Google Map Preview"
                           ></iframe>
-                        </div>
+                        </span>
                       </span>
                     </Typography>
                   </div>
@@ -272,14 +272,14 @@ function Cards({ type, filter }) {
                       <Link href={card.location} target="_blank" rel="noopener">
                         {card.locationLabel}
                       </Link>
-                      <div className="locationMapPreview">
+                      <span className="locationMapPreview">
                         <iframe
                           src={`https://maps.google.com/maps?q=${encodeURIComponent(
                             card.locationLabel
                           )}&output=embed`}
                           title="Google Map Preview"
                         ></iframe>
-                      </div>
+                      </span>
                     </span>
                   </Typography>
                   <Typography level="title-lg" textColor="#fff">

@@ -1,0 +1,21 @@
+.dashVehiclesBox {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 2rem;
+}
+
+.dashVehiclesHeading {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.vehicles {
+    width: 13rem;
+    height: 9.5rem;
+    border-top-right-radius: 3rem;
+    border-bottom-left-radius: 3rem;
+}
+
+.dashVehiclesContainer {
+    margin-bottom: 1rem;
+}
