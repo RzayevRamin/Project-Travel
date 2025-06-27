@@ -1,0 +1,16 @@
+.toursContainer {
+    width: 100rem;
+    padding: 2rem 4rem;
+}
+
+.foreignToursStyle {
+    width: 111%;
+}
+
+.localToursStyle  {
+    width: 111%;
+}
+
+.worldToursStyle {
+    width: 111%;
+}

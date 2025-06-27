@@ -93,7 +93,7 @@ function PrevArrow(props) {
   );
 }
 
-function LocalTours({ filter }) {
+function LocalTours({ filter, source }) {
   const [hoveredRate, setHoveredRating] = useState(null);
   const [liked, setLiked] = useState({});
 
@@ -162,7 +162,7 @@ function LocalTours({ filter }) {
   };
 
   return (
-    <div className="localToursContainer">
+    <div className={`${source === "home" ? "localHomeStyle" : "localToursStyle"} localToursContainer`}>
       <h1>Domestic Tours</h1>
       <Slider {...sliderSettings}>
         {selectedCards.map((card) => (

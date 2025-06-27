@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import MainLayout from "./Components/Main/MainLayout";
-import Main from "./Components/Main/Main";
+import Home from "./Components/Main/Home";
 import Login from "./Components/Main/Login/Login";
 import MainLoading from "./Components/Main/LoadingComponents/MainLoading";
 import { AuthProvider } from "./Components/AuthContext/AuthContext";
+import Tours from "./Components/Main/Tours/Tours";
 
 function App() {  
   const [darkMode, setDarkMode] = useState(() => {
@@ -33,10 +34,13 @@ function App() {
         <Route path="/login/*" element={<Login />} />
 
         <Route
-          path="/*"
+          path="/"
           element={<MainLayout darkMode={darkMode} setDarkMode={setDarkMode} />}
         >
-          <Route index element={<Main />} />
+          <Route index element={<Home />} />
+          <Route path="home" element={<Home />} />
+          <Route path="tours" element={<Tours />} />
+
         </Route>
       </Routes>
     </AuthProvider>

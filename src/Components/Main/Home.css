@@ -17,3 +17,15 @@
     flex-direction: column;
     border-radius: 0.5rem;
 }
+
+.foreignHomeStyle {
+    width: 100%;
+}
+
+.localHomeStyle {
+    width: 100%;
+}
+
+.worldHomeStyle {
+    width: 100%;
+}

@@ -90,7 +90,7 @@ function PrevArrow(props) {
   );
 }
 
-function ForeignTours({ filter }) {
+function ForeignTours({ filter, source }) {
   const [hoveredRate2, setHoveredRating2] = useState(null);
   const [liked, setLiked] = useState({});
 
@@ -145,7 +145,7 @@ function ForeignTours({ filter }) {
   };
 
   return (
-    <div className="foreignToursContainer">
+    <div className={`${source === "home" ? "foreignHomeStyle" : "foreignToursStyle"} foreignToursContainer`}>
       <h1>Foreign Tours</h1>
       <Slider {...sliderSettings}>
         {selectedCards.map((card) => (
