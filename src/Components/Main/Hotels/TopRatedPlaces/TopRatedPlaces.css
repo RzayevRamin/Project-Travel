@@ -1,0 +1,67 @@
+.ratedPlacesCardContextContainer {
+    background-color: rgba(253, 251, 248, 0.6);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+.topRatedPlacesCardsContainer:hover {
+  transform: scale(1.05);
+  z-index: 2;
+}
+
+.topRatedPlaceContainer .slick-slide {
+  padding: 10px;
+}
+
+.slick-track {
+  display: flex !important;
+  justify-content: space-between;
+  gap: 0 !important;
+}
+
+.slick-slide {
+  display: flex !important;
+  justify-content: center;
+  height: auto;
+}
+
+.rateIconBox {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 2;
+  background-color: rgba(255, 255, 255, 0.71);
+  border-radius: 20rem !important;
+}
+
+.rateIconBox {
+    border-radius: 20rem !important;
+}
+
+.ratedPlacesCardContextTextBox {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.locationMapPreview {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 260px;
+  height: 180px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  background: #fff;
+  z-index: 100;
+  margin-top: 8px;
+  overflow: hidden;
+}
+
+.ratedPlacesCardContextTextBox:hover .locationMapPreview {
+  display: block;
+}

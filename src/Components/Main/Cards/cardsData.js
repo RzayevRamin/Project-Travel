@@ -33,6 +33,37 @@ import euroTourImg from "../../../assets/CardsImages/Tours/WorldTours/EuroTour.j
 import northAmericaTourImg from "../../../assets/CardsImages/Tours/WorldTours/NorthAmericaTour.jpg";
 import southAmericaTourImg from "../../../assets/CardsImages/Tours/WorldTours/SouthAmericaTour.jpg";
 import cruiseTourImg from "../../../assets/CardsImages/Tours/WorldTours/CruiseTour.jpg";
+import hotelAmbassadeImg from "../../../assets/CardsImages/Hotels/Hotels/AmbassadeNetherland.jpg";
+import hotelAnantaraImg from "../../../assets/CardsImages/Hotels/Hotels/AnantaraPalazzoNaiadiItaly.jpg";
+import hotelAndamanImg from "../../../assets/CardsImages/Hotels/Hotels/AndamanMalaysia.jpeg";
+import hotelAstoriaImg from "../../../assets/CardsImages/Hotels/Hotels/AstoriaRussia.jpg";
+import hotelBadamImg from "../../../assets/CardsImages/Hotels/Hotels/BadamD'art BoutiqueHotel.jpg";
+import hotelBergsImg from "../../../assets/CardsImages/Hotels/Hotels/BergsHotelGakh.jpg";
+import hotelBurjAlArabImg from "../../../assets/CardsImages/Hotels/Hotels/BurjAlArabDubai.jpeg";
+import hotelCambrianImg from "../../../assets/CardsImages/Hotels/Hotels/CambrianSwitzerland.jpg";
+import hotelCarltonCannesImg from "../../../assets/CardsImages/Hotels/Hotels/CarltonCannesFrance.jpg";
+import hotelCasaPalacioMaríaLuisaJerezImg from "../../../assets/CardsImages/Hotels/Hotels/CasaPalacioMaríaLuisaJerezSpain.jpg";
+import hotelChenotPalaceImg from "../../../assets/CardsImages/Hotels/Hotels/ChenotPalaceGabala.jpeg";
+import hotelClaridgeImg from "../../../assets/CardsImages/Hotels/Hotels/Claridge'sLondon.jpg";
+import hotelConradBaliIndonesiaImg from "../../../assets/CardsImages/Hotels/Hotels/ConradBaliIndonesia.jpg";
+import hotelDelphinImperialTurkeyImg from "../../../assets/CardsImages/Hotels/Hotels/DelphinImperialTurkey.jpg";
+import hotelDivanTurkeyImg from "../../../assets/CardsImages/Hotels/Hotels/DivanTurkey.jpg";
+import hotelDuzdagImg from "../../../assets/CardsImages/Hotels/Hotels/Duzdag.jpg";
+import hotelElGounaImg from "../../../assets/CardsImages/Hotels/Hotels/ElGounaEgypt.jpg";
+import hotelElMiradorImg from "../../../assets/CardsImages/Hotels/Hotels/ElMiradorSpain.jpg";
+import hotelElResortImg from "../../../assets/CardsImages/Hotels/Hotels/ElResortHotelGakh.jpg";
+import hotelFairmontBakuImg from "../../../assets/CardsImages/Hotels/Hotels/FairmontBakuFlameTowers.jpg";
+import hotelFlamsbryggaImg from "../../../assets/CardsImages/Hotels/Hotels/FlåmsbryggaNorway.jpg";
+import hotelGrandHotelAmrathImg from "../../../assets/CardsImages/Hotels/Hotels/GrandHotelAmrâthNetherland.jpg";
+import hotelGrandHyattDubaiImg from "../../../assets/CardsImages/Hotels/Hotels/GrandHyattDubai.jpg";
+import hotelGrandMakadiImg from "../../../assets/CardsImages/Hotels/Hotels/GrandMakadiEgypt.jpg";
+import hotelHavilaHotelGeirangerImg from "../../../assets/CardsImages/Hotels/Hotels/HavilaHotelGeirangerNetherland.jpg";
+import hotelHeritanceKandalamaSriLankaImg from "../../../assets/CardsImages/Hotels/Hotels/HeritanceKandalamaSriLanka.jpg";
+import hotelHotelSaatMeydaniImg from "../../../assets/CardsImages/Hotels/Hotels/HotelSaatMeydani.jpg";
+import hotelHotelVillaBelvedereImg from "../../../assets/CardsImages/Hotels/Hotels/HotelVillaBelvedereItaly.jpg";
+import hotelJaiMahalPalaceImg from "../../../assets/CardsImages/Hotels/Hotels/JaiMahalPalaceIndia.jpg";
+import hotelJetwingSamanImg from "../../../assets/CardsImages/Hotels/Hotels/JetwingSamanSriLnaka.jpg";
+
 
 export const cardsData = [{
     id: "1",
@@ -424,4 +455,365 @@ export const cardsData = [{
     time: "1 hour ago",
     className: "worldCard",
   },
+
+  {
+    id: "36",
+    img: hotelAmbassadeImg,
+    title:
+      "Magnificent hotel in Netherlands",
+    location: "https://maps.google.com/?q=Ambassade Hotel, Netherlands",
+    locationLabel: "Ambassade Hotel, Netherlands",
+    views: "6.3k views",
+    time: "1 hour ago",
+    className: "hotel netherlands",
+  },
+
+  {
+    id: "37",
+    img: hotelAnantaraImg,
+    title:
+      "Magnificent hotel in Italy",
+    location: "https://maps.google.com/?q=Anantara Hotel, Italy",
+    locationLabel: "Anantara Hotel, Italy",
+    views: "6.3k views",
+    time: "1 hour ago",
+    className: "hotel italy",
+  },
+
+  {
+    id: "38",
+    img: hotelAndamanImg,
+    title:
+      "Magnificent hotel in Malaysia",
+    location: "https://maps.google.com/?q=Andaman Hotel, Malaysia",
+    locationLabel: "Andaman Hotel, Malaysia",
+    views: "6.3k views",
+    time: "1 hour ago",
+    className: "hotel malaysia",
+  },
+
+  {
+    id: "39",
+    img: hotelAstoriaImg,
+    title:
+      "Magnificent hotel in Russia",
+    location: "https://maps.google.com/?q=Astoria Hotel, Russia",
+    locationLabel: "Astoria Hotel, Russia",
+    views: "6.3k views",
+    time: "1 hour ago",
+    className: "hotel russia",
+  },
+
+  {
+    id: "40",
+    img: hotelBurjAlArabImg,
+    title:
+      "Magnificent hotel in Dubai",
+    location: "https://maps.google.com/?q=Burj Al Arab Hotel, Dubai",
+    locationLabel: "Burj Al Arab Hotel, Dubai",
+    views: "6.3k views",
+    time: "1 hour ago",
+    className: "hotel dubai",
+  },
+
+  {
+    id: "41",
+    img: hotelCambrianImg,
+    title:
+      "Magnificent hotel in Switzerland",
+    location: "https://maps.google.com/?q=Cambrian Hotel, Switzerland",
+    locationLabel: "Cambrian Hotel, Switzerland",
+    views: "6.3k views",
+    time: "1 hour ago",
+    className: "hotel switzerland",
+  },
+
+  {
+    id: "42",
+    img: hotelCarltonCannesImg,
+    title:
+      "Magnificent hotel in France",
+    location: "https://maps.google.com/?q=Carlton Hotel, Cannes, France",
+    locationLabel: "Carlton Hotel, Cannes, France",
+    views: "6.3k views",
+    time: "1 hour ago",
+    className: "hotel france",
+  },
+
+  {
+    id: "43",
+    img: hotelCasaPalacioMaríaLuisaJerezImg,
+    title:
+      "Magnificent hotel in Spain",
+    location: "https://maps.google.com/?q=Casa Palacio María Luisa Jerez Hotel, Spain",
+    locationLabel: "Casa Palacio María Luisa Jerez Hotel, Spain",
+    views: "6.3k views",
+    time: "1 hour ago",
+    className: "hotel spain",
+  },
+
+  {
+    id: "44",
+    img: hotelClaridgeImg,
+    title:
+      "Magnificent hotel in England",
+    location: "https://maps.google.com/?q=Claridge's Hotel, London",
+    locationLabel: "Claridge's Hotel, London",
+    views: "6.3k views",
+    time: "1 hour ago",
+    className: "hotel england",
+  },
+
+  {
+    id: "45",
+    img: hotelConradBaliIndonesiaImg,
+    title:
+      "Magnificent hotel in Indonesia",
+    location: "https://maps.google.com/?q=Conrad Hotel, Bali, Indonesia",
+    locationLabel: "Conrad Hotel, Bali, Indonesia",
+    views: "6.3k views",
+    time: "1 hour ago",
+    className: "hotel indonesia",
+  },
+
+  {
+    id: "46",
+    img: hotelDelphinImperialTurkeyImg,
+    title:
+      "Magnificent hotel in Turkey",
+    location: "https://maps.google.com/?q=Delphin Imperial Hotel, Turkey",
+    locationLabel: "Delphin Imperial Hotel, Turkey",
+    views: "6.3k views",
+    time: "1 hour ago",
+    className: "hotel turkey",
+  },
+
+  {
+    id: "47",
+    img: hotelDivanTurkeyImg,
+    title:
+      "Magnificent hotel in Turkey",
+    location: "https://maps.google.com/?q=Divan Hotel, Turkey",
+    locationLabel: "Divan Hotel, Turkey",
+    views: "6.3k views",
+    time: "1 hour ago",
+    className: "hotel turkey",
+  },
+  
+  {
+    id: "48",
+    img: hotelElGounaImg,
+    title:
+      "Magnificent hotel in Egypt",
+    location: "https://maps.google.com/?q=El Gouna Hotel, Egypt",
+    locationLabel: "El Gouna Hotel, Egypt",
+    views: "6.3k views",
+    time: "1 hour ago",
+    className: "hotel egypt",
+  },
+  
+  {
+    id: "49",
+    img: hotelElMiradorImg,
+    title:
+      "Magnificent hotel in Spain",
+    location: "https://maps.google.com/?q=El Mirador Hotel, Spain",
+    locationLabel: "El Mirador Hotel, Spain",
+    views: "6.3k views",
+    time: "1 hour ago",
+    className: "hotel spain",
+  },
+  
+  {
+    id: "50",
+    img: hotelFlamsbryggaImg,
+    title:
+      "Magnificent hotel in Norway",
+    location: "https://maps.google.com/?q=Flamsbrygga Hotel, Norway",
+    locationLabel: "Flamsbrygga Hotel, Norway",
+    views: "6.3k views",
+    time: "1 hour ago",
+    className: "hotel norway",
+  },
+  
+  {
+    id: "51",
+    img: hotelGrandHotelAmrathImg,
+    title:
+      "Magnificent hotel in Indonesia",
+    location: "https://maps.google.com/?q=Grand Hotel Amrath, Spain",
+    locationLabel: "Grand Hotel Amrath, Spain",
+    views: "6.3k views",
+    time: "1 hour ago",
+    className: "hotel Spain",
+  },
+  
+  {
+    id: "52",
+    img: hotelGrandHyattDubaiImg,
+    title:
+      "Magnificent hotel in Dubai",
+    location: "https://maps.google.com/?q=Grand Hyatt Hotel, Dubai",
+    locationLabel: "Grand Hyatt Hotel, Dubai",
+    views: "6.3k views",
+    time: "1 hour ago",
+    className: "hotel dubai",
+  },
+  
+  {
+    id: "53",
+    img: hotelGrandMakadiImg,
+    title:
+      "Magnificent hotel in egypt",
+    location: "https://maps.google.com/?q=Grand Makadi Hotel, Egypt",
+    locationLabel: "Grand Makadi Hotel, Egypt",
+    views: "6.3k views",
+    time: "1 hour ago",
+    className: "hotel egypt",
+  },
+  
+  {
+    id: "54",
+    img: hotelHavilaHotelGeirangerImg,
+    title:
+      "Magnificent hotel in Netherlands",
+    location: "https://maps.google.com/?q=Havila Hotel Geiranger, Netherlands",
+    locationLabel: "Havila Hotel Geiranger, Netherlands",
+    views: "6.3k views",
+    time: "1 hour ago",
+    className: "hotel netherlands",
+  },
+  
+  {
+    id: "55",
+    img: hotelHeritanceKandalamaSriLankaImg,
+    title:
+      "Magnificent hotel in Sri Lanka",
+    location: "https://maps.google.com/?q=Conrad Hotel, Bali, Indonesia",
+    locationLabel: "Chotel Heritance Kandalama. Sri-Lanka",
+    views: "6.3k views",
+    time: "1 hour ago",
+    className: "hotel sri-lanka",
+  },
+  
+  {
+    id: "56",
+    img: hotelHotelVillaBelvedereImg,
+    title:
+      "Magnificent hotel in Italy",
+    location: "https://maps.google.com/?q=Hotel Villa Belvedere, Italy",
+    locationLabel: "Hotel Villa Belvedere, Italy",
+    views: "6.3k views",
+    time: "1 hour ago",
+    className: "hotel italy",
+  },
+  
+  {
+    id: "57",
+    img: hotelJaiMahalPalaceImg,
+    title:
+      "Magnificent hotel in India",
+    location: "https://maps.google.com/?q=Jai Mahal Palace, India",
+    locationLabel: "Jai Mahal Palace, India",
+    views: "6.3k views",
+    time: "1 hour ago",
+    className: "hotel india",
+  },
+  
+  {
+    id: "58",
+    img: hotelJetwingSamanImg,
+    title:
+      "Magnificent hotel in Sri-lanka",
+    location: "https://maps.google.com/?q=Jetwing Saman, Sri-lanka",
+    locationLabel: "Jetwing Saman, Sri-lanka",
+    views: "6.3k views",
+    time: "1 hour ago",
+    className: "hotel sri-lanka",
+  },
+  
+  {
+    id: "59",
+    img: hotelBadamImg,
+    title:
+      "Magnificent hotel in Baku, Azerbaijan",
+    location: "https://maps.google.com/?q=Badam d'Art Boutique Hotel, Azerbaijan",
+    locationLabel: "Badam d'Art Boutique Hotel, Azerbaijan",
+    views: "6.3k views",
+    time: "1 hour ago",
+    className: "hotel azerbaijan",
+  },
+  
+  {
+    id: "60",
+    img: hotelBergsImg,
+    title:
+      "Magnificent hotel in Gakh, Azerbaijan",
+    location: "https://maps.google.com/?q=Bergs Hotel, Azerbaijan",
+    locationLabel: "Bergs Hotel, Azerbaijan",
+    views: "6.3k views",
+    time: "1 hour ago",
+    className: "hotel azerbaijan",
+  },
+  
+  {
+    id: "61",
+    img: hotelChenotPalaceImg,
+    title:
+      "Magnificent hotel in Gabala, Azerbaijan",
+    location: "https://maps.google.com/?q=Chenot Palace, Gabala, Azerbaijan",
+    locationLabel: "Chenot Palace, Gabala, Azerbaijan",
+    views: "6.3k views",
+    time: "1 hour ago",
+    className: "hotel azerbaijan",
+  },
+  
+  {
+    id: "62",
+    img: hotelDuzdagImg,
+    title:
+      "Magnificent hotel in Nakhchivan, Azerbaijan",
+    location: "https://maps.google.com/?q=Duzdag Hotel, Nakhchivan, Azerbaijan",
+    locationLabel: "Duzdag Hotel, Nakhchivan, Azerbaijan",
+    views: "6.3k views",
+    time: "1 hour ago",
+    className: "hotel azerbaijan",
+  },
+  
+  {
+    id: "63",
+    img: hotelElResortImg,
+    title:
+      "Magnificent hotel in Gakh, Azerbaijan",
+    location: "https://maps.google.com/?q=El Resort Hotel, Gakh, Azerbaijan",
+    locationLabel: "El Resort Hotel, Gakh, Azerbaijan",
+    views: "6.3k views",
+    time: "1 hour ago",
+    className: "hotel azerbaijan",
+  },
+  
+  {
+    id: "64",
+    img: hotelFairmontBakuImg,
+    title:
+      "Magnificent hotel in Baku, Azerbaijan",
+    location: "https://maps.google.com/?q=Fairmont Hotel, Baku, Azerbaijan",
+    locationLabel: "Fairmont Hotel, Baku, Azerbaijan",
+    views: "6.3k views",
+    time: "1 hour ago",
+    className: "hotel azerbaijan",
+  },
+  
+  {
+    id: "65",
+    img: hotelHotelSaatMeydaniImg,
+    title:
+      "Magnificent hotel in Nakhchivan, Azerbaijan",
+    location: "https://maps.google.com/?q=Saat Meydani Hotel, Nakhchivan, Azerbaijan",
+    locationLabel: "Saat Meydani Hotel, Nakhchivan, Azerbaijan",
+    views: "6.3k views",
+    time: "1 hour ago",
+    className: "hotel azerbaijan",
+  },
+
 ];

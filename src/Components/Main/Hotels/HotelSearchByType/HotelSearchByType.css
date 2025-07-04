@@ -1,0 +1,34 @@
+.hotelTypesCardItem .hoverImg {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hotelTypesCardItem .defaultImg {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hotelTypesCardItem:hover .defaultImg {
+  display: none;
+}
+
+.hotelTypesCardItem:hover .hoverImg {
+  display: block;
+}
+
+.hotelTypesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 58rem;
+}

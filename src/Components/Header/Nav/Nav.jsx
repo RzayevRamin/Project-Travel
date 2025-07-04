@@ -13,7 +13,7 @@ function Nav() {
       <ToggleButtonGroup id="nav-buttons">
         <Button onClick={() => navigate("/home")}>Home</Button>
         <Button onClick={() => navigate("/tours")}>Tours</Button>
-        <Button>Hotels</Button>
+        <Button onClick={() => navigate("/hotels")}>Hotels</Button>
         <Button>Transport</Button>
         <Button>Media</Button>
         <Button>Forum</Button>
