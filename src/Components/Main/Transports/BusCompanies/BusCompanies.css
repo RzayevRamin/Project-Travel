@@ -1,0 +1,46 @@
+.mostPopularBusCardsContainer {
+    padding: 1rem 0;
+}
+
+.mostPopularBusCardContextContainer {
+    background-color: rgba(253, 251, 248, 0.6);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+.mostPopularBusCardContextTextBox {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.locationMapPreview {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 260px;
+  height: 180px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  background: #fff;
+  z-index: 100;
+  margin-top: 8px;
+  overflow: hidden;
+}
+
+.mostPopularBusCardsLocation:hover .locationMapPreview {
+  display: block;
+}
+
+.slick-center .MuiCard-root {
+  transform: scale(1.05);
+}
+.slick-slide:not(.slick-center) .MuiCard-root {
+  transform: scale(0.9);
+  opacity: 0.9;
+}
+

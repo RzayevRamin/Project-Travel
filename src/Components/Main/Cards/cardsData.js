@@ -63,9 +63,64 @@ import hotelHotelSaatMeydaniImg from "../../../assets/CardsImages/Hotels/Hotels/
 import hotelHotelVillaBelvedereImg from "../../../assets/CardsImages/Hotels/Hotels/HotelVillaBelvedereItaly.jpg";
 import hotelJaiMahalPalaceImg from "../../../assets/CardsImages/Hotels/Hotels/JaiMahalPalaceIndia.jpg";
 import hotelJetwingSamanImg from "../../../assets/CardsImages/Hotels/Hotels/JetwingSamanSriLnaka.jpg";
+import hotelJumeirahImg from "../../../assets/CardsImages/Hotels/Hotels/JumeirahBeachDubai.jpg";
+import hotelKayakapiImg from "../../../assets/CardsImages/Hotels/Hotels/KayakapiTurkey.jpg";
+import hotelLandmarkImg from "../../../assets/CardsImages/Hotels/Hotels/LandmarkHotelLondon.jpg";
+import hotelLankaranSpringsWellnessImg from "../../../assets/CardsImages/Hotels/Hotels/LankaranSpringsWellnessResort.jpeg";
+import hotelLaSultanaImg from "../../../assets/CardsImages/Hotels/Hotels/LaSultanaMorocco.jpg";
+import hotelLeBristolImg from "../../../assets/CardsImages/Hotels/Hotels/LeBristolParis.jpg";
+import hotelLesanteCapeImg from "../../../assets/CardsImages/Hotels/Hotels/LesanteCapeGreece.jpg";
+import hotelLexisHotelImg from "../../../assets/CardsImages/Hotels/Hotels/LexisHotelMalaysia.jpg";
+import hotelMacaraLakeParkImg from "../../../assets/CardsImages/Hotels/Hotels/MacaraLakePark.jpg";
+import hotelMarriottAnkaraImg from "../../../assets/CardsImages/Hotels/Hotels/MarriottAnkaraTurkey.jpg";
+import planeAmericanAirlinesImg from "../../../assets/Transport/Airlines/AmericanAirlines.jpg";
+import planeAstanaAirlinesImg from "../../../assets/Transport/Airlines/AstanaAirlines.jpg";
+import planeAzalAirLinesImg from "../../../assets/Transport/Airlines/AzalAirLines.jpg";
+import planeCathayAirlinesImg from "../../../assets/Transport/Airlines/CathayAirlines.jpg";
+import planeDubaiAirlinesImg from "../../../assets/Transport/Airlines/DubaiAirlines.jpg";
+import planeEtihadAirlinesImg from "../../../assets/Transport/Airlines/EtihadAirlines.jpg";
+import planeKoreanAirlinesImg from "../../../assets/Transport/Airlines/KoreanAirlines.jpg";
+import planeNewZealandAirlinesImg from "../../../assets/Transport/Airlines/NewZealandAirlines.jpg";
+import planeQatarAirlinesImg from "../../../assets/Transport/Airlines/QatarAirlines.jpg";
+import planeSingaporeAirlinesImg from "../../../assets/Transport/Airlines/SingaporeAirlines.jpg";
+import planeTurkishAirlinesImg from "../../../assets/Transport/Airlines/TurkishAirlines.jpg";
+import planeUnitedAirlinesImg from "../../../assets/Transport/Airlines/UnitedAirlines.jpg";
+import planeVirginAtlanticAirlinesImg from "../../../assets/Transport/Airlines/VirginAtlanticAirlines.jpg";
+import trainAmtrakImg from "../../../assets/Transport/Railways/Amtrak.jpg";
+import trainChinaRailwayImg from "../../../assets/Transport/Railways/ChinaRailway.jpg";
+import trainDeutscheBahnImg from "../../../assets/Transport/Railways/DeutscheBahn.jpg";
+import trainEastJapanRailwayImg from "../../../assets/Transport/Railways/EastJapanRailway.jpg";
+import trainEurostarImg from "../../../assets/Transport/Railways/Eurostar.jpg";
+import trainIndianPasificImg from "../../../assets/Transport/Railways/IndianPasific.jpg";
+import trainIndianRailwayImg from "../../../assets/Transport/Railways/IndianRailway.jpg";
+import trainAzerbaijanRailwaysImg from "../../../assets/Transport/Railways/AzerbaijanRailways.jpg";
+import trainIsraelRailwaysImg from "../../../assets/Transport/Railways/IsraelRailways.jpg";
+import trainPerurailImg from "../../../assets/Transport/Railways/Perurail.jpg";
+import trainSaudiRailwayImg from "../../../assets/Transport/Railways/SaudiRailway.jpg";
+import trainSNCFImg from "../../../assets/Transport/Railways/SNCF.jpg";
+import trainTrenitaliaImg from "../../../assets/Transport/Railways/Trenitalia.jpg";
+import busBakuBusImg from "../../../assets/Transport/Bus/BakuBus.jpg";
+import busBusEireannImg from "../../../assets/Transport/Bus/BusEireann.jpg";
+import busEurolinesBusImg from "../../../assets/Transport/Bus/EurolinesBus.jpg";
+import busFlixBusImg from "../../../assets/Transport/Bus/FlixBus.jpg";
+import busGreyhoundBusImg from "../../../assets/Transport/Bus/GreyhoundBus.jpg";
+import busLondonBusImg from "../../../assets/Transport/Bus/LondonBus.jpg";
+import busMegaBusImg from "../../../assets/Transport/Bus/MegaBus.jpg";
+import busPolskiBusImg from "../../../assets/Transport/Bus/PolskiBus.jpg";
+import carCampervanImg from "../../../assets/Transport/CarRenting/Campervan.jpg";
+import carCaravanImg from "../../../assets/Transport/CarRenting/Caravan.jpg";
+import carKastenwagenImg from "../../../assets/Transport/CarRenting/Kastenwagen.jpg";
+import carMoterhomeImg from "../../../assets/Transport/CarRenting/Motorhome.jpg";
+import carCupeImg from "../../../assets/Transport/CarRenting/Cupe.jpg";
+import carHetchbackImg from "../../../assets/Transport/CarRenting/Hetchback.jpg";
+import carMiniSUVImg from "../../../assets/Transport/CarRenting/MiniSUV.jpg";
+import motoImg from "../../../assets/Transport/CarRenting/Moto.jpg";
+import carRoadsterImg from "../../../assets/Transport/CarRenting/Roadster.jpg";
+import carSedanImg from "../../../assets/Transport/CarRenting/Sedan.jpg";
+import carSUVImg from "../../../assets/Transport/CarRenting/SUV.jpg";
 
-
-export const cardsData = [{
+export const cardsData = [
+  {
     id: "1",
     img: dubaiImg,
     title: "Luxury, sun, skyscrapers, shopping, fun-filled travel",
@@ -109,7 +164,7 @@ export const cardsData = [{
     className: "foreignCard",
   },
 
-  { 
+  {
     id: "5",
     img: italyImg,
     title: "A journey full of history, pastry, Rome, fashion, art, and pizza",
@@ -142,7 +197,7 @@ export const cardsData = [{
     className: "foreignCard",
   },
 
-  { 
+  {
     id: "8",
     img: greeceImg,
     title: "A journey full of mythology, island, sea, history, olives, and sun",
@@ -156,7 +211,8 @@ export const cardsData = [{
   {
     id: "9",
     img: turkeyImg,
-    title: "A journey full of history, markets, cuisine, sea, and hot air balloons",
+    title:
+      "A journey full of history, markets, cuisine, sea, and hot air balloons",
     location: "https://maps.google.com/?q=Turkey",
     locationLabel: "Turkey",
     views: "6.3k views",
@@ -459,8 +515,7 @@ export const cardsData = [{
   {
     id: "36",
     img: hotelAmbassadeImg,
-    title:
-      "Magnificent hotel in Netherlands",
+    title: "Magnificent hotel in Netherlands",
     location: "https://maps.google.com/?q=Ambassade Hotel, Netherlands",
     locationLabel: "Ambassade Hotel, Netherlands",
     views: "6.3k views",
@@ -471,8 +526,7 @@ export const cardsData = [{
   {
     id: "37",
     img: hotelAnantaraImg,
-    title:
-      "Magnificent hotel in Italy",
+    title: "Magnificent hotel in Italy",
     location: "https://maps.google.com/?q=Anantara Hotel, Italy",
     locationLabel: "Anantara Hotel, Italy",
     views: "6.3k views",
@@ -483,8 +537,7 @@ export const cardsData = [{
   {
     id: "38",
     img: hotelAndamanImg,
-    title:
-      "Magnificent hotel in Malaysia",
+    title: "Magnificent hotel in Malaysia",
     location: "https://maps.google.com/?q=Andaman Hotel, Malaysia",
     locationLabel: "Andaman Hotel, Malaysia",
     views: "6.3k views",
@@ -495,8 +548,7 @@ export const cardsData = [{
   {
     id: "39",
     img: hotelAstoriaImg,
-    title:
-      "Magnificent hotel in Russia",
+    title: "Magnificent hotel in Russia",
     location: "https://maps.google.com/?q=Astoria Hotel, Russia",
     locationLabel: "Astoria Hotel, Russia",
     views: "6.3k views",
@@ -507,8 +559,7 @@ export const cardsData = [{
   {
     id: "40",
     img: hotelBurjAlArabImg,
-    title:
-      "Magnificent hotel in Dubai",
+    title: "Magnificent hotel in Dubai",
     location: "https://maps.google.com/?q=Burj Al Arab Hotel, Dubai",
     locationLabel: "Burj Al Arab Hotel, Dubai",
     views: "6.3k views",
@@ -519,8 +570,7 @@ export const cardsData = [{
   {
     id: "41",
     img: hotelCambrianImg,
-    title:
-      "Magnificent hotel in Switzerland",
+    title: "Magnificent hotel in Switzerland",
     location: "https://maps.google.com/?q=Cambrian Hotel, Switzerland",
     locationLabel: "Cambrian Hotel, Switzerland",
     views: "6.3k views",
@@ -531,8 +581,7 @@ export const cardsData = [{
   {
     id: "42",
     img: hotelCarltonCannesImg,
-    title:
-      "Magnificent hotel in France",
+    title: "Magnificent hotel in France",
     location: "https://maps.google.com/?q=Carlton Hotel, Cannes, France",
     locationLabel: "Carlton Hotel, Cannes, France",
     views: "6.3k views",
@@ -543,9 +592,9 @@ export const cardsData = [{
   {
     id: "43",
     img: hotelCasaPalacioMaríaLuisaJerezImg,
-    title:
-      "Magnificent hotel in Spain",
-    location: "https://maps.google.com/?q=Casa Palacio María Luisa Jerez Hotel, Spain",
+    title: "Magnificent hotel in Spain",
+    location:
+      "https://maps.google.com/?q=Casa Palacio María Luisa Jerez Hotel, Spain",
     locationLabel: "Casa Palacio María Luisa Jerez Hotel, Spain",
     views: "6.3k views",
     time: "1 hour ago",
@@ -555,8 +604,7 @@ export const cardsData = [{
   {
     id: "44",
     img: hotelClaridgeImg,
-    title:
-      "Magnificent hotel in England",
+    title: "Magnificent hotel in England",
     location: "https://maps.google.com/?q=Claridge's Hotel, London",
     locationLabel: "Claridge's Hotel, London",
     views: "6.3k views",
@@ -567,8 +615,7 @@ export const cardsData = [{
   {
     id: "45",
     img: hotelConradBaliIndonesiaImg,
-    title:
-      "Magnificent hotel in Indonesia",
+    title: "Magnificent hotel in Indonesia",
     location: "https://maps.google.com/?q=Conrad Hotel, Bali, Indonesia",
     locationLabel: "Conrad Hotel, Bali, Indonesia",
     views: "6.3k views",
@@ -579,8 +626,7 @@ export const cardsData = [{
   {
     id: "46",
     img: hotelDelphinImperialTurkeyImg,
-    title:
-      "Magnificent hotel in Turkey",
+    title: "Magnificent hotel in Turkey",
     location: "https://maps.google.com/?q=Delphin Imperial Hotel, Turkey",
     locationLabel: "Delphin Imperial Hotel, Turkey",
     views: "6.3k views",
@@ -591,229 +637,851 @@ export const cardsData = [{
   {
     id: "47",
     img: hotelDivanTurkeyImg,
-    title:
-      "Magnificent hotel in Turkey",
+    title: "Magnificent hotel in Turkey",
     location: "https://maps.google.com/?q=Divan Hotel, Turkey",
     locationLabel: "Divan Hotel, Turkey",
     views: "6.3k views",
     time: "1 hour ago",
     className: "hotel turkey",
   },
-  
+
   {
     id: "48",
     img: hotelElGounaImg,
-    title:
-      "Magnificent hotel in Egypt",
+    title: "Magnificent hotel in Egypt",
     location: "https://maps.google.com/?q=El Gouna Hotel, Egypt",
     locationLabel: "El Gouna Hotel, Egypt",
     views: "6.3k views",
     time: "1 hour ago",
     className: "hotel egypt",
   },
-  
+
   {
     id: "49",
     img: hotelElMiradorImg,
-    title:
-      "Magnificent hotel in Spain",
+    title: "Magnificent hotel in Spain",
     location: "https://maps.google.com/?q=El Mirador Hotel, Spain",
     locationLabel: "El Mirador Hotel, Spain",
     views: "6.3k views",
     time: "1 hour ago",
     className: "hotel spain",
   },
-  
+
   {
     id: "50",
     img: hotelFlamsbryggaImg,
-    title:
-      "Magnificent hotel in Norway",
+    title: "Magnificent hotel in Norway",
     location: "https://maps.google.com/?q=Flamsbrygga Hotel, Norway",
     locationLabel: "Flamsbrygga Hotel, Norway",
     views: "6.3k views",
     time: "1 hour ago",
     className: "hotel norway",
   },
-  
+
   {
     id: "51",
     img: hotelGrandHotelAmrathImg,
-    title:
-      "Magnificent hotel in Indonesia",
+    title: "Magnificent hotel in Indonesia",
     location: "https://maps.google.com/?q=Grand Hotel Amrath, Spain",
     locationLabel: "Grand Hotel Amrath, Spain",
     views: "6.3k views",
     time: "1 hour ago",
     className: "hotel Spain",
   },
-  
+
   {
     id: "52",
     img: hotelGrandHyattDubaiImg,
-    title:
-      "Magnificent hotel in Dubai",
+    title: "Magnificent hotel in Dubai",
     location: "https://maps.google.com/?q=Grand Hyatt Hotel, Dubai",
     locationLabel: "Grand Hyatt Hotel, Dubai",
     views: "6.3k views",
     time: "1 hour ago",
     className: "hotel dubai",
   },
-  
+
   {
     id: "53",
     img: hotelGrandMakadiImg,
-    title:
-      "Magnificent hotel in egypt",
+    title: "Magnificent hotel in egypt",
     location: "https://maps.google.com/?q=Grand Makadi Hotel, Egypt",
     locationLabel: "Grand Makadi Hotel, Egypt",
     views: "6.3k views",
     time: "1 hour ago",
     className: "hotel egypt",
   },
-  
+
   {
     id: "54",
     img: hotelHavilaHotelGeirangerImg,
-    title:
-      "Magnificent hotel in Netherlands",
+    title: "Magnificent hotel in Netherlands",
     location: "https://maps.google.com/?q=Havila Hotel Geiranger, Netherlands",
     locationLabel: "Havila Hotel Geiranger, Netherlands",
     views: "6.3k views",
     time: "1 hour ago",
     className: "hotel netherlands",
   },
-  
+
   {
     id: "55",
     img: hotelHeritanceKandalamaSriLankaImg,
-    title:
-      "Magnificent hotel in Sri Lanka",
+    title: "Magnificent hotel in Sri Lanka",
     location: "https://maps.google.com/?q=Conrad Hotel, Bali, Indonesia",
     locationLabel: "Chotel Heritance Kandalama. Sri-Lanka",
     views: "6.3k views",
     time: "1 hour ago",
     className: "hotel sri-lanka",
   },
-  
+
   {
     id: "56",
     img: hotelHotelVillaBelvedereImg,
-    title:
-      "Magnificent hotel in Italy",
+    title: "Magnificent hotel in Italy",
     location: "https://maps.google.com/?q=Hotel Villa Belvedere, Italy",
     locationLabel: "Hotel Villa Belvedere, Italy",
     views: "6.3k views",
     time: "1 hour ago",
     className: "hotel italy",
   },
-  
+
   {
     id: "57",
     img: hotelJaiMahalPalaceImg,
-    title:
-      "Magnificent hotel in India",
+    title: "Magnificent hotel in India",
     location: "https://maps.google.com/?q=Jai Mahal Palace, India",
     locationLabel: "Jai Mahal Palace, India",
     views: "6.3k views",
     time: "1 hour ago",
     className: "hotel india",
   },
-  
+
   {
     id: "58",
     img: hotelJetwingSamanImg,
-    title:
-      "Magnificent hotel in Sri-lanka",
+    title: "Magnificent hotel in Sri-lanka",
     location: "https://maps.google.com/?q=Jetwing Saman, Sri-lanka",
     locationLabel: "Jetwing Saman, Sri-lanka",
     views: "6.3k views",
     time: "1 hour ago",
     className: "hotel sri-lanka",
   },
-  
+
   {
     id: "59",
     img: hotelBadamImg,
-    title:
-      "Magnificent hotel in Baku, Azerbaijan",
-    location: "https://maps.google.com/?q=Badam d'Art Boutique Hotel, Azerbaijan",
+    title: "Magnificent hotel in Baku, Azerbaijan",
+    location:
+      "https://maps.google.com/?q=Badam d'Art Boutique Hotel, Azerbaijan",
     locationLabel: "Badam d'Art Boutique Hotel, Azerbaijan",
     views: "6.3k views",
     time: "1 hour ago",
     className: "hotel azerbaijan",
   },
-  
+
   {
     id: "60",
     img: hotelBergsImg,
-    title:
-      "Magnificent hotel in Gakh, Azerbaijan",
+    title: "Magnificent hotel in Gakh, Azerbaijan",
     location: "https://maps.google.com/?q=Bergs Hotel, Azerbaijan",
     locationLabel: "Bergs Hotel, Azerbaijan",
     views: "6.3k views",
     time: "1 hour ago",
     className: "hotel azerbaijan",
   },
-  
+
   {
     id: "61",
     img: hotelChenotPalaceImg,
-    title:
-      "Magnificent hotel in Gabala, Azerbaijan",
+    title: "Magnificent hotel in Gabala, Azerbaijan",
     location: "https://maps.google.com/?q=Chenot Palace, Gabala, Azerbaijan",
     locationLabel: "Chenot Palace, Gabala, Azerbaijan",
     views: "6.3k views",
     time: "1 hour ago",
     className: "hotel azerbaijan",
   },
-  
+
   {
     id: "62",
     img: hotelDuzdagImg,
-    title:
-      "Magnificent hotel in Nakhchivan, Azerbaijan",
+    title: "Magnificent hotel in Nakhchivan, Azerbaijan",
     location: "https://maps.google.com/?q=Duzdag Hotel, Nakhchivan, Azerbaijan",
     locationLabel: "Duzdag Hotel, Nakhchivan, Azerbaijan",
     views: "6.3k views",
     time: "1 hour ago",
     className: "hotel azerbaijan",
   },
-  
+
   {
     id: "63",
     img: hotelElResortImg,
-    title:
-      "Magnificent hotel in Gakh, Azerbaijan",
+    title: "Magnificent hotel in Gakh, Azerbaijan",
     location: "https://maps.google.com/?q=El Resort Hotel, Gakh, Azerbaijan",
     locationLabel: "El Resort Hotel, Gakh, Azerbaijan",
     views: "6.3k views",
     time: "1 hour ago",
     className: "hotel azerbaijan",
   },
-  
+
   {
     id: "64",
     img: hotelFairmontBakuImg,
-    title:
-      "Magnificent hotel in Baku, Azerbaijan",
+    title: "Magnificent hotel in Baku, Azerbaijan",
     location: "https://maps.google.com/?q=Fairmont Hotel, Baku, Azerbaijan",
     locationLabel: "Fairmont Hotel, Baku, Azerbaijan",
     views: "6.3k views",
     time: "1 hour ago",
     className: "hotel azerbaijan",
   },
-  
+
   {
     id: "65",
     img: hotelHotelSaatMeydaniImg,
-    title:
-      "Magnificent hotel in Nakhchivan, Azerbaijan",
-    location: "https://maps.google.com/?q=Saat Meydani Hotel, Nakhchivan, Azerbaijan",
+    title: "Magnificent hotel in Nakhchivan, Azerbaijan",
+    location:
+      "https://maps.google.com/?q=Saat Meydani Hotel, Nakhchivan, Azerbaijan",
     locationLabel: "Saat Meydani Hotel, Nakhchivan, Azerbaijan",
     views: "6.3k views",
     time: "1 hour ago",
     className: "hotel azerbaijan",
   },
 
+  {
+    id: "66",
+    img: hotelLandmarkImg,
+    title: "Magnificent hotel in London, UK",
+    location:
+      "https://maps.google.com/?q=Saat Meydani Hotel, Nakhchivan, Azerbaijan",
+    locationLabel: "Landmark, London, UK",
+    views: "6.3k views",
+    time: "1 hour ago",
+    className: "hotel UK",
+  },
+
+  {
+    id: "67",
+    img: hotelLankaranSpringsWellnessImg,
+    title: "Magnificent hotel in Lankaran, Azerbaijan",
+    location:
+      "https://maps.google.com/?q=LankaranSpringsWellness, Lankaran, Azerbaijan",
+    locationLabel: "Saat Meydani Hotel, Lankaran, Azerbaijan",
+    views: "6.3k views",
+    time: "1 hour ago",
+    className: "hotel azerbaijan",
+  },
+
+  {
+    id: "68",
+    img: hotelJumeirahImg,
+    title: "Magnificent hotel in Dubai, UAR",
+    location: "https://maps.google.com/?q=Jumeirah Hotel, Dubai, UAE",
+    locationLabel: "Jumeirah Hotel, Dubai, UAE",
+    views: "6.3k views",
+    time: "1 hour ago",
+    className: "hotel UAE",
+  },
+
+  {
+    id: "69",
+    img: hotelKayakapiImg,
+    title: "Magnificent hotel in Turkey",
+    location: "https://maps.google.com/?q=Kayakapi, Turkey",
+    locationLabel: "Kayakapi, Turkey",
+    views: "6.3k views",
+    time: "1 hour ago",
+    className: "hotel Turkey",
+  },
+
+  {
+    id: "70",
+    img: hotelLaSultanaImg,
+    title: "Magnificent hotel in Morocco",
+    location: "https://maps.google.com/?q=LaSultana, Morocco",
+    locationLabel: "LaSultana, Morocco",
+    views: "6.3k views",
+    time: "1 hour ago",
+    className: "hotel Morocco",
+  },
+
+  {
+    id: "71",
+    img: hotelLeBristolImg,
+    title: "Magnificent hotel in Paris, France",
+    location: "https://maps.google.com/?q=LeBristol, Paris, France",
+    locationLabel: "LeBristol, Paris, France",
+    views: "6.3k views",
+    time: "1 hour ago",
+    className: "hotel france",
+  },
+
+  {
+    id: "72",
+    img: hotelLesanteCapeImg,
+    title: "Magnificent hotel in Greece",
+    location: "https://maps.google.com/?q=LesanteCape, Greece",
+    locationLabel: "LesanteCape, Greece",
+    views: "6.3k views",
+    time: "1 hour ago",
+    className: "hotel Greece",
+  },
+
+  {
+    id: "73",
+    img: hotelLexisHotelImg,
+    title: "Magnificent hotel in Malaysia",
+    location: "https://maps.google.com/?q=Lexis, Malaysia",
+    locationLabel: "Lexis, Malaysia",
+    views: "6.3k views",
+    time: "1 hour ago",
+    className: "hotel malaysia",
+  },
+
+  {
+    id: "74",
+    img: hotelMacaraLakeParkImg,
+    title: "Magnificent hotel in Quba, Azerbaijan",
+    location: "https://maps.google.com/?q=Macara Lake Park, Quba, Azerbaijan",
+    locationLabel: "Macara Lake Park, Quba, Azerbaijan",
+    views: "6.3k views",
+    time: "1 hour ago",
+    className: "hotel azerbaijan",
+  },
+
+  {
+    id: "75",
+    img: hotelMarriottAnkaraImg,
+    title: "Magnificent hotel in Ankara, Turkey",
+    location: "https://maps.google.com/?q=Marriott, Ankara, Turkey",
+    locationLabel: "Marriott, Ankara, Turkey",
+    views: "6.3k views",
+    time: "1 hour ago",
+    className: "hotel turkey",
+  },
+
+  {
+    id: "76",
+    img: planeAmericanAirlinesImg,
+    title: "Top rated airlines with great services",
+    location: "",
+    locationLabel: "American Airlines",
+    views: "6.3k views",
+    time: "1 hour ago",
+    className: "plane american airlines",
+  },
+
+  {
+    id: "77",
+    img: planeAstanaAirlinesImg,
+    title: "Top rated airlines with great services",
+    location: "",
+    locationLabel: "Astana Airlines",
+    views: "6.3k views",
+    time: "1 hour ago",
+    className: "plane astana airlines",
+  },
+
+  {
+    id: "78",
+    img: planeAzalAirLinesImg,
+    title: "Top rated airlines with great services",
+    location: "",
+    locationLabel: "Azal AirLines",
+    views: "6.3k views",
+    time: "1 hour ago",
+    className: "plane azal airLines",
+  },
+
+  {
+    id: "79",
+    img: planeCathayAirlinesImg,
+    title: "Top rated airlines with great services",
+    location: "",
+    locationLabel: "Cathay Airlines",
+    views: "6.3k views",
+    time: "1 hour ago",
+    className: "plane cathay airlines",
+  },
+
+  {
+    id: "80",
+    img: planeDubaiAirlinesImg,
+    title: "Top rated airlines with great services",
+    location: "",
+    locationLabel: "Dubai Airlines",
+    views: "6.3k views",
+    time: "1 hour ago",
+    className: "plane dubai airlines",
+  },
+
+  {
+    id: "81",
+    img: planeEtihadAirlinesImg,
+    title: "Top rated airlines with great services",
+    location: "",
+    locationLabel: "Etihad Airlines",
+    views: "6.3k views",
+    time: "1 hour ago",
+    className: "plane etihad airlines",
+  },
+
+  {
+    id: "82",
+    img: planeKoreanAirlinesImg,
+    title: "Top rated airlines with great services",
+    location: "",
+    locationLabel: "Korean Airlines",
+    views: "6.3k views",
+    time: "1 hour ago",
+    className: "plane korean airlines",
+  },
+
+  {
+    id: "83",
+    img: planeNewZealandAirlinesImg,
+    title: "Top rated airlines with great services",
+    location: "",
+    locationLabel: "New Zealand Airlines",
+    views: "6.3k views",
+    time: "1 hour ago",
+    className: "plane new zealand Airlines",
+  },
+
+  {
+    id: "84",
+    img: planeQatarAirlinesImg,
+    title: "Top rated airlines with great services",
+    location: "",
+    locationLabel: "Qatar Airlines",
+    views: "6.3k views",
+    time: "1 hour ago",
+    className: "plane qatar airlines",
+  },
+
+  {
+    id: "85",
+    img: planeSingaporeAirlinesImg,
+    title: "Top rated airlines with great services",
+    location: "",
+    locationLabel: "Singapore Airlines",
+    views: "6.3k views",
+    time: "1 hour ago",
+    className: "plane singapore airlines",
+  },
+
+  {
+    id: "86",
+    img: planeTurkishAirlinesImg,
+    title: "Top rated airlines with great services",
+    location: "",
+    locationLabel: "Turkish Airlines",
+    views: "6.3k views",
+    time: "1 hour ago",
+    className: "plane turkish airlines",
+  },
+
+  {
+    id: "87",
+    img: planeUnitedAirlinesImg,
+    title: "Top rated airlines with great services",
+    location: "",
+    locationLabel: "United Airlines",
+    views: "6.3k views",
+    time: "1 hour ago",
+    className: "plane united airlines",
+  },
+
+  {
+    id: "88",
+    img: planeVirginAtlanticAirlinesImg,
+    title: "Top rated airlines with great services",
+    location: "",
+    locationLabel: "Virgin Atlantic Airlines",
+    views: "6.3k views",
+    time: "1 hour ago",
+    className: "plane virgin atlantic airlines",
+  },
+
+  {
+    id: "89",
+    img: trainAmtrakImg,
+    title: "Top rated railways company in area",
+    location: "",
+    locationLabel: "Amtrak Railways",
+    views: "6.3k views",
+    time: "1 hour ago",
+    className: "train amtrak railways",
+  },
+
+  {
+    id: "90",
+    img: trainAzerbaijanRailwaysImg,
+    title: "Top rated railways company in area",
+    location: "",
+    locationLabel: "Azerbaijan Railways",
+    views: "6.3k views",
+    time: "1 hour ago",
+    className: "train azerbaijan railways",
+  },
+
+  {
+    id: "91",
+    img: trainChinaRailwayImg,
+    title: "Top rated railways company in area",
+    location: "",
+    locationLabel: "China Railway",
+    views: "6.3k views",
+    time: "1 hour ago",
+    className: "train china railway",
+  },
+
+  {
+    id: "92",
+    img: trainDeutscheBahnImg,
+    title: "Top rated railways company in area",
+    location: "",
+    locationLabel: "Deutsche Bahn Railways",
+    views: "6.3k views",
+    time: "1 hour ago",
+    className: "train deutsche bahn railways",
+  },
+
+  {
+    id: "93",
+    img: trainEastJapanRailwayImg,
+    title: "Top rated railways company in area",
+    location: "",
+    locationLabel: "East Japan Railways",
+    views: "6.3k views",
+    time: "1 hour ago",
+    className: "train east japan railways",
+  },
+
+  {
+    id: "94",
+    img: trainEurostarImg,
+    title: "Top rated railways company in area",
+    location: "",
+    locationLabel: "Eurostar Railways",
+    views: "6.3k views",
+    time: "1 hour ago",
+    className: "train eurostar railways",
+  },
+
+  {
+    id: "95",
+    img: trainIndianPasificImg,
+    title: "Top rated railways company in area",
+    location: "",
+    locationLabel: "Indian Pasific Railways",
+    views: "6.3k views",
+    time: "1 hour ago",
+    className: "train indian pasific railways",
+  },
+
+  {
+    id: "96",
+    img: trainIndianRailwayImg,
+    title: "Top rated railways company in area",
+    location: "",
+    locationLabel: "Indian Railway",
+    views: "6.3k views",
+    time: "1 hour ago",
+    className: "train indian railway",
+  },
+
+  {
+    id: "97",
+    img: trainIsraelRailwaysImg,
+    title: "Top rated railways company in area",
+    location: "",
+    locationLabel: "Israel Railways",
+    views: "6.3k views",
+    time: "1 hour ago",
+    className: "train israel railways",
+  },
+
+  {
+    id: "98",
+    img: trainPerurailImg,
+    title: "Top rated railways company in area",
+    location: "",
+    locationLabel: "Perurail Railways",
+    views: "6.3k views",
+    time: "1 hour ago",
+    className: "train perurail railways",
+  },
+
+  {
+    id: "99",
+    img: trainSNCFImg,
+    title: "Top rated railways company in area",
+    location: "",
+    locationLabel: "SNCF Railways",
+    views: "6.3k views",
+    time: "1 hour ago",
+    className: "train SNCF Railways",
+  },
+
+  {
+    id: "100",
+    img: trainSaudiRailwayImg,
+    title: "Top rated railways company in area",
+    location: "",
+    locationLabel: "Saudi Railways",
+    views: "6.3k views",
+    time: "1 hour ago",
+    className: "train saudi railways",
+  },
+
+  {
+    id: "101",
+    img: trainTrenitaliaImg,
+    title: "Top rated railways company in area",
+    location: "",
+    locationLabel: "Trenitalia Railways",
+    views: "6.3k views",
+    time: "1 hour ago",
+    className: "train trenitalia railways",
+  },
+
+  {
+    id: "102",
+    img: busBakuBusImg,
+    title: "Top rated passenger transportation company in area",
+    location: "",
+    locationLabel: "BakuBus",
+    views: "6.3k views",
+    time: "1 hour ago",
+    className: "bus baku",
+  },
+
+  {
+    id: "103",
+    img: busBusEireannImg,
+    title: "Top rated passenger transportation company in area",
+    location: "",
+    locationLabel: "BusEireann",
+    views: "6.3k views",
+    time: "1 hour ago",
+    className: "bus eireann",
+  },
+
+  {
+    id: "104",
+    img: busEurolinesBusImg,
+    title: "Top rated passenger transportation company in area",
+    location: "",
+    locationLabel: "EurolinesBus",
+    views: "6.3k views",
+    time: "1 hour ago",
+    className: "bus eurolines",
+  },
+
+  {
+    id: "105",
+    img: busFlixBusImg,
+    title: "Top rated passenger transportation company in area",
+    location: "",
+    locationLabel: "FlixBus",
+    views: "6.3k views",
+    time: "1 hour ago",
+    className: "bus flixbus",
+  },
+
+  {
+    id: "106",
+    img: busGreyhoundBusImg,
+    title: "Top rated passenger transportation company in area",
+    location: "",
+    locationLabel: "Greyhound Bus",
+    views: "6.3k views",
+    time: "1 hour ago",
+    className: "bus greyhound",
+  },
+
+  {
+    id: "107",
+    img: busLondonBusImg,
+    title: "Top rated passenger transportation company in area",
+    location: "",
+    locationLabel: "LondonBus",
+    views: "6.3k views",
+    time: "1 hour ago",
+    className: "bus london",
+  },
+
+  {
+    id: "108",
+    img: busMegaBusImg,
+    title: "Top rated passenger transportation company in area",
+    location: "",
+    locationLabel: "MegaBus",
+    views: "6.3k views",
+    time: "1 hour ago",
+    className: "bus megabus",
+  },
+
+  {
+    id: "109",
+    img: busPolskiBusImg,
+    title: "Top rated passenger transportation company in area",
+    location: "",
+    locationLabel: "PolskiBus",
+    views: "6.3k views",
+    time: "1 hour ago",
+    className: "bus polskibus",
+  },
+
+  {
+    id: "110",
+    img: carCampervanImg,
+    title: "Great and comfortable transport for your needs",
+    location: "",
+    locationLabel: "Campervan",
+    fuel: "40L",
+    transmission: "Manual",
+    seats: "6 person",
+    views: "6.3k views",
+    time: "1 hour ago",
+    className: "car rent campervan",
+  },
+
+  {
+    id: "111",
+    img: carMoterhomeImg,
+    title: "Great and comfortable transport for your needs",
+    location: "",
+    locationLabel: "Moterhome",
+    fuel: "600L",
+    transmission: "Manual",
+    seats: "8 person",
+    views: "6.3k views",
+    time: "1 hour ago",
+    className: "car rent moterhome",
+  },
+
+  {
+    id: "112",
+    img: carCaravanImg,
+    title: "Great and comfortable transport for your needs",
+    location: "-",
+    locationLabel: "Caravan",
+    fuel: "-",
+    transmission: "-",
+    seats: "6 person",
+    views: "6.3k views",
+    time: "1 hour ago",
+    className: "car rent caravan",
+  },
+
+  {
+    id: "113",
+    img: carKastenwagenImg,
+    title: "Great and comfortable transport for your needs",
+    location: "",
+    locationLabel: "Kastenwagen",
+    fuel: "70L",
+    transmission: "Manual",
+    seats: "8 person",
+    views: "6.3k views",
+    time: "1 hour ago",
+    className: "car rent kastenwagen",
+  },
+
+  {
+    id: "114",
+    img: carHetchbackImg,
+    title: "Great and comfortable transport for your needs",
+    location: "",
+    locationLabel: "Hetchback",
+    fuel: "50L",
+    transmission: "Manual",
+    seats: "5 person",
+    views: "6.3k views",
+    time: "1 hour ago",
+    className: "car rent hetchback",
+  },
+
+  {
+    id: "115",
+    img: carCupeImg,
+    title: "Great and comfortable transport for your needs",
+    location: "",
+    locationLabel: "Cupe",
+    fuel: "75L",
+    transmission: "Manual",
+    seats: "2 person",
+    views: "6.3k views",
+    time: "1 hour ago",
+    className: "car rent cupe",
+  },
+
+  {
+    id: "116",
+    img: carMiniSUVImg,
+    title: "Great and comfortable transport for your needs",
+    location: "",
+    locationLabel: "MiniSUV",
+    fuel: "40L",
+    transmission: "Manual",
+    seats: "4 person",
+    views: "6.3k views",
+    time: "1 hour ago",
+    className: "car rent miniSUV",
+  },
+
+  {
+    id: "117",
+    img: carRoadsterImg,
+    title: "Great and comfortable transport for your needs",
+    location: "",
+    locationLabel: "Roadster",
+    fuel: "52L",
+    transmission: "Manual",
+    seats: "2 person",
+    views: "6.3k views",
+    time: "1 hour ago",
+    className: "car rent roadster",
+  },
+
+  {
+    id: "118",
+    img: carSUVImg,
+    title: "Great and comfortable transport for your needs",
+    location: "",
+    locationLabel: "SUV",
+    fuel: "90L",
+    transmission: "Manual",
+    seats: "4 person",
+    views: "6.3k views",
+    time: "1 hour ago",
+    className: "car rent suv",
+  },
+
+  {
+    id: "119",
+    img: carSedanImg,
+    title: "Great and comfortable transport for your needs",
+    location: "",
+    locationLabel: "Sedan",
+    fuel: "66L",
+    transmission: "Manual",
+    seats: "4 person",
+    views: "6.3k views",
+    time: "1 hour ago",
+    className: "car rent sedan",
+  },
+
+  {
+    id: "120",
+    img: motoImg,
+    title: "Great and comfortable transport for your needs",
+    location: "",
+    locationLabel: "Motorcycle",
+    fuel: "15L",
+    transmission: "Manual",
+    seats: "2 person",
+    views: "6.3k views",
+    time: "1 hour ago",
+    className: "car rent moto",
+  },
 ];

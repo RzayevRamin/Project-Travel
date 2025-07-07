@@ -7,6 +7,7 @@ import MainLoading from "./Components/Main/LoadingComponents/MainLoading";
 import { AuthProvider } from "./Components/AuthContext/AuthContext";
 import Tours from "./Components/Main/Tours/Tours";
 import Hotels from "./Components/Main/Hotels/Hotels";
+import Transports from "./Components/Main/Transports/Transports";
 
 function App() {  
   const [darkMode, setDarkMode] = useState(() => {
@@ -42,6 +43,7 @@ function App() {
           <Route path="home" element={<Home />} />
           <Route path="tours" element={<Tours />} />
           <Route path="hotels" element={<Hotels />} />
+          <Route path="transport" element={<Transports />} />
         </Route>
       </Routes>
     </AuthProvider>

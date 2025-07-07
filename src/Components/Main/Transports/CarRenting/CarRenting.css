@@ -1,0 +1,33 @@
+.mainCarCardTextBox {
+background-color: rgba(0, 0, 0, 0.25);
+border-top-right-radius: 5rem;
+border-bottom-right-radius: 5rem;
+width: 31vw;
+padding: 2rem 1rem;
+}
+
+.mainCarCardButtonBox{
+position: absolute;
+bottom: 3rem;
+left: 3rem;
+z-index: 999;
+}
+
+.carRentCartBox{
+    display: flex;
+    justify-content: space-between;
+}
+
+.skrollRentCarBox {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-height: 55rem;
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.skrollRentCarBox::-webkit-scrollbar {
+  display: none;
+}
