@@ -118,6 +118,156 @@ import motoImg from "../../../assets/Transport/CarRenting/Moto.jpg";
 import carRoadsterImg from "../../../assets/Transport/CarRenting/Roadster.jpg";
 import carSedanImg from "../../../assets/Transport/CarRenting/Sedan.jpg";
 import carSUVImg from "../../../assets/Transport/CarRenting/SUV.jpg";
+import mediaBakuImg1 from "../../../assets/MediaLocalTours/baku/Baku1.jpg";
+import mediaBakuImg2 from "../../../assets/MediaLocalTours/baku/Baku2.jpg";
+import mediaBakuImg3 from "../../../assets/MediaLocalTours/baku/Baku3.jpg";
+import mediaBakuImg4 from "../../../assets/MediaLocalTours/baku/Baku4.jpg";
+import mediaBakuImg5 from "../../../assets/MediaLocalTours/baku/Baku5.jpg";
+import mediaBakuImg6 from "../../../assets/MediaLocalTours/baku/Baku6.jpg";
+import mediaBakuImg7 from "../../../assets/MediaLocalTours/baku/Baku7.jpg";
+import mediaNakhchivanImg1 from "../../../assets/MediaLocalTours/nakhcivan/Nakhchivan1.jpg";
+import mediaNakhchivanImg2 from "../../../assets/MediaLocalTours/nakhcivan/Nakhchivan2.jpeg";
+import mediaNakhchivanImg3 from "../../../assets/MediaLocalTours/nakhcivan/Nakhchivan3.jpg";
+import mediaNakhchivanImg4 from "../../../assets/MediaLocalTours/nakhcivan/Nakhchivan4.jpg";
+import mediaNakhchivanImg5 from "../../../assets/MediaLocalTours/nakhcivan/Nakhchivan5.jpg";
+import mediaIsmayilliImg1 from "../../../assets/MediaLocalTours/ismayilli/Ismayilli1.jpg";
+import mediaIsmayilliImg2 from "../../../assets/MediaLocalTours/ismayilli/Ismayilli2.jpg";
+import mediaIsmayilliImg3 from "../../../assets/MediaLocalTours/ismayilli/Ismayilli3.jpg";
+import mediaKhinaliqImg1 from "../../../assets/MediaLocalTours/khinaliq/Khinaliq1.jpg";
+import mediaKhinaliqImg2 from "../../../assets/MediaLocalTours/khinaliq/Khinaliq2.jpg";
+import mediaKhinaliqImg3 from "../../../assets/MediaLocalTours/khinaliq/Khinaliq3.jpg";
+import mediaKhinaliqImg4 from "../../../assets/MediaLocalTours/khinaliq/Khinaliq4.jpg";
+import mediaGabalaImg1 from "../../../assets/MediaLocalTours/qəbələ/Gabala1.jpg";
+import mediaGabalaImg2 from "../../../assets/MediaLocalTours/qəbələ/Gabala2.jpg";
+import mediaGabalaImg3 from "../../../assets/MediaLocalTours/qəbələ/Gabala3.jpg";
+import mediaGabalaImg4 from "../../../assets/MediaLocalTours/qəbələ/Gabala4.jpg";
+import mediaGabalaImg5 from "../../../assets/MediaLocalTours/qəbələ/Gabala5.jpg";
+import mediaGabalaImg6 from "../../../assets/MediaLocalTours/qəbələ/Gabala6.jpeg";
+import mediaGabalaImg7 from "../../../assets/MediaLocalTours/qəbələ/Gabala7.jpg";
+import mediaGabalaImg8 from "../../../assets/MediaLocalTours/qəbələ/Gabala8.jpg";
+import mediaQubaImg1 from "../../../assets/MediaLocalTours/quba/Quba1.jpg";
+import mediaQubaImg2 from "../../../assets/MediaLocalTours/quba/Quba2.jpg";
+import mediaQubaImg3 from "../../../assets/MediaLocalTours/quba/Quba3.jpg";
+import mediaLahicImg1 from "../../../assets/MediaLocalTours/lahic/Lahic1.jpg";
+import mediaLahicImg2 from "../../../assets/MediaLocalTours/lahic/Lahic2.jpg";
+import mediaLahicImg3 from "../../../assets/MediaLocalTours/lahic/Lahic3.jpg";
+import mediaLahicImg4 from "../../../assets/MediaLocalTours/lahic/Lahic4.jpg";
+import mediaShekiImg1 from "../../../assets/MediaLocalTours/sheki/Sheki1.jpg";
+import mediaShekiImg2 from "../../../assets/MediaLocalTours/sheki/Sheki2.jpg";
+import mediaShekiImg3 from "../../../assets/MediaLocalTours/sheki/Sheki3.jpg";
+import mediaShushaImg1 from "../../../assets/MediaLocalTours/shusha/Shusha1.jpg";
+import mediaShushaImg2 from "../../../assets/MediaLocalTours/shusha/Shusha2.jpg";
+import mediaShushaImg3 from "../../../assets/MediaLocalTours/shusha/Shusha3.jpg";
+import mediaShushaImg4 from "../../../assets/MediaLocalTours/shusha/Shusha4.jpg";
+import mediaShushaImg5 from "../../../assets/MediaLocalTours/shusha/Shusha5.jpg";
+import mediaZagatalaImg1 from "../../../assets/MediaLocalTours/zagatala/Zagatala1.jpg";
+import mediaZagatalaImg2 from "../../../assets/MediaLocalTours/zagatala/Zagatala2.jpg";
+import mediaZagatalaImg3 from "../../../assets/MediaLocalTours/zagatala/Zagatala3.jpg";
+import mediaZagatalaImg4 from "../../../assets/MediaLocalTours/zagatala/Zagatala4.jpg";
+import mediaZagatalaImg5 from "../../../assets/MediaLocalTours/zagatala/Zagatala5.jpg";
+import mediaItalyImg1 from "../../../assets/MediaForegnTours/Italy/Italy1.jpg";
+import mediaItalyImg2 from "../../../assets/MediaForegnTours/Italy/Italy2.jpg";
+import mediaItalyImg3 from "../../../assets/MediaForegnTours/Italy/Italy3.jpg";
+import mediaItalyImg4 from "../../../assets/MediaForegnTours/Italy/Italy4.jpg";
+import mediaItalyImg5 from "../../../assets/MediaForegnTours/Italy/Italy5.jpg";
+import mediaItalyImg6 from "../../../assets/MediaForegnTours/Italy/Italy6.jpg";
+import mediaItalyImg7 from "../../../assets/MediaForegnTours/Italy/Italy7.jpg";
+import mediaItalyImg8 from "../../../assets/MediaForegnTours/Italy/Italy8.jpg";
+import mediaItalyImg9 from "../../../assets/MediaForegnTours/Italy/Italy9.jpg";
+import mediaItalyImg10 from "../../../assets/MediaForegnTours/Italy/Italy10.jpg";
+import mediaItalyImg11 from "../../../assets/MediaForegnTours/Italy/Italy11.jpg";
+import mediaItalyImg12 from "../../../assets/MediaForegnTours/Italy/Italy12.jpg";
+import mediaItalyImg13 from "../../../assets/MediaForegnTours/Italy/Italy13.jpg";
+import mediaItalyImg14 from "../../../assets/MediaForegnTours/Italy/Italy14.jpg";
+import mediaTurkeyImg1 from "../../../assets/MediaForegnTours/Turkey/Turkey1.jpg";
+import mediaTurkeyImg2 from "../../../assets/MediaForegnTours/Turkey/Turkey2.jpg";
+import mediaTurkeyImg3 from "../../../assets/MediaForegnTours/Turkey/Turkey3.jpg";
+import mediaTurkeyImg4 from "../../../assets/MediaForegnTours/Turkey/Turkey4.jpg";
+import mediaTurkeyImg5 from "../../../assets/MediaForegnTours/Turkey/Turkey5.jpg";
+import mediaTurkeyImg6 from "../../../assets/MediaForegnTours/Turkey/Turkey6.jpg";
+import mediaTurkeyImg7 from "../../../assets/MediaForegnTours/Turkey/Turkey7.jpg";
+import mediaTurkeyImg8 from "../../../assets/MediaForegnTours/Turkey/Turkey8.jpg";
+import mediaTurkeyImg9 from "../../../assets/MediaForegnTours/Turkey/Turkey9.jpg";
+import mediaTurkeyImg10 from "../../../assets/MediaForegnTours/Turkey/Turkey10.jpg";
+import mediaJapanImg1 from "../../../assets/MediaForegnTours/Japan/Japan1.jpg";
+import mediaJapanImg2 from "../../../assets/MediaForegnTours/Japan/Japan2.jpg";
+import mediaJapanImg3 from "../../../assets/MediaForegnTours/Japan/Japan3.jpg";
+import mediaJapanImg4 from "../../../assets/MediaForegnTours/Japan/Japan4.jpg";
+import mediaJapanImg5 from "../../../assets/MediaForegnTours/Japan/Japan5.jpg";
+import mediaJapanImg6 from "../../../assets/MediaForegnTours/Japan/Japan6.jpg";
+import mediaJapanImg7 from "../../../assets/MediaForegnTours/Japan/Japan7.jpg";
+import mediaJapanImg8 from "../../../assets/MediaForegnTours/Japan/Japan8.jpg";
+import mediaJapanImg9 from "../../../assets/MediaForegnTours/Japan/Japan9.jpg";
+import mediaJapanImg10 from "../../../assets/MediaForegnTours/Japan/Japan10.jpg";
+import mediaEgyptImg1 from "../../../assets/MediaForegnTours/Egypt/Egypt1.jpg";
+import mediaEgyptImg2 from "../../../assets/MediaForegnTours/Egypt/Egypt2.jpg";
+import mediaEgyptImg3 from "../../../assets/MediaForegnTours/Egypt/Egypt3.jpg";
+import mediaEgyptImg4 from "../../../assets/MediaForegnTours/Egypt/Egypt4.jpg";
+import mediaEgyptImg5 from "../../../assets/MediaForegnTours/Egypt/Egypt5.jpg";
+import mediaEgyptImg6 from "../../../assets/MediaForegnTours/Egypt/Egypt6.jpg";
+import mediaEgyptImg7 from "../../../assets/MediaForegnTours/Egypt/Egypt7.jpg";
+import mediaEgyptImg8 from "../../../assets/MediaForegnTours/Egypt/Egypt8.jpg";
+import mediaEgyptImg9 from "../../../assets/MediaForegnTours/Egypt/Egypt9.jpg";
+import mediaEgyptImg10 from "../../../assets/MediaForegnTours/Egypt/Egypt10.jpg";
+import mediaEgyptImg11 from "../../../assets/MediaForegnTours/Egypt/Egypt11.jpg";
+import mediaFranceImg1 from "../../../assets/MediaForegnTours/France/France1.jpg";
+import mediaFranceImg2 from "../../../assets/MediaForegnTours/France/France2.jpg";
+import mediaFranceImg3 from "../../../assets/MediaForegnTours/France/France3.jpg";
+import mediaFranceImg4 from "../../../assets/MediaForegnTours/France/France4.jpg";
+import mediaFranceImg5 from "../../../assets/MediaForegnTours/France/France5.jpg";
+import mediaFranceImg6 from "../../../assets/MediaForegnTours/France/France6.jpg";
+import mediaFranceImg7 from "../../../assets/MediaForegnTours/France/France7.jpg";
+import mediaFranceImg8 from "../../../assets/MediaForegnTours/France/France8.jpg";
+import mediaGreeceImg1 from "../../../assets/MediaForegnTours/Greece/Greece1.jpg";
+import mediaGreeceImg2 from "../../../assets/MediaForegnTours/Greece/Greece2.jpg";
+import mediaGreeceImg3 from "../../../assets/MediaForegnTours/Greece/Greece3.jpg";
+import mediaGreeceImg4 from "../../../assets/MediaForegnTours/Greece/Greece4.jpg";
+import mediaGreeceImg5 from "../../../assets/MediaForegnTours/Greece/Greece5.jpg";
+import mediaGreeceImg6 from "../../../assets/MediaForegnTours/Greece/Greece6.jpg";
+import mediaGreeceImg7 from "../../../assets/MediaForegnTours/Greece/Greece7.jpg";
+import mediaGreeceImg8 from "../../../assets/MediaForegnTours/Greece/Greece8.jpg";
+import mediaGreeceImg9 from "../../../assets/MediaForegnTours/Greece/Greece9.jpg";
+import mediaGreeceImg10 from "../../../assets/MediaForegnTours/Greece/Greece10.jpg";
+import mediaGreeceImg11 from "../../../assets/MediaForegnTours/Greece/Greece11.jpg";
+import mediaIndiaImg1 from "../../../assets/MediaForegnTours/India/India1.jpg";
+import mediaIndiaImg2 from "../../../assets/MediaForegnTours/India/India2.jpg";
+import mediaIndiaImg3 from "../../../assets/MediaForegnTours/India/India3.jpg";
+import mediaIndiaImg4 from "../../../assets/MediaForegnTours/India/India4.jpg";
+import mediaIndiaImg5 from "../../../assets/MediaForegnTours/India/India5.jpg";
+import mediaIndiaImg6 from "../../../assets/MediaForegnTours/India/India6.jpg";
+import mediaIndiaImg7 from "../../../assets/MediaForegnTours/India/India7.jpg";
+import mediaIndiaImg8 from "../../../assets/MediaForegnTours/India/India8.jpg";
+import mediaIndiaImg9 from "../../../assets/MediaForegnTours/India/India9.jpg";
+import mediaIndiaImg10 from "../../../assets/MediaForegnTours/India/India10.jpg";
+import mediaIndiaImg11 from "../../../assets/MediaForegnTours/India/India11.jpg";
+import mediaIndiaImg12 from "../../../assets/MediaForegnTours/India/India12.jpg";
+import mediaSingaporeImg1 from "../../../assets/MediaForegnTours/Singapore/Singapore1.jpg";
+import mediaSingaporeImg2 from "../../../assets/MediaForegnTours/Singapore/Singapore2.jpg";
+import mediaSingaporeImg3 from "../../../assets/MediaForegnTours/Singapore/Singapore3.jpg";
+import mediaSingaporeImg4 from "../../../assets/MediaForegnTours/Singapore/Singapore4.jpg";
+import mediaSingaporeImg5 from "../../../assets/MediaForegnTours/Singapore/Singapore5.jpg";
+import mediaSingaporeImg6 from "../../../assets/MediaForegnTours/Singapore/Singapore6.jpg";
+import mediaSingaporeImg7 from "../../../assets/MediaForegnTours/Singapore/Singapore7.jpg";
+import mediaSingaporeImg8 from "../../../assets/MediaForegnTours/Singapore/Singapore8.jpg";
+import mediaSingaporeImg9 from "../../../assets/MediaForegnTours/Singapore/Singapore9.jpg";
+import mediaSpainImg1 from "../../../assets/MediaForegnTours/Spain/Spain1.jpg";
+import mediaSpainImg2 from "../../../assets/MediaForegnTours/Spain/Spain2.jpg";
+import mediaSpainImg3 from "../../../assets/MediaForegnTours/Spain/Spain3.jpg";
+import mediaSpainImg4 from "../../../assets/MediaForegnTours/Spain/Spain4.jpg";
+import mediaSpainImg5 from "../../../assets/MediaForegnTours/Spain/Spain5.jpg";
+import mediaSpainImg6 from "../../../assets/MediaForegnTours/Spain/Spain6.jpg";
+import mediaSpainImg7 from "../../../assets/MediaForegnTours/Spain/Spain7.jpg";
+import mediaSpainImg8 from "../../../assets/MediaForegnTours/Spain/Spain8.jpg";
+import mediaSpainImg9 from "../../../assets/MediaForegnTours/Spain/Spain9.jpg";
+import mediaThailandImg1 from "../../../assets/MediaForegnTours/Thailand/Thailand1.jpg";
+import mediaThailandImg2 from "../../../assets/MediaForegnTours/Thailand/Thailand2.jpg";
+import mediaThailandImg3 from "../../../assets/MediaForegnTours/Thailand/Thailand3.jpg";
+import mediaThailandImg4 from "../../../assets/MediaForegnTours/Thailand/Thailand4.jpg";
+import mediaThailandImg5 from "../../../assets/MediaForegnTours/Thailand/Thailand5.jpg";
+import mediaThailandImg6 from "../../../assets/MediaForegnTours/Thailand/Thailand6.jpg";
+import mediaThailandImg7 from "../../../assets/MediaForegnTours/Thailand/Thailand7.jpg";
+import mediaThailandImg8 from "../../../assets/MediaForegnTours/Thailand/Thailand8.jpg";
+
 
 export const cardsData = [
   {
@@ -1483,5 +1633,145 @@ export const cardsData = [
     views: "6.3k views",
     time: "1 hour ago",
     className: "car rent moto",
+  },
+
+  {
+    id: "121",
+    img: [mediaBakuImg1, mediaBakuImg2, mediaBakuImg3, mediaBakuImg4, mediaBakuImg5, mediaBakuImg6, mediaBakuImg7],
+    label: "Baku Oldtown tour",
+    title: "Historic, vibrant, charming, cultural, picturesque.",
+  },
+
+  {
+    id: "122",
+    img: [mediaNakhchivanImg1, mediaNakhchivanImg2, mediaNakhchivanImg3, mediaNakhchivanImg4, mediaNakhchivanImg5],
+    label: "Nakhchivan tour",
+    title: "Historic, scenic, cultural, tranquil, unique.",
+  },
+
+  {
+    id: "123",
+    img: [mediaIsmayilliImg1, mediaIsmayilliImg2, mediaIsmayilliImg3],
+    label: "Ismayilli tour",
+    title: "Scenic, cultural, mountainous, picturesque, refreshing.",
+  },
+
+  {
+    id: "124",
+    img: [mediaKhinaliqImg1, mediaKhinaliqImg2, mediaKhinaliqImg3, mediaKhinaliqImg4],
+    label: "Khinaliq tour",
+    title: "Scenic, Cultural, Mountainous, Authentic, Adventure",
+  },
+
+  {
+    id: "125",
+    img: [mediaGabalaImg1, mediaGabalaImg2, mediaGabalaImg3, mediaGabalaImg4, mediaGabalaImg5, mediaGabalaImg6, mediaGabalaImg7, mediaGabalaImg8],
+    label: "Gabala tour",
+    title: "Scenic, historic, lush, cultural, relaxing.",
+  },
+
+  {
+    id: "126",
+    img: [mediaQubaImg1, mediaQubaImg2, mediaQubaImg3],
+    label: "Quba tour",
+    title: "Scenic, historic, vibrant, cultural, peaceful, memorable.",
+  },
+
+  {
+    id: "127",
+    img: [mediaLahicImg1, mediaLahicImg2, mediaLahicImg3, mediaLahicImg4],
+    label: "Lahic tour",
+    title: "Scenic mountain village, handcrafted silver jewelry.",
+  },
+
+  {
+    id: "128",
+    img: [mediaShekiImg1, mediaShekiImg2, mediaShekiImg3],
+    label: "Sheki tour",
+    title: "Scenic, historic, vibrant, cultural, picturesque, memorable.",
+  },
+
+  {
+    id: "129",
+    img: [mediaShushaImg1, mediaShushaImg2, mediaShushaImg3, mediaShushaImg4, mediaShushaImg5],
+    label: "Shusha tour",
+    title: "Historic fortress city, breathtaking views, rich cultural heritage.",
+  },
+
+  {
+    id: "130",
+    img: [mediaZagatalaImg1, mediaZagatalaImg2, mediaZagatalaImg3, mediaZagatalaImg4, mediaZagatalaImg5],
+    label: "Zagatala tour",
+    title: "Scenic mountains, rich culture, lush landscapes.",
+  },
+
+  {
+    id: "131",
+    img: [mediaItalyImg1, mediaItalyImg2, mediaItalyImg3, mediaItalyImg4, mediaItalyImg5, mediaItalyImg6, mediaItalyImg7, mediaItalyImg8, mediaItalyImg9, mediaItalyImg10, mediaItalyImg11, mediaItalyImg12, mediaItalyImg13, mediaItalyImg14],
+    label: "Italy tour",
+    title: "",
+  },
+
+  {
+    id: "132",
+    img: [mediaTurkeyImg1, mediaTurkeyImg2, mediaTurkeyImg3, mediaTurkeyImg4, mediaTurkeyImg5, mediaTurkeyImg6, mediaTurkeyImg7, mediaTurkeyImg8, mediaTurkeyImg9, mediaTurkeyImg10],
+    label: "Turkey tour",
+    title: "",
+  },
+
+  {
+    id: "133",
+    img: [mediaJapanImg1, mediaJapanImg2, mediaJapanImg3, mediaJapanImg4, mediaJapanImg5, mediaJapanImg6, mediaJapanImg7, mediaJapanImg8, mediaJapanImg9, mediaJapanImg10],
+    label: "Japan tour",
+    title: "",
+  },
+
+  {
+    id: "134",
+    img: [mediaEgyptImg1, mediaEgyptImg2, mediaEgyptImg3, mediaEgyptImg4, mediaEgyptImg5, mediaEgyptImg6, mediaEgyptImg7, mediaEgyptImg8, mediaEgyptImg9, mediaEgyptImg10, mediaEgyptImg11],
+    label: "Egypt tour",
+    title: "",
+  },
+
+  {
+    id: "135",
+    img: [mediaFranceImg1, mediaFranceImg2, mediaFranceImg3, mediaFranceImg4, mediaFranceImg5, mediaFranceImg6, mediaFranceImg7, mediaFranceImg8],
+    label: "France tour",
+    title: "",
+  },
+
+  {
+    id: "136",
+    img: [mediaGreeceImg1, mediaGreeceImg2, mediaGreeceImg3, mediaGreeceImg4, mediaGreeceImg5, mediaGreeceImg6, mediaGreeceImg7, mediaGreeceImg8, mediaGreeceImg9, mediaGreeceImg10, mediaGreeceImg11],
+    label: "Greece tour",
+    title: "",
+  },
+
+  {
+    id: "137",
+    img: [mediaIndiaImg1, mediaIndiaImg2, mediaIndiaImg3, mediaIndiaImg4, mediaIndiaImg5, mediaIndiaImg6, mediaIndiaImg7, mediaIndiaImg8, mediaIndiaImg9, mediaIndiaImg10, mediaIndiaImg11, mediaIndiaImg12],
+    label: "India tour",
+    title: "",
+  },
+
+  {
+    id: "138",
+    img: [mediaSingaporeImg1, mediaSingaporeImg2, mediaSingaporeImg3, mediaSingaporeImg4, mediaSingaporeImg5, mediaSingaporeImg6, mediaSingaporeImg7, mediaSingaporeImg8, mediaSingaporeImg9],
+    label: "Singapore tour",
+    title: "",
+  },
+
+  {
+    id: "139",
+    img: [mediaSpainImg1, mediaSpainImg2, mediaSpainImg3, mediaSpainImg4, mediaSpainImg5, mediaSpainImg6, mediaSpainImg7, mediaSpainImg8, mediaSpainImg9],
+    label: "Spain tour",
+    title: "",
+  },
+
+  {
+    id: "140",
+    img: [mediaThailandImg1, mediaThailandImg2, mediaThailandImg3, mediaThailandImg4, mediaThailandImg5, mediaThailandImg6, mediaThailandImg7, mediaThailandImg8],
+    label: "Thailand tour",
+    title: "",
   },
 ];

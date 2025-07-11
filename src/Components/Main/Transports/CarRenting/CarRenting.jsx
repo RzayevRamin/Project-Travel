@@ -102,6 +102,7 @@ function CarRenting() {
           {selectedScrolledCard.map((card) => {
             return (
           <Card
+            key={card.id}
             variant="outlined"
             orientation="horizontal"
             sx={{

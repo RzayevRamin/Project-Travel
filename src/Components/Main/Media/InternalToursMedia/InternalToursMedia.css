@@ -1,0 +1,30 @@
+.doubleSlider {
+  width: 100rem;
+  margin: auto;
+  text-align: center;
+}
+
+
+.internalToursMediaCardsBox{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mediaCardContextContainer {
+    background-color: rgba(253, 251, 248, 0.6);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+.mediaCardContextTextBox {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.topSlider .mediaCardContextContainer {
+  width: 32rem;
+}
