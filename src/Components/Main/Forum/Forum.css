@@ -1,0 +1,107 @@
+.searchRightSide {
+  display: flex;
+  align-items: center;
+  background-color: #0123ff;
+  width: 21vw;
+  border-radius: 10rem;
+}
+
+.searchRightSide p {
+  color: #ffffff;
+}
+
+.forumSearchBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+  width: 90vw;
+  height: 100%;
+  background-color: #0123ff;
+  border-radius: 10rem;
+}
+
+.forumContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.categorySelect {
+  display: flex;
+  justify-content: right;
+  width: 21vw;
+}
+
+.searchInput {
+  width: 48vw;
+}
+
+.css-me27eb-JoySelect-button {
+  opacity: 1 !important;
+  color: #ffffff !important;
+  font-size: 32px !important;
+}
+
+.css-1wmuzea-JoySelect-listbox {
+  background-color: #0123ff !important;
+  color: #ffffff !important;
+}
+
+.forumCardsBox {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 90vw;
+  margin-bottom: 1rem;
+  gap: 2rem;
+}
+
+.forumHeadingBox h1 {
+  font-size: 54px;
+}
+
+.forumCardAuthor {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
+  align-items: center;
+  width: 100%;
+}
+
+.topicDate {
+  font-size: 24px;
+}
+
+.topicAuthor {
+  font-size: 24px;
+  line-height: 40px;
+  margin: 0;
+}
+
+.topicAuthorBox {
+  position: relative;
+  display: inline-block;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.topicAuthorBox::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  transform: skew(-20deg);
+  z-index: 0;
+  pointer-events: none;
+}

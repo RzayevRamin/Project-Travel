@@ -1,5 +1,5 @@
-import React, { useRef, useState, useEffect } from 'react'
-import "./ForeignToursMedia.css"
+import React, { useRef, useState, useEffect } from "react";
+import "./ForeignToursMedia.css";
 import Slider from "react-slick";
 import { cardsData } from "../../Cards/cardsData";
 import IconButton from "@mui/joy/IconButton";
@@ -13,63 +13,59 @@ import Typography from "@mui/joy/Typography";
 import Link from "@mui/joy/Link";
 
 function ForeignToursMedia() {
+  const topSlider = useRef(null);
+  const bottomSlider = useRef(null);
 
-    const topSlider = useRef(null);
-      const bottomSlider = useRef(null);
-    
-      const [hoveredIndex, setHoveredIndex] = useState(null);
-      const [imageIndex, setImageIndex] = useState(0);
-    
-      const filteredCards = cardsData.filter((card) => {
-        const id = parseInt(card.id, 10);
-        return id >= 131 && id <= 140;
-      });
-    
-      useEffect(() => {
-        if (
-          hoveredIndex !== null &&
-          filteredCards[hoveredIndex]?.img?.length > 1
-        ) {
-          const interval = setInterval(() => {
-            setImageIndex(
-              (prev) => (prev + 1) % filteredCards[hoveredIndex].img.length
-            );
-          }, 600);
-          return () => clearInterval(interval);
-        }
-      }, [hoveredIndex, filteredCards]);
-    
-      const handleNext = () => {
-        topSlider.current.slickNext();
-        bottomSlider.current.slickNext();
-      };
-    
-      const handlePrev = () => {
-        topSlider.current.slickPrev();
-        bottomSlider.current.slickPrev();
-      };
-    
-      const topSettings = {
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        infinite: true,
-        arrows: false,
-        speed: 500,
-      };
-    
-      const bottomSettings = {
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        infinite: true,
-        arrows: false,
-        speed: 500,
-        initialSlide: 3,
-      };
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+  const [imageIndex, setImageIndex] = useState(0);
+
+  const filteredCards = cardsData.filter((card) => {
+    const id = parseInt(card.id, 10);
+    return id >= 131 && id <= 140;
+  });
+
+  useEffect(() => {
+    if (hoveredIndex !== null && filteredCards[hoveredIndex]?.img?.length > 1) {
+      const interval = setInterval(() => {
+        setImageIndex(
+          (prev) => (prev + 1) % filteredCards[hoveredIndex].img.length
+        );
+      }, 600);
+      return () => clearInterval(interval);
+    }
+  }, [hoveredIndex, filteredCards]);
+
+  const handleNext = () => {
+    topSlider.current.slickNext();
+    bottomSlider.current.slickNext();
+  };
+
+  const handlePrev = () => {
+    topSlider.current.slickPrev();
+    bottomSlider.current.slickPrev();
+  };
+
+  const topSettings = {
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    infinite: true,
+    arrows: false,
+    speed: 500,
+  };
+
+  const bottomSettings = {
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    infinite: true,
+    arrows: false,
+    speed: 500,
+    initialSlide: 3,
+  };
 
   return (
     <div className="foreignToursMediaContainer">
       <div className="foreignToursMediaHeadingBox">
-        <h1>Media from internal tours</h1>
+        <h1>Media from foreign tours</h1>
       </div>
 
       <div className="foreignToursMediaCardsBox">
@@ -102,11 +98,25 @@ function ForeignToursMedia() {
                   }}
                   sx={{
                     height: "37rem",
+                    width: "34rem",
                     margin: "0 0.5rem",
                     padding: 0,
                     position: "relative",
                     display: "flex",
                     alignItems: "center",
+                    flexShrink: 0,
+                    transform:
+                      hoveredIndex === null
+                        ? "scale(1)"
+                        : hoveredIndex === index
+                        ? "scale(1.08)"
+                        : "scale(0.95)",
+                    transition: "transform 0.3s ease",
+                    zIndex: hoveredIndex === index ? 5 : 1,
+                    clipPath:
+                      hoveredIndex === index
+                        ? "inset(-10% -10% -10% -10%)"
+                        : "none",
                   }}
                 >
                   <CardCover>
@@ -132,8 +142,7 @@ function ForeignToursMedia() {
                       alignItems: "center",
                       position: "relative",
                       height: "36rem",
-                      width: "34rem",
-                      left: "0.5rem",
+                      width: "100%",
                     }}
                   >
                     <span className="mediaCardContextContainer">
@@ -188,6 +197,17 @@ function ForeignToursMedia() {
                     margin: "0 0.5rem",
                     padding: 0,
                     position: "relative",
+                    display: "flex",
+                    alignItems: "center",
+                    flexShrink: 0,
+                    transform:
+                      hoveredIndex === null
+                        ? "scale(1)"
+                        : hoveredIndex === index
+                        ? "scale(1.08)"
+                        : "scale(0.92)",
+                    transition: "transform 0.3s ease",
+                    zIndex: hoveredIndex === index ? 2 : 1,
                   }}
                 >
                   <CardCover>
@@ -210,10 +230,10 @@ function ForeignToursMedia() {
                   <CardContent
                     sx={{
                       justifyContent: "flex-end",
+                      alignItems: "center",
                       position: "relative",
                       height: "24rem",
-                      width: "25rem",
-                      left: "0.5rem",
+                      width: "100%",
                     }}
                   >
                     <span className="mediaCardContextContainer">
@@ -266,7 +286,7 @@ function ForeignToursMedia() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default ForeignToursMedia
+export default ForeignToursMedia;

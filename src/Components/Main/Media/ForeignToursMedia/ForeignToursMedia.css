@@ -25,6 +25,6 @@
   cursor: pointer;
 }
 
-.topSlider .mediaCardContextContainer {
-  width: 32rem;
+.mediaCardContextContainer {
+    width: 24rem;
 }
