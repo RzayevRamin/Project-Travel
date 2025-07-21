@@ -33,7 +33,7 @@ function FooterContact() {
                   strokeLinejoin="round"
                 />
               </svg>
-              <p>050 681 55 51</p>
+              <p>+994 77 440 48 61</p>
             </a>
           </li>
           <li>
@@ -59,7 +59,7 @@ function FooterContact() {
                   fill="white"
                 />
               </svg>
-              <p>077 440 48 61</p>
+              <p>+994 77 440 48 61</p>
             </a>
           </li>
           <li>
@@ -80,7 +80,7 @@ function FooterContact() {
             </a>
           </li>
           <li>
-            <a href="https://maps.app.goo.gl/USHYxtFgzHTDShYs7">
+            <a href="https://maps.app.goo.gl/USHYxtFgzHTDShYs7" target="blank">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="18"

@@ -15,7 +15,7 @@ import { forumsData } from "./forumsData.jsx";
 import Logo from "../../Header/Logo/Logo.jsx";
 import Button from '@mui/joy/Button';
 
-function Forum() {
+function Forum({ darkMode }) {
   const [value, setValue] = React.useState("");
   const action = React.useRef(null);
 
@@ -110,10 +110,10 @@ function Forum() {
       </div>
       <div className="forumCardsBox">
         {filteredForumCards.map((card) => (
-        <Card sx={{width: "42.2vw", minWidth: "300px", backgroundColor: "transparent", border: "none", "&:hover": {backgroundColor: "#a3cbffff", cursor: "pointer"}}} key={card.id}>
+        <Card sx={{width: "42.2vw", minWidth: "300px", color: darkMode ? "#f5f5f5" : "#000000", backgroundColor: "transparent", border: "none", "&:hover": {backgroundColor: "#a3cbffff", cursor: "pointer"}}} key={card.id}>
           <CardContent>
-            <Typography level="title-md" sx={{fontSize: "30px", fontWeight: "bold",}}>{card.label}</Typography>
-            <Typography sx={{textAlign: "justify", width: "100%", fontSize: "22px"}}>{card.title.length > 190 ? card.title.slice(0, 190) + "..." : card.title}</Typography>
+            <Typography level="title-md" sx={{fontSize: "30px", fontWeight: "bold", color: darkMode ? "#f5f5f5" : "#000000",}}>{card.label}</Typography>
+            <Typography sx={{textAlign: "justify", width: "100%", fontSize: "22px", color: darkMode ? "#f5f5f5" : "#000000",}}>{card.title.length > 190 ? card.title.slice(0, 190) + "..." : card.title}</Typography>
           </CardContent>
           <CardContent>
             <div className="forumCardFooter">

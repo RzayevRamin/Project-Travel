@@ -17,7 +17,7 @@ function Nav() {
         <Button onClick={() => navigate("/transport")}>Transport</Button>
         <Button onClick={() => navigate("/media")}>Media</Button>
         <Button onClick={() => navigate("/forum")}>Forum</Button>
-        <Button>Contact</Button>
+        <Button onClick={() => navigate("/contact")}>Contact</Button>
       </ToggleButtonGroup>
     </div>
   )

@@ -1,0 +1,281 @@
+.contactList li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  margin-left: 0;
+}
+
+.contactList li svg {
+  width: 24px;
+  height: 24px;
+  margin-right: 2rem;
+}
+
+.contactList li a {
+  font-size: 20px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.contactContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 4rem;
+}
+
+.contactList {
+  list-style: none;
+  padding: 0;
+}
+
+.contactsAndLocation {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.contacts h2 {
+  font-size: 32px;
+  line-height: 40px;
+  margin-bottom: 2rem;
+}
+
+.aboutCompany h2 {
+  font-size: 32px;
+  line-height: 40px;
+  margin-bottom: 1rem;
+  margin-top: 3rem;
+}
+
+.aboutCompany p {
+  font-size: 20px;
+  line-height: 28px;
+  margin-bottom: 2rem;
+  text-align: justify;
+  text-indent: 3rem;
+}
+
+.aboutTeam p {
+  font-size: 20px;
+  line-height: 28px;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  text-align: justify;
+  text-indent: 3rem;
+}
+
+.aboutTeam h3 {
+  font-size: 24px;
+  line-height: 32px;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.foundersPhoto {
+  width: 28.6vw;
+  height: 55vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.foundersPhoto img {
+  width: 100%;
+  height: 55vh;
+  position: absolute;
+  bottom: 0;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  border-bottom-left-radius: 3rem;
+}
+
+.foundersPhoto img:hover {
+  position: fixed;
+  width: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.5);
+  z-index: 9;
+  border-radius: 0.5rem;
+}
+
+.foundersInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(162, 162, 199);
+  border-bottom-left-radius: 3rem;
+  border-top-right-radius: 3rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.foundersInfo p {
+  font-size: 20px;
+  text-align: center;
+  text-indent: 0;
+  margin: 0;
+  padding: 0 0.5rem 0.5rem 0.5rem;
+}
+
+.foundersInfo h4 {
+  font-size: 24px;
+  text-align: center;
+  margin: 0;
+  padding: 0.5rem 0.5rem 0 0.5rem;
+}
+
+.teamPhotosBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.managerInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(162, 162, 199);
+  border-bottom-left-radius: 3rem;
+  border-top-right-radius: 3rem;
+  width: 100%;
+}
+
+.managerInfo p {
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+  text-indent: 0;
+  margin: 0;
+  padding: 0 0.5rem 0.5rem 0.5rem;
+}
+
+.managerInfo h4 {
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  margin: 0;
+  padding: 0.5rem 0.5rem 0 0.5rem;
+}
+
+.managerPhoto {
+  width: 21vw;
+  height: 55vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.managerPhoto img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+.managerPhoto img:hover {
+  position: fixed;
+  width: auto;
+  height: 55vh;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.5);
+  z-index: 9;
+}
+
+.lawyerAndDogPhoto {
+  width: 13vw;
+  height: 55vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.lawyerAndDogPhoto img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+.lawyerAndDogPhoto img:hover {
+  position: fixed;
+  width: auto;
+  height: 55vh;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.5);
+  z-index: 9;
+}
+
+.lawyerAndDogPhoto h4 {
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  margin: 0;
+  background-color: rgb(162, 162, 199);
+  padding: 0.5rem;
+  border-radius: 3rem;
+  font-weight: lighter;
+}
+
+.lawyerAndDogPhoto h4 b {
+  font-weight: bold;
+}
+
+.transportManagerPhoto {
+  width: 21vw;
+  height: 55vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.transportManagerPhoto img {
+  width: 100%;
+  height: 26rem;
+  border-radius: 0.5rem;
+}
+
+.transportManagerPhoto img:hover {
+  position: fixed;
+  width: auto;
+  height: 55vh;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.5);
+  z-index: 9;
+}
+
+.transportManagerInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(162, 162, 199);
+  border-bottom-left-radius: 3rem;
+  border-top-right-radius: 3rem;
+  width: 100%;
+}
+
+.transportManagerInfo p {
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+  text-indent: 0;
+  margin: 0;
+  padding: 0 0.5rem 0.5rem 0.5rem;
+}
+.transportManagerInfo h4 {
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  margin: 0;
+  padding: 0.5rem 0.5rem 0 0.5rem;
+}

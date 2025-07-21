@@ -10,6 +10,7 @@ import Hotels from "./Components/Main/Hotels/Hotels";
 import Transports from "./Components/Main/Transports/Transports";
 import Media from "./Components/Main/Media/Media";
 import Forum from "./Components/Main/Forum/Forum";
+import Contact from "./Components/Main/Contact/Contact";
 
 function App() {  
   const [darkMode, setDarkMode] = useState(() => {
@@ -47,7 +48,8 @@ function App() {
           <Route path="hotels" element={<Hotels />} />
           <Route path="transport" element={<Transports />} />
           <Route path="media" element={<Media />} />
-          <Route path="forum" element={<Forum />} />
+          <Route path="forum" element={<Forum darkMode={darkMode} />} />
+          <Route path="contact" element={<Contact />} />
         </Route>
       </Routes>
     </AuthProvider>
