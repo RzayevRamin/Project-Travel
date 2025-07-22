@@ -11,6 +11,7 @@ import Transports from "./Components/Main/Transports/Transports";
 import Media from "./Components/Main/Media/Media";
 import Forum from "./Components/Main/Forum/Forum";
 import Contact from "./Components/Main/Contact/Contact";
+import UserPanel from "./Components/Main/UserPanel/UserPanel";
 
 function App() {  
   const [darkMode, setDarkMode] = useState(() => {
@@ -37,6 +38,9 @@ function App() {
     <AuthProvider>
       <Routes>
         <Route path="/login/*" element={<Login />} />
+        <Route
+          path="/userpanel/*"
+          element={<UserPanel darkMode={darkMode} setDarkMode={setDarkMode} />} />
 
         <Route
           path="/"

@@ -44,7 +44,7 @@ function ProfileDropdown({ onClose }) {
       <button
         onClick={() => {
           onClose();
-          navigate("/profile");
+          navigate("/userPanel");
         }}
         style={{
           width: "100%",
@@ -55,7 +55,75 @@ function ProfileDropdown({ onClose }) {
           cursor: "pointer",
         }}
       >
-        Profile
+        User Panel
+      </button>
+      <hr style={{ margin: 0 }} />
+      <button
+        onClick={() => {
+          onClose();
+          navigate("/notification");
+        }}
+        style={{
+          width: "100%",
+          padding: "10px",
+          border: "none",
+          background: "none",
+          textAlign: "left",
+          cursor: "pointer",
+        }}
+      >
+        Notifications
+      </button>
+      <hr style={{ margin: 0 }} />
+      <button
+        onClick={() => {
+          onClose();
+          navigate("/message");
+        }}
+        style={{
+          width: "100%",
+          padding: "10px",
+          border: "none",
+          background: "none",
+          textAlign: "left",
+          cursor: "pointer",
+        }}
+      >
+        Messages
+      </button>
+      <hr style={{ margin: 0 }} />
+      <button
+        onClick={() => {
+          onClose();
+          navigate("/favorites");
+        }}
+        style={{
+          width: "100%",
+          padding: "10px",
+          border: "none",
+          background: "none",
+          textAlign: "left",
+          cursor: "pointer",
+        }}
+      >
+        Favorites
+      </button>
+      <hr style={{ margin: 0 }} />
+      <button
+        onClick={() => {
+          onClose();
+          navigate("/shopping");
+        }}
+        style={{
+          width: "100%",
+          padding: "10px",
+          border: "none",
+          background: "none",
+          textAlign: "left",
+          cursor: "pointer",
+        }}
+      >
+        Shopping
       </button>
       <hr style={{ margin: 0 }} />
       <button

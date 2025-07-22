@@ -1,0 +1,76 @@
+.userHeaderContent {
+      position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+}
+
+.userHeader {
+  display: flex;
+  align-items: center; 
+  justify-content: space-around;
+  width: 90vw;
+  height: 58px;
+  background-color: #0123FF;
+  margin-top: 23px;
+  border-radius: 26px;
+}
+
+body.dark .userHeader {
+  background-color: #0123FF;
+}
+
+.userLogo {
+  margin: 0;
+  padding: 0;
+}
+
+.userHeaderRightSection {
+  display: flex;
+  align-items: center;
+}
+
+.userNavContainer {
+  display: flex;
+  align-items: center;
+}
+
+.userLogo .logoContainer .logoText h1 {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.userLogo .logoContainer .logoText h3 {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.userLogo .logoContainer .logoBox svg {
+  filter: invert(1) contrast(2);
+}
+
+.userNavContainer .nav #nav-buttons button {
+  color: #fff;
+  text-decoration: none;
+}
+
+.userNavContainer .nav #nav-buttons button:hover {
+  color: #000;
+}
+
+.userHeaderRightSection .searchContainer .searchButton svg {
+  color: #fff !important;
+}
+
+.userHeaderRightSection .valutaSelect svg {
+  color: #fff !important;
+}
+
+.userHeaderRightSection .valutaSelect .MuiSelect-button {
+  color: #fff !important;
+}

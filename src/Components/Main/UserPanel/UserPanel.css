@@ -1,0 +1,62 @@
+.userPanelLogout {
+    color: #F60909;
+}
+
+.userPanelInfoBackground img {
+    width: 54vw;
+    height: auto;
+}
+
+.userPanelContentBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.userPanelBox {
+    padding: 4rem 5rem 4rem 10rem;
+}
+
+.userPanelAvatar img {
+    width: 10vw;
+    height: auto;
+    border-radius: 50%;
+    border: 0.6rem solid #fff;
+}
+
+.userPanelInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 52vw;
+    position: absolute;
+    bottom: -9rem;
+    left: 2vw;
+}
+
+.userPanelAvatarAndInfo {
+    display: flex;
+    align-items: center;
+}
+
+.userPanelUserInfo {
+    margin-left: 2rem;
+}
+
+.userPanelInfoBox {
+    position: relative;
+    margin-bottom: 10rem;
+}
+
+.userPanelStatisticsBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 54vw;
+}
+
+.userPanelStatisticsContainer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}

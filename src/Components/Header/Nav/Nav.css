@@ -9,6 +9,10 @@ body.dark #nav-buttons button svg {
   color: #fff;
 }
 
+body.dark #nav-buttons button:hover {
+  color: #000;
+}
+
 .nav {
 
   display: flex;
