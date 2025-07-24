@@ -1,0 +1,9 @@
+.profileInfoContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.profileContainer {
+    padding: 4rem 5rem 4rem 10rem;
+}

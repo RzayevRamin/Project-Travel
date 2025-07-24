@@ -44,7 +44,7 @@ function ProfileDropdown({ onClose }) {
       <button
         onClick={() => {
           onClose();
-          navigate("/userPanel");
+          navigate("/userpanel");
         }}
         style={{
           width: "100%",

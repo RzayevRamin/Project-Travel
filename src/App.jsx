@@ -12,8 +12,10 @@ import Media from "./Components/Main/Media/Media";
 import Forum from "./Components/Main/Forum/Forum";
 import Contact from "./Components/Main/Contact/Contact";
 import UserPanel from "./Components/Main/UserPanel/UserPanel";
+import Profile from "./Components/Main/UserPanel/Profile/Profile";
+import SecondLayout from "./Components/Main/SecondLayout";
 
-function App() {  
+function App() {
   const [darkMode, setDarkMode] = useState(() => {
     const saved = localStorage.getItem("darkMode");
     return saved === "true";
@@ -39,8 +41,14 @@ function App() {
       <Routes>
         <Route path="/login/*" element={<Login />} />
         <Route
-          path="/userpanel/*"
-          element={<UserPanel darkMode={darkMode} setDarkMode={setDarkMode} />} />
+          path="/userpanel/"
+          element={
+            <SecondLayout darkMode={darkMode} setDarkMode={setDarkMode} />
+          }
+        >
+          <Route index element={<UserPanel />} />
+          <Route path="profile" element={<Profile />} />
+        </Route>
 
         <Route
           path="/"

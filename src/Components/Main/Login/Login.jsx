@@ -216,7 +216,7 @@ function Login() {
       const data = await response.json();
       if (data.success) {
         alert("Code verified successfully!");
-        navigate("/login/new-password"); // yeni şifrə yaratmaq üçün
+        navigate("/login/new-password");
       } else {
         alert("Invalid verification code.");
       }
@@ -227,14 +227,14 @@ function Login() {
 
   const handleCreateNewPassword = async () => {
     try {
-      // Backend endpoint-də müvafiq parol yeniləmə route olmalıdır, məsələn:
+     
       const response = await fetch("https://backtest-2-pm0t.onrender.com/reset-password", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           emailOrPhone: signFormik.values.email,
           password: signFormik.values.password,
-          // əgər lazım olsa, verification code əlavə etmək
+
         }),
       });
       const data = await response.json();
