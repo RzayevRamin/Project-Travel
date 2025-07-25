@@ -256,15 +256,6 @@ function LocalTours({ filter, source }) {
                     >
                       <IconButton>
                         {hoveredRate === card.id ? (
-                          <div
-                            className="hoverRatingWrapper"
-                            style={{
-                              position: "absolute",
-                              transform: "translateX(-50%)",
-                              zIndex: 10,
-                              marginBottom: "8px",
-                            }}
-                          >
                             <HoverRating
                               value={rates[card.id]}
                               onChange={(value) => {
@@ -274,7 +265,6 @@ function LocalTours({ filter, source }) {
                                 }));
                               }}
                             />
-                          </div>
                         ) : (
                           <>
                             <span className="ratingValue">

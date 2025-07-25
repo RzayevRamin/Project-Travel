@@ -14,6 +14,7 @@ import Contact from "./Components/Main/Contact/Contact";
 import UserPanel from "./Components/Main/UserPanel/UserPanel";
 import Profile from "./Components/Main/UserPanel/Profile/Profile";
 import SecondLayout from "./Components/Main/SecondLayout";
+import Favorites from "./Components/Main/UserPanel/Favorites/Favorites";
 
 function App() {
   const [darkMode, setDarkMode] = useState(() => {
@@ -48,6 +49,7 @@ function App() {
         >
           <Route index element={<UserPanel />} />
           <Route path="profile" element={<Profile />} />
+          <Route path="favorites" element={<Favorites />} />
         </Route>
 
         <Route

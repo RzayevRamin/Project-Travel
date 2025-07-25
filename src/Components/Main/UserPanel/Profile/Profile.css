@@ -7,3 +7,31 @@
 .profileContainer {
     padding: 4rem 5rem 4rem 10rem;
 }
+
+.profileInfo {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.profileInfo h1 {
+    font-size: 32px;
+}
+
+.profileLabel {
+    font-size: 20px !important;
+}
+
+.profileLogout {
+    margin-left: 0.5rem;
+    color: #F60909;
+}
+
+.passwordEdition {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+}

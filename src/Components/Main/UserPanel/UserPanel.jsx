@@ -6,10 +6,21 @@ import ListItemButton from "@mui/joy/ListItemButton";
 import UserPanelInfoBox from "./UserPanelInfoBox/UserPanelInfoBox";
 import UserPanelStatistic from "./UserPanelStatistics/UserPanelStatistic";
 import { useNavigate } from "react-router-dom";
+import { signOut } from "firebase/auth";
+import { auth } from "../../../firebase-config";
 
 function UserPanel() {
 
   const navigate = useNavigate();
+
+  const handleLogout = async () => {
+      try {
+        await signOut(auth);
+        navigate("/");
+      } catch (error) {
+        console.error("Logout error:", error.message);
+      }
+    };
 
   return (
     <div className="userPanelContainer">
@@ -41,7 +52,7 @@ function UserPanel() {
                 </ListItemDecorator>
                 <span>Profile</span>
               </ListItemButton>
-              <ListItemButton className="userPanelButton">
+              <ListItemButton className="userPanelButton" onClick={() => navigate("/userpanel/favorites")}>
                 <ListItemDecorator>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -198,7 +209,7 @@ function UserPanel() {
                 </ListItemDecorator>
                 <span>Settings</span>
               </ListItemButton>
-              <ListItemButton className="userPanelButton">
+              <ListItemButton className="userPanelButton" onClick={handleLogout}>
                 <ListItemDecorator>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
