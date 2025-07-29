@@ -15,6 +15,8 @@ import UserPanel from "./Components/Main/UserPanel/UserPanel";
 import Profile from "./Components/Main/UserPanel/Profile/Profile";
 import SecondLayout from "./Components/Main/SecondLayout";
 import Favorites from "./Components/Main/UserPanel/Favorites/Favorites";
+import Shopping from "./Components/Main/UserPanel/Shopping/Shopping";
+import { CurrencyProvider } from "./CurrencyContext";
 
 function App() {
   const [darkMode, setDarkMode] = useState(() => {
@@ -38,35 +40,40 @@ function App() {
   if (loading) return <MainLoading />;
 
   return (
-    <AuthProvider>
-      <Routes>
-        <Route path="/login/*" element={<Login />} />
-        <Route
-          path="/userpanel/"
-          element={
-            <SecondLayout darkMode={darkMode} setDarkMode={setDarkMode} />
-          }
-        >
-          <Route index element={<UserPanel />} />
-          <Route path="profile" element={<Profile />} />
-          <Route path="favorites" element={<Favorites />} />
-        </Route>
+    <CurrencyProvider>
+      <AuthProvider>
+        <Routes>
+          <Route path="/login/*" element={<Login />} />
+          <Route
+            path="/userpanel/"
+            element={
+              <SecondLayout darkMode={darkMode} setDarkMode={setDarkMode} />
+            }
+          >
+            <Route index element={<UserPanel />} />
+            <Route path="profile" element={<Profile />} />
+            <Route path="favorites" element={<Favorites />} />
+            <Route path="shopping" element={<Shopping />} />
+          </Route>
 
-        <Route
-          path="/"
-          element={<MainLayout darkMode={darkMode} setDarkMode={setDarkMode} />}
-        >
-          <Route index element={<Home />} />
-          <Route path="home" element={<Home />} />
-          <Route path="tours" element={<Tours />} />
-          <Route path="hotels" element={<Hotels />} />
-          <Route path="transport" element={<Transports />} />
-          <Route path="media" element={<Media />} />
-          <Route path="forum" element={<Forum darkMode={darkMode} />} />
-          <Route path="contact" element={<Contact />} />
-        </Route>
-      </Routes>
-    </AuthProvider>
+          <Route
+            path="/"
+            element={
+              <MainLayout darkMode={darkMode} setDarkMode={setDarkMode} />
+            }
+          >
+            <Route index element={<Home />} />
+            <Route path="home" element={<Home />} />
+            <Route path="tours" element={<Tours />} />
+            <Route path="hotels" element={<Hotels />} />
+            <Route path="transport" element={<Transports />} />
+            <Route path="media" element={<Media />} />
+            <Route path="forum" element={<Forum darkMode={darkMode} />} />
+            <Route path="contact" element={<Contact />} />
+          </Route>
+        </Routes>
+      </AuthProvider>
+    </CurrencyProvider>
   );
 }
 

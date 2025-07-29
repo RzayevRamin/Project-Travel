@@ -72,7 +72,7 @@ function UserPanel() {
                 </ListItemDecorator>
                 <span>Favorites</span>
               </ListItemButton>
-              <ListItemButton className="userPanelButton">
+              <ListItemButton className="userPanelButton" onClick={() => navigate("/userpanel/shopping")}>
                 <ListItemDecorator>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

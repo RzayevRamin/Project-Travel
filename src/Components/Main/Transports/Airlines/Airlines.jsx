@@ -204,7 +204,7 @@ function Airlines({filter}) {
                     <span className="mostPopularAirlinesCardContextTextBox">
                       <Typography className="mostPopularAirlinesCardsLocation" level="title-lg" textColor="#fff">
                         <Link>
-                          {card.locationLabel}
+                          {card.cardLabel}
                         </Link>
                       </Typography>
                       {isCenter && (

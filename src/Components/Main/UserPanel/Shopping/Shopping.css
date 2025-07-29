@@ -1,0 +1,44 @@
+.shoppingContainer {
+    padding: 3rem 5rem;
+}
+
+.cardItem img {
+    width: 21vw;
+    height: 37vh;
+    border-radius: 0.3rem;
+    object-fit: cover;
+}
+
+.cardItem {
+    display: flex;
+    justify-content: space-between;
+}
+
+.itemInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 37vh;
+    width: 27vw;
+
+}
+
+.countingBox {
+    display: flex;
+    align-items: center;
+}
+
+.cardsInfoBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.itemDeleteAndCost {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 8vw;
+    height: 37vh;
+}

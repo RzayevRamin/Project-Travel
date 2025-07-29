@@ -221,7 +221,7 @@ function LocalTours({ filter, source }) {
                             target="_blank"
                             rel="noopener"
                           >
-                            {card.locationLabel}
+                            {card.cardLabel}
                           </Link>
                           <span
                             className="locationMapPreview"
@@ -241,7 +241,7 @@ function LocalTours({ filter, source }) {
                               width="250"
                               height="150"
                               src={`https://maps.google.com/maps?q=${encodeURIComponent(
-                                card.locationLabel
+                                card.cardLabel
                               )}&output=embed`}
                               title="Google Map Preview"
                             ></iframe>

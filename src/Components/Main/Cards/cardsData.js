@@ -110,7 +110,7 @@ import busPolskiBusImg from "../../../assets/Transport/Bus/PolskiBus.jpg";
 import carCampervanImg from "../../../assets/Transport/CarRenting/Campervan.jpg";
 import carCaravanImg from "../../../assets/Transport/CarRenting/Caravan.jpg";
 import carKastenwagenImg from "../../../assets/Transport/CarRenting/Kastenwagen.jpg";
-import carMoterhomeImg from "../../../assets/Transport/CarRenting/Motorhome.jpg";
+import carMotorhomeImg from "../../../assets/Transport/CarRenting/Motorhome.jpg";
 import carCupeImg from "../../../assets/Transport/CarRenting/Cupe.jpg";
 import carHetchbackImg from "../../../assets/Transport/CarRenting/Hetchback.jpg";
 import carMiniSUVImg from "../../../assets/Transport/CarRenting/MiniSUV.jpg";
@@ -275,10 +275,15 @@ export const cardsData = [
     img: dubaiImg,
     title: "Luxury, sun, skyscrapers, shopping, fun-filled travel",
     location: "https://maps.google.com/?q=Dubai",
-    locationLabel: "Dubai, UAE",
+    cardLabel: "Dubai, UAE",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "5 days, 4 nights",
     className: "foreignCard",
+    price: {
+      adult: 515,
+      child: 375,
+    },
+    tags: "Dubai, UAE",
   },
 
   {
@@ -286,10 +291,14 @@ export const cardsData = [
     img: egyptImg,
     title: "A journey full of history, pyramids, deserts, the Nile and the sun",
     location: "https://maps.google.com/?q=Egypt",
-    locationLabel: "Egypt",
+    cardLabel: "Egypt",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "5 days, 4 nights",
     className: "foreignCard",
+    price: {
+      adult: 415,
+      child: 275,
+    }
   },
 
   {
@@ -297,10 +306,14 @@ export const cardsData = [
     img: englandImg,
     title: "A trip filled with history, rain, castles, museums, and rivers",
     location: "https://maps.google.com/?q=England",
-    locationLabel: "England",
+    cardLabel: "England",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "5 days, 4 nights",
     className: "foreignCard",
+    price: {
+      adult: 715,
+      child: 575,
+    }
   },
 
   {
@@ -308,10 +321,14 @@ export const cardsData = [
     img: franceImg,
     title: "A trip full of romance, fashion, Eiffel, wine, art",
     location: "https://maps.google.com/?q=France",
-    locationLabel: "France",
+    cardLabel: "France",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "5 days, 4 nights",
     className: "foreignCard",
+    price: {
+      adult: 615,
+      child: 475,
+    }
   },
 
   {
@@ -319,10 +336,14 @@ export const cardsData = [
     img: italyImg,
     title: "A journey full of history, pastry, Rome, fashion, art, and pizza",
     location: "https://maps.google.com/?q=Italy",
-    locationLabel: "Italy",
+    cardLabel: "Italy",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "5 days, 4 nights",
     className: "foreignCard",
+    price: {
+      adult: 615,
+      child: 475,
+    }
   },
 
   {
@@ -330,10 +351,14 @@ export const cardsData = [
     img: germanyImg,
     title: "History, technology, castles, beer filled journey",
     location: "https://maps.google.com/?q=Germany",
-    locationLabel: "Germany",
+    cardLabel: "Germany",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "5 days, 4 nights",
     className: "foreignCard",
+    price: {
+      adult: 615,
+      child: 475,
+    }
   },
 
   {
@@ -341,10 +366,14 @@ export const cardsData = [
     img: spainImg,
     title: "Corrida, flamenco, sun, football, sea, cuisine-filled trip",
     location: "https://maps.google.com/?q=Spain",
-    locationLabel: "Spain",
+    cardLabel: "Spain",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "5 days, 4 nights",
     className: "foreignCard",
+    price: {
+      adult: 615,
+      child: 475,
+    }
   },
 
   {
@@ -352,10 +381,14 @@ export const cardsData = [
     img: greeceImg,
     title: "A journey full of mythology, island, sea, history, olives, and sun",
     location: "https://maps.google.com/?q=Greece",
-    locationLabel: "Greece",
+    cardLabel: "Greece",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "5 days, 4 nights",
     className: "foreignCard",
+    price: {
+      adult: 615,
+      child: 475,
+    }
   },
 
   {
@@ -364,10 +397,14 @@ export const cardsData = [
     title:
       "A journey full of history, markets, cuisine, sea, and hot air balloons",
     location: "https://maps.google.com/?q=Turkey",
-    locationLabel: "Turkey",
+    cardLabel: "Turkey",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "5 days, 4 nights",
     className: "foreignCard",
+    price: {
+      adult: 315,
+      child: 175,
+    }
   },
 
   {
@@ -375,10 +412,14 @@ export const cardsData = [
     img: portugalImg,
     title: "A journey full of ocean, fado, Lisbon, history, and wine",
     location: "https://maps.google.com/?q=Portugal",
-    locationLabel: "Portugal",
+    cardLabel: "Portugal",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "5 days, 4 nights",
     className: "foreignCard",
+    price: {
+      adult: 615,
+      child: 475,
+    }
   },
 
   {
@@ -386,10 +427,14 @@ export const cardsData = [
     img: netherlandsImg,
     title: "A trip full of tulips, canals, mills, museums, and bicycles",
     location: "https://maps.google.com/?q=Netherlands",
-    locationLabel: "Neterlands",
+    cardLabel: "Neterlands",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "5 days, 4 nights",
     className: "foreignCard",
+    price: {
+      adult: 615,
+      child: 475,
+    }
   },
 
   {
@@ -397,10 +442,14 @@ export const cardsData = [
     img: switzerlandImg,
     title: "A journey full of chocolate, cheese, mountains, lakes, and watches",
     location: "https://maps.google.com/?q=Switzerland",
-    locationLabel: "Switzerland",
+    cardLabel: "Switzerland",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "5 days, 4 nights",
     className: "foreignCard",
+    price: {
+      adult: 615,
+      child: 475,
+    }
   },
 
   {
@@ -408,10 +457,14 @@ export const cardsData = [
     img: indiaImg,
     title: "A journey full of culture, history, cuisine, and spirituality",
     location: "https://maps.google.com/?q=India",
-    locationLabel: "India",
+    cardLabel: "India",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "5 days, 4 nights",
     className: "foreignCard",
+    price: {
+      adult: 415,
+      child: 275,
+    }
   },
 
   {
@@ -419,10 +472,14 @@ export const cardsData = [
     img: indonesiaImg,
     title: "A journey full of islands, beaches, culture, and nature",
     location: "https://maps.google.com/?q=Indonesia",
-    locationLabel: "Indonesia",
+    cardLabel: "Indonesia",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "5 days, 4 nights",
     className: "foreignCard",
+    price: {
+      adult: 615,
+      child: 475,
+    }
   },
 
   {
@@ -430,10 +487,14 @@ export const cardsData = [
     img: malaysiaImg,
     title: "A journey full of islands, beaches, culture, and nature",
     location: "https://maps.google.com/?q=Malaysia",
-    locationLabel: "Malaysia",
+    cardLabel: "Malaysia",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "5 days, 4 nights",
     className: "foreignCard",
+    price: {
+      adult: 615,
+      child: 475,
+    }
   },
 
   {
@@ -441,10 +502,14 @@ export const cardsData = [
     img: maroccoImg,
     title: "A journey full of desert, markets, culture, and history",
     location: "https://maps.google.com/?q=Morocco",
-    locationLabel: "Morocco",
+    cardLabel: "Morocco",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "5 days, 4 nights",
     className: "foreignCard",
+    price: {
+      adult: 515,
+      child: 375,
+    }
   },
 
   {
@@ -452,10 +517,14 @@ export const cardsData = [
     img: norwayImg,
     title: "A journey full of fjords, mountains, northern lights, and culture",
     location: "https://maps.google.com/?q=Norway",
-    locationLabel: "Norway",
+    cardLabel: "Norway",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "5 days, 4 nights",
     className: "foreignCard",
+    price: {
+      adult: 615,
+      child: 475,
+    }
   },
 
   {
@@ -463,10 +532,14 @@ export const cardsData = [
     img: russiaImg,
     title: "A journey full of history, culture, architecture, and nature",
     location: "https://maps.google.com/?q=Russia",
-    locationLabel: "Russia",
+    cardLabel: "Russia",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "5 days, 4 nights",
     className: "foreignCard",
+    price: {
+      adult: 415,
+      child: 275,
+    }
   },
 
   {
@@ -474,10 +547,14 @@ export const cardsData = [
     img: srilankaImg,
     title: "A journey full of beaches, culture, wildlife, and tea",
     location: "https://maps.google.com/?q=Sri Lanka",
-    locationLabel: "Sri Lanka",
+    cardLabel: "Sri Lanka",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "5 days, 4 nights",
     className: "foreignCard",
+    price: {
+      adult: 615,
+      child: 475,
+    }
   },
 
   {
@@ -485,10 +562,14 @@ export const cardsData = [
     img: gabalaImg,
     title: "A journey full of nature, mountains, waterfalls, and culture",
     location: "https://maps.google.com/?q=Gabala",
-    locationLabel: "Gabala, Azerbaijan",
+    cardLabel: "Gabala, Azerbaijan",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "1 day",
     className: "localCard",
+    price: {
+      adult: 35,
+      child: 25,
+    }
   },
 
   {
@@ -496,10 +577,14 @@ export const cardsData = [
     img: gakhImg,
     title: "A journey full of nature, mountains, waterfalls, and culture",
     location: "https://maps.google.com/?q=Gakh",
-    locationLabel: "Gakh, Azerbaijan",
+    cardLabel: "Gakh, Azerbaijan",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "1 day",
     className: "localCard",
+    price: {
+      adult: 35,
+      child: 25,
+    }
   },
 
   {
@@ -507,10 +592,14 @@ export const cardsData = [
     img: qubaImg,
     title: "A journey full of nature, mountains, waterfalls, and culture",
     location: "https://maps.google.com/?q=Quba",
-    locationLabel: "Quba, Azerbaijan",
+    cardLabel: "Quba, Azerbaijan",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "1 day",
     className: "localCard",
+    price: {
+      adult: 35,
+      child: 25,
+    }
   },
 
   {
@@ -518,10 +607,14 @@ export const cardsData = [
     img: lerikImg,
     title: "A journey full of nature, mountains, waterfalls, and culture",
     location: "https://maps.google.com/?q=Lerik",
-    locationLabel: "Lerik, Azerbaijan",
+    cardLabel: "Lerik, Azerbaijan",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "1 day",
     className: "localCard",
+    price: {
+      adult: 35,
+      child: 25,
+    }
   },
 
   {
@@ -529,10 +622,14 @@ export const cardsData = [
     img: shakiImg,
     title: "A journey full of nature, mountains, waterfalls, and culture",
     location: "https://maps.google.com/?q=Shaki",
-    locationLabel: "Shaki, Azerbaijan",
+    cardLabel: "Shaki, Azerbaijan",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "1 day",
     className: "localCard",
+    price: {
+      adult: 35,
+      child: 25,
+    }
   },
 
   {
@@ -540,10 +637,14 @@ export const cardsData = [
     img: nakhchivanImg,
     title: "A journey full of nature, mountains, waterfalls, and culture",
     location: "https://maps.google.com/?q=Nakhchivan",
-    locationLabel: "Nakhchivan, Azerbaijan",
+    cardLabel: "Nakhchivan, Azerbaijan",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "1 day",
     className: "localCard",
+    price: {
+      adult: 85,
+      child: 65,
+    }
   },
 
   {
@@ -551,10 +652,14 @@ export const cardsData = [
     img: oldtownImg,
     title: "A journey full of history, culture, and architecture",
     location: "https://maps.google.com/?q=Old Town Baku",
-    locationLabel: "Old Town, Baku, Azerbaijan",
+    cardLabel: "Old Town, Baku, Azerbaijan",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "1 day",
     className: "localCard",
+    price: {
+      adult: 25,
+      child: 15,
+    }
   },
 
   {
@@ -562,10 +667,14 @@ export const cardsData = [
     img: shusaImg,
     title: "A journey full of history, culture, and architecture",
     location: "https://maps.google.com/?q=Shusha",
-    locationLabel: "Shusha, Azerbaijan",
+    cardLabel: "Shusha, Azerbaijan",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "1 day",
     className: "localCard",
+    price: {
+      adult: 95,
+      child: 75,
+    }
   },
 
   {
@@ -573,10 +682,14 @@ export const cardsData = [
     img: khinaliqImg,
     title: "A journey full of history, culture, and architecture",
     location: "https://maps.google.com/?q=Khinaliq",
-    locationLabel: "Khinaliq, Azerbaijan",
+    cardLabel: "Khinaliq, Azerbaijan",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "1 day",
     className: "localCard",
+    price: {
+      adult: 35,
+      child: 25,
+    }
   },
 
   {
@@ -584,10 +697,14 @@ export const cardsData = [
     img: zagatalaImg,
     title: "A journey full of nature, mountains, waterfalls, and culture",
     location: "https://maps.google.com/?q=Zagatala",
-    locationLabel: "Zagatala, Azerbaijan",
+    cardLabel: "Zagatala, Azerbaijan",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "1 day",
     className: "localCard",
+    price: {
+      adult: 35,
+      child: 25,
+    }
   },
 
   {
@@ -596,10 +713,14 @@ export const cardsData = [
     title:
       "A journey through the diverse landscapes, cultures, and wildlife of Africa",
     location: "https://maps.google.com/?q=Africa",
-    locationLabel: "Africa Tour",
+    cardLabel: "Africa Tour",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "14 days, 13 nights",
     className: "worldCard",
+    price: {
+      adult: 1550,
+      child: 1375,
+    }
   },
 
   {
@@ -608,10 +729,14 @@ export const cardsData = [
     title:
       "A journey through the rich cultures, landscapes, and history of Asia",
     location: "https://maps.google.com/?q=Asia",
-    locationLabel: "Asia Tour",
+    cardLabel: "Asia Tour",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "14 days, 13 nights",
     className: "worldCard",
+    price: {
+      adult: 1550,
+      child: 1375,
+    }
   },
 
   {
@@ -620,10 +745,14 @@ export const cardsData = [
     title:
       "A journey through the diverse cultures, history, and landscapes of Europe",
     location: "https://maps.google.com/?q=Europe",
-    locationLabel: "Europe Tour",
+    cardLabel: "Europe Tour",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "14 days, 13 nights",
     className: "worldCard",
+    price: {
+      adult: 1750,
+      child: 1575,
+    }
   },
 
   {
@@ -632,10 +761,14 @@ export const cardsData = [
     title:
       "A journey through the diverse landscapes, cultures, and history of North America",
     location: "https://maps.google.com/?q=North America",
-    locationLabel: "North America Tour",
+    cardLabel: "North America Tour",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "14 days, 13 nights",
     className: "worldCard",
+    price: {
+      adult: 1950,
+      child: 1775,
+    }
   },
 
   {
@@ -644,10 +777,14 @@ export const cardsData = [
     title:
       "A journey through the diverse landscapes, cultures, and history of South America",
     location: "https://maps.google.com/?q=South America",
-    locationLabel: "South America Tour",
+    cardLabel: "South America Tour",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "14 days, 13 nights",
     className: "worldCard",
+    price: {
+      adult: 1950,
+      child: 1775,
+    }
   },
 
   {
@@ -656,10 +793,14 @@ export const cardsData = [
     title:
       "A journey through the world's oceans, exploring diverse cultures and landscapes",
     location: "https://maps.google.com/?q=Cruise Tour",
-    locationLabel: "Cruise Tour",
+    cardLabel: "Cruise Tour",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "28 days, 27 nights",
     className: "worldCard",
+    price: {
+      adult: 4550,
+      child: 3875,
+    }
   },
 
   {
@@ -667,10 +808,14 @@ export const cardsData = [
     img: hotelAmbassadeImg,
     title: "Magnificent hotel in Netherlands",
     location: "https://maps.google.com/?q=Ambassade Hotel, Netherlands",
-    locationLabel: "Ambassade Hotel, Netherlands",
+    cardLabel: "Ambassade Hotel, Netherlands",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "",
     className: "hotel netherlands",
+    price: {
+      adult: 250,
+      child: 175,
+    }
   },
 
   {
@@ -678,10 +823,14 @@ export const cardsData = [
     img: hotelAnantaraImg,
     title: "Magnificent hotel in Italy",
     location: "https://maps.google.com/?q=Anantara Hotel, Italy",
-    locationLabel: "Anantara Hotel, Italy",
+    cardLabel: "Anantara Hotel, Italy",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "",
     className: "hotel italy",
+    price: {
+      adult: 275,
+      child: 190,
+    }
   },
 
   {
@@ -689,10 +838,14 @@ export const cardsData = [
     img: hotelAndamanImg,
     title: "Magnificent hotel in Malaysia",
     location: "https://maps.google.com/?q=Andaman Hotel, Malaysia",
-    locationLabel: "Andaman Hotel, Malaysia",
+    cardLabel: "Andaman Hotel, Malaysia",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "",
     className: "hotel malaysia",
+    price: {
+      adult: 150,
+      child: 100,
+    }
   },
 
   {
@@ -700,10 +853,14 @@ export const cardsData = [
     img: hotelAstoriaImg,
     title: "Magnificent hotel in Russia",
     location: "https://maps.google.com/?q=Astoria Hotel, Russia",
-    locationLabel: "Astoria Hotel, Russia",
+    cardLabel: "Astoria Hotel, Russia",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "",
     className: "hotel russia",
+    price: {
+      adult: 130,
+      child: 100,
+    }
   },
 
   {
@@ -711,10 +868,14 @@ export const cardsData = [
     img: hotelBurjAlArabImg,
     title: "Magnificent hotel in Dubai",
     location: "https://maps.google.com/?q=Burj Al Arab Hotel, Dubai",
-    locationLabel: "Burj Al Arab Hotel, Dubai",
+    cardLabel: "Burj Al Arab Hotel, Dubai",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "",
     className: "hotel dubai",
+    price: {
+      adult: 250,
+      child: 175,
+    }
   },
 
   {
@@ -722,10 +883,14 @@ export const cardsData = [
     img: hotelCambrianImg,
     title: "Magnificent hotel in Switzerland",
     location: "https://maps.google.com/?q=Cambrian Hotel, Switzerland",
-    locationLabel: "Cambrian Hotel, Switzerland",
+    cardLabel: "Cambrian Hotel, Switzerland",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "",
     className: "hotel switzerland",
+    price: {
+      adult: 250,
+      child: 175,
+    }
   },
 
   {
@@ -733,10 +898,14 @@ export const cardsData = [
     img: hotelCarltonCannesImg,
     title: "Magnificent hotel in France",
     location: "https://maps.google.com/?q=Carlton Hotel, Cannes, France",
-    locationLabel: "Carlton Hotel, Cannes, France",
+    cardLabel: "Carlton Hotel, Cannes, France",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "",
     className: "hotel france",
+    price: {
+      adult: 215,
+      child: 175,
+    }
   },
 
   {
@@ -745,10 +914,14 @@ export const cardsData = [
     title: "Magnificent hotel in Spain",
     location:
       "https://maps.google.com/?q=Casa Palacio María Luisa Jerez Hotel, Spain",
-    locationLabel: "Casa Palacio María Luisa Jerez Hotel, Spain",
+    cardLabel: "Casa Palacio María Luisa Jerez Hotel, Spain",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "",
     className: "hotel spain",
+    price: {
+      adult: 200,
+      child: 150,
+    }
   },
 
   {
@@ -756,10 +929,14 @@ export const cardsData = [
     img: hotelClaridgeImg,
     title: "Magnificent hotel in England",
     location: "https://maps.google.com/?q=Claridge's Hotel, London",
-    locationLabel: "Claridge's Hotel, London",
+    cardLabel: "Claridge's Hotel, London",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "",
     className: "hotel england",
+    price: {
+      adult: 450,
+      child: 375,
+    }
   },
 
   {
@@ -767,10 +944,14 @@ export const cardsData = [
     img: hotelConradBaliIndonesiaImg,
     title: "Magnificent hotel in Indonesia",
     location: "https://maps.google.com/?q=Conrad Hotel, Bali, Indonesia",
-    locationLabel: "Conrad Hotel, Bali, Indonesia",
+    cardLabel: "Conrad Hotel, Bali, Indonesia",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "",
     className: "hotel indonesia",
+    price: {
+      adult: 150,
+      child: 105,
+    }
   },
 
   {
@@ -778,10 +959,14 @@ export const cardsData = [
     img: hotelDelphinImperialTurkeyImg,
     title: "Magnificent hotel in Turkey",
     location: "https://maps.google.com/?q=Delphin Imperial Hotel, Turkey",
-    locationLabel: "Delphin Imperial Hotel, Turkey",
+    cardLabel: "Delphin Imperial Hotel, Turkey",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "",
     className: "hotel turkey",
+    price: {
+      adult: 120,
+      child: 95,
+    }
   },
 
   {
@@ -789,10 +974,14 @@ export const cardsData = [
     img: hotelDivanTurkeyImg,
     title: "Magnificent hotel in Turkey",
     location: "https://maps.google.com/?q=Divan Hotel, Turkey",
-    locationLabel: "Divan Hotel, Turkey",
+    cardLabel: "Divan Hotel, Turkey",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "",
     className: "hotel turkey",
+    price: {
+      adult: 200,
+      child: 155,
+    }
   },
 
   {
@@ -800,10 +989,14 @@ export const cardsData = [
     img: hotelElGounaImg,
     title: "Magnificent hotel in Egypt",
     location: "https://maps.google.com/?q=El Gouna Hotel, Egypt",
-    locationLabel: "El Gouna Hotel, Egypt",
+    cardLabel: "El Gouna Hotel, Egypt",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "",
     className: "hotel egypt",
+    price: {
+      adult: 250,
+      child: 155,
+    }
   },
 
   {
@@ -811,10 +1004,14 @@ export const cardsData = [
     img: hotelElMiradorImg,
     title: "Magnificent hotel in Spain",
     location: "https://maps.google.com/?q=El Mirador Hotel, Spain",
-    locationLabel: "El Mirador Hotel, Spain",
+    cardLabel: "El Mirador Hotel, Spain",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "",
     className: "hotel spain",
+    price: {
+      adult: 210,
+      child: 165,
+    }
   },
 
   {
@@ -822,10 +1019,14 @@ export const cardsData = [
     img: hotelFlamsbryggaImg,
     title: "Magnificent hotel in Norway",
     location: "https://maps.google.com/?q=Flamsbrygga Hotel, Norway",
-    locationLabel: "Flamsbrygga Hotel, Norway",
+    cardLabel: "Flamsbrygga Hotel, Norway",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "",
     className: "hotel norway",
+    price: {
+      adult: 200,
+      child: 150,
+    }
   },
 
   {
@@ -833,10 +1034,14 @@ export const cardsData = [
     img: hotelGrandHotelAmrathImg,
     title: "Magnificent hotel in Indonesia",
     location: "https://maps.google.com/?q=Grand Hotel Amrath, Spain",
-    locationLabel: "Grand Hotel Amrath, Spain",
+    cardLabel: "Grand Hotel Amrath, Spain",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "",
     className: "hotel Spain",
+    price: {
+      adult: 200,
+      child: 135,
+    }
   },
 
   {
@@ -844,10 +1049,14 @@ export const cardsData = [
     img: hotelGrandHyattDubaiImg,
     title: "Magnificent hotel in Dubai",
     location: "https://maps.google.com/?q=Grand Hyatt Hotel, Dubai",
-    locationLabel: "Grand Hyatt Hotel, Dubai",
+    cardLabel: "Grand Hyatt Hotel, Dubai",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "",
     className: "hotel dubai",
+    price: {
+      adult: 350,
+      child: 255,
+    }
   },
 
   {
@@ -855,10 +1064,14 @@ export const cardsData = [
     img: hotelGrandMakadiImg,
     title: "Magnificent hotel in egypt",
     location: "https://maps.google.com/?q=Grand Makadi Hotel, Egypt",
-    locationLabel: "Grand Makadi Hotel, Egypt",
+    cardLabel: "Grand Makadi Hotel, Egypt",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "",
     className: "hotel egypt",
+    price: {
+      adult: 250,
+      child: 165,
+    }
   },
 
   {
@@ -866,10 +1079,14 @@ export const cardsData = [
     img: hotelHavilaHotelGeirangerImg,
     title: "Magnificent hotel in Netherlands",
     location: "https://maps.google.com/?q=Havila Hotel Geiranger, Netherlands",
-    locationLabel: "Havila Hotel Geiranger, Netherlands",
+    cardLabel: "Havila Hotel Geiranger, Netherlands",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "",
     className: "hotel netherlands",
+    price: {
+      adult: 250,
+      child: 165,
+    }
   },
 
   {
@@ -877,10 +1094,14 @@ export const cardsData = [
     img: hotelHeritanceKandalamaSriLankaImg,
     title: "Magnificent hotel in Sri Lanka",
     location: "https://maps.google.com/?q=Conrad Hotel, Bali, Indonesia",
-    locationLabel: "Chotel Heritance Kandalama. Sri-Lanka",
+    cardLabel: "Chotel Heritance Kandalama. Sri-Lanka",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "",
     className: "hotel sri-lanka",
+    price: {
+      adult: 200,
+      child: 145,
+    }
   },
 
   {
@@ -888,10 +1109,14 @@ export const cardsData = [
     img: hotelHotelVillaBelvedereImg,
     title: "Magnificent hotel in Italy",
     location: "https://maps.google.com/?q=Hotel Villa Belvedere, Italy",
-    locationLabel: "Hotel Villa Belvedere, Italy",
+    cardLabel: "Hotel Villa Belvedere, Italy",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "",
     className: "hotel italy",
+    price: {
+      adult: 230,
+      child: 175,
+    }
   },
 
   {
@@ -899,10 +1124,14 @@ export const cardsData = [
     img: hotelJaiMahalPalaceImg,
     title: "Magnificent hotel in India",
     location: "https://maps.google.com/?q=Jai Mahal Palace, India",
-    locationLabel: "Jai Mahal Palace, India",
+    cardLabel: "Jai Mahal Palace, India",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "",
     className: "hotel india",
+    price: {
+      adult: 150,
+      child: 105,
+    }
   },
 
   {
@@ -910,10 +1139,14 @@ export const cardsData = [
     img: hotelJetwingSamanImg,
     title: "Magnificent hotel in Sri-lanka",
     location: "https://maps.google.com/?q=Jetwing Saman, Sri-lanka",
-    locationLabel: "Jetwing Saman, Sri-lanka",
+    cardLabel: "Jetwing Saman, Sri-lanka",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "",
     className: "hotel sri-lanka",
+    price: {
+      adult: 120,
+      child: 75,
+    }
   },
 
   {
@@ -922,10 +1155,14 @@ export const cardsData = [
     title: "Magnificent hotel in Baku, Azerbaijan",
     location:
       "https://maps.google.com/?q=Badam d'Art Boutique Hotel, Azerbaijan",
-    locationLabel: "Badam d'Art Boutique Hotel, Azerbaijan",
+    cardLabel: "Badam d'Art Boutique Hotel, Azerbaijan",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "",
     className: "hotel azerbaijan",
+    price: {
+      adult: 100,
+      child: 75,
+    }
   },
 
   {
@@ -933,10 +1170,14 @@ export const cardsData = [
     img: hotelBergsImg,
     title: "Magnificent hotel in Gakh, Azerbaijan",
     location: "https://maps.google.com/?q=Bergs Hotel, Azerbaijan",
-    locationLabel: "Bergs Hotel, Azerbaijan",
+    cardLabel: "Bergs Hotel, Azerbaijan",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "",
     className: "hotel azerbaijan",
+    price: {
+      adult: 110,
+      child: 75,
+    }
   },
 
   {
@@ -944,10 +1185,14 @@ export const cardsData = [
     img: hotelChenotPalaceImg,
     title: "Magnificent hotel in Gabala, Azerbaijan",
     location: "https://maps.google.com/?q=Chenot Palace, Gabala, Azerbaijan",
-    locationLabel: "Chenot Palace, Gabala, Azerbaijan",
+    cardLabel: "Chenot Palace, Gabala, Azerbaijan",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "",
     className: "hotel azerbaijan",
+    price: {
+      adult: 100,
+      child: 75,
+    }
   },
 
   {
@@ -955,10 +1200,14 @@ export const cardsData = [
     img: hotelDuzdagImg,
     title: "Magnificent hotel in Nakhchivan, Azerbaijan",
     location: "https://maps.google.com/?q=Duzdag Hotel, Nakhchivan, Azerbaijan",
-    locationLabel: "Duzdag Hotel, Nakhchivan, Azerbaijan",
+    cardLabel: "Duzdag Hotel, Nakhchivan, Azerbaijan",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "",
     className: "hotel azerbaijan",
+    price: {
+      adult: 90,
+      child: 60,
+    }
   },
 
   {
@@ -966,10 +1215,14 @@ export const cardsData = [
     img: hotelElResortImg,
     title: "Magnificent hotel in Gakh, Azerbaijan",
     location: "https://maps.google.com/?q=El Resort Hotel, Gakh, Azerbaijan",
-    locationLabel: "El Resort Hotel, Gakh, Azerbaijan",
+    cardLabel: "El Resort Hotel, Gakh, Azerbaijan",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "",
     className: "hotel azerbaijan",
+    price: {
+      adult: 90,
+      child: 75,
+    }
   },
 
   {
@@ -977,10 +1230,14 @@ export const cardsData = [
     img: hotelFairmontBakuImg,
     title: "Magnificent hotel in Baku, Azerbaijan",
     location: "https://maps.google.com/?q=Fairmont Hotel, Baku, Azerbaijan",
-    locationLabel: "Fairmont Hotel, Baku, Azerbaijan",
+    cardLabel: "Fairmont Hotel, Baku, Azerbaijan",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "",
     className: "hotel azerbaijan",
+    price: {
+      adult: 150,
+      child: 100,
+    }
   },
 
   {
@@ -989,10 +1246,14 @@ export const cardsData = [
     title: "Magnificent hotel in Nakhchivan, Azerbaijan",
     location:
       "https://maps.google.com/?q=Saat Meydani Hotel, Nakhchivan, Azerbaijan",
-    locationLabel: "Saat Meydani Hotel, Nakhchivan, Azerbaijan",
+    cardLabel: "Saat Meydani Hotel, Nakhchivan, Azerbaijan",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "",
     className: "hotel azerbaijan",
+    price: {
+      adult: 80,
+      child: 65,
+    }
   },
 
   {
@@ -1001,10 +1262,14 @@ export const cardsData = [
     title: "Magnificent hotel in London, UK",
     location:
       "https://maps.google.com/?q=Saat Meydani Hotel, Nakhchivan, Azerbaijan",
-    locationLabel: "Landmark, London, UK",
+    cardLabel: "Landmark, London, UK",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "",
     className: "hotel UK",
+    price: {
+      adult: 550,
+      child: 475,
+    }
   },
 
   {
@@ -1013,10 +1278,14 @@ export const cardsData = [
     title: "Magnificent hotel in Lankaran, Azerbaijan",
     location:
       "https://maps.google.com/?q=LankaranSpringsWellness, Lankaran, Azerbaijan",
-    locationLabel: "Saat Meydani Hotel, Lankaran, Azerbaijan",
+    cardLabel: "Saat Meydani Hotel, Lankaran, Azerbaijan",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "",
     className: "hotel azerbaijan",
+    price: {
+      adult: 100,
+      child: 75,
+    }
   },
 
   {
@@ -1024,10 +1293,14 @@ export const cardsData = [
     img: hotelJumeirahImg,
     title: "Magnificent hotel in Dubai, UAR",
     location: "https://maps.google.com/?q=Jumeirah Hotel, Dubai, UAE",
-    locationLabel: "Jumeirah Hotel, Dubai, UAE",
+    cardLabel: "Jumeirah Hotel, Dubai, UAE",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "",
     className: "hotel UAE",
+    price: {
+      adult: 350,
+      child: 275,
+    }
   },
 
   {
@@ -1035,10 +1308,14 @@ export const cardsData = [
     img: hotelKayakapiImg,
     title: "Magnificent hotel in Turkey",
     location: "https://maps.google.com/?q=Kayakapi, Turkey",
-    locationLabel: "Kayakapi, Turkey",
+    cardLabel: "Kayakapi, Turkey",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "",
     className: "hotel Turkey",
+    price: {
+      adult: 150,
+      child: 125,
+    }
   },
 
   {
@@ -1046,10 +1323,14 @@ export const cardsData = [
     img: hotelLaSultanaImg,
     title: "Magnificent hotel in Morocco",
     location: "https://maps.google.com/?q=LaSultana, Morocco",
-    locationLabel: "LaSultana, Morocco",
+    cardLabel: "LaSultana, Morocco",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "",
     className: "hotel Morocco",
+    price: {
+      adult: 215,
+      child: 155,
+    }
   },
 
   {
@@ -1057,10 +1338,14 @@ export const cardsData = [
     img: hotelLeBristolImg,
     title: "Magnificent hotel in Paris, France",
     location: "https://maps.google.com/?q=LeBristol, Paris, France",
-    locationLabel: "LeBristol, Paris, France",
+    cardLabel: "LeBristol, Paris, France",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "",
     className: "hotel france",
+    price: {
+      adult: 250,
+      child: 185,
+    }
   },
 
   {
@@ -1068,10 +1353,14 @@ export const cardsData = [
     img: hotelLesanteCapeImg,
     title: "Magnificent hotel in Greece",
     location: "https://maps.google.com/?q=LesanteCape, Greece",
-    locationLabel: "LesanteCape, Greece",
+    cardLabel: "LesanteCape, Greece",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "",
     className: "hotel Greece",
+    price: {
+      adult: 250,
+      child: 175,
+    }
   },
 
   {
@@ -1079,10 +1368,14 @@ export const cardsData = [
     img: hotelLexisHotelImg,
     title: "Magnificent hotel in Malaysia",
     location: "https://maps.google.com/?q=Lexis, Malaysia",
-    locationLabel: "Lexis, Malaysia",
+    cardLabel: "Lexis, Malaysia",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "",
     className: "hotel malaysia",
+    price: {
+      adult: 200,
+      child: 155,
+    }
   },
 
   {
@@ -1090,10 +1383,14 @@ export const cardsData = [
     img: hotelMacaraLakeParkImg,
     title: "Magnificent hotel in Quba, Azerbaijan",
     location: "https://maps.google.com/?q=Macara Lake Park, Quba, Azerbaijan",
-    locationLabel: "Macara Lake Park, Quba, Azerbaijan",
+    cardLabel: "Macara Lake Park, Quba, Azerbaijan",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "",
     className: "hotel azerbaijan",
+    price: {
+      adult: 110,
+      child: 85,
+    }
   },
 
   {
@@ -1101,10 +1398,14 @@ export const cardsData = [
     img: hotelMarriottAnkaraImg,
     title: "Magnificent hotel in Ankara, Turkey",
     location: "https://maps.google.com/?q=Marriott, Ankara, Turkey",
-    locationLabel: "Marriott, Ankara, Turkey",
+    cardLabel: "Marriott, Ankara, Turkey",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "",
     className: "hotel turkey",
+    price: {
+      adult: 255,
+      child: 195,
+    }
   },
 
   {
@@ -1112,10 +1413,14 @@ export const cardsData = [
     img: planeAmericanAirlinesImg,
     title: "Top rated airlines with great services",
     location: "",
-    locationLabel: "American Airlines",
+    cardLabel: "American Airlines",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "",
     className: "plane american airlines",
+    price: {
+      adult: 200,
+      child: 155,
+    }
   },
 
   {
@@ -1123,10 +1428,14 @@ export const cardsData = [
     img: planeAstanaAirlinesImg,
     title: "Top rated airlines with great services",
     location: "",
-    locationLabel: "Astana Airlines",
+    cardLabel: "Astana Airlines",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "",
     className: "plane astana airlines",
+    price: {
+      adult: 160,
+      child: 125,
+    }
   },
 
   {
@@ -1134,10 +1443,14 @@ export const cardsData = [
     img: planeAzalAirLinesImg,
     title: "Top rated airlines with great services",
     location: "",
-    locationLabel: "Azal AirLines",
+    cardLabel: "Azal AirLines",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "",
     className: "plane azal airLines",
+    price: {
+      adult: 180,
+      child: 155,
+    }
   },
 
   {
@@ -1145,10 +1458,14 @@ export const cardsData = [
     img: planeCathayAirlinesImg,
     title: "Top rated airlines with great services",
     location: "",
-    locationLabel: "Cathay Airlines",
+    cardLabel: "Cathay Airlines",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "",
     className: "plane cathay airlines",
+    price: {
+      adult: 220,
+      child: 175,
+    }
   },
 
   {
@@ -1156,10 +1473,14 @@ export const cardsData = [
     img: planeDubaiAirlinesImg,
     title: "Top rated airlines with great services",
     location: "",
-    locationLabel: "Dubai Airlines",
+    cardLabel: "Dubai Airlines",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "",
     className: "plane dubai airlines",
+    price: {
+      adult: 250,
+      child: 185,
+    }
   },
 
   {
@@ -1167,10 +1488,14 @@ export const cardsData = [
     img: planeEtihadAirlinesImg,
     title: "Top rated airlines with great services",
     location: "",
-    locationLabel: "Etihad Airlines",
+    cardLabel: "Etihad Airlines",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "",
     className: "plane etihad airlines",
+    price: {
+      adult: 300,
+      child: 255,
+    }
   },
 
   {
@@ -1178,10 +1503,14 @@ export const cardsData = [
     img: planeKoreanAirlinesImg,
     title: "Top rated airlines with great services",
     location: "",
-    locationLabel: "Korean Airlines",
+    cardLabel: "Korean Airlines",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "",
     className: "plane korean airlines",
+    price: {
+      adult: 200,
+      child: 155,
+    }
   },
 
   {
@@ -1189,10 +1518,14 @@ export const cardsData = [
     img: planeNewZealandAirlinesImg,
     title: "Top rated airlines with great services",
     location: "",
-    locationLabel: "New Zealand Airlines",
+    cardLabel: "New Zealand Airlines",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "",
     className: "plane new zealand Airlines",
+    price: {
+      adult: 220,
+      child: 175,
+    }
   },
 
   {
@@ -1200,10 +1533,14 @@ export const cardsData = [
     img: planeQatarAirlinesImg,
     title: "Top rated airlines with great services",
     location: "",
-    locationLabel: "Qatar Airlines",
+    cardLabel: "Qatar Airlines",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "",
     className: "plane qatar airlines",
+    price: {
+      adult: 280,
+      child: 185,
+    }
   },
 
   {
@@ -1211,10 +1548,14 @@ export const cardsData = [
     img: planeSingaporeAirlinesImg,
     title: "Top rated airlines with great services",
     location: "",
-    locationLabel: "Singapore Airlines",
+    cardLabel: "Singapore Airlines",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "",
     className: "plane singapore airlines",
+    price: {
+      adult: 200,
+      child: 155,
+    }
   },
 
   {
@@ -1222,10 +1563,14 @@ export const cardsData = [
     img: planeTurkishAirlinesImg,
     title: "Top rated airlines with great services",
     location: "",
-    locationLabel: "Turkish Airlines",
+    cardLabel: "Turkish Airlines",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "",
     className: "plane turkish airlines",
+    price: {
+      adult: 190,
+      child: 145,
+    }
   },
 
   {
@@ -1233,10 +1578,14 @@ export const cardsData = [
     img: planeUnitedAirlinesImg,
     title: "Top rated airlines with great services",
     location: "",
-    locationLabel: "United Airlines",
+    cardLabel: "United Airlines",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "",
     className: "plane united airlines",
+    price: {
+      adult: 200,
+      child: 155,
+    }
   },
 
   {
@@ -1244,10 +1593,14 @@ export const cardsData = [
     img: planeVirginAtlanticAirlinesImg,
     title: "Top rated airlines with great services",
     location: "",
-    locationLabel: "Virgin Atlantic Airlines",
+    cardLabel: "Virgin Atlantic Airlines",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "",
     className: "plane virgin atlantic airlines",
+    price: {
+      adult: 210,
+      child: 155,
+    }
   },
 
   {
@@ -1255,10 +1608,14 @@ export const cardsData = [
     img: trainAmtrakImg,
     title: "Top rated railways company in area",
     location: "",
-    locationLabel: "Amtrak Railways",
+    cardLabel: "Amtrak Railways",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "",
     className: "train amtrak railways",
+    price: {
+      adult: 40,
+      child: 25,
+    }
   },
 
   {
@@ -1266,10 +1623,14 @@ export const cardsData = [
     img: trainAzerbaijanRailwaysImg,
     title: "Top rated railways company in area",
     location: "",
-    locationLabel: "Azerbaijan Railways",
+    cardLabel: "Azerbaijan Railways",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "",
     className: "train azerbaijan railways",
+    price: {
+      adult: 20,
+      child: 15,
+    }
   },
 
   {
@@ -1277,10 +1638,14 @@ export const cardsData = [
     img: trainChinaRailwayImg,
     title: "Top rated railways company in area",
     location: "",
-    locationLabel: "China Railway",
+    cardLabel: "China Railway",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "",
     className: "train china railway",
+    price: {
+      adult: 30,
+      child: 20,
+    }
   },
 
   {
@@ -1288,10 +1653,14 @@ export const cardsData = [
     img: trainDeutscheBahnImg,
     title: "Top rated railways company in area",
     location: "",
-    locationLabel: "Deutsche Bahn Railways",
+    cardLabel: "Deutsche Bahn Railways",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "",
     className: "train deutsche bahn railways",
+    price: {
+      adult: 40,
+      child: 25,
+    }
   },
 
   {
@@ -1299,10 +1668,14 @@ export const cardsData = [
     img: trainEastJapanRailwayImg,
     title: "Top rated railways company in area",
     location: "",
-    locationLabel: "East Japan Railways",
+    cardLabel: "East Japan Railways",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "",
     className: "train east japan railways",
+    price: {
+      adult: 30,
+      child: 20,
+    }
   },
 
   {
@@ -1310,10 +1683,14 @@ export const cardsData = [
     img: trainEurostarImg,
     title: "Top rated railways company in area",
     location: "",
-    locationLabel: "Eurostar Railways",
+    cardLabel: "Eurostar Railways",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "",
     className: "train eurostar railways",
+    price: {
+      adult: 45,
+      child: 30,
+    }
   },
 
   {
@@ -1321,10 +1698,14 @@ export const cardsData = [
     img: trainIndianPasificImg,
     title: "Top rated railways company in area",
     location: "",
-    locationLabel: "Indian Pasific Railways",
+    cardLabel: "Indian Pasific Railways",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "",
     className: "train indian pasific railways",
+    price: {
+      adult: 25,
+      child: 20,
+    }
   },
 
   {
@@ -1332,10 +1713,14 @@ export const cardsData = [
     img: trainIndianRailwayImg,
     title: "Top rated railways company in area",
     location: "",
-    locationLabel: "Indian Railway",
+    cardLabel: "Indian Railway",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "",
     className: "train indian railway",
+    price: {
+      adult: 18,
+      child: 13,
+    }
   },
 
   {
@@ -1343,10 +1728,14 @@ export const cardsData = [
     img: trainIsraelRailwaysImg,
     title: "Top rated railways company in area",
     location: "",
-    locationLabel: "Israel Railways",
+    cardLabel: "Israel Railways",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "",
     className: "train israel railways",
+    price: {
+      adult: 30,
+      child: 22,
+    }
   },
 
   {
@@ -1354,10 +1743,14 @@ export const cardsData = [
     img: trainPerurailImg,
     title: "Top rated railways company in area",
     location: "",
-    locationLabel: "Perurail Railways",
+    cardLabel: "Perurail Railways",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "",
     className: "train perurail railways",
+    price: {
+      adult: 27,
+      child: 20,
+    }
   },
 
   {
@@ -1365,10 +1758,14 @@ export const cardsData = [
     img: trainSNCFImg,
     title: "Top rated railways company in area",
     location: "",
-    locationLabel: "SNCF Railways",
+    cardLabel: "SNCF Railways",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "",
     className: "train SNCF Railways",
+    price: {
+      adult: 30,
+      child: 22,
+    }
   },
 
   {
@@ -1376,10 +1773,14 @@ export const cardsData = [
     img: trainSaudiRailwayImg,
     title: "Top rated railways company in area",
     location: "",
-    locationLabel: "Saudi Railways",
+    cardLabel: "Saudi Railways",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "",
     className: "train saudi railways",
+    price: {
+      adult: 35,
+      child: 25,
+    }
   },
 
   {
@@ -1387,10 +1788,14 @@ export const cardsData = [
     img: trainTrenitaliaImg,
     title: "Top rated railways company in area",
     location: "",
-    locationLabel: "Trenitalia Railways",
+    cardLabel: "Trenitalia Railways",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "",
     className: "train trenitalia railways",
+    price: {
+      adult: 40,
+      child: 25,
+    }
   },
 
   {
@@ -1398,10 +1803,11 @@ export const cardsData = [
     img: busBakuBusImg,
     title: "Top rated passenger transportation company in area",
     location: "",
-    locationLabel: "BakuBus",
+    cardLabel: "BakuBus",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "",
     className: "bus baku",
+    price: 15,
   },
 
   {
@@ -1409,10 +1815,11 @@ export const cardsData = [
     img: busBusEireannImg,
     title: "Top rated passenger transportation company in area",
     location: "",
-    locationLabel: "BusEireann",
+    cardLabel: "BusEireann",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "",
     className: "bus eireann",
+    price: 25,
   },
 
   {
@@ -1420,10 +1827,11 @@ export const cardsData = [
     img: busEurolinesBusImg,
     title: "Top rated passenger transportation company in area",
     location: "",
-    locationLabel: "EurolinesBus",
+    cardLabel: "EurolinesBus",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "",
     className: "bus eurolines",
+    price: 35,
   },
 
   {
@@ -1431,10 +1839,11 @@ export const cardsData = [
     img: busFlixBusImg,
     title: "Top rated passenger transportation company in area",
     location: "",
-    locationLabel: "FlixBus",
+    cardLabel: "FlixBus",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "",
     className: "bus flixbus",
+    price: 30,
   },
 
   {
@@ -1442,10 +1851,11 @@ export const cardsData = [
     img: busGreyhoundBusImg,
     title: "Top rated passenger transportation company in area",
     location: "",
-    locationLabel: "Greyhound Bus",
+    cardLabel: "Greyhound Bus",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "",
     className: "bus greyhound",
+    price: 30,
   },
 
   {
@@ -1453,10 +1863,11 @@ export const cardsData = [
     img: busLondonBusImg,
     title: "Top rated passenger transportation company in area",
     location: "",
-    locationLabel: "LondonBus",
+    cardLabel: "LondonBus",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "",
     className: "bus london",
+    price: 20,
   },
 
   {
@@ -1464,10 +1875,11 @@ export const cardsData = [
     img: busMegaBusImg,
     title: "Top rated passenger transportation company in area",
     location: "",
-    locationLabel: "MegaBus",
+    cardLabel: "MegaBus",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "",
     className: "bus megabus",
+    price: 30,
   },
 
   {
@@ -1475,10 +1887,11 @@ export const cardsData = [
     img: busPolskiBusImg,
     title: "Top rated passenger transportation company in area",
     location: "",
-    locationLabel: "PolskiBus",
+    cardLabel: "PolskiBus",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "",
     className: "bus polskibus",
+    price: 25,
   },
 
   {
@@ -1486,27 +1899,29 @@ export const cardsData = [
     img: carCampervanImg,
     title: "Great and comfortable transport for your needs",
     location: "",
-    locationLabel: "Campervan",
+    cardLabel: "Campervan",
     fuel: "40L",
     transmission: "Manual",
     seats: "6 person",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "",
     className: "car rent campervan",
+    price: 105,
   },
 
   {
     id: "111",
-    img: carMoterhomeImg,
+    img: carMotorhomeImg,
     title: "Great and comfortable transport for your needs",
     location: "",
-    locationLabel: "Moterhome",
+    cardLabel: "Moterhome",
     fuel: "600L",
     transmission: "Manual",
     seats: "8 person",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "",
     className: "car rent moterhome",
+    price: 250,
   },
 
   {
@@ -1514,13 +1929,14 @@ export const cardsData = [
     img: carCaravanImg,
     title: "Great and comfortable transport for your needs",
     location: "-",
-    locationLabel: "Caravan",
+    cardLabel: "Caravan",
     fuel: "-",
     transmission: "-",
     seats: "6 person",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "",
     className: "car rent caravan",
+    price: 150,
   },
 
   {
@@ -1528,13 +1944,14 @@ export const cardsData = [
     img: carKastenwagenImg,
     title: "Great and comfortable transport for your needs",
     location: "",
-    locationLabel: "Kastenwagen",
+    cardLabel: "Kastenwagen",
     fuel: "70L",
     transmission: "Manual",
     seats: "8 person",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "",
     className: "car rent kastenwagen",
+    price: 130,
   },
 
   {
@@ -1542,13 +1959,14 @@ export const cardsData = [
     img: carHetchbackImg,
     title: "Great and comfortable transport for your needs",
     location: "",
-    locationLabel: "Hetchback",
+    cardLabel: "Hetchback",
     fuel: "50L",
     transmission: "Manual",
     seats: "5 person",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "",
     className: "car rent hetchback",
+    price: 80,
   },
 
   {
@@ -1556,13 +1974,14 @@ export const cardsData = [
     img: carCupeImg,
     title: "Great and comfortable transport for your needs",
     location: "",
-    locationLabel: "Cupe",
+    cardLabel: "Cupe",
     fuel: "75L",
     transmission: "Manual",
     seats: "2 person",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "",
     className: "car rent cupe",
+    price: 140,
   },
 
   {
@@ -1570,13 +1989,14 @@ export const cardsData = [
     img: carMiniSUVImg,
     title: "Great and comfortable transport for your needs",
     location: "",
-    locationLabel: "MiniSUV",
+    cardLabel: "MiniSUV",
     fuel: "40L",
     transmission: "Manual",
     seats: "4 person",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "",
     className: "car rent miniSUV",
+    price: 100,
   },
 
   {
@@ -1584,13 +2004,14 @@ export const cardsData = [
     img: carRoadsterImg,
     title: "Great and comfortable transport for your needs",
     location: "",
-    locationLabel: "Roadster",
+    cardLabel: "Roadster",
     fuel: "52L",
     transmission: "Manual",
     seats: "2 person",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "",
     className: "car rent roadster",
+    price: 150,
   },
 
   {
@@ -1598,13 +2019,14 @@ export const cardsData = [
     img: carSUVImg,
     title: "Great and comfortable transport for your needs",
     location: "",
-    locationLabel: "SUV",
+    cardLabel: "SUV",
     fuel: "90L",
     transmission: "Manual",
     seats: "4 person",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "",
     className: "car rent suv",
+    price: 90,
   },
 
   {
@@ -1612,13 +2034,14 @@ export const cardsData = [
     img: carSedanImg,
     title: "Great and comfortable transport for your needs",
     location: "",
-    locationLabel: "Sedan",
+    cardLabel: "Sedan",
     fuel: "66L",
     transmission: "Manual",
     seats: "4 person",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "",
     className: "car rent sedan",
+    price: 100,
   },
 
   {
@@ -1626,13 +2049,14 @@ export const cardsData = [
     img: motoImg,
     title: "Great and comfortable transport for your needs",
     location: "",
-    locationLabel: "Motorcycle",
+    cardLabel: "Motorcycle",
     fuel: "15L",
     transmission: "Manual",
     seats: "2 person",
     views: "6.3k views",
-    time: "1 hour ago",
+    time: "",
     className: "car rent moto",
+    price: 40,
   },
 
   {

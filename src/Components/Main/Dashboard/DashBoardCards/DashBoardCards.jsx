@@ -47,7 +47,7 @@ function DashBoardCards() {
             </AspectRatio>
             <CardContent sx={{ justifyContent: "center" }}>
               <Typography level="title-lg" id="card-description">
-                {firstCard.locationLabel}
+                {firstCard.cardLabel}
               </Typography>
               <Typography
                 level="body-sm"
@@ -107,7 +107,7 @@ function DashBoardCards() {
             </AspectRatio>
             <CardContent sx={{ justifyContent: "center" }}>
               <Typography level="title-lg" id="card-description">
-                {secondCard.locationLabel}
+                {secondCard.cardLabel}
               </Typography>
               <Typography
                 level="body-sm"
@@ -167,7 +167,7 @@ function DashBoardCards() {
             </AspectRatio>
             <CardContent sx={{ justifyContent: "center" }}>
               <Typography level="title-lg" id="card-description">
-                {thirdCard.locationLabel}
+                {thirdCard.cardLabel}
               </Typography>
               <Typography
                 level="body-sm"

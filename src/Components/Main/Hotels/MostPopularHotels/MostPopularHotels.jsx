@@ -208,11 +208,11 @@ function MostPopularHotels({ filter }) {
                           target="_blank"
                           rel="noopener"
                         >
-                          {card.locationLabel}
+                          {card.cardLabel}
                           <span className="locationMapPreview">
                             <iframe
                               src={`https://maps.google.com/maps?q=${encodeURIComponent(
-                                card.locationLabel
+                                card.cardLabel
                               )}&output=embed`}
                               width="100%"
                               height="100%"

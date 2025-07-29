@@ -95,7 +95,7 @@ function ProfileDropdown({ onClose }) {
       <button
         onClick={() => {
           onClose();
-          navigate("/favorites");
+          navigate("/userpanel/favorites");
         }}
         style={{
           width: "100%",
@@ -112,7 +112,7 @@ function ProfileDropdown({ onClose }) {
       <button
         onClick={() => {
           onClose();
-          navigate("/shopping");
+          navigate("/userpanel/shopping");
         }}
         style={{
           width: "100%",

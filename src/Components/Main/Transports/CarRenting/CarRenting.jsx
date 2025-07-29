@@ -59,7 +59,7 @@ function CarRenting() {
                   textColor="#fff"
                   sx={{ fontSize: "24px", lineHeight: "29px" }}
                 >
-                  {selectedMainCard.locationLabel}
+                  {selectedMainCard.cardLabel}
                 </Typography>
                 <Typography
                   textColor="#fff"
@@ -119,7 +119,7 @@ function CarRenting() {
                 id="card-description"
                 sx={{ fontSize: "20px", lineHeight: "24px", marginTop: "24px" }}
               >
-                {card.locationLabel}
+                {card.cardLabel}
               </Typography>
               <Typography
                 level="body-sm"

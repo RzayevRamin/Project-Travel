@@ -235,12 +235,12 @@ function ForeignTours({ filter, source }) {
                           target="_blank"
                           rel="noopener"
                         >
-                          {card.locationLabel}
+                          {card.cardLabel}
                         </Link>
                         <span className="locationMapPreview">
                           <iframe
                             src={`https://maps.google.com/maps?q=${encodeURIComponent(
-                              card.locationLabel
+                              card.cardLabel
                             )}&output=embed`}
                             title="Google Map Preview"
                           ></iframe>

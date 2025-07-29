@@ -205,7 +205,7 @@ function Trains({filter}) {
                     <span className="mostPopularRailwaysCardContextTextBox">
                       <Typography className="mostPopularRailwaysCardsLocation" level="title-lg" textColor="#fff">
                         <Link>
-                          {card.locationLabel}
+                          {card.cardLabel}
                         </Link>
                       </Typography>
                       {isCenter && (

@@ -205,7 +205,7 @@ function BusCompanies({filter}) {
                     <span className="mostPopularBusCardContextTextBox">
                       <Typography className="mostPopularBusCardsLocation" level="title-lg" textColor="#fff">
                         <Link>
-                          {card.locationLabel}
+                          {card.cardLabel}
                         </Link>
                       </Typography>
                       {isCenter && (

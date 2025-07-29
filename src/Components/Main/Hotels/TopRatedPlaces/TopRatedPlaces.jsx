@@ -238,11 +238,11 @@ function TopRatedPlaces({ filter }) {
                   <span className="ratedPlacesCardContextTextBox">
                     <Typography level="title-lg" textColor="#fff">
                       <Link href={card.location} target="_blank" rel="noopener">
-                        {card.locationLabel}
+                        {card.cardLabel}
                         <span className="locationMapPreview">
                           <iframe
                             src={`https://maps.google.com/maps?q=${encodeURIComponent(
-                              card.locationLabel
+                              card.cardLabel
                             )}&output=embed`}
                             width="100%"
                             height="100%"
