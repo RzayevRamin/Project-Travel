@@ -1,5 +1,7 @@
-.headerLoginButton {
+.headerLoginContainer .headerLoginButton {
     background-color: #FDFBF8 !important;
     color: #2A2929 !important;
     border: 1px solid #FDFBF8 !important;
+    border-radius: 2rem;
+    height: 2rem;
 }

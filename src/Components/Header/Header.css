@@ -9,8 +9,8 @@
 }
 
 .modeToggle {
-  margin: 10px;
-  padding: 6px 12px;
+  margin: 0.2rem;
+  padding: 0.15rem 0.3rem;
   cursor: pointer;
 }
 
@@ -19,10 +19,10 @@
   align-items: center; 
   justify-content: space-around;
   width: 90vw;
-  height: 58px;
+  height: auto;
   background-color: rgba(255, 255, 255, 0.29);
-  margin-top: 23px;
-  border-radius: 26px;
+  margin-top: 2rem;
+  border-radius: 6rem;
   
 }
 
@@ -45,6 +45,7 @@ body.dark .header {
 .headerRightSection {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .navContainer {
@@ -71,14 +72,161 @@ body.dark .header {
   width: 100vw;
 }
 
-.searchDestinationContainer {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 10;
-  width: 100%;
+
+/* Ümumi gizli elementlər */
+
+.desktopHeader {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+  margin-top: 2rem;
+  border-radius: 6rem;
+  background-color: rgba(255, 255, 255, 0.29);
+  height: 58px;
+  width: 90vw;
+}
+
+body.dark .desktopHeader {
+  background-color: rgba(0, 0, 0, 0.29);
+}
+
+.headerTopMobile,
+.headerMobile {
+  display: none;
+}
+
+/* Mobil görünüş üçün */
+@media (max-width: 768px) {
+  .desktopHeader {
+    display: none;
+  }
+
+  .headerTopMobile {
+    display: flex;
+    justify-content: space-between;
+    width: 92vw;
+  }
+
+  .headerMobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+    width: 100vw;
+    box-sizing: border-box;
+  }
+
+  .headerMobile .mobileMenuRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  /* Burger düyməsi */
+  .nav .hamburger {
+    display: inline-block;
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: inherit;
+    padding: 0;
+    margin: 0;
+  }
+
+  /* Nav menyu mobilda gizlidir */
+  #nav-buttons {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background: rgba(255, 255, 255, 0.95);
+    width: 100vw;
+    flex-direction: column;
+    padding: 20px 15px;
+    box-sizing: border-box;
+    z-index: 1000;
+    border-top: 1px solid #ccc;
+  }
+
+  /* Menyu açıqdırsa göstər */
+  #nav-buttons.show {
+    display: flex;
+  }
+
+ #nav-buttons button {
+    width: 100%;
+    justify-content: flex-start;
+    padding: 10px 0;
+  }
+
+  /* Search, ModeSwitch, Language, Valuta üçün ölçü tənzimləmələri */
+  .headerMobile > .mobileMenuRow > *:not(.nav) {
+    flex-shrink: 0;
+  }
+
+  .headerTopLeft {
+  display: flex;
+  align-items: center;
+}
+
+.headerTopRight {
+  display: flex;
+  align-items: center;
+}
+
+.mobileCarousel {
+  margin-top: 11vh;
+  width: 100vw;
+  box-sizing: border-box;
+}
+
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .desktopHeader,
+  .headerTopMobile,
+  .headerMobile {
+    display: none;
+  }
+
+  .headerTablet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90vw;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.29);
+    border-radius: 8rem;
+  }
+
+  body.dark .headerTablet{
+    background-color: rgba(0, 0, 0, 0.29);
+  }
+
+  .headerTabletTop {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .headerTabletTop > * {
+    flex-shrink: 0;
+    margin: 5px;
+  }
+
+  .headerTabletBottom {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .headerTabletBottom .nav {
+    width: 100%;
+  }
 }

@@ -125,23 +125,23 @@ function LocalTours({ filter, source }) {
 
   const sliderSettings = {
     infinite: true,
-    slidesToShow: 5,
-    slidesToScroll: 4,
+    slidesToShow: source === "home" ? 4 : 5,
+  slidesToScroll: source === "home" ? 3 : 4,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
     responsive: [
       {
         breakpoint: 1280,
         settings: {
-          slidesToShow: 4,
-          slidesToScroll: 3,
+          slidesToShow: source === "home" ? 3 : 4,
+          slidesToScroll: source === "home" ? 2 : 3,
         },
       },
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 2,
+          slidesToShow: source === "home" ? 2 : 3,
+          slidesToScroll: source === "home" ? 1 : 2,
         },
       },
       {
@@ -162,7 +162,11 @@ function LocalTours({ filter, source }) {
   };
 
   return (
-    <div className={`${source === "home" ? "localHomeStyle" : "localToursStyle"} localToursContainer`}>
+    <div
+      className={`${
+        source === "home" ? "localHomeStyle" : "localToursStyle"
+      } localToursContainer`}
+    >
       <h1>Domestic Tours</h1>
       <Slider {...sliderSettings}>
         {selectedCards.map((card) => (
@@ -256,15 +260,15 @@ function LocalTours({ filter, source }) {
                     >
                       <IconButton>
                         {hoveredRate === card.id ? (
-                            <HoverRating
-                              value={rates[card.id]}
-                              onChange={(value) => {
-                                setRates((prev) => ({
-                                  ...prev,
-                                  [card.id]: value,
-                                }));
-                              }}
-                            />
+                          <HoverRating
+                            value={rates[card.id]}
+                            onChange={(value) => {
+                              setRates((prev) => ({
+                                ...prev,
+                                [card.id]: value,
+                              }));
+                            }}
+                          />
                         ) : (
                           <>
                             <span className="ratingValue">

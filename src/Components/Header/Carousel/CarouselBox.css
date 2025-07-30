@@ -12,7 +12,7 @@
   visibility: visible !important;
   z-index: 3;
   position: absolute;
-  bottom: 20px;
+  bottom: 0.1rem;
   width: 100%;
   justify-content: center;
 }
@@ -33,11 +33,22 @@ body.dark .carousel .control-dots .dot {
   background: #fff !important;
 }
 
-.carouselCaption {
+.carouselContent {
   position: absolute;
+  top: 50%;
   left: 0;
   right: 0;
-  bottom: 50px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.carouselCaption {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -45,15 +56,60 @@ body.dark .carousel .control-dots .dot {
 
 .carouselCaption p {
   padding: 5px 10px;
-  background-color: rgba(4, 105, 183, 0.74);
-  color: #fff;
-  border-radius: 16px;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #0123FF;
+  border-radius: 0.5rem;
   font-size: 12px;
+  line-height: 18px;
+  font-weight: bold;
 }
 
-.carouselButton {
-  background: #057DD4 !important;   
-  color: #fff !important;
-  font-weight: bold !important;
-  cursor: pointer !important;
+
+@media (max-width: 768px) {
+  .carouselCaption {
+    justify-content: space-between;
+    align-items: center;
+    bottom: 30px;
+    padding: 0 10px;
+    gap: 8px;
+  }
+
+  .carouselCaption p {
+    font-size: 10px;
+    padding: 8px;
+    max-width: 90%;
+    text-align: center;
+  }
+
+  .carouselButton {
+    font-size: 12px !important;
+    padding: 6px 14px !important;
+  }
+
+  .carousel .control-dots {
+    bottom: 10px;
+  }
+
+  .carousel .control-dots .dot {
+    width: 10px !important;
+    height: 10px !important;
+  }
+
+  .carousel .control-dots .dot.selected {
+    width: 24px !important;
+  }
+
+  .searchDestinationBox {
+    display: none;
+  }
+
+  .carouselContent {
+    position: static; /* artıq absolute olmasın */
+    transform: translateY(-90%); /* translateY(-50%)-ni ləğv et */
+    align-items: center;
+  }
+
+  .carousel .control-dots {
+    display: none !important;
+  }
 }

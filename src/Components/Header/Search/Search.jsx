@@ -37,7 +37,7 @@ function Search() {
       {showInput && (
         <form
           className="searchInputForm"
-          style={{ display: "flex", alignItems: "center", marginLeft: "8px" }}
+          style={{ display: "flex", alignItems: "center", }}
           onSubmit={(e) => {
             e.preventDefault();
           }}

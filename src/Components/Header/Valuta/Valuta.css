@@ -12,7 +12,7 @@
 }
 
 .valutaSelect, .valutaSelect .MuiOption-root {
-  min-width: 120px !important;
+  min-width: 5vw !important;
 }
 .valutaSelect .MuiListItemDecorator-root {
   min-width: 32px;
@@ -37,4 +37,8 @@ body.dark .valutaSelect svg {
 body.dark .valutaSelect .MuiSelect-button,
 body.dark .valutaSelect [role="button"] {
   color: #fff !important;
+}
+
+.MuiSelect-root {
+  padding: 0 !important;
 }

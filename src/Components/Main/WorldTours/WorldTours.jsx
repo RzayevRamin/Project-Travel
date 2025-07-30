@@ -122,15 +122,15 @@ function WorldTours({ filter, source }) {
 
   const sliderSettings = {
     infinite: true,
-    slidesToShow: 2.5,
-    slidesToScroll: 1,
+    slidesToShow: source === "home" ? 2 : 2.5,
+  slidesToScroll: source === "home" ? 1 : 2,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
     responsive: [
       {
         breakpoint: 1760,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: source === "home" ? 1.5 : 2,
           slidesToScroll: 1,
         },
       },
