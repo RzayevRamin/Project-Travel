@@ -1,7 +1,12 @@
-.logoForFooter .logoSvg {
-  width: 4.2rem;
-  height: 4.2rem;
+.logoForFooter .logoContainer .logoBox .logoSvg {
+  width: clamp(3.5rem, 5vw, 4rem);
+  height: clamp(3.5rem, 5vw, 4rem);
   filter: invert(1) contrast(2);
+}
+
+.logoForFooter {
+  margin: 0;
+  padding: 0;
 }
 
 .logoForFooter .logoContainer {
@@ -13,55 +18,140 @@
   align-items: center;
 }
 
-.logoForFooter .logoBox {
+.logoForFooter .logoContainer .logoBox {
   margin: 0;
   padding: 0;
 }
-.logoForFooter .logoText {
+.logoForFooter .logoContainer .logoText {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 2.6rem;
+  align-items: flex-start;
   margin: 0;
   padding: 0;
 }
 
-.logoForFooter .logoText h1 {
-  font-size: 40px;
+.logoForFooter .logoContainer .logoText h1 {
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
   font-weight: bolder;
-  line-height: 48px;
   margin: 0;
   padding: 0;
   color: #fff;
 }
 
-.logoForFooter .logoText h3 {
-  font-size: 24px;
-  line-height: 29px;
+.logoForFooter .logoContainer .logoText h3 {
+  font-size: clamp(1rem, 1.75vw, 1.5rem);
   margin: 0;
   padding: 0;
   color: #fff;
 }
 
 .socialNetworksLogo a svg {
-  width: 34px;
-  height: 34px;
-  margin-right: 34px;
+  width: clamp(1.5rem, 3vw, 2.2rem);
+  height: clamp(1.5rem, 3vw, 2.2rem);
 }
 
 .socialNetworksContainer {
-  margin: 25px 0;
+  margin: clamp(0.5rem, 3vw, 2rem) 0 0 0;
 }
 
 .socialNetworksLogo {
-  margin-top: 21px;
+  margin-top: clamp(0.5rem, 2vw, 1.5rem);
+  display: flex;
+  justify-content: space-between;
 }
 
 .socialNetworksContainer h3 {
-  font-size: 24px;
+  font-size: clamp(0.25rem, 2.5vw, 1.5rem);
   color: #fff;
 }
 
 .footerLogoAndSocialNetworksContainer {
-  min-width: 27rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 30%;
+}
+
+@media (max-width: 480px) {
+  .logoForFooter .logoSvg {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .logoForFooter .logoText h1 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .logoForFooter .logoText h3 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .socialNetworksLogo a svg {
+    width: 1.75rem;
+    height: 1.75rem;
+    margin-right: 1rem;
+  }
+
+  .footerLogoAndSocialNetworksContainer {
+    text-align: center;
+  }
+
+  .logoForFooter .logoContainer {
+    justify-content: center;
+  }
+
+  .socialNetworksContainer {
+    margin: 1rem 0 0 0;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .logoForFooter .logoContainer .logoBox .logoSvg {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
+  .logoForFooter .logoContainer .logoText h1 {
+    font-size: 1.75rem;
+    line-height: 2.2rem;
+  }
+
+  .logoForFooter .logoContainer .logoText h3 {
+    font-size: 1.1rem;
+    line-height: 1.6rem;
+  }
+
+  .socialNetworksLogo a svg {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 1.5rem;
+  }
+
+  .socialNetworksContainer h3 {
+    font-size: 1.1rem;
+  }
+
+  .socialNetworksContainer {
+    margin: 1.5rem 0 0 0;
+  }
+
+  .footerLogoAndSocialNetworksContainer {
+    text-align: center;
+    align-items: center;
+  }
+
+  .logoForFooter .logoContainer {
+    justify-content: flex;
+  }
+
+  .logoForFooter .logoContainer .logoText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
 }

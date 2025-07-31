@@ -1,49 +1,107 @@
-.footerContactListItems li a {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: #fff;
-}
-
-.footerContactListItems li a svg {
-    width: 24px;
-    height: 24px;
-    margin-right: 32px;
-}
-
-.footerContactListItems li a p {
-    font-size: 20px;
-    line-height: 24px;
-    margin: 0;
-}
-
-.footerContactListItems li {
-    margin: 0 0 20px 0;
-    list-style: none;
-    padding: 0;
-}
-
-.footerContactHeading h2 {
-    font-size: 32px;
-    margin: 0;
-    color: #fff;
-}
-
-.footerContactListItems {
-    padding-left: 0;
-    margin: 0;
+.footerContactContainer {
+  padding-left: clamp(0.5rem, 2vw, 3rem);
+  margin-left: clamp(0.5rem, 2vw, 3rem);
+  border-left: 2px solid #fff;
+  width: 35%;
+  height: 100%;
 }
 
 .footerContactHeading {
-    margin-bottom: 25px;
+  margin-bottom: clamp(0.75rem, 2vw, 1.5rem);
 }
 
-.footerContactContainer {
-    padding-left: 3rem;
-    border-left: 2px solid #fff;
-    min-width: 27rem;
+.footerContactHeading h2 {
+  font-size: clamp(1.2rem, 3vw, 2rem);
+  margin: 0;
+  color: #fff;
 }
 
-.footerContactListItems :last-child {
-    margin-bottom: 0;
+.footerContactListItems {
+  padding-left: 0;
+  margin: 0;
+}
+
+.footerContactListItems li {
+  margin-bottom: clamp(0.5rem, 2vw, 1.25rem);
+  list-style: none;
+  padding: 0;
+}
+
+.footerContactListItems li:last-child {
+  margin-bottom: 0;
+}
+
+.footerContactListItems li a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+}
+
+.footerContactListItems li a .iconWrapper {
+  width: clamp(1.25rem, 2.5vw, 1.8rem);
+  height: clamp(1.25rem, 2.5vw, 1.8rem);
+  margin-right: clamp(0.3rem, 2vw, 2rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footerContactListItems li a .icon-wrapper svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.footerContactListItems li a p {
+  font-size: clamp(0.95rem, 2vw, 1.25rem);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* 480px-dən kiçik ekranlar üçün əlavə uyğunlaşma */
+@media (max-width: 480px) {
+  .footerContactContainer {
+    padding-left: 1.2rem;
+    min-width: 100%;
+    border-left: none;
+  }
+
+  .footerContactHeading h2 {
+    text-align: center;
+  }
+
+  .footerContactListItems li a {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .footerContactListItems li a .icon-wrapper svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+  .footerContactListItems li {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 767px) {
+    .footerContactContainer {
+    padding-left: 0;
+    border-left: none;
+    border-top: 2px solid #fff;
+    padding-top: clamp(1rem, 4vw, 3rem);
+    min-width: 100%;
+    margin-top: clamp(1rem, 4vw, 2rem);
+    text-align: center;
+  }
+
+  .footerContactListItems {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
 }

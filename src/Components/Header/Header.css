@@ -77,8 +77,9 @@ body.dark .header {
 
 .desktopHeader {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  padding: 0 0.2rem;
   margin-top: 2rem;
   border-radius: 6rem;
   background-color: rgba(255, 255, 255, 0.29);
@@ -96,7 +97,7 @@ body.dark .desktopHeader {
 }
 
 /* Mobil görünüş üçün */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .desktopHeader {
     display: none;
   }

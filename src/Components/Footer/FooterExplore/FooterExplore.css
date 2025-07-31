@@ -1,44 +1,66 @@
-.footerExploreListItems {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto auto auto auto;
-    padding-left: 0;
-    margin: 0;
-}
-
-.footerExploreListItems li {
-    list-style: none;
-    margin: 0 70px 20px 0;
-    padding: 0;
-}
-
-.footerExploreListItems li a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 20px;
-    line-height: 24px;
+.footerExploreContainer {
+  padding-left: clamp(0.5rem, 2vw, 3rem);
+  margin-left: clamp(0.5rem, 2vw, 3rem);
+  border-left: 2px solid #fff;
+  width: 25%;
+  height: 100%;
 }
 
 .footerExploreHeading {
-    margin-bottom: 25px;
+  margin-bottom: clamp(1rem, 3vw, 1.5rem);
 }
 
 .footerExploreHeading h2 {
-    font-size: 32px;
-    margin: 0;
-    color: #fff;
+  font-size: clamp(1.2rem, 3vw, 2rem);
+  margin: 0;
+  color: #fff;
 }
 
-.footerExploreContainer {
-    padding-left: 3rem;
-    border-left: 2px solid #fff;
-    min-width: 27rem;
+.footerExploreListItems {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: auto;
+  gap: clamp(0.3rem, 1.5vw, 1.5rem) clamp(0.4rem, 1.5vw, 4rem);
+  padding-left: 0;
+  margin: 0;
+}
+
+.footerExploreListItems li {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.footerExploreListItems li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: clamp(0.9rem, 2.5vw, 1.25rem);
+  line-height: clamp(1.2rem, 3vw, 1.6rem);
+  transition: all 0.3s ease;
 }
 
 .footerExploreListItems :last-child {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 #exploreContactListItem {
-    margin-bottom: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+/* ✅ Mobil versiya üçün - 768px-dən aşağı */
+@media (max-width: 767px) {
+  .footerExploreContainer {
+    padding-left: 0;
+    border-left: none;
+    border-top: 2px solid #fff;
+    padding-top: clamp(1rem, 4vw, 3rem);
+    min-width: 100%;
+    margin-top: clamp(1rem, 4vw, 2rem);
+    text-align: center;
+  }
+
+  .footerExploreListItems {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
 }

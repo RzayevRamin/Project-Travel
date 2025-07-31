@@ -32,13 +32,13 @@ function Nav({ menuOpen, setMenuOpen, showLoginInMenu = false }) {
         orientation="horizontal"
         sx={{ gap: "0.2rem", width: showLoginInMenu ? "100%" : "auto" }}
       >
-        <Button onClick={() => handleNavigate("/home")}>Home</Button>
+        <Button onClick={() => handleNavigate("/home")} id="navHomeButton">Home</Button>
         <Button onClick={() => handleNavigate("/tours")}>Tours</Button>
         <Button onClick={() => handleNavigate("/hotels")}>Hotels</Button>
         <Button onClick={() => handleNavigate("/transport")}>Transport</Button>
         <Button onClick={() => handleNavigate("/media")}>Media</Button>
         <Button onClick={() => handleNavigate("/forum")}>Forum</Button>
-        <Button onClick={() => handleNavigate("/contact")}>Contact</Button>
+        <Button onClick={() => handleNavigate("/contact")} id="navContactButton">Contact</Button>
 
         {/* HeaderLogin burger menu daxilində */}
         {showLoginInMenu && menuOpen && <HeaderLogin />}

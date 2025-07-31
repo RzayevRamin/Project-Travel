@@ -11,6 +11,7 @@ function FooterContact() {
         <ul className="footerContactListItems">
           <li>
             <a href="tel:+994506815551" target="blank">
+              <span className="iconWrapper">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -33,6 +34,7 @@ function FooterContact() {
                   strokeLinejoin="round"
                 />
               </svg>
+              </span>
               <p>+994 77 440 48 61</p>
             </a>
           </li>
@@ -41,6 +43,7 @@ function FooterContact() {
               href="https://api.whatsapp.com/send?phone=+994774404861&text=Hello"
               target="blank"
             >
+              <span className="iconWrapper">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -59,11 +62,13 @@ function FooterContact() {
                   fill="white"
                 />
               </svg>
+              </span>
               <p>+994 77 440 48 61</p>
             </a>
           </li>
           <li>
             <a href="mailto:raminrzayev1990@gmail.com" target="blank">
+              <span className="iconWrapper">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -76,11 +81,13 @@ function FooterContact() {
                   fill="white"
                 />
               </svg>
+              </span>
               <p>raminrzayev1990@gmail.com</p>
             </a>
           </li>
           <li>
             <a href="https://maps.app.goo.gl/USHYxtFgzHTDShYs7" target="blank">
+            <span className="iconWrapper">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="18"
@@ -93,6 +100,7 @@ function FooterContact() {
                   fill="#FDFBF8"
                 />
               </svg>
+              </span>
               <p>Baku, Azerbaijan</p>
             </a>
           </li>

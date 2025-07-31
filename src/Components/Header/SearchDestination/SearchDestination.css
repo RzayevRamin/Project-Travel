@@ -18,7 +18,7 @@
 .searchDestinationBox h1 {
     width: 46.6rem;
     text-align: center;
-    font-size: 40px;
+    font-size: clamp(22px, 2vw, 40px);
     font-weight: bold;
     color: #0123FF;
     background-color: rgba(255, 255, 255, 0.5);

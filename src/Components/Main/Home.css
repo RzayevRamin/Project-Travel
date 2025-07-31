@@ -1,7 +1,7 @@
 .homeContainer {
     display: flex;
     flex-direction: row;
-    width: 100rem;
+    width: 90vw;
     padding: 2rem 4rem;
     gap: 2rem;
 }
@@ -9,7 +9,7 @@
 .homeContext {
     display: flex;
     flex-direction: column;
-    width: 80rem;
+    width: 66vw;
 }
 
 .dashboardContainer {
@@ -29,3 +29,29 @@
 .worldHomeStyle {
     width: 100%;
 }
+
+@media (max-width: 768px) {
+  .homeContainer {
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem 2rem;
+  }
+
+  .homeContext {
+    width: 80%;
+  }
+
+  .dashboardContainer {
+    width: 20%;
+    margin-top: 2rem;
+  }
+}
+
+/* Mobil üçün daha kiçik ekran */
+@media (max-width: 480px) {
+  .homeContainer {
+    padding: 1rem;
+    gap: 1rem;
+  }
+}
+

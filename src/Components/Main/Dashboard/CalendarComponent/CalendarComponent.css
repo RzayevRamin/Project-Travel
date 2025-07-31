@@ -1,14 +1,33 @@
-.calendar {
-  transform: scale(1.275);
-  transform-origin: top left;
-  border-top-left-radius: 0.5rem;
-  border-top-right-radius: 0.5rem;
-  overflow: hidden;
+.calendarContainer {
+  width: 100%;
 }
 
-.calendarContainer {
-  min-height: 29rem; 
+.calendarWrapper {
+  transition: transform 0.3s ease;
+}
+
+.rdrCalendarWrapper  {
+  border-radius: 0.5rem;
+  overflow: hidden;
   width: 100%;
-  width: 28rem;
-  box-sizing: border-box;
+  padding: 0.5rem;
+  height: auto;
+  max-width: 32rem;
+}
+
+.rdrMonth {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+}
+
+.calendarComponentContainer {
+  width: 100%;
+}
+
+.rdrMonths {
+  width: 92%;
+  height: auto;
+  padding: 0.5rem;
+  max-width: 28rem;
 }

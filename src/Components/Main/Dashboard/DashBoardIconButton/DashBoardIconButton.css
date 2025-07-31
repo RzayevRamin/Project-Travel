@@ -1,13 +1,18 @@
 .dashBoardIconButtonContainer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
 }
 
-.dashIconButton{
-    width: 6rem;
-    height: 6rem;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
+.dashIconButton {
+  width: clamp(2.5rem, 5vw, 6rem);
+  height: clamp(2.5rem, 5vw, 6rem);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

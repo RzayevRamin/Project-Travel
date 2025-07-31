@@ -53,16 +53,14 @@ function CarouselBox() {
               <SearchDestination />
             </div>
             <div className="carouselCaption">
-              <p>
-                An impressive journey to Russia, filled with imperial luxury,
-                rich history, magnificent architecture, and deep layers of
-                culture . . .
+              <p><span>An impressive journey to Russia, filled with imperial luxury,
+                rich history, magnificent architecture . . .</span>
                 <Button
                 sx={{
                   background: "transparent",
                   color: "#0123FF",
                   fontWeight: "bold",
-                  fontSize: "12px",
+                  fontSize: "16px",
                   cursor: "pointer",
                   height: "18px",
                   padding: "0 0.3rem !important",
@@ -77,7 +75,7 @@ function CarouselBox() {
                 }}
                 className="carouselButton"
               >
-                More
+                More about Russia
               </Button>
               </p>
             </div>
@@ -90,16 +88,14 @@ function CarouselBox() {
               <SearchDestination />
             </div>
             <div className="carouselCaption">
-              <p>
-                A unique tour of Icheri Sheher, filled with narrow streets
-                breathing history between ancient fortress walls, architecture
-                reminiscent of oriental fairy tales, and cultural heritage . . .
+              <p><span>A unique tour of Icheri Sheher, filled with narrow streets
+                breathing history between ancient walls . . .</span>
                 <Button
                 sx={{
                   background: "transparent",
                   color: "#0123FF",
                   fontWeight: "bold",
-                  fontSize: "12px",
+                  fontSize: "16px",
                   cursor: "pointer",
                   height: "18px",
                   padding: "0 0.3rem !important",
@@ -112,9 +108,9 @@ function CarouselBox() {
                   borderTopLeftRadius: "0.2rem !important",
                   borderBottomLeftRadius: "0.2rem !important",
                 }}
-                className="carouselButton"
+                className="carouselButton oldTownButton"
               >
-                More
+                More about Icheri Sheher
               </Button>
               </p>
             </div>
@@ -127,15 +123,13 @@ function CarouselBox() {
               <SearchDestination />
             </div>
             <div className="carouselCaption">
-              <p>
-                A Dubai tour that combines the beauty of the endless desert, the
-                magnificent modern city, entertainment, and grandeur . . .
+              <p><span>A Dubai tour that combines the beauty of the endless desert, entertainment, and grandeur . . .</span>
                 <Button
                 sx={{
                   background: "transparent",
                   color: "#0123FF",
                   fontWeight: "bold",
-                  fontSize: "12px",
+                  fontSize: "16px",
                   cursor: "pointer",
                   height: "18px",
                   padding: "0 0.3rem !important",
@@ -150,7 +144,7 @@ function CarouselBox() {
                 }}
                 className="carouselButton"
               >
-                More
+                More about Dubai
               </Button>
               </p>
             </div>
@@ -163,13 +157,13 @@ function CarouselBox() {
               <SearchDestination />
             </div>
             <div className="carouselCaption">
-              <p>Georgia tour, distinguished by its mysterious nature . . .
+              <p><span>Georgia tour, distinguished by its mysterious nature . . .</span>
                 <Button
                 sx={{
                   background: "transparent",
                   color: "#0123FF",
                   fontWeight: "bold",
-                  fontSize: "12px",
+                  fontSize: "16px",
                   cursor: "pointer",
                   height: "18px",
                   padding: "0 0.3rem !important",
@@ -184,7 +178,7 @@ function CarouselBox() {
                 }}
                 className="carouselButton"
               >
-                More
+                More about Georgia
               </Button>
               </p>
             </div>
@@ -197,15 +191,14 @@ function CarouselBox() {
               <SearchDestination />
             </div>
             <div className="carouselCaption">
-              <p>
-                A unique Turkey tour with historic rock houses, magnificent
-                natural landscapes and hot air balloons . . .
+              <p><span>A unique Turkey tour with historic rock houses, magnificent
+                natural landscapes and hot air balloons . . .</span>
                 <Button
                 sx={{
                   background: "transparent",
                   color: "#0123FF",
                   fontWeight: "bold",
-                  fontSize: "12px",
+                  fontSize: "16px",
                   cursor: "pointer",
                   height: "18px",
                   padding: "0 0.3rem !important",
@@ -220,7 +213,7 @@ function CarouselBox() {
                 }}
                 className="carouselButton"
               >
-                More
+                More about Turkey
               </Button>
               </p>
             </div>
@@ -233,15 +226,13 @@ function CarouselBox() {
               <SearchDestination />
             </div>
             <div className="carouselCaption">
-              <p>
-                Images from a tour of Italy, which combines ancient Roman,
-                Gothic, Renaissance, Baroque and other architectural styles . . .
+              <p><span>Images from a tour of Italy, which combines many architectural styles . . .</span>
                 <Button
                 sx={{
                   background: "transparent",
                   color: "#0123FF",
                   fontWeight: "bold",
-                  fontSize: "12px",
+                  fontSize: "16px",
                   cursor: "pointer",
                   height: "18px",
                   padding: "0 0.3rem !important",
@@ -256,7 +247,7 @@ function CarouselBox() {
                 }}
                 className="carouselButton"
               >
-                More
+                More about Italy
               </Button>
               </p>
             </div>
@@ -269,13 +260,13 @@ function CarouselBox() {
               <SearchDestination />
             </div>
             <div className="carouselCaption">
-              <p>Love tour on france . . .
+              <p><span>Love tour on france . . .</span>
                 <Button
                 sx={{
                   background: "transparent",
                   color: "#0123FF",
                   fontWeight: "bold",
-                  fontSize: "12px",
+                  fontSize: "16px",
                   cursor: "pointer",
                   height: "18px",
                   padding: "0 0.3rem !important",
@@ -290,7 +281,7 @@ function CarouselBox() {
                 }}
                 className="carouselButton"
               >
-                More
+                More about France
               </Button>
               </p>
             </div>
@@ -303,15 +294,14 @@ function CarouselBox() {
               <SearchDestination />
             </div>
             <div className="carouselCaption">
-              <p>
-                To Spain — an unforgettable adventure full of colorful culture,
-                historic cities, delicious flavors, and sunny beaches . . .
+              <p><span>To Spain — an unforgettable adventure full of colorful culture,
+                delicious flavors, and sunny beaches . . .</span>
                 <Button
                 sx={{
                   background: "transparent",
                   color: "#0123FF",
                   fontWeight: "bold",
-                  fontSize: "12px",
+                  fontSize: "16px",
                   cursor: "pointer",
                   height: "18px",
                   padding: "0 0.3rem !important",
@@ -326,7 +316,7 @@ function CarouselBox() {
                 }}
                 className="carouselButton"
               >
-                More
+                More about Spain
               </Button>
               </p>
             </div>
@@ -339,13 +329,13 @@ function CarouselBox() {
               <SearchDestination />
             </div>
             <div className="carouselCaption">
-              <p>Feel the beauty of nature in Gakh . . .
+              <p><span>Feel the beauty of nature in Gakh . . .</span>
                 <Button
                 sx={{
                   background: "transparent",
                   color: "#0123FF",
                   fontWeight: "bold",
-                  fontSize: "12px",
+                  fontSize: "16px",
                   cursor: "pointer",
                   height: "18px",
                   padding: "0 0.3rem !important",
@@ -360,7 +350,7 @@ function CarouselBox() {
                 }}
                 className="carouselButton"
               >
-                More
+                More about Gakh
               </Button>
               </p>
             </div>

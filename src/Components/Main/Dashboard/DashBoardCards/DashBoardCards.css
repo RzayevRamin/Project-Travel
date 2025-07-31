@@ -1,29 +1,108 @@
 .rounded {
-    border-radius: 50%;
+  border-radius: 50%;
+  width: clamp(3rem, 5vw, 5.35rem);
+  height: auto;
 }
 
 .dashCardsbox {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 21rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 100%;
+  gap: 0.5rem;
+  height: auto;
 }
 
 .dashCardsContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 26.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 26rem;
+  height: auto;
+}
+
+.dashCardItem {
+  flex: 1 1 calc(100% - 0);
+  max-width: calc(100% - 0);
+}
+
+.dashCardItem .MuiCard-root {
+  display: flex;
+  justify-content: space-between !important;
+  align-items: center !important;
+  max-width: clamp(14rem, 28vw, 30rem);
+  padding: 0.5rem;
+  gap: clamp(0.1rem, 0.8vw, 0.8rem);
+}
+
+.dashCardItem .MuiCard-root .MuiAspectRatio-root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 30%;
+  max-width: 30%;
+  height: auto;
+}
+
+.dashCardItem .MuiCard-root .MuiAspectRatio-root .MuiAspectRatio-content {
+  width: 100%;
+}
+
+.dashCardItem .MuiCard-root .MuiCardContent-root {
+  flex: 1;
+  padding: 0 0.5rem;
+  max-width: 30%;
+  width: 30%;
+  min-width: 30%;
+  overflow: hidden;
+}
+
+.dashCardItem .MuiCard-root .MuiCardContent-root .MuiTypography-title-lg {
+  font-size: clamp(0.5rem, 1.5vw, 1.5rem);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dashCardItem .MuiCard-root .MuiButton-root {
+  min-width: 25%;
+  max-width: 25%;
 }
 
 .dashCardsHeading h4 {
-    font-size: 20px;
-    line-height: 24px;
-    margin: 0;
-    padding: 0;
+  font-size: 20px;
+  line-height: 24px;
+  margin: 0;
+  padding: 0;
 }
 
 .dashCardsHeading {
-    margin: 0;
-    padding: 0;
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  margin-bottom: 0.5rem;
+  padding: 0;
+}
+
+.dashCardsMore {
+  width: 100%;
+  max-width: 30rem;
+}
+
+@media (max-width: 768px) {
+  .dashCardsContainer {
+    padding: 0.5rem;
+  }
+
+  .dashCardsbox {
+    gap: 0.75rem;
+  }
+
+  .dashCardsHeading h4 {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .dashCardItem {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
 }

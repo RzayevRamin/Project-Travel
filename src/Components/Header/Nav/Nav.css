@@ -55,7 +55,12 @@ border: none;
   padding: 0.5rem !important;
 }
 
-@media (max-width: 768px) {
+#navContactButton {
+  border-top-right-radius: 0.4rem;
+  border-bottom-right-radius: 0.4rem;
+}
+
+@media (max-width: 767px) {
   .nav {
     flex-direction: column;
     align-items: flex-start;
@@ -66,7 +71,7 @@ border: none;
     display: none;
     flex-direction: column;
     align-items: flex-start;
-    width: 100%;
+    width: 8rem;
     background-color: rgba(255, 255, 255, 0.9);
     padding: 10px 20px;
     position: absolute;
@@ -74,6 +79,10 @@ border: none;
     left: 0;
     z-index: 10;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  }
+
+  body.dark #nav-buttons {
+    background-color: rgba(0, 0, 0, 0.5);
   }
 
   #nav-buttons.show {
@@ -84,6 +93,11 @@ border: none;
     width: 100%;
     justify-content: flex-start;
     padding: 10px 0;
+    border-radius: 0.25rem;
+  }
+
+  #nav-buttons button :hover {
+    background-color: #8a8989 !important;
   }
 
   .hamburger {
@@ -97,8 +111,19 @@ border: none;
   }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   .hamburger {
     display: none;
   }
 }
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  #navContactButton {
+    border-bottom-right-radius: 100rem;
+  }
+
+  #navHomeButton {
+    border-bottom-left-radius: 100rem;
+  }
+}
+
