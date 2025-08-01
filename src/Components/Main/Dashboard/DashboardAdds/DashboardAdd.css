@@ -14,6 +14,7 @@
     max-width: 14.6rem;
     height: auto;
     height: clamp(6rem, 10vw, 9.6rem);
+    border-radius: 0.5rem;
     position: absolute;
     bottom: 4%;
     left: 3%;
@@ -73,4 +74,109 @@
     max-width: 100%;
     line-height: 1.6rem;
     z-index: 99;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .dashboardAddContainer {
+        position: relative;
+        width: 36rem;
+        height: 26rem;
+        border-radius: 0.5rem;
+        margin-left: 1rem;
+    }
+
+    .firstCard {
+        height: 10rem;
+    }
+
+    .secondCard {
+        height: 10rem;
+    }
+
+    .thirdCard {
+        height: 12rem;
+    }
+
+    .dashboardAddCardsWrapper{
+        width: 36rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .dashboardAddContainer {
+    background-color: rgba(5, 125, 212, 0.5);
+    position: relative;
+    width: 100%;
+    max-width: 38rem;
+    height: clamp(18rem, 50vw, 50rem);
+    box-sizing: border-box;
+}
+
+.firstCard {
+    width: 52%;
+    max-width: 20rem;
+    height: clamp(6rem, 20vw, 22rem);
+    border-radius: 0.5rem;
+    position: absolute;
+    right: 3%;
+    top: 4%;
+    z-index: 9;
+}
+
+.secondCard {
+    width: 52%;
+    max-width: 20rem;
+    height: clamp(6rem, 20vw, 22rem);
+    border-radius: 0.5rem;
+    position: absolute;
+    bottom: 4%;
+    left: 3%;
+    z-index: 9;
+}
+
+.thirdCard {
+    width: 66%;
+    max-width: 28rem;
+    height: clamp(7rem, 28vw, 28rem);
+    border-radius: 0.5rem;
+    position: absolute;
+    right: 8%;
+    bottom: 8%;
+}
+
+.dashboardAddCardsWrapper {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  max-width: 38rem;
+  min-height: 100%;
+}
+
+.dashAddHeadingContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44%;
+    position: absolute;
+    left: 3%;
+    top: 5%;
+    max-width: 30vw;
+    z-index: 95;
+}
+
+.dashAddHeading {
+    display: block;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    white-space: normal;
+    color: #fff;
+    font-size: clamp(0.8rem, 20vw, 1.5rem);
+    font-weight: 600;
+    text-align: start;
+    max-width: 100%;
+    line-height: 1.6rem;
+    z-index: 99;
+}
 }

@@ -40,3 +40,31 @@
   opacity: 0.9;
   transition: opacity 0.3s ease-in-out;
 }
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .dashVehiclesContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0;
+    width: 32rem;
+    height: 26rem;
+  }
+
+  .dashVehiclesBox {
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 30rem;
+  }
+
+  .dashVehiclesHeading h4{
+    margin-top: 0;
+    line-height: 1rem;
+  }
+
+  .vehicles {
+    min-width: 12rem;
+    max-width: 100%;
+  }
+}

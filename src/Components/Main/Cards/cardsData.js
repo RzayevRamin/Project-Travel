@@ -650,7 +650,7 @@ export const cardsData = [
   {
     id: "26",
     img: oldtownImg,
-    title: "A journey full of history, culture, and architecture",
+    title: "A journey full of history, culture, architecture, art, spirit.",
     location: "https://maps.google.com/?q=Old Town Baku",
     cardLabel: "Old Town, Baku, Azerbaijan",
     views: "6.3k views",
@@ -665,7 +665,7 @@ export const cardsData = [
   {
     id: "27",
     img: shusaImg,
-    title: "A journey full of history, culture, and architecture",
+    title: "A journey full of pride, history, nature, music, heritage.",
     location: "https://maps.google.com/?q=Shusha",
     cardLabel: "Shusha, Azerbaijan",
     views: "6.3k views",
@@ -680,7 +680,7 @@ export const cardsData = [
   {
     id: "28",
     img: khinaliqImg,
-    title: "A journey full of history, culture, and architecture",
+    title: "A journey full of mountains, silence, history, authenticity, nature.",
     location: "https://maps.google.com/?q=Khinaliq",
     cardLabel: "Khinaliq, Azerbaijan",
     views: "6.3k views",

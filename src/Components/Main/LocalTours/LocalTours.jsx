@@ -125,16 +125,17 @@ function LocalTours({ filter, source }) {
 
   const sliderSettings = {
     infinite: true,
-    slidesToShow: source === "home" ? 4 : 5,
-  slidesToScroll: source === "home" ? 3 : 4,
+    slidesToShow: source === "home" ? 3 : 5,
+  slidesToScroll: source === "home" ? 2 : 4,
+  centerMode: false,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
     responsive: [
       {
         breakpoint: 1280,
         settings: {
-          slidesToShow: source === "home" ? 3 : 4,
-          slidesToScroll: source === "home" ? 2 : 3,
+          slidesToShow: source === "home" ? 2 : 4,
+          slidesToScroll: source === "home" ? 1 : 3,
         },
       },
       {
@@ -149,6 +150,7 @@ function LocalTours({ filter, source }) {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
+          arrows: false,
         },
       },
       {
@@ -156,6 +158,7 @@ function LocalTours({ filter, source }) {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          arrows: false,
         },
       },
     ],
@@ -175,10 +178,10 @@ function LocalTours({ filter, source }) {
               key={card.id}
               className={card.className}
               variant="outlined"
-              sx={{ width: 320, bgcolor: "#F1FAFA" }}
+              sx={{ bgcolor: "#F1FAFA" }}
             >
               <CardOverflow sx={{ bgcolor: "#F1FAFA" }}>
-                <AspectRatio ratio="2">
+                <AspectRatio ratio="1.25">
                   <img src={card.img} loading="lazy" alt={card.title} />
                 </AspectRatio>
                 <IconButton
@@ -197,8 +200,7 @@ function LocalTours({ filter, source }) {
                     zIndex: 2,
                     borderRadius: "50%",
                     right: "0.5rem",
-                    bottom: 0,
-                    transform: "translateY(-375%)",
+                    top: "0.5rem",
                     backgroundColor: "rgba(255, 255, 255, 0.71)",
                     color: "#F60909",
                   }}

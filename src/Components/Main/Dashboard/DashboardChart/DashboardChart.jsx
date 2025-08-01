@@ -6,7 +6,7 @@ import { BarChart } from "@mui/x-charts/BarChart";
 function DashboardChart() {
 
   return (
-    <div>
+    <div className="dashChartContainer">
       <h4 className="dashboardHeading">Tour statistics by location</h4>
       <BarChart
         sx={{

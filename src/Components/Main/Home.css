@@ -1,9 +1,9 @@
 .homeContainer {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     width: 90vw;
     padding: 2rem 4rem;
-    gap: 2rem;
 }
 
 .homeContext {
@@ -30,24 +30,48 @@
     width: 100%;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   .homeContainer {
     flex-direction: column;
     width: 100%;
+    padding: 1.5rem 2rem;
+  }
+
+  .dashboardContainer {
+    order: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+
+  .homeContext {
+    order: 2;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .homeContainer {
+    flex-direction: column;
+    width: 90%;
     padding: 1rem 2rem;
   }
 
   .homeContext {
-    width: 80%;
+    order: 2;
+    width: 100%;
   }
 
   .dashboardContainer {
-    width: 20%;
+    order: 1;
+    width: 100%;
     margin-top: 2rem;
   }
 }
 
-/* Mobil üçün daha kiçik ekran */
 @media (max-width: 480px) {
   .homeContainer {
     padding: 1rem;

@@ -88,21 +88,11 @@
 }
 
 @media (max-width: 768px) {
-  .dashCardsContainer {
-    padding: 0.5rem;
-  }
+  
+}
 
-  .dashCardsbox {
-    gap: 0.75rem;
-  }
-
-  .dashCardsHeading h4 {
-    font-size: 16px;
-    line-height: 20px;
-  }
-
-  .dashCardItem {
-    flex: 1 1 100%;
-    max-width: 100%;
+@media (min-width: 768px) and (max-width: 1023px) {
+  .dashCardsMoreButton {
+    border-radius: 0.5rem !important;
   }
 }

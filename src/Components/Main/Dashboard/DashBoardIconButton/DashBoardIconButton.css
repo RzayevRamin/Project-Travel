@@ -1,6 +1,6 @@
 .dashBoardIconButtonContainer {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   gap: 1rem;
   padding: 1rem;
 }
@@ -15,4 +15,32 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .dashBoardIconButtonContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .dashIconButton {
+    width: 6rem;
+    height: 6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashIconButton {
+  width: clamp(2.5rem, 50vw, 6rem);
+  height: clamp(2.5rem, 50vw, 6rem);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 }

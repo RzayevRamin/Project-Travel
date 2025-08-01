@@ -16,7 +16,7 @@ import SearchDestination from "../SearchDestination/SearchDestination";
 
 function CarouselBox() {
   return (
-    <div>
+    <div className="carouselBox">
       <Carousel
         autoPlay={true}
         interval={6000}

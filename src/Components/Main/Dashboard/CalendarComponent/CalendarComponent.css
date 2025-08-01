@@ -31,3 +31,57 @@
   padding: 0.5rem;
   max-width: 28rem;
 }
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .rdrMonths {
+    width: 100%;
+  }
+  .rdrMonth {
+    width: 100%;
+  }
+  .rdrCalendarWrapper {
+    max-width: 100%;
+  }
+  .calendarContainer {
+    width: 30rem;
+  }
+  .calendarComponentContainer{
+    width: 30rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .calendarContainer {
+  width: clamp(10rem, 79vw ,38rem);
+}
+
+.calendarWrapper {
+  transition: transform 0.3s ease;
+}
+
+.rdrCalendarWrapper  {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  width: 100%;
+  padding: 0.5rem;
+  height: auto;
+  max-width: 38rem
+}
+
+.rdrMonth {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+}
+
+.calendarComponentContainer {
+  width: 100%;
+}
+
+.rdrMonths {
+  width: 92%;
+  height: auto;
+  padding: 0.5rem;
+  max-width: 34rem;
+}
+}

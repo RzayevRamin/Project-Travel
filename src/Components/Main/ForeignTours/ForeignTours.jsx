@@ -122,35 +122,62 @@ function ForeignTours({ filter, source }) {
 
   const sliderSettings = {
     infinite: true,
-    slidesToShow: source === "home" ? 2 : 2.5,
-  slidesToScroll: source === "home" ? 1 : 2,
+    slidesToShow: source === "home" ? 2 : 3,
+    slidesToScroll: source === "home" ? 1 : 2,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
     responsive: [
       {
-        breakpoint: 1760,
+        breakpoint: 1859,
         settings: {
-          slidesToShow: source === "home" ? 1.5 : 2,
+          slidesToShow: 2,
           slidesToScroll: 1,
         },
       },
+
       {
-        breakpoint: 1408,
+        breakpoint: 1300,
+        settings: {
+          slidesToShow: source === "home" ? 2 : 2,
+          slidesToScroll: 1,
+          centerMode: false,
+          centerPadding: "16.66%",
+        },
+      },
+      {
+        breakpoint: 1023,
+        settings: {
+          slidesToShow: source === "home" ? 1 : 2,
+          slidesToScroll: 1,
+          centerPadding: "0px",
+        },
+      },
+      {
+        breakpoint: 958,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          arrows: false,
         },
       },
     ],
   };
 
   return (
-    <div className={`${source === "home" ? "foreignHomeStyle" : "foreignToursStyle"} foreignToursContainer`}>
+    <div
+      className={`${
+        source === "home" ? "foreignHomeStyle" : "foreignToursStyle"
+      } foreignToursContainer`}
+    >
       <h1>Foreign Tours</h1>
-      <Slider {...sliderSettings}>
+      <Slider {...sliderSettings} className="foreignToursSlider">
         {selectedCards.map((card) => (
           <div key={card.id} className="cardContainer">
-            <Card key={card.id} sx={{ minHeight: "410px", width: "42rem" }}>
+            <Card
+              key={card.id}
+              sx={{ minHeight: "410px" }}
+              className="foreignCard"
+            >
               <CardCover>
                 <img src={card.img} loading="lazy" alt={card.title} />
               </CardCover>
@@ -224,7 +251,7 @@ function ForeignTours({ filter, source }) {
               <CardContent sx={{ justifyContent: "flex-end" }}>
                 <div className="secondCardContentContainer">
                   <div className="secondCardContentBox">
-                    <Typography 
+                    <Typography
                       as="div"
                       startDecorator={<LocationOnRoundedIcon />}
                       textColor="neutral.300"

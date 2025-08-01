@@ -25,7 +25,7 @@ function DashBoardCards() {
               variant="outlined"
               orientation="horizontal"
               sx={{
-                maxWidth: "28rem",
+                
                 padding: "0.5rem",
                 border: 0,
                 display: "flex",
@@ -88,6 +88,7 @@ function DashBoardCards() {
 
       <div className="dashCardsMore">
         <Button 
+        className="dashCardsMoreButton"
           variant="solid"
           color="primary"
           sx={{

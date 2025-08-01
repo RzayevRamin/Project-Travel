@@ -19,3 +19,23 @@ body.dark .MuiChartsAxis-tickLabel {
     margin-top: 2rem;
     margin-bottom: 0.5rem;
 }
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .dashChartContainer {
+    width: 26rem;
+    height: 24rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .css-51fz6w-MuiChartsWrapper-root {
+    height: 24rem;
+    width: 28rem;
+  }
+
+  .dashboardHeading {
+    margin-top: 0;
+  }
+}

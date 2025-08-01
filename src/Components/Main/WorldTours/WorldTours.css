@@ -1,35 +1,43 @@
-.customArrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 2;
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 6px;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: all 0.3s ease;
+
+.cardContainer {
+  padding-right: 1rem;
+  box-sizing: border-box;
+  width: 100%;
+  flex: 0 0 100%;
 }
 
-.nextArrow {
-  right: -20px;
+@media (min-width: 1024px) and (max-width: 1300px) {
+  
+  .cardContainer {
+    width: 100%;
+    flex: 0 0 auto;
+  }
+
 }
 
-.prevArrow {
-  left: -20px;
+@media (max-width: 768px) {
+  
+  .cardContainer {
+    padding-right: 0.5rem;
+    flex: 0 0 100%;
+  }
+
+  .customArrow.nextArrow {
+    right: -10px;
+  }
+
+  .customArrow.prevArrow {
+    left: -10px;
+  }
 }
 
-.customArrow:hover {
-  background-color: rgba(200, 200, 200, 0.9);
-}
+@media (max-width: 480px) {
+ 
+  .cardContainer {
+    padding: 0 0.15rem;
+  }
 
-.worldToursContainer {
-  position: relative;
-}
-
-.slick-slider {
-  overflow: visible;
-}
-
-.worldToursContainer .slick-slide {
-  transform: translateX(-50%);
+  .customArrow {
+    display: none;
+  }
 }

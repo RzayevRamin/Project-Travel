@@ -9,8 +9,26 @@
     width: 23vw;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .dashboard {
     padding: 0.5rem;
+    width: 90%;
   }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .dashboard {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    overflow-y: auto;    
+  scrollbar-width: none; 
+  -ms-overflow-style: none;
+  }
+
+  .dashboardContainer::-webkit-scrollbar {
+  display: none;
+}
 }
