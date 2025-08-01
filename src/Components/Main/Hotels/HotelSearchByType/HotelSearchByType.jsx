@@ -23,7 +23,7 @@ function HotelSearchByType() {
       <h1>Search by type</h1>
       <div className="hotelTypesContainer">
         <div className="hotelTypesCardItem">
-          <Card sx={{ height: "26rem", width: '36.4vw', padding: 0 }}>
+          <Card sx={{  padding: 0 }} className="hotel">
             <CardCover>
                 <img src={typeHotelOutImg} className="defaultImg" loading="lazy" alt="" />
                 <img src={typeHotelImg} className="hoverImg" loading="lazy" alt="" />
@@ -42,7 +42,7 @@ function HotelSearchByType() {
           </Card>
         </div>
         <div className="hotelTypesCardItem">
-                      <Card sx={{ height: "26rem", width: "28.5vw", padding: 0 }}>
+                      <Card sx={{ padding: 0 }} className="hostel">
             <CardCover>
                 <img src={typeHostelOutImg} className="defaultImg" loading="lazy" alt="" />
                 <img src={typeHostelImg} className="hoverImg" loading="lazy" alt="" />
@@ -61,7 +61,7 @@ function HotelSearchByType() {
           </Card>
         </div>
         <div className="hotelTypesCardItem">
-                      <Card sx={{ height: "26rem", width: "20.8vw", padding: 0 }}>
+                      <Card sx={{  padding: 0 }} className="motel">
             <CardCover>
                 <img src={typeMotelOutImg} className="defaultImg" loading="lazy" alt="" />
                 <img src={typeMotelImg} className="hoverImg" loading="lazy" alt="" />
@@ -80,7 +80,7 @@ function HotelSearchByType() {
           </Card>
         </div>
         <div className="hotelTypesCardItem">
-                      <Card sx={{ height: "26rem", width: "20.8vw", padding: 0 }}>
+                      <Card sx={{ padding: 0 }} className="villa">
             <CardCover>
                 <img src={typeVillaOutImg} className="defaultImg" loading="lazy" alt="" />
                 <img src={typeVillaImg} className="hoverImg" loading="lazy" alt="" />
@@ -99,7 +99,7 @@ function HotelSearchByType() {
           </Card>
         </div>
         <div className="hotelTypesCardItem">
-                      <Card sx={{ height: "26rem", width: "28.5vw", padding: 0 }}>
+                      <Card sx={{ padding: 0 }} className="apartment">
             <CardCover>
                 <img src={typeAppartmentOutImg} className="defaultImg" loading="lazy" alt="" />
                 <img src={typeAppartmentImg} className="hoverImg" loading="lazy" alt="" />
@@ -112,13 +112,13 @@ function HotelSearchByType() {
             />
             <CardContent sx={{ justifyContent: 'flex-end', margin: 0 }}>
               <Typography sx={{backgroundColor: 'rgba(253, 251, 248, 0.6)', margin: 0, width: '100%', height: "52px", display: "flex", alignItems: "center", justifyContent: "center",}} level="title-lg" textColor="#fff">
-                Appartment
+                Apartment
               </Typography>
             </CardContent>
           </Card>
         </div>
         <div className="hotelTypesCardItem">
-                      <Card sx={{ height: "26rem", width: '36.4vw', padding: 0 }}>
+                      <Card sx={{ padding: 0 }} className="residanse">
             <CardCover>
                 <img src={typeResidanseOutImg} className="defaultImg" loading="lazy" alt="" />
                 <img src={typeResidanseImg} className="hoverImg" loading="lazy" alt="" />

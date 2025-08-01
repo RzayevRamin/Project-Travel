@@ -88,7 +88,6 @@ function PrevArrow(props) {
 function MostPopularHotels({ filter }) {
   const [liked, setLiked] = useState({});
 
-
   const filteredCards = filter
     ? cardsData.filter((card) => card.className === filter)
     : cardsData;
@@ -119,8 +118,8 @@ function MostPopularHotels({ filter }) {
 
   const sliderSettings = {
     infinite: true,
-    slidesToShow: 3,
     slidesToScroll: 1,
+    slidesToShow: 3,
     centerMode: true,
     centerPadding: "0px",
     nextArrow: <NextArrow />,
@@ -130,10 +129,33 @@ function MostPopularHotels({ filter }) {
     },
     responsive: [
       {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          centerMode: false,
+        },
+      },
+      {
+        breakpoint: 900,
+        settings: {
+          slidesToShow: 2,
+          centerMode: false,
+        },
+      },
+      {
         breakpoint: 768,
         settings: {
           slidesToShow: 1,
           centerMode: false,
+          centerPadding: "6vw",
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          centerMode: false,
+          centerPadding: "5vw",
         },
       },
     ],
@@ -154,13 +176,22 @@ function MostPopularHotels({ filter }) {
             >
               <Card
                 sx={{
-                  height: isCenter ? "30rem" : "24rem",
-                  width: isCenter ? "28.5rem" : "22rem",
-                  margin: "0 0.5rem",
+                  height: "26rem",
+                  width: "100%", // default genişlik
+                  maxWidth: {
+                    xs: "90vw",
+                    sm: "85vw",
+                    md: isCenter ? "32rem" : "22rem",
+                  },
+                  margin: "0 auto",
                   padding: 0,
                   position: "relative",
-                  transform: isCenter ? "scale(1.05)" : "scale(0.9)",
+                  transform: {
+                    xs: "scale(1)",
+                    md: isCenter ? "scale(1.1)" : "scale(0.92)",
+                  },
                   transition: "all 0.3s ease-in-out",
+                  zIndex: isCenter ? 9 : 1,
                 }}
               >
                 <CardCover>
@@ -173,7 +204,11 @@ function MostPopularHotels({ filter }) {
                   }}
                 />
                 <CardContent
-                  sx={{ justifyContent: "flex-end", position: "relative", margin: "0.3rem" }}
+                  sx={{
+                    justifyContent: "flex-end",
+                    position: "relative",
+                    margin: "0.3rem",
+                  }}
                 >
                   <IconButton
                     className="likeButton"
@@ -202,7 +237,18 @@ function MostPopularHotels({ filter }) {
 
                   <span className="mostPopularHotelsCardContextContainer">
                     <span className="mostPopularHotelsCardContextTextBox">
-                      <Typography className="mostPopularHotelsCardsLocation" level="title-lg" textColor="#fff">
+                      <Typography
+                        className="mostPopularHotelsCardsLocation"
+                        level="title-lg"
+                        textColor="#fff"
+                        sx={{
+                          fontSize: {
+                            xs: "0.9rem",
+                            sm: "1rem",
+                            md: "1.2rem",
+                          },
+                        }}
+                      >
                         <Link
                           href={card.location}
                           target="_blank"
@@ -225,20 +271,32 @@ function MostPopularHotels({ filter }) {
                         </Link>
                       </Typography>
                       {isCenter && (
-                          <Box sx={{ mt: 1, mb: 1, backgroundColor: "transparent" }}>
-                            <HoverRating sx={{backgroundColor: "transparent"}}
-                              value={rates[card.id]}
-                              onChange={(value) => {
-                                setRates((prevRates) => ({
-                                  ...prevRates,
-                                  [card.id]: value,
-                                }));
-                              }}
-                            />
-                          </Box>
+                        <Box
+                          sx={{ mt: 1, mb: 1, backgroundColor: "transparent" }}
+                        >
+                          <HoverRating
+                            sx={{ backgroundColor: "transparent" }}
+                            value={rates[card.id]}
+                            onChange={(value) => {
+                              setRates((prevRates) => ({
+                                ...prevRates,
+                                [card.id]: value,
+                              }));
+                            }}
+                          />
+                        </Box>
                       )}
                       {isCenter && (
-                        <Typography textColor="neutral.300">
+                        <Typography
+                          textColor="neutral.300"
+                          sx={{
+                            fontSize: {
+                              xs: "0.9rem",
+                              sm: "1rem",
+                              md: "1.2rem",
+                            },
+                          }}
+                        >
                           {card.title}
                         </Typography>
                       )}
@@ -248,8 +306,20 @@ function MostPopularHotels({ filter }) {
                         variant="solid"
                         color="primary"
                         sx={{
-                          width: "9rem",
-                          height: "2rem",
+                          width: {
+                            xs: "7rem",
+                            sm: "8rem",
+                            md: "9rem",
+                          },
+                          height: {
+                            xs: "1.8rem",
+                            sm: "2rem",
+                          },
+                          fontSize: {
+                            xs: "0.75rem",
+                            sm: "0.85rem",
+                            md: "0.95rem",
+                          },
                           borderRadius: "4rem",
                         }}
                       >

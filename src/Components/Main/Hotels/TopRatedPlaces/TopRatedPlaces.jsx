@@ -117,6 +117,7 @@ function TopRatedPlaces({ filter }) {
 
   const sliderSettings = {
     infinite: true,
+    centerMode: false,
     slidesToShow: 3,
     slidesToScroll: 2,
     nextArrow: <NextArrow />,
@@ -149,8 +150,7 @@ function TopRatedPlaces({ filter }) {
               key={card.id}
               sx={{
                 height: "28.5rem",
-                width: "28.5rem",
-                margin: "0 0.5rem",
+                margin: 0,
                 padding: 0,
                 position: "relative",
               }}

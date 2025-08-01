@@ -1,3 +1,4 @@
+
 .hotelTypesCardItem .hoverImg {
   display: none;
   position: absolute;
@@ -9,7 +10,6 @@
 }
 
 .hotelTypesCardItem .defaultImg {
-  display: block;
   position: absolute;
   top: 0;
   left: 0;
@@ -26,9 +26,113 @@
   display: block;
 }
 
-.hotelTypesContainer {
+/* RESPONSIVE DÜZÜLÜŞƏ ZƏMANƏT VERƏN BREAKPOINT-LƏR */
+
+@media (max-width: 768px) {
+  .hotelTypesContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hotelTypesCardItem .MuiCard-root {
+    width: 80vw;
+    height: clamp(12rem, 40vw, 28rem);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+ .hotelTypesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 3rem 0;
+ }
+
+ .hotel {
+    width: clamp(20rem, 48vw, 50rem);
+    height: clamp(12rem, 22vw, 28rem);
+  }
+
+  .hostel {
+    width: clamp(12rem, 28vw, 30rem);
+    height: clamp(12rem, 22vw, 28rem);
+  }
+
+  .motel {
+    width: clamp(12rem, 28vw, 30rem);
+    height: clamp(12rem, 22vw, 28rem);
+  }
+
+  .villa {
+    width: clamp(20rem, 48vw, 50rem);
+    height: clamp(12rem, 22vw, 28rem);
+  }
+
+  .apartment {
+    width: clamp(20rem, 48vw, 50rem);
+    height: clamp(12rem, 22vw, 28rem);
+  }
+
+  .residanse {
+    width: clamp(12rem, 28vw, 30rem);
+    height: clamp(12rem, 22vw, 28rem);
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .hotelTypesContainer {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    grid-template-columns: 26vw 26vw 26vw;
+  }
+
+  .hotelTypesCardItem .MuiCard-root {
+    width: 26vw;
+    height: 26vw;
+  }
+
+}
+
+@media (min-width: 1200px) {
+ .hotelTypesContainer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    height: 58rem;
+    gap: 3rem 0;
+}
+
+.hotel {
+  width: clamp(20rem, 38vw, 38rem);
+  height: clamp(12rem, 22vw, 28rem);
+}
+
+.hostel {
+  width: clamp(16rem, 28vw, 28rem);
+  height: clamp(12rem, 22vw, 28rem);
+}
+
+.motel {
+  width: clamp(12rem, 18vw, 18rem);
+  height: clamp(12rem, 22vw, 28rem);
+}
+
+.villa {
+  width: clamp(12rem, 18vw, 18rem);
+  height: clamp(12rem, 22vw, 28rem);
+}
+
+.apartment {
+  width: clamp(16rem, 28vw, 28rem);
+  height: clamp(12rem, 22vw, 28rem);
+}
+
+.residanse {
+  width: clamp(20rem, 38vw, 38rem);
+  height: clamp(12rem, 22vw, 28rem);
+}
+
 }

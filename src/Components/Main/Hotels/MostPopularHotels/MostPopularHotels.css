@@ -16,7 +16,7 @@
   cursor: pointer;
 }
 
-.locationMapPreview {
+.mostPopularHotelsContainer .locationMapPreview {
   display: none;
   position: absolute;
   top: 100%;
@@ -36,11 +36,148 @@
   display: block;
 }
 
-.slick-center .MuiCard-root {
+.mostPopularHotelsContainer .slick-center .MuiCard-root {
   transform: scale(1.05);
 }
-.slick-slide:not(.slick-center) .MuiCard-root {
+.mostPopularHotelsContainer .slick-slide:not(.slick-center) .MuiCard-root {
   transform: scale(0.9);
   opacity: 0.9;
 }
+
+.mostPopularHotelsContainer {
+  padding: 0 !important;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.mostPopularHotelsContainer .slick-slide {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.mostPopularHotelsContainer {
+  padding-inline: 1rem;
+}
+
+.mostPopularHotelsContainer .customArrow {
+  z-index: 999 !important;
+}
+
+.customArrow {
+  z-index: 9999 !important;
+}
+
+@media (max-width: 1024px) {
+  .mostPopularHotelsCardContextContainer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding: 0.4rem;
+  }
+
+  .locationMapPreview {
+    width: 200px;
+    height: 140px;
+  }
+
+   .mostPopularHotelsCardContextTextBox {
+    font-size: 0.9rem;
+  }
+  
+}
+
+@media (max-width: 768px) {
+  .mostPopularHotelsCardsContainer {
+    padding: 0.5rem 0;
+  }
+
+  .mostPopularHotelsCardContextContainer {
+    padding: 0.3rem;
+    font-size: 0.85rem;
+  }
+
+  .mostPopularHotelsCardContextTextBox {
+    max-width: 100%;
+    font-size: 0.8rem;
+  }
+
+  .mostPopularHotelsContainer .slick-center .MuiCard-root,
+  .slick-slide:not(.slick-center) .MuiCard-root {
+    transform: scale(1) !important;
+    opacity: 1;
+  }
+
+  .mostPopularHotelsContainer .locationMapPreview {
+    display: none !important;
+  }
+
+}
+
+@media (min-width: 1025px) {
+  .mostPopularHotelsContainer .slick-center .MuiCard-root {
+    transform: scale(1.05);
+    z-index: 2;
+  }
+
+  .mostPopularHotelsContainer .slick-slide:not(.slick-center) .MuiCard-root {
+    transform: scale(0.92);
+    opacity: 0.9;
+    z-index: 1;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1024px) {
+  .mostPopularHotelsContainer .slick-slide .MuiCard-root {
+    transform: scale(1) !important;
+    opacity: 1 !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 899px) {
+  .mostPopularHotelsContainer .slick-slide .MuiCard-root {
+    transform: scale(1) !important;
+    opacity: 1 !important;
+  }
+}
+
+.mostPopularHotelsContainer .slick-slide {
+  box-sizing: border-box !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.mostPopularHotelsContainer .slick-track {
+  display: flex !important;
+  align-items: stretch;
+}
+
+.mostPopularHotelsContainer {
+  padding-inline: 0 !important;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.mostPopularHotelsContainer .slick-slide {
+  box-sizing: border-box !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: flex !important;
+  justify-content: center;
+}
+
+.mostPopularHotelsContainer .slick-slide > div {
+  min-width: 0 !important;
+  width: 100% !important;
+}
+
+.mostPopularHotelsContainer .slick-track {
+  display: flex !important;
+  align-items: stretch;
+}
+
+.mostPopularHotelsContainer .MuiCard-root {
+  width: 100% !important;
+  max-width: 32rem; 
+}
+
 

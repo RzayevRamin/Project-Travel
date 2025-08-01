@@ -3,27 +3,25 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5rem;
+
 }
 
 .topRatedPlacesCardsContainer:hover {
-  transform: scale(1.05);
+  transform: scale(1.1);
   z-index: 2;
 }
 
-.topRatedPlaceContainer .slick-slide {
-  padding: 10px;
-}
 
-.slick-track {
+.topRatedPlaceContainer .slick-track {
   display: flex !important;
   justify-content: space-between;
   gap: 0 !important;
 }
 
-.slick-slide {
+.topRatedPlaceContainer .slick-slide {
   display: flex !important;
   justify-content: center;
+  align-items: center;
   height: auto;
 }
 
@@ -64,4 +62,34 @@
 
 .ratedPlacesCardContextTextBox:hover .locationMapPreview {
   display: block;
+}
+
+.topRatedPlacesCardsContainer {
+  width: 100%;
+  max-width: 50rem;
+  transition: transform 0.3s ease;
+}
+
+.topRatedPlacesCardsContainer .MuiCard-root {
+  width: clamp(16rem, 30vw, 32rem);
+}
+
+@media (max-width: 1024px) {
+  .topRatedPlacesCardsContainer {
+    max-width: 100%;
+  }
+
+  .topRatedPlacesCardsContainer .MuiCard-root{
+    width: clamp(20rem, 40vw, 32rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .topRatedPlacesCardsContainer {
+    max-width: 100%;
+  }
+
+  .topRatedPlacesCardsContainer .MuiCard-root {
+    width: clamp(9rem, 90vw, 32rem);
+  }
 }
