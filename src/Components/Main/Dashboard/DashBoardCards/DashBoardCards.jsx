@@ -93,10 +93,8 @@ function DashBoardCards() {
           color="primary"
           sx={{
             backgroundColor: "#0123FF",
-            width: "calc(100% + 2rem)",
             borderTopRightRadius: 0,
             borderTopLeftRadius: 0,
-            marginLeft: "-1rem",
             borderBottomRightRadius: "2rem",
             borderBottomLeftRadius: "2rem",
           }}

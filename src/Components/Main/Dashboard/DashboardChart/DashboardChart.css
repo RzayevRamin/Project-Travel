@@ -39,3 +39,9 @@ body.dark .MuiChartsAxis-tickLabel {
     margin-top: 0;
   }
 }
+
+@media (max-width: 767px) {
+  .dashChartContainer{
+    margin-top: 12vw;
+  }
+}

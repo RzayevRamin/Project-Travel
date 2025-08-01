@@ -19,6 +19,7 @@
   justify-content: space-between;
   min-height: 26rem;
   height: auto;
+  margin-bottom: 8rem;
 }
 
 .dashCardItem {
@@ -87,12 +88,102 @@
   max-width: 30rem;
 }
 
+.dashCardsMoreButton{
+  width: 100% !important;
+  margin-top: 1rem !important;
+}
+
 @media (max-width: 768px) {
+  .dashCardsbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .dashCardItem {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .dashCardItem .MuiCard-root {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  }
+
+  .dashCardItem .MuiCard-root .MuiAspectRatio-root {
+    flex-shrink: 0;
+    width: 30%;
+    max-width: 30%;
+  }
+
+  .dashCardItem .MuiCard-root .MuiAspectRatio-root .MuiAspectRatio-content {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+  }
+
+  .dashCardItem .MuiCard-root .MuiCardContent-root {
+    flex-grow: 1;
+    width: 70%;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .dashCardItem .MuiCard-root .MuiCardContent-root .MuiTypography-title-lg {
+    font-size: 1rem;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .dashCardsContainer {
+    width: 100%;
+    margin-bottom: 8rem;
+  }
+
+  .dashCardsMore {
+    width: 100%;
+    padding: 0.5rem;
+  }
+
+  .dashCardsMore .MuiButton-root {
+    width: clamp(12rem, 76vw, 36rem) !important;
+  }
+
   
+
+  .dashCardsHeading {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    padding: 0 1rem;
+  }
+
+  .rounded {
+    border-radius: 50%;
+    width: 3.5rem;
+    height: 3.5rem;
+    object-fit: cover;
+  }
+
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
   .dashCardsMoreButton {
     border-radius: 0.5rem !important;
+  }
+
+  .dashCardsContainer {
+    margin-bottom: 0;
   }
 }
