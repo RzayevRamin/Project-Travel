@@ -16,7 +16,7 @@
   cursor: pointer;
 }
 
-.locationMapPreview {
+.mostPopularBusContainer .locationMapPreview {
   display: none;
   position: absolute;
   top: 100%;
@@ -36,11 +36,148 @@
   display: block;
 }
 
-.slick-center .MuiCard-root {
+.mostPopularBusContainer .slick-center .MuiCard-root {
   transform: scale(1.05);
 }
-.slick-slide:not(.slick-center) .MuiCard-root {
+.mostPopularBusContainer .slick-slide:not(.slick-center) .MuiCard-root {
   transform: scale(0.9);
   opacity: 0.9;
 }
+
+.mostPopularBusContainer {
+  padding: 0 !important;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.mostPopularBusContainer .slick-slide {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.mostPopularBusContainer {
+  padding-inline: 1rem;
+}
+
+.mostPopularBusContainer .customArrow {
+  z-index: 999 !important;
+}
+
+.customArrow {
+  z-index: 9999 !important;
+}
+
+@media (max-width: 1024px) {
+  .mostPopularBusCardContextContainer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding: 0.4rem;
+  }
+
+  .locationMapPreview {
+    width: 200px;
+    height: 140px;
+  }
+
+   .mostPopularBusCardContextTextBox {
+    font-size: 0.9rem;
+  }
+  
+}
+
+@media (max-width: 768px) {
+  .mostPopularBusCardsContainer {
+    padding: 0.5rem 0;
+  }
+
+  .mostPopularBusCardContextContainer {
+    padding: 0.3rem;
+    font-size: 0.85rem;
+  }
+
+  .mostPopularBusCardContextTextBox {
+    max-width: 100%;
+    font-size: 0.8rem;
+  }
+
+  .mostPopularBusContainer .slick-center .MuiCard-root,
+  .slick-slide:not(.slick-center) .MuiCard-root {
+    transform: scale(1) !important;
+    opacity: 1;
+  }
+
+  .mostPopularBusContainer .locationMapPreview {
+    display: none !important;
+  }
+
+}
+
+@media (min-width: 1025px) {
+  .mostPopularBusContainer .slick-center .MuiCard-root {
+    transform: scale(1.05);
+    z-index: 2;
+  }
+
+  .mostPopularBusContainer .slick-slide:not(.slick-center) .MuiCard-root {
+    transform: scale(0.92);
+    opacity: 0.9;
+    z-index: 1;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1024px) {
+  .mostPopularBusContainer .slick-slide .MuiCard-root {
+    transform: scale(1) !important;
+    opacity: 1 !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 899px) {
+  .mostPopularBusContainer .slick-slide .MuiCard-root {
+    transform: scale(1) !important;
+    opacity: 1 !important;
+  }
+}
+
+.mostPopularBusContainer .slick-slide {
+  box-sizing: border-box !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.mostPopularBusContainer .slick-track {
+  display: flex !important;
+  align-items: stretch;
+}
+
+.mostPopularBusContainer {
+  padding-inline: 0 !important;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.mostPopularBusContainer .slick-slide {
+  box-sizing: border-box !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: flex !important;
+  justify-content: center;
+}
+
+.mostPopularBusContainer .slick-slide > div {
+  min-width: 0 !important;
+  width: 100% !important;
+}
+
+.mostPopularBusContainer .slick-track {
+  display: flex !important;
+  align-items: stretch;
+}
+
+.mostPopularBusContainer .MuiCard-root {
+  width: 100% !important;
+  max-width: 32rem; 
+}
+
 

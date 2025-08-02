@@ -106,32 +106,32 @@
 }
 
 .hotel {
-  width: clamp(20rem, 38vw, 38rem);
+  width: clamp(20rem, 38vw, 60rem);
   height: clamp(12rem, 22vw, 28rem);
 }
 
 .hostel {
-  width: clamp(16rem, 28vw, 28rem);
+  width: clamp(16rem, 28vw, 45rem);
   height: clamp(12rem, 22vw, 28rem);
 }
 
 .motel {
-  width: clamp(12rem, 18vw, 18rem);
+  width: clamp(12rem, 18vw, 30rem);
   height: clamp(12rem, 22vw, 28rem);
 }
 
 .villa {
-  width: clamp(12rem, 18vw, 18rem);
+  width: clamp(12rem, 18vw, 30rem);
   height: clamp(12rem, 22vw, 28rem);
 }
 
 .apartment {
-  width: clamp(16rem, 28vw, 28rem);
+  width: clamp(16rem, 28vw, 45rem);
   height: clamp(12rem, 22vw, 28rem);
 }
 
 .residanse {
-  width: clamp(20rem, 38vw, 38rem);
+  width: clamp(20rem, 38vw, 60rem);
   height: clamp(12rem, 22vw, 28rem);
 }
 

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./CarRenting.css";
 import { cardsData } from "../../Cards/cardsData";
 import Card from "@mui/joy/Card";
@@ -9,167 +9,184 @@ import Button from "@mui/joy/Button";
 import AspectRatio from "@mui/joy/AspectRatio";
 import Link from "@mui/joy/Link";
 
-
 function CarRenting() {
-  const getCardsByIdRange = (startId, endId) => {
-    return cardsData.filter((card) => {
-      const id = parseInt(card.id, 10);
-      return id >= startId && id <= endId;
-    });
-  };
+  const [mainCards, setMainCards] = useState([]);
+  const [scrolledCards, setScrolledCards] = useState([]);
 
-  const selectedMainCard = getCardsByIdRange(110, 110)[0];
-  const selectedScrolledCard = getCardsByIdRange(111, 120);
+  useEffect(() => {
+    const updateCardsLayout = () => {
+      const width = window.innerWidth;
+      const allCards = cardsData.filter((card) => {
+        const id = parseInt(card.id, 10);
+        return id >= 110 && id <= 120;
+      });
+
+      if (width >= 1200) {
+        setMainCards([allCards.find((card) => parseInt(card.id) === 110)]);
+        setScrolledCards(
+          allCards.filter(
+            (card) => parseInt(card.id) >= 111 && parseInt(card.id) <= 120
+          )
+        );
+      } else if (width >= 1024) {
+        setMainCards([allCards.find((card) => parseInt(card.id) === 110)]);
+        setScrolledCards(
+          allCards.filter(
+            (card) => parseInt(card.id) >= 111 && parseInt(card.id) <= 120
+          )
+        );
+      } else if (width >= 768) {
+        const main = allCards.slice(0, allCards.length - 1);
+        const last = allCards[allCards.length - 1];
+        setMainCards(main);
+        setScrolledCards([last]);
+      } else {
+        setMainCards(allCards);
+        setScrolledCards([]);
+      }
+    };
+
+    updateCardsLayout();
+    window.addEventListener("resize", updateCardsLayout);
+    return () => window.removeEventListener("resize", updateCardsLayout);
+  }, []);
 
   return (
-    <div className="carRentingcontainer">
+    <div className="carRentingContainer">
       <div className="carRentHeaderBox">
         <h1>Cars for rent</h1>
       </div>
-      <div className="carRentCartBox">
-        <div className="mainRentCarBox">
-          <Card sx={{ height: "52.75rem", width: "44vw" }}>
-            <CardCover>
-              <img
-                src={selectedMainCard.img}
-                loading="lazy"
-                alt={selectedMainCard.title}
-              />
-            </CardCover>
-            <CardCover
-              sx={{
-                background:
-                  "linear-gradient(to top, rgba(0,0,0,0.4), rgba(0,0,0,0) 200px), linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0) 300px)",
-              }}
-            />
-            <CardContent
-              sx={{
-                justifyContent: "flex-start",
-              }}
-            >
-              <div className="mainCarCardTextBox">
-                <Typography
-                  level="title-lg"
-                  textColor="#fff"
-                  sx={{ fontSize: "24px", lineHeight: "29px" }}
-                >
-                  {selectedMainCard.title}
-                </Typography>
-                <Typography
-                  textColor="#fff"
-                  sx={{ fontSize: "24px", lineHeight: "29px" }}
-                >
-                  {selectedMainCard.cardLabel}
-                </Typography>
-                <Typography
-                  textColor="#fff"
-                  sx={{ fontSize: "20px", lineHeight: "24px" }}
-                >
-                  {selectedMainCard.fuel}
-                </Typography>
-                <Typography
-                  textColor="#fff"
-                  sx={{ fontSize: "20px", lineHeight: "24px" }}
-                >
-                  {selectedMainCard.transmission}
-                </Typography>
-                <Typography
-                  textColor="#fff"
-                  sx={{ fontSize: "20px", lineHeight: "24px" }}
-                >
-                  {selectedMainCard.seats}
-                </Typography>
-              </div>
-            </CardContent>
-            <div className="mainCarCardButtonBox">
-              <Button
-                variant="solid"
-                sx={{
-                  width: "13.7vw",
-                  height: "2.8rem",
-                  borderRadius: "4rem",
-                  backgroundColor: "#0123FF",
-                  cursor: "pointer",
-                  "&:hover": { backgroundColor: "#00adfd", color: "#000" },
-                }}
+      <div className="rentCarContainer">
+        <div className="carRentCartBox">
+          <div className="mainRentCarBox">
+            {mainCards.map((card) => (
+              <Card
+                key={card.id}
+                sx={{ height: "98%", width: "93%", position: "relative" }}
               >
-                Rent Now
-              </Button>
+                <CardCover>
+                  <img src={card.img} loading="lazy" alt={card.title} />
+                </CardCover>
+                <CardCover
+                  className="mainCarCardCover"
+                  sx={{
+                    background:
+                      "linear-gradient(to top, rgba(0,0,0,0.4), rgba(0,0,0,0) 200px), linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0) 300px)",
+                  }}
+                />
+                <CardContent sx={{ justifyContent: "flex-start" }}>
+                  <div className="mainCarCardTextBox">
+                    <Typography
+                      level="title-lg"
+                      textColor="#fff"
+                      sx={{
+                        fontSize: "clamp(18px, 2vw, 24px)",
+                        lineHeight: "29px",
+                      }}
+                      className="mainCarCardTitle"
+                    >
+                      {card.title}
+                    </Typography>
+                    <Typography
+                      textColor="#fff"
+                      sx={{ fontSize: "clamp(18px, 2vw, 24px)" }}
+                    >
+                      {card.cardLabel}
+                    </Typography>
+                    <Typography
+                      textColor="#fff"
+                      sx={{ fontSize: "clamp(16px, 1.8vw, 20px)" }}
+                    >
+                      {card.fuel}
+                    </Typography>
+                    <Typography
+                      textColor="#fff"
+                      sx={{ fontSize: "clamp(16px, 1.8vw, 20px)" }}
+                    >
+                      {card.transmission}
+                    </Typography>
+                    <Typography
+                      textColor="#fff"
+                      sx={{ fontSize: "clamp(16px, 1.8vw, 20px)" }}
+                    >
+                      {card.seats}
+                    </Typography>
+                  </div>
+                </CardContent>
+                <div className="mainCarCardButtonBox">
+                  <Button
+                    variant="solid"
+                    sx={{
+                      width: "clamp(120px, 15vw, 180px)",
+                      height: "2.8rem",
+                      borderRadius: "4rem",
+                      backgroundColor: "#0123FF",
+                      "&:hover": { backgroundColor: "#00adfd", color: "#000" },
+                    }}
+                  >
+                    Rent Now
+                  </Button>
+                </div>
+              </Card>
+            ))}
+          </div>
+
+          {scrolledCards.length > 0 && (
+            <div className="skrollRentCarBox">
+              {scrolledCards.map((card) => (
+                <Card
+                  key={card.id}
+                  variant="outlined"
+                  orientation="horizontal"
+                  sx={{
+                    width: "93%",
+                    "&:hover": {
+                      boxShadow: "md",
+                      borderColor: "neutral.outlinedHoverBorder",
+                    },
+                  }}
+                >
+                  <CardContent>
+                    <Typography
+                      level="title-lg"
+                      id="card-description"
+                      sx={{
+                        fontSize: "clamp(16px, 2vw, 20px)",
+                        marginTop: "1rem",
+                      }}
+                    >
+                      {card.cardLabel}
+                    </Typography>
+                    {[card.fuel, card.transmission, card.seats].map(
+                      (info, idx) => (
+                        <Typography
+                          key={idx}
+                          level="body-sm"
+                          aria-describedby="card-description"
+                          sx={{ mb: 1 }}
+                        >
+                          <Link
+                            overlay
+                            underline="none"
+                            href="#"
+                            sx={{
+                              color: "text.tertiary",
+                              fontSize: "clamp(14px, 1.8vw, 18px)",
+                            }}
+                          >
+                            {info}
+                          </Link>
+                        </Typography>
+                      )
+                    )}
+                  </CardContent>
+                  <AspectRatio sx={{ width: "23vw" }}>
+                    <img src={card.img} loading="lazy" alt={card.title} />
+                  </AspectRatio>
+                </Card>
+              ))}
             </div>
-          </Card>
-        </div>
-        <div className="skrollRentCarBox">
-          {selectedScrolledCard.map((card) => {
-            return (
-          <Card
-            key={card.id}
-            variant="outlined"
-            orientation="horizontal"
-            sx={{
-              width: "41vw",
-              "&:hover": {
-                boxShadow: "md",
-                borderColor: "neutral.outlinedHoverBorder",
-              },
-            }}
-          >
-            <CardContent>
-              <Typography
-                level="title-lg"
-                id="card-description"
-                sx={{ fontSize: "20px", lineHeight: "24px", marginTop: "24px" }}
-              >
-                {card.cardLabel}
-              </Typography>
-              <Typography
-                level="body-sm"
-                aria-describedby="card-description"
-                sx={{ mb: 1 }}
-              >
-                <Link
-                  overlay
-                  underline="none"
-                  href="#interactive-card"
-                  sx={{ color: "text.tertiary", fontSize: "20px", marginTop: "24px" }}
-                >
-                  {card.fuel}
-                </Link>
-              </Typography>
-              <Typography
-                level="body-sm"
-                aria-describedby="card-description"
-                sx={{ mb: 1 }}
-              >
-                <Link
-                  overlay
-                  underline="none"
-                  href="#interactive-card"
-                  sx={{ color: "text.tertiary", fontSize: "20px" }}
-                >
-                  {card.transmission}
-                </Link>
-              </Typography>
-              <Typography
-                level="body-sm"
-                aria-describedby="card-description"
-                sx={{ mb: 1 }}
-              >
-                <Link
-                  overlay
-                  underline="none"
-                  href="#interactive-card"
-                  sx={{ color: "text.tertiary", fontSize: "20px" }}
-                >
-                  {card.seats}
-                </Link>
-              </Typography>
-            </CardContent>
-            <AspectRatio sx={{ width: "23vw" }}>
-              <img src={card.img} loading="lazy" alt={card.title} />
-            </AspectRatio>
-          </Card>
-            )
-          })},
+          )}
         </div>
       </div>
     </div>

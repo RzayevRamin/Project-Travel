@@ -16,7 +16,7 @@
   cursor: pointer;
 }
 
-.locationMapPreview {
+.mostPopularAirlinesContainer .locationMapPreview {
   display: none;
   position: absolute;
   top: 100%;
@@ -36,11 +36,148 @@
   display: block;
 }
 
-.slick-center .MuiCard-root {
+.mostPopularAirlinesContainer .slick-center .MuiCard-root {
   transform: scale(1.05);
 }
-.slick-slide:not(.slick-center) .MuiCard-root {
+.mostPopularAirlinesContainer .slick-slide:not(.slick-center) .MuiCard-root {
   transform: scale(0.9);
   opacity: 0.9;
 }
+
+.mostPopularAirlinesContainer {
+  padding: 0 !important;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.mostPopularAirlinesContainer .slick-slide {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.mostPopularAirlinesContainer {
+  padding-inline: 1rem;
+}
+
+.mostPopularAirlinesContainer .customArrow {
+  z-index: 999 !important;
+}
+
+.customArrow {
+  z-index: 9999 !important;
+}
+
+@media (max-width: 1024px) {
+  .mostPopularAirlinesCardContextContainer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding: 0.4rem;
+  }
+
+  .locationMapPreview {
+    width: 200px;
+    height: 140px;
+  }
+
+   .mostPopularAirlinesCardContextTextBox {
+    font-size: 0.9rem;
+  }
+  
+}
+
+@media (max-width: 768px) {
+  .mostPopularAirlinesCardsContainer {
+    padding: 0.5rem 0;
+  }
+
+  .mostPopularAirlinesCardContextContainer {
+    padding: 0.3rem;
+    font-size: 0.85rem;
+  }
+
+  .mostPopularAirlinesCardContextTextBox {
+    max-width: 100%;
+    font-size: 0.8rem;
+  }
+
+  .mostPopularAirlinesContainer .slick-center .MuiCard-root,
+  .slick-slide:not(.slick-center) .MuiCard-root {
+    transform: scale(1) !important;
+    opacity: 1;
+  }
+
+  .mostPopularAirlinesContainer .locationMapPreview {
+    display: none !important;
+  }
+
+}
+
+@media (min-width: 1025px) {
+  .mostPopularAirlinesContainer .slick-center .MuiCard-root {
+    transform: scale(1.05);
+    z-index: 2;
+  }
+
+  .mostPopularAirlinesContainer .slick-slide:not(.slick-center) .MuiCard-root {
+    transform: scale(0.92);
+    opacity: 0.9;
+    z-index: 1;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1024px) {
+  .mostPopularAirlinesContainer .slick-slide .MuiCard-root {
+    transform: scale(1) !important;
+    opacity: 1 !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 899px) {
+  .mostPopularAirlinesContainer .slick-slide .MuiCard-root {
+    transform: scale(1) !important;
+    opacity: 1 !important;
+  }
+}
+
+.mostPopularAirlinesContainer .slick-slide {
+  box-sizing: border-box !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.mostPopularAirlinesContainer .slick-track {
+  display: flex !important;
+  align-items: stretch;
+}
+
+.mostPopularAirlinesContainer {
+  padding-inline: 0 !important;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.mostPopularAirlinesContainer .slick-slide {
+  box-sizing: border-box !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: flex !important;
+  justify-content: center;
+}
+
+.mostPopularAirlinesContainer .slick-slide > div {
+  min-width: 0 !important;
+  width: 100% !important;
+}
+
+.mostPopularAirlinesContainer .slick-track {
+  display: flex !important;
+  align-items: stretch;
+}
+
+.mostPopularAirlinesContainer .MuiCard-root {
+  width: 100% !important;
+  max-width: 32rem; 
+}
+
 

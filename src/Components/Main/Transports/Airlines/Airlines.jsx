@@ -119,8 +119,8 @@ function Airlines({filter}) {
 
   const sliderSettings = {
     infinite: true,
-    slidesToShow: 3,
     slidesToScroll: 1,
+    slidesToShow: 3,
     centerMode: true,
     centerPadding: "0px",
     nextArrow: <NextArrow />,
@@ -130,10 +130,33 @@ function Airlines({filter}) {
     },
     responsive: [
       {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          centerMode: false,
+        },
+      },
+      {
+        breakpoint: 900,
+        settings: {
+          slidesToShow: 2,
+          centerMode: false,
+        },
+      },
+      {
         breakpoint: 768,
         settings: {
           slidesToShow: 1,
           centerMode: false,
+          centerPadding: "6vw",
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          centerMode: false,
+          centerPadding: "5vw",
         },
       },
     ],
@@ -154,13 +177,22 @@ function Airlines({filter}) {
             >
               <Card
                 sx={{
-                  height: isCenter ? "30rem" : "24rem",
-                  width: isCenter ? "28.5rem" : "22rem",
-                  margin: "0 0.5rem",
+                  height: "26rem",
+                  width: "100%", // default genişlik
+                  maxWidth: {
+                    xs: "90vw",
+                    sm: "85vw",
+                    md: isCenter ? "32rem" : "22rem",
+                  },
+                  margin: "0 auto",
                   padding: 0,
                   position: "relative",
-                  transform: isCenter ? "scale(1.05)" : "scale(0.9)",
+                  transform: {
+                    xs: "scale(1)",
+                    md: isCenter ? "scale(1.1)" : "scale(0.92)",
+                  },
                   transition: "all 0.3s ease-in-out",
+                  zIndex: isCenter ? 9 : 1,
                 }}
               >
                 <CardCover>
@@ -192,7 +224,7 @@ function Airlines({filter}) {
                       borderRadius: "50%",
                       right: "0.5rem",
                       bottom: 0,
-                      transform: "translateY(-1145%)",
+                      transform: "translateY(-1000%)",
                       backgroundColor: "rgba(255, 255, 255, 0.71)",
                       color: "#FDFBF8",
                     }}

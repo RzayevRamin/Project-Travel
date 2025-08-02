@@ -1,33 +1,218 @@
+.carRentCartBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.mainRentCarBox {
+  display: flex;
+  flex-direction: column;
+  width: 45vw;
+  height: 44vw;
+}
+
 .mainCarCardTextBox {
-background-color: rgba(0, 0, 0, 0.25);
-border-top-right-radius: 5rem;
-border-bottom-right-radius: 5rem;
-width: 31vw;
-padding: 2rem 1rem;
-}
-
-.mainCarCardButtonBox{
-position: absolute;
-bottom: 3rem;
-left: 3rem;
-z-index: 999;
-}
-
-.carRentCartBox{
-    display: flex;
-    justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.25);
+  border-top-right-radius: 5rem;
+  border-bottom-right-radius: 5rem;
+  width: 31vw;
+  padding: 2rem 1rem;
 }
 
 .skrollRentCarBox {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 45vw;
   gap: 1rem;
-  max-height: 55rem;
+  height: 44vw;
   overflow-y: auto;
   scrollbar-width: none;
-  -ms-overflow-style: none;
 }
 
 .skrollRentCarBox::-webkit-scrollbar {
   display: none;
+}
+
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .carRentCartBox {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .mainRentCarBox {
+    width: 90vw;
+    height: 80vw;
+  }
+
+  .mainRentCarBox .MuiCard-root {
+    width: 100%;
+    padding: 0;
+  }
+
+  .mainCarCardTextBox {
+    margin-top: 1rem;
+    margin-left: 1rem;
+    width: 50vw;
+  }
+
+  .mainCarCardButtonBox {
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+  }
+
+  .skrollRentCarBox {
+    width: 90vw;
+    max-height: 34vw;
+    display: grid;
+    flex: 1 1 45%;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    overflow-y: auto;
+    scrollbar-width: none;
+  }
+
+  .skrollRentCarBox::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .rentCarContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    max-height: 70vw;
+    overflow-y: auto;
+    scrollbar-width: none;
+  }
+
+  .rentCarContainer::-webkit-scrollbar {
+    display: none;
+  }
+
+  .carRentCartBox {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .mainRentCarBox {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 38vw 38vw;
+    gap: 1vw;
+    justify-content: space-between;
+  }
+
+  .mainRentCarBox .MuiCard-root {
+    width: 38vw;
+    height: 100%;
+    padding: 0;
+  }
+
+  .mainCarCardTextBox {
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
+    width: 14vw;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+  }
+
+  .mainCarCardCover {
+    background: none !important;
+  }
+
+  .mainCarCardButtonBox {
+    margin-bottom: 0.5rem;
+    margin-left: 0.5rem;
+  }
+
+  .mainCarCardTitle {
+    display: none !important;
+  }
+
+  .skrollRentCarBox {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    margin-top: 1rem;
+  }
+
+  .skrollRentCarBox .MuiCard-root {
+    width: 95%;
+  }
+
+  .skrollRentCarBox .MuiCard-root .MuiAspectRatio-root {
+    width: 50vw;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .rentCarContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    max-height: 75vw;
+    overflow-y: auto;
+    scrollbar-width: none;
+  }
+
+  .rentCarContainer::-webkit-scrollbar {
+    display: none;
+  }
+
+  .carRentCartBox {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .mainRentCarBox {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+  .mainRentCarBox .MuiCard-root {
+    width: 100%;
+    height: 50vw;
+    padding: 0;
+  }
+
+  .mainCarCardTextBox {
+    width: 30%;
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+  }
+
+  .mainCarCardCover {
+    background: none !important;
+  }
+
+  .mainCarCardButtonBox {
+    margin-bottom: 0.5rem;
+    margin-left: 0.5rem;
+  }
+
+  .mainCarCardTitle {
+    display: none !important;
+  }
 }

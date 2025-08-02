@@ -177,7 +177,7 @@ function MostPopularHotels({ filter }) {
               <Card
                 sx={{
                   height: "26rem",
-                  width: "100%", // default genişlik
+                  width: "100%",
                   maxWidth: {
                     xs: "90vw",
                     sm: "85vw",
@@ -227,7 +227,7 @@ function MostPopularHotels({ filter }) {
                       borderRadius: "50%",
                       right: "0.5rem",
                       bottom: 0,
-                      transform: "translateY(-1145%)",
+                      transform: "translateY(-1000%)",
                       backgroundColor: "rgba(255, 255, 255, 0.71)",
                       color: "#FDFBF8",
                     }}
