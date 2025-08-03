@@ -164,9 +164,11 @@ function Contact() {
                 </div>
             </div>
             <div className="lawyerAndDogPhoto">
-                <img src={lawyerPhoto} alt="Lawyer" />
+                <img className="lawyerImg" src={lawyerPhoto} alt="Lawyer" />
+                <div className="lawyerAndDogInfo">
                 <h4>lawyer <b> Zaur Abdullayev </b> <br></br> special guide assistant <b> Lilith </b></h4>
-                <img src={dogPhoto} alt="Dog" />
+                </div>
+                <img className="dogImg" src={dogPhoto} alt="Dog" />
             </div>
             <div className="transportManagerPhoto">
                 <div className="transportManagerInfo">
@@ -176,7 +178,7 @@ function Contact() {
                 <img src={transportManagerPhoto} alt="Transport manager" />
             </div>
           </div>
-          <p>
+          <p className="textAboutTeam">
             The TripWithUs team is built on the principles of professionalism,
             innovation and sincerity. One of the company's founders, Ramin
             Rzayev, acts as both a manager and a senior developer responsible
