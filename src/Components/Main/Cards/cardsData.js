@@ -2133,69 +2133,69 @@ export const cardsData = [
     id: "131",
     img: [mediaItalyImg1, mediaItalyImg2, mediaItalyImg3, mediaItalyImg4, mediaItalyImg5, mediaItalyImg6, mediaItalyImg7, mediaItalyImg8, mediaItalyImg9, mediaItalyImg10, mediaItalyImg11, mediaItalyImg12, mediaItalyImg13, mediaItalyImg14],
     label: "Italy tour",
-    title: "",
+    title: "Fashion, history, art, romance, cuisine.",
   },
 
   {
     id: "132",
     img: [mediaTurkeyImg1, mediaTurkeyImg2, mediaTurkeyImg3, mediaTurkeyImg4, mediaTurkeyImg5, mediaTurkeyImg6, mediaTurkeyImg7, mediaTurkeyImg8, mediaTurkeyImg9, mediaTurkeyImg10],
     label: "Turkey tour",
-    title: "",
+    title: "History, sea, market, hospitality, cuisine.",
   },
 
   {
     id: "133",
     img: [mediaJapanImg1, mediaJapanImg2, mediaJapanImg3, mediaJapanImg4, mediaJapanImg5, mediaJapanImg6, mediaJapanImg7, mediaJapanImg8, mediaJapanImg9, mediaJapanImg10],
     label: "Japan tour",
-    title: "",
+    title: "Technology, ceremonies, nature, fluency, difference.",
   },
 
   {
     id: "134",
     img: [mediaEgyptImg1, mediaEgyptImg2, mediaEgyptImg3, mediaEgyptImg4, mediaEgyptImg5, mediaEgyptImg6, mediaEgyptImg7, mediaEgyptImg8, mediaEgyptImg9, mediaEgyptImg10, mediaEgyptImg11],
     label: "Egypt tour",
-    title: "",
+    title: "Pyramids, desert, Nile, mystery, history.",
   },
 
   {
     id: "135",
     img: [mediaFranceImg1, mediaFranceImg2, mediaFranceImg3, mediaFranceImg4, mediaFranceImg5, mediaFranceImg6, mediaFranceImg7, mediaFranceImg8],
     label: "France tour",
-    title: "",
+    title: "Fashion, art, romance, history, cuisine.",
   },
 
   {
     id: "136",
     img: [mediaGreeceImg1, mediaGreeceImg2, mediaGreeceImg3, mediaGreeceImg4, mediaGreeceImg5, mediaGreeceImg6, mediaGreeceImg7, mediaGreeceImg8, mediaGreeceImg9, mediaGreeceImg10, mediaGreeceImg11],
     label: "Greece tour",
-    title: "",
+    title: "Sea, gods, blue-white, civilization, island-wind.",
   },
 
   {
     id: "137",
     img: [mediaIndiaImg1, mediaIndiaImg2, mediaIndiaImg3, mediaIndiaImg4, mediaIndiaImg5, mediaIndiaImg6, mediaIndiaImg7, mediaIndiaImg8, mediaIndiaImg9, mediaIndiaImg10, mediaIndiaImg11, mediaIndiaImg12],
     label: "India tour",
-    title: "",
+    title: "Color, chaos, antiquity, ceremonies, mysticism.",
   },
 
   {
     id: "138",
     img: [mediaSingaporeImg1, mediaSingaporeImg2, mediaSingaporeImg3, mediaSingaporeImg4, mediaSingaporeImg5, mediaSingaporeImg6, mediaSingaporeImg7, mediaSingaporeImg8, mediaSingaporeImg9],
     label: "Singapore tour",
-    title: "",
+    title: "Security, technology, cleanliness, order, modernity.",
   },
 
   {
     id: "139",
     img: [mediaSpainImg1, mediaSpainImg2, mediaSpainImg3, mediaSpainImg4, mediaSpainImg5, mediaSpainImg6, mediaSpainImg7, mediaSpainImg8, mediaSpainImg9],
     label: "Spain tour",
-    title: "",
+    title: "Fiesta, flamenco, history, sun, cuisine.",
   },
 
   {
     id: "140",
     img: [mediaThailandImg1, mediaThailandImg2, mediaThailandImg3, mediaThailandImg4, mediaThailandImg5, mediaThailandImg6, mediaThailandImg7, mediaThailandImg8],
     label: "Thailand tour",
-    title: "",
+    title: "Temples, beaches, massage, nature, exoticism.",
   },
 ];

@@ -35,6 +35,30 @@ function ForeignToursMedia() {
     }
   }, [hoveredIndex, filteredCards]);
 
+  useEffect(() => {
+    const handleResize = () => {
+      const width = window.innerWidth;
+      if (width < 768) {
+        bottomSlider.current?.slickGoTo(0, true);
+        setTimeout(() => {
+          bottomSlider.current?.slickNext();
+        }, 0);
+      } else if (width < 1200) {
+        bottomSlider.current?.slickGoTo(1, true);
+        setTimeout(() => {
+          bottomSlider.current?.slickNext();
+          bottomSlider.current?.slickNext();
+        }, 0);
+      } else {
+        bottomSlider.current?.slickGoTo(3, true);
+      }
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const handleNext = () => {
     topSlider.current.slickNext();
     bottomSlider.current.slickNext();
@@ -50,7 +74,20 @@ function ForeignToursMedia() {
     slidesToScroll: 1,
     infinite: true,
     arrows: false,
-    speed: 500,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   };
 
   const bottomSettings = {
@@ -58,8 +95,23 @@ function ForeignToursMedia() {
     slidesToScroll: 1,
     infinite: true,
     arrows: false,
-    speed: 500,
     initialSlide: 3,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 3,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          initialSlide: 1,
+        },
+      },
+    ],
   };
 
   return (
@@ -87,6 +139,7 @@ function ForeignToursMedia() {
             <Slider ref={topSlider} {...topSettings}>
               {filteredCards.map((slide, index) => (
                 <Card
+                className="topSliderCard"
                   key={slide.id}
                   onMouseEnter={() => {
                     setHoveredIndex(index);
@@ -97,9 +150,6 @@ function ForeignToursMedia() {
                     setImageIndex(0);
                   }}
                   sx={{
-                    height: "37rem",
-                    width: "34rem",
-                    margin: "0 0.5rem",
                     padding: 0,
                     position: "relative",
                     display: "flex",
@@ -119,7 +169,7 @@ function ForeignToursMedia() {
                         : "none",
                   }}
                 >
-                  <CardCover>
+                  <CardCover className="imgCover">
                     <img
                       src={
                         hoveredIndex === index
@@ -136,13 +186,9 @@ function ForeignToursMedia() {
                         "linear-gradient(to top, rgba(0,0,0,0.4), rgba(0,0,0,0) 200px), linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0) 300px)",
                     }}
                   />
-                  <CardContent
+                  <CardContent className="mediaTopCardContentContainer"
                     sx={{
-                      justifyContent: "flex-end",
-                      alignItems: "center",
                       position: "relative",
-                      height: "36rem",
-                      width: "100%",
                     }}
                   >
                     <span className="mediaCardContextContainer">
@@ -166,7 +212,7 @@ function ForeignToursMedia() {
                         sx={{
                           width: "3rem",
                           height: "3rem",
-                          borderRadius: "4rem",
+                          borderRadius: "50%",
                         }}
                       >
                         <ArrowForwardRoundedIcon sx={{ fontSize: "2.2rem" }} />
@@ -182,6 +228,7 @@ function ForeignToursMedia() {
             <Slider ref={bottomSlider} {...bottomSettings}>
               {filteredCards.map((slide, index) => (
                 <Card
+                className="bottomSliderCard"
                   key={slide.id}
                   onMouseEnter={() => {
                     setHoveredIndex(index);
@@ -192,9 +239,6 @@ function ForeignToursMedia() {
                     setImageIndex(0);
                   }}
                   sx={{
-                    height: "25rem",
-                    width: "25rem",
-                    margin: "0 0.5rem",
                     padding: 0,
                     position: "relative",
                     display: "flex",
@@ -210,7 +254,7 @@ function ForeignToursMedia() {
                     zIndex: hoveredIndex === index ? 2 : 1,
                   }}
                 >
-                  <CardCover>
+                  <CardCover className="imgCover">
                     <img
                       src={
                         hoveredIndex === index
@@ -228,12 +272,10 @@ function ForeignToursMedia() {
                     }}
                   />
                   <CardContent
+                  className="mediaBottomCardContentContainer"
                     sx={{
                       justifyContent: "flex-end",
-                      alignItems: "center",
                       position: "relative",
-                      height: "24rem",
-                      width: "100%",
                     }}
                   >
                     <span className="mediaCardContextContainer">
@@ -247,9 +289,6 @@ function ForeignToursMedia() {
                             {slide.label}
                           </Link>
                         </Typography>
-                        <Typography textColor="neutral.300">
-                          {slide.title}
-                        </Typography>
                       </span>
                       <IconButton
                         variant="solid"
@@ -257,7 +296,7 @@ function ForeignToursMedia() {
                         sx={{
                           width: "3rem",
                           height: "3rem",
-                          borderRadius: "4rem",
+                          borderRadius: "50%",
                         }}
                       >
                         <ArrowForwardRoundedIcon sx={{ fontSize: "2.2rem" }} />

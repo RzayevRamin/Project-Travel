@@ -25,10 +25,7 @@ function InternalToursMedia() {
   });
 
   useEffect(() => {
-    if (
-      hoveredIndex !== null &&
-      filteredCards[hoveredIndex]?.img?.length > 1
-    ) {
+    if (hoveredIndex !== null && filteredCards[hoveredIndex]?.img?.length > 1) {
       const interval = setInterval(() => {
         setImageIndex(
           (prev) => (prev + 1) % filteredCards[hoveredIndex].img.length
@@ -37,6 +34,30 @@ function InternalToursMedia() {
       return () => clearInterval(interval);
     }
   }, [hoveredIndex, filteredCards]);
+
+  useEffect(() => {
+    const handleResize = () => {
+      const width = window.innerWidth;
+      if (width < 768) {
+        bottomSlider.current?.slickGoTo(0, true);
+        setTimeout(() => {
+          bottomSlider.current?.slickNext();
+        }, 0);
+      } else if (width < 1200) {
+        bottomSlider.current?.slickGoTo(1, true);
+        setTimeout(() => {
+          bottomSlider.current?.slickNext();
+          bottomSlider.current?.slickNext();
+        }, 0);
+      } else {
+        bottomSlider.current?.slickGoTo(3, true);
+      }
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const handleNext = () => {
     topSlider.current.slickNext();
@@ -53,7 +74,20 @@ function InternalToursMedia() {
     slidesToScroll: 1,
     infinite: true,
     arrows: false,
-    speed: 500,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   };
 
   const bottomSettings = {
@@ -61,8 +95,23 @@ function InternalToursMedia() {
     slidesToScroll: 1,
     infinite: true,
     arrows: false,
-    speed: 500,
     initialSlide: 3,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 3,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          initialSlide: 1,
+        },
+      },
+    ],
   };
 
   return (
@@ -73,7 +122,8 @@ function InternalToursMedia() {
 
       <div className="internalToursMediaCardsBox">
         <div className="leftSliderButton">
-          <IconButton
+          <IconButton 
+          className="doubleSliderButton"
             sx={{
               backgroundColor: "rgba(217, 217, 217, 0.39);",
               width: "3rem",
@@ -85,11 +135,13 @@ function InternalToursMedia() {
             <ArrowBackIosRoundedIcon style={{ fontSize: 32, color: "#333" }} />
           </IconButton>
         </div>
+
         <div className="doubleSlider">
           <div className="sliderRow topSlider">
             <Slider ref={topSlider} {...topSettings}>
               {filteredCards.map((slide, index) => (
                 <Card
+                  className="topSliderCard"
                   key={slide.id}
                   onMouseEnter={() => {
                     setHoveredIndex(index);
@@ -100,15 +152,13 @@ function InternalToursMedia() {
                     setImageIndex(0);
                   }}
                   sx={{
-                    height: "37rem",
-                    margin: "0 0.5rem",
                     padding: 0,
                     position: "relative",
                     display: "flex",
                     alignItems: "center",
                   }}
                 >
-                  <CardCover>
+                  <CardCover className="imgCover">
                     <img
                       src={
                         hoveredIndex === index
@@ -125,14 +175,9 @@ function InternalToursMedia() {
                         "linear-gradient(to top, rgba(0,0,0,0.4), rgba(0,0,0,0) 200px), linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0) 300px)",
                     }}
                   />
-                  <CardContent
+                  <CardContent className="mediaTopCardContentContainer"
                     sx={{
-                      justifyContent: "flex-end",
-                      alignItems: "center",
                       position: "relative",
-                      height: "36rem",
-                      width: "34rem",
-                      left: "0.5rem",
                     }}
                   >
                     <span className="mediaCardContextContainer">
@@ -151,12 +196,13 @@ function InternalToursMedia() {
                         </Typography>
                       </span>
                       <IconButton
+                      className="doubleSliderCardButton"
                         variant="solid"
                         color="primary"
                         sx={{
                           width: "3rem",
-                          height: "3rem",
-                          borderRadius: "4rem",
+              height: "3rem",
+                          borderRadius: "50%",
                         }}
                       >
                         <ArrowForwardRoundedIcon sx={{ fontSize: "2.2rem" }} />
@@ -167,11 +213,11 @@ function InternalToursMedia() {
               ))}
             </Slider>
           </div>
-
           <div className="sliderRow bottomSlider">
             <Slider ref={bottomSlider} {...bottomSettings}>
               {filteredCards.map((slide, index) => (
                 <Card
+                  className="bottomSliderCard"
                   key={slide.id}
                   onMouseEnter={() => {
                     setHoveredIndex(index);
@@ -182,14 +228,11 @@ function InternalToursMedia() {
                     setImageIndex(0);
                   }}
                   sx={{
-                    height: "25rem",
-                    width: "25rem",
-                    margin: "0 0.5rem",
                     padding: 0,
                     position: "relative",
                   }}
                 >
-                  <CardCover>
+                  <CardCover className="imgCover">
                     <img
                       src={
                         hoveredIndex === index
@@ -207,16 +250,14 @@ function InternalToursMedia() {
                     }}
                   />
                   <CardContent
+                    className="mediaBottomCardContentContainer"
                     sx={{
                       justifyContent: "flex-end",
                       position: "relative",
-                      height: "24rem",
-                      width: "25rem",
-                      left: "0.5rem",
                     }}
                   >
                     <span className="mediaCardContextContainer">
-                      <span className="mediaCardContextTextBox">
+                      <span className="bottomMediaCardContextTextBox">
                         <Typography level="title-lg" textColor="#fff">
                           <Link
                             href={slide.location}
@@ -226,17 +267,15 @@ function InternalToursMedia() {
                             {slide.label}
                           </Link>
                         </Typography>
-                        <Typography textColor="neutral.300">
-                          {slide.title}
-                        </Typography>
                       </span>
                       <IconButton
+                      className="doubleSliderCardButton"
                         variant="solid"
                         color="primary"
                         sx={{
                           width: "3rem",
-                          height: "3rem",
-                          borderRadius: "4rem",
+              height: "3rem",
+                          borderRadius: "50%",
                         }}
                       >
                         <ArrowForwardRoundedIcon sx={{ fontSize: "2.2rem" }} />
@@ -248,8 +287,10 @@ function InternalToursMedia() {
             </Slider>
           </div>
         </div>
+
         <div className="rightSliderButton">
           <IconButton
+          className="doubleSliderButton"
             sx={{
               backgroundColor: "rgba(217, 217, 217, 0.39);",
               width: "3rem",

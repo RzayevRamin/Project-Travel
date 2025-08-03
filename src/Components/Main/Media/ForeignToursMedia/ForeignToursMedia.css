@@ -1,9 +1,21 @@
-.doubleSlider {
-  width: 100rem;
-  margin: auto;
-  text-align: center;
+.foreignToursMediaContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
+.foreignToursMediaCardsBox {
+  width: 100%;
+}
+
+.foreignToursMediaCardsBox .doubleSlider {
+  width: 85vw;
+}
+
+.topSliderCard {
+  height: 30vw;
+}
 
 .foreignToursMediaCardsBox{
     display: flex;
@@ -11,20 +23,110 @@
     align-items: center;
 }
 
+.mediaTopCardContentContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  height: 30vw;
+}
+
 .mediaCardContextContainer {
     background-color: rgba(253, 251, 248, 0.6);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5rem;
+    width: 95%;
+    padding: 2.5%;
 }
 
 .mediaCardContextTextBox {
   position: relative;
   display: inline-block;
   cursor: pointer;
+  width: 20vw;
 }
 
-.mediaCardContextContainer {
-    width: 24rem;
+.bottomSliderCard {
+  height: 20vw;
+}
+
+.mediaBottomCardContentContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  height: 20vw;
+}
+
+.bottomMediaCardContextTextBox {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  width: 15vw;
+}
+
+.imgCover img {
+  object-fit: fill;
+}
+
+.foreignToursMediaHeadingBox {
+  display: block;
+  width: 100%;
+  margin-left: 6rem;
+  margin-top: 2vw;
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+
+  .topSliderCard {
+  height: 40vw;
+}
+
+ .mediaTopCardContentContainer {
+  height: 40vw;
+ }
+
+ .bottomSliderCard {
+  height: 25vw;
+}
+
+.mediaBottomCardContentContainer {
+  height: 25vw;
+}
+
+.mediaCardContextTextBox {
+  width: 35vw;
+}
+
+.bottomMediaCardContextTextBox {
+  width: 20vw;
+}
+}
+
+@media (max-width: 767px) {
+
+  .topSliderCard {
+  height: 70vw;
+}
+
+ .mediaTopCardContentContainer {
+  height: 70vw;
+ }
+
+ .bottomSliderCard {
+  height: 40vw;
+}
+
+.mediaBottomCardContentContainer {
+  height: 40vw;
+}
+
+.mediaCardContextTextBox {
+  width: 70vw;
+}
+
+.bottomMediaCardContextTextBox {
+  width: 35vw;
+}
 }
