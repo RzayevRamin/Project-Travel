@@ -23,7 +23,7 @@ import qubaImg from "../../../assets/CardsImages/Tours/LocalTours/Quba.jpg";
 import lerikImg from "../../../assets/CardsImages/Tours/LocalTours/Lerik.jpg";
 import shakiImg from "../../../assets/CardsImages/Tours/LocalTours/Shaki.jpg";
 import nakhchivanImg from "../../../assets/CardsImages/Tours/LocalTours/Nakhchivan.jpg";
-import oldtownImg from "../../../assets/CardsImages/Tours/LocalTours/OldTowN.jpeg";
+import oldtownImg from "../../../assets/CardsImages/Tours/LocalTours/OldTown.jpeg";
 import shusaImg from "../../../assets/CardsImages/Tours/LocalTours/Shusha.jpg";
 import khinaliqImg from "../../../assets/CardsImages/Tours/LocalTours/Khinaliq.jpeg";
 import zagatalaImg from "../../../assets/CardsImages/Tours/LocalTours/Zagatala.jpg";
@@ -37,7 +37,7 @@ import hotelAmbassadeImg from "../../../assets/CardsImages/Hotels/Hotels/Ambassa
 import hotelAnantaraImg from "../../../assets/CardsImages/Hotels/Hotels/AnantaraPalazzoNaiadiItaly.jpg";
 import hotelAndamanImg from "../../../assets/CardsImages/Hotels/Hotels/AndamanMalaysia.jpeg";
 import hotelAstoriaImg from "../../../assets/CardsImages/Hotels/Hotels/AstoriaRussia.jpg";
-import hotelBadamImg from "../../../assets/CardsImages/Hotels/Hotels/BadamD'art BoutiqueHotel.jpg";
+import hotelBadamImg from "../../../assets/CardsImages/Hotels/Hotels/BadamDartBoutiqueHotel.jpg";
 import hotelBergsImg from "../../../assets/CardsImages/Hotels/Hotels/BergsHotelGakh.jpg";
 import hotelBurjAlArabImg from "../../../assets/CardsImages/Hotels/Hotels/BurjAlArabDubai.jpeg";
 import hotelCambrianImg from "../../../assets/CardsImages/Hotels/Hotels/CambrianSwitzerland.jpg";
