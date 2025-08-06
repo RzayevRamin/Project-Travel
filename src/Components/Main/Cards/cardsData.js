@@ -16,14 +16,14 @@ import malaysiaImg from "../../../assets/CardsImages/Tours/ForeignTours/Malaysia
 import maroccoImg from "../../../assets/CardsImages/Tours/ForeignTours/Morocco.jpeg";
 import norwayImg from "../../../assets/CardsImages/Tours/ForeignTours/Norway.jpg";
 import russiaImg from "../../../assets/CardsImages/Tours/ForeignTours/Russia.jpg";
-import srilankaImg from "../../../assets/CardsImages/Tours/ForeignTours/srilanka.jpeg";
+import srilankaImg from "../../../assets/CardsImages/Tours/ForeignTours/Srilanka.jpeg";
 import gabalaImg from "../../../assets/CardsImages/Tours/LocalTours/Gabala.jpg";
 import gakhImg from "../../../assets/CardsImages/Tours/LocalTours/Gakh.jpg";
 import qubaImg from "../../../assets/CardsImages/Tours/LocalTours/Quba.jpg";
 import lerikImg from "../../../assets/CardsImages/Tours/LocalTours/Lerik.jpg";
 import shakiImg from "../../../assets/CardsImages/Tours/LocalTours/Shaki.jpg";
 import nakhchivanImg from "../../../assets/CardsImages/Tours/LocalTours/Nakhchivan.jpg";
-import oldtownImg from "../../../assets/CardsImages/Tours/LocalTours/OldTown.jpeg";
+import oldtownImg from "../../../assets/CardsImages/Tours/LocalTours/OldTowN.jpeg";
 import shusaImg from "../../../assets/CardsImages/Tours/LocalTours/Shusha.jpg";
 import khinaliqImg from "../../../assets/CardsImages/Tours/LocalTours/Khinaliq.jpeg";
 import zagatalaImg from "../../../assets/CardsImages/Tours/LocalTours/Zagatala.jpg";
