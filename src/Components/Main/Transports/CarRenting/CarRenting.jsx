@@ -8,10 +8,18 @@ import Typography from "@mui/joy/Typography";
 import Button from "@mui/joy/Button";
 import AspectRatio from "@mui/joy/AspectRatio";
 import Link from "@mui/joy/Link";
+import { useNavigate } from "react-router-dom";
 
 function CarRenting() {
   const [mainCards, setMainCards] = useState([]);
   const [scrolledCards, setScrolledCards] = useState([]);
+
+  const navigate = useNavigate();
+  
+    const handleCardExplore = (card) => {
+    const path = card.cardLabel.replace(/\s+/g, "-").toLowerCase();
+    navigate(`/tours/${path}`);
+  };
 
   useEffect(() => {
     const updateCardsLayout = () => {
@@ -123,6 +131,7 @@ function CarRenting() {
                       backgroundColor: "#0123FF",
                       "&:hover": { backgroundColor: "#00adfd", color: "#000" },
                     }}
+                    onClick={() => handleCardExplore(card)}
                   >
                     Rent Now
                   </Button>

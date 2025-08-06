@@ -16,6 +16,7 @@ import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import Box from "@mui/material/Box";
 import Rating from "@mui/material/Rating";
 import StarIcon from "@mui/icons-material/Star";
+import { useNavigate } from "react-router-dom";
 
 
 function HoverRating({ value, onChange }) {
@@ -163,6 +164,13 @@ function BusCompanies({filter}) {
     ],
   };
 
+  const navigate = useNavigate();
+  
+    const handleCardExplore = (card) => {
+    const path = card.cardLabel.replace(/\s+/g, "-").toLowerCase();
+    navigate(`/tours/${path}`);
+  };
+
   return (
     <div className="mostPopularBusContainer">
       <h1>Most Popular Bus</h1>
@@ -268,6 +276,7 @@ function BusCompanies({filter}) {
                           height: "2rem",
                           borderRadius: "4rem",
                         }}
+                        onClick={() => handleCardExplore(card)}
                       >
                         Book now
                       </Button>

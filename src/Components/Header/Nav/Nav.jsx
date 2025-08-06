@@ -12,12 +12,11 @@ function Nav({ menuOpen, setMenuOpen, showLoginInMenu = false }) {
 
   const handleNavigate = (path) => {
     navigate(path);
-    if (setMenuOpen) setMenuOpen(false); // menyunu bağla (mobil üçün)
+    if (setMenuOpen) setMenuOpen(false);
   };
 
   return (
     <div className="nav">
-      {/* Hamburger button yalnız mobil üçün göstərilir */}
       <button
         className="hamburger"
         onClick={() => setMenuOpen(!menuOpen)}
@@ -40,7 +39,6 @@ function Nav({ menuOpen, setMenuOpen, showLoginInMenu = false }) {
         <Button onClick={() => handleNavigate("/forum")}>Forum</Button>
         <Button onClick={() => handleNavigate("/contact")} id="navContactButton">Contact</Button>
 
-        {/* HeaderLogin burger menu daxilində */}
         {showLoginInMenu && menuOpen && <HeaderLogin />}
       </ToggleButtonGroup>
     </div>

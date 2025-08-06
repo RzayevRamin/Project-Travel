@@ -95,6 +95,12 @@ body.dark .desktopHeader {
 
 /* Mobil görünüş üçün */
 @media (max-width: 767px) {
+  .headerContainer {
+    overflow: visible;
+    position: relative;
+    z-index: 1;
+  }
+  
   .desktopHeader {
     display: none;
   }
@@ -122,7 +128,7 @@ body.dark .desktopHeader {
     width: 100%;
   }
 
-  /* Burger düyməsi */
+
   .nav .hamburger {
     display: inline-block;
     background: none;

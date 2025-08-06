@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Shopping.css";
 import { cardsData } from "../../Cards/cardsData";
 import AddIcon from "@mui/icons-material/Add";
@@ -8,54 +8,91 @@ import { useCurrency } from "../../../../CurrencyContext";
 import { currencyIcons } from "../../../../currencyIcon";
 
 function Shopping() {
-  const selectedIds = [9, 113];
-  const selectedCards = cardsData.filter((card) =>
-    selectedIds.includes(parseInt(card.id, 10))
-  );
-
-  const [counts, setCounts] = useState(
-    selectedIds.reduce((acc, id) => {
-      acc[id] = {
-        adult: 1,
-        child: 0,
-        price: 1,
-      };
-      return acc;
-    }, {})
-  );
-
-  const handleAdd = (id, type = "price") => {
-    setCounts((prev) => ({
-      ...prev,
-      [id]: {
-        ...prev[id],
-        [type]: prev[id][type] + 1,
-      },
-    }));
-  };
-
-  const handleRemove = (id, type = "price") => {
-    setCounts((prev) => ({
-      ...prev,
-      [id]: {
-        ...prev[id],
-        [type]: prev[id][type] > 0 ? prev[id][type] - 1 : 0,
-      },
-    }));
-  };
-
-  const [hoveredId, setHoveredId] = useState(null);
+  const [selectedIds, setSelectedIds] = useState([]);
+  const [counts, setCounts] = useState({});
 
   const { currency, convert } = useCurrency();
+
+
+  useEffect(() => {
+    const cart = JSON.parse(localStorage.getItem("selectedIds")) || [];
+    setSelectedIds(cart);
+  }, []);
+
+
+  useEffect(() => {
+    setCounts((prevCounts) => {
+
+      const newCounts = { ...prevCounts };
+
+      selectedIds.forEach((id) => {
+        if (!newCounts[id]) {
+          newCounts[id] = {
+            adult: 1,
+            child: 0,
+            price: 1,
+          };
+        }
+      });
+
+      Object.keys(newCounts).forEach((id) => {
+        if (!selectedIds.includes(Number(id))) {
+          delete newCounts[id];
+        }
+      });
+
+      return newCounts;
+    });
+  }, [selectedIds]);
+
+  const selectedCards = cardsData.filter((card) =>
+    selectedIds.includes(card.id)
+  );
+
+  const handleDelete = (id) => {
+  setSelectedIds((prev) => {
+    const newSelected = prev.filter((itemId) => itemId !== id);
+    localStorage.setItem("selectedIds", JSON.stringify(newSelected));
+    return newSelected;
+  });
+};
+
+  const handleAdd = (id, type = "price") => {
+  setCounts((prev) => ({
+    ...prev,
+    [id]: {
+      adult: prev[id]?.adult ?? 1,
+      child: prev[id]?.child ?? 0,
+      price: prev[id]?.price ?? 1,
+      [type]: (prev[id]?.[type] ?? 0) + 1,
+    },
+  }));
+};
+
+const handleRemove = (id, type = "price") => {
+  setCounts((prev) => ({
+    ...prev,
+    [id]: {
+      adult: prev[id]?.adult ?? 1,
+      child: prev[id]?.child ?? 0,
+      price: prev[id]?.price ?? 1,
+      [type]: prev[id]?.[type] > 0 ? prev[id][type] - 1 : 0,
+    },
+  }));
+};
+
+  const [hoveredId, setHoveredId] = useState(null);
 
   return (
     <div className="shoppingContainer">
       <h1>My Cart</h1>
       <div className="CartBox">
         <div className="itemBox">
+          {selectedCards.length === 0 && <p>Cart is empty.</p>}
+
           {selectedCards.map((card) => {
             const priceInfo = card.price;
-            const count = counts[card.id];
+            const count = counts[card.id] || { adult: 1, child: 0, price: 1 };
             let total = 0;
 
             if (
@@ -78,21 +115,16 @@ function Shopping() {
                   <h2>{card.cardLabel}</h2>
                   <p>{card.title}</p>
                   <p>{card.time}</p>
-                  {priceInfo?.adult !== undefined &&
-                  priceInfo?.child !== undefined ? (
+                  {priceInfo?.adult !== undefined && priceInfo?.child !== undefined ? (
                     <>
                       <div className="cardsInfoBox adult">
                         <p>Adult:</p>
                         <div className="countingBox">
-                          <IconButton
-                            onClick={() => handleRemove(card.id, "adult")}
-                          >
+                          <IconButton onClick={() => handleRemove(card.id, "adult")}>
                             <RemoveIcon />
                           </IconButton>
                           <div className="countBox">{count.adult}</div>
-                          <IconButton
-                            onClick={() => handleAdd(card.id, "adult")}
-                          >
+                          <IconButton onClick={() => handleAdd(card.id, "adult")}>
                             <AddIcon />
                           </IconButton>
                         </div>
@@ -101,15 +133,11 @@ function Shopping() {
                       <div className="cardsInfoBox child">
                         <p>Child:</p>
                         <div className="countingBox">
-                          <IconButton
-                            onClick={() => handleRemove(card.id, "child")}
-                          >
+                          <IconButton onClick={() => handleRemove(card.id, "child")}>
                             <RemoveIcon />
                           </IconButton>
                           <div className="countBox">{count.child}</div>
-                          <IconButton
-                            onClick={() => handleAdd(card.id, "child")}
-                          >
+                          <IconButton onClick={() => handleAdd(card.id, "child")}>
                             <AddIcon />
                           </IconButton>
                         </div>
@@ -119,9 +147,7 @@ function Shopping() {
                     <div className="cardsInfoBox singlePrice">
                       <p>Price:</p>
                       <div className="countingBox">
-                        <IconButton
-                          onClick={() => handleRemove(card.id, "price")}
-                        >
+                        <IconButton onClick={() => handleRemove(card.id, "price")}>
                           <RemoveIcon />
                         </IconButton>
                         <div className="countBox">{count.price}</div>
@@ -138,6 +164,7 @@ function Shopping() {
                     className="itemDeleteButton"
                     onMouseEnter={() => setHoveredId(card.id)}
                     onMouseLeave={() => setHoveredId(null)}
+                    onClick={() => handleDelete(card.id)}
                   >
                     {hoveredId === card.id ? (
                       <IconButton
@@ -153,6 +180,7 @@ function Shopping() {
                           },
                         }}
                       >
+                        {/* Burada sənin silmək svg və ya icon */}
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="24"
@@ -181,6 +209,7 @@ function Shopping() {
                           border: "2px solid #F60909",
                         }}
                       >
+                        {/* Silmək icon */}
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="24"
@@ -205,8 +234,7 @@ function Shopping() {
                         gap: "6px",
                       }}
                     >
-                      {currencyIcons[currency.toLowerCase()] ||
-                        currency.toUpperCase()}
+                      {currencyIcons[currency.toLowerCase()] || currency.toUpperCase()}
                       <span>
                         {new Intl.NumberFormat("az-Latn-AZ", {
                           style: "decimal",

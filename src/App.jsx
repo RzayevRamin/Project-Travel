@@ -17,6 +17,7 @@ import SecondLayout from "./Components/Main/SecondLayout";
 import Favorites from "./Components/Main/UserPanel/Favorites/Favorites";
 import Shopping from "./Components/Main/UserPanel/Shopping/Shopping";
 import { CurrencyProvider } from "./CurrencyContext";
+import ItemCard from "./Components/Main/ItemCards/ItemCard";
 
 function App() {
   const [darkMode, setDarkMode] = useState(() => {
@@ -70,6 +71,7 @@ function App() {
             <Route path="media" element={<Media />} />
             <Route path="forum" element={<Forum darkMode={darkMode} />} />
             <Route path="contact" element={<Contact />} />
+            <Route path="/tours/:label" element={<ItemCard />} />
           </Route>
         </Routes>
       </AuthProvider>

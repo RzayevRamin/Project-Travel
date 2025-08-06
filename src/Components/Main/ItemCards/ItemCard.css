@@ -1,0 +1,32 @@
+.itemCardBox {
+    display: flex !important;
+    flex-direction: row !important;
+}
+
+.itemCardImgBox img {
+    width: 44vw !important;
+    height: auto;
+}
+
+.itemCardImgBox .MuiAspectRatio-content {
+    width: 44vw !important;
+    height: auto;
+}
+
+.itemCardRatingBox {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 30vw;
+    max-height: 2.5vw !important;
+}
+
+.itemCardRatingBox .MuiBox-root {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    height: 2.5vw !important;
+
+}

@@ -18,6 +18,7 @@ import { cardsData } from "../Cards/cardsData";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { useState } from "react";
 import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import AspectRatio from "@mui/joy/AspectRatio";
 import CardOverflow from "@mui/joy/CardOverflow";
 import Divider from "@mui/joy/Divider";
@@ -126,8 +127,8 @@ function LocalTours({ filter, source }) {
   const sliderSettings = {
     infinite: true,
     slidesToShow: source === "home" ? 3 : 5,
-  slidesToScroll: source === "home" ? 2 : 4,
-  centerMode: false,
+    slidesToScroll: source === "home" ? 2 : 4,
+    centerMode: false,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
     responsive: [
@@ -163,6 +164,13 @@ function LocalTours({ filter, source }) {
       },
     ],
   };
+
+  const navigate = useNavigate();
+
+  const handleCardExplore = (card) => {
+  const path = card.cardLabel.replace(/\s+/g, "-").toLowerCase();
+  navigate(`/tours/${path}`);
+};
 
   return (
     <div
@@ -218,41 +226,16 @@ function LocalTours({ filter, source }) {
                         </Link>
                       </Typography>
                       <Typography level="title-md">
-                        <span
-                          className="locationPreview"
-                          style={{ position: "relative", zIndex: 1000 }}
-                        >
-                          <Link className="localToursNameLabel"
+                        <div className="locationHoverWrapper">
+                          <Link
+                            className="localToursNameLabel"
                             href={card.location}
                             target="_blank"
                             rel="noopener"
                           >
                             {card.cardLabel}
                           </Link>
-                          <span
-                            className="locationMapPreview"
-                            style={{
-                              position: "absolute",
-                              top: "100%",
-                              left: 0,
-                              zIndex: "9999",
-                              width: "250px",
-                              background: "white",
-                              boxShadow: "0 2px 8px rgba(0,0,0,0.15)",
-                              borderRadius: "8px",
-                              overflow: "hidden",
-                            }}
-                          >
-                            <iframe
-                              width="250"
-                              height="150"
-                              src={`https://maps.google.com/maps?q=${encodeURIComponent(
-                                card.cardLabel
-                              )}&output=embed`}
-                              title="Google Map Preview"
-                            ></iframe>
-                          </span>
-                        </span>
+                        </div>
                       </Typography>
                     </div>
                     <div
@@ -294,7 +277,7 @@ function LocalTours({ filter, source }) {
                     </div>
                   </div>
                   <div className="cardButtonBox">
-                    <Button variant="contained" className="cardButton">
+                    <Button variant="contained" className="cardButton" onClick={() => handleCardExplore(card)}>
                       Explore more
                     </Button>
                   </div>

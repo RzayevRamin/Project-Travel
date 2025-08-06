@@ -21,6 +21,7 @@ import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import CardCover from "@mui/joy/CardCover";
 import LocationOnRoundedIcon from "@mui/icons-material/LocationOnRounded";
+import { useNavigate } from "react-router-dom";
 
 function HoverRating({ value, onChange }) {
   const [hover2, setHover2] = useState(-1);
@@ -163,6 +164,13 @@ function ForeignTours({ filter, source }) {
     ],
   };
 
+  const navigate = useNavigate();
+  
+    const handleCardExplore = (card) => {
+    const path = card.cardLabel.replace(/\s+/g, "-").toLowerCase();
+    navigate(`/tours/${path}`);
+  };
+
   return (
     <div
       className={`${
@@ -279,7 +287,7 @@ function ForeignTours({ filter, source }) {
                     </Typography>
                   </div>
                   <div className="cardButtonBox">
-                    <Button variant="contained" className="cardButton">
+                    <Button variant="contained" className="cardButton" onClick={() => handleCardExplore(card)}>
                       Explore more
                     </Button>
                   </div>

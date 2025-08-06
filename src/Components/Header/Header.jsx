@@ -37,7 +37,6 @@ function Header({ darkMode, setDarkMode }) {
       )}
 
       <div className="headerContent">
-        {/* Mobil top row */}
         {isMobile && (
           <div className="headerTopMobile">
             <div className="headerTopLeft">
@@ -49,7 +48,7 @@ function Header({ darkMode, setDarkMode }) {
           </div>
         )}
 
-        {/* Desktop üçün adi header */}
+
         {isDesktop && (
           <div className="header desktopHeader">
             <div className="logo">
@@ -113,7 +112,6 @@ function Header({ darkMode, setDarkMode }) {
         )}
       </div>
 
-      {/* Mobil olduqda carousel burda göstər */}
       {isMobile && (
         <div className="carouselContainer mobileCarousel">
           <CarouselBox />
