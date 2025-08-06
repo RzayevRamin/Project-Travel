@@ -256,7 +256,7 @@ function WorldTours({ filter, source }) {
                       textColor="neutral.300"
                     >
                       <span className="locationPreview">
-                        <Link
+                        <Link className="tourNameLabel"
                           href={card.location}
                           target="_blank"
                           rel="noopener"

@@ -171,12 +171,12 @@ function LocalTours({ filter, source }) {
       } localToursContainer`}
     >
       <h1>Domestic Tours</h1>
-      <Slider {...sliderSettings}>
+      <Slider className="localToursSlider" {...sliderSettings}>
         {selectedCards.map((card) => (
           <div key={card.id} className="cardContainer">
             <Card
               key={card.id}
-              className={card.className}
+              className="localTourCard"
               variant="outlined"
               sx={{ bgcolor: "#F1FAFA" }}
             >
@@ -222,7 +222,7 @@ function LocalTours({ filter, source }) {
                           className="locationPreview"
                           style={{ position: "relative", zIndex: 1000 }}
                         >
-                          <Link
+                          <Link className="localToursNameLabel"
                             href={card.location}
                             target="_blank"
                             rel="noopener"

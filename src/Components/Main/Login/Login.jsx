@@ -311,7 +311,7 @@ function Login() {
                       <FormLabel>Email or phone</FormLabel>
                       <Input
                         name="email"
-                        placeholder="email@email.com or +994501234567"
+                        placeholder="email or phone"
                         value={loginFormik.values.email}
                         onChange={loginFormik.handleChange}
                         onBlur={loginFormik.handleBlur}
@@ -385,7 +385,7 @@ function Login() {
                     <FormLabel>Email or Phone</FormLabel>
                     <Input
                       name="email"
-                      placeholder="email@email.com or +994501234567"
+                      placeholder="email or phone"
                       value={signFormik.values.email}
                       onChange={signFormik.handleChange}
                       onBlur={signFormik.handleBlur}

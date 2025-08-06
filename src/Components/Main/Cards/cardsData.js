@@ -16,7 +16,7 @@ import malaysiaImg from "../../../assets/CardsImages/Tours/ForeignTours/Malaysia
 import maroccoImg from "../../../assets/CardsImages/Tours/ForeignTours/Morocco.jpeg";
 import norwayImg from "../../../assets/CardsImages/Tours/ForeignTours/Norway.jpg";
 import russiaImg from "../../../assets/CardsImages/Tours/ForeignTours/Russia.jpg";
-import srilankaImg from "../../../assets/CardsImages/Tours/ForeignTours/sri Lanka.jpeg";
+import srilankaImg from "../../../assets/CardsImages/Tours/ForeignTours/srilanka.jpeg";
 import gabalaImg from "../../../assets/CardsImages/Tours/LocalTours/Gabala.jpg";
 import gakhImg from "../../../assets/CardsImages/Tours/LocalTours/Gakh.jpg";
 import qubaImg from "../../../assets/CardsImages/Tours/LocalTours/Quba.jpg";
@@ -1959,13 +1959,13 @@ export const cardsData = [
     img: carHetchbackImg,
     title: "Great and comfortable transport for your needs",
     location: "",
-    cardLabel: "Hetchback",
+    cardLabel: "Hatchback",
     fuel: "50L",
     transmission: "Manual",
     seats: "5 person",
     views: "6.3k views",
     time: "",
-    className: "car rent hetchback",
+    className: "car rent hatchback",
     price: 80,
   },
 

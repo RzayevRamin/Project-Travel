@@ -1,38 +1,51 @@
-/* ======= CONTAINER & GENERAL STYLING ======= */
+
 .localToursContainer {
+  display: flex;
+  flex-direction: column;
   position: relative;
   width: 100%;
   box-sizing: border-box;
+  margin-top: 2rem;
 }
 
-/* Slick List */
+.localToursContainer h1 {
+ margin-left: 3rem;
+}
+
+.localToursSlider {
+  width: 94.5vw;
+}
+
+.localHomeStyle .localToursSlider {
+  width: 99%;
+}
+
+
 .localToursContainer .slick-list {
   padding: 0 !important;
   overflow: hidden;
 }
 
-/* Slick Track */
+
 .localToursContainer .slick-track {
   display: flex;
   align-items: stretch;
   gap: 1rem;
 }
 
-/* Slide Wrapper */
+
 .localToursContainer .slick-slide {
   display: flex !important;
   justify-content: center;
   height: auto;
   box-sizing: border-box;
-  padding: 0.5rem;
-  flex: 0 0 auto;
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
   padding: 0.5rem;
 }
 
-/* Card inside slider */
+
 .localTourCard {
   width: 100%;
   max-width: 100%;
@@ -47,7 +60,7 @@
   flex-direction: column;
 }
 
-/* ======= ARROWS ======= */
+
 .customArrow {
   position: absolute;
   top: 50%;
@@ -73,9 +86,12 @@
   left: -25px;
 }
 
-/* ======= RESPONSIVE BREAKPOINTS ======= */
+.localToursNameLabel {
+  font-size: 1vw !important;
+  font-weight: bolder !important;
+}
 
-/* >= 1281px: Default - 3 or 5 cards */
+
 @media (min-width: 1281px) {
   .localToursContainer .slick-slide {
     padding: 0 0.5rem;
@@ -87,7 +103,7 @@
   }
 }
 
-/* 1025px - 1280px: 2 or 4 cards */
+
 @media (min-width: 1024px) and (max-width: 1280px) {
   .localToursContainer .slick-slide {
     padding: 0 0.5rem;
@@ -99,7 +115,7 @@
   }
 }
 
-/* 768px - 1024px: 2 or 3 cards */
+
 @media (min-width: 768px) and (max-width: 1023px) {
   .localToursContainer .slick-slide {
     padding: 0 0.4rem;
@@ -115,7 +131,7 @@
   }
 }
 
-/* 481px - 767px: 2 cards, no arrows */
+
 @media (min-width: 481px) and (max-width: 767px) {
   .localToursContainer .slick-slide {
     padding: 0 0.3rem;
@@ -131,7 +147,7 @@
   }
 }
 
-/* <= 480px: 1 card */
+
 @media (max-width: 480px) {
   .localToursContainer {
     padding: 0 0.5rem;
