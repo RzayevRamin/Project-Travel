@@ -50,6 +50,8 @@ function ItemCard() {
     return <Typography level="h4">Tour not found.</Typography>;
   }
 
+  
+
   const handleAdd = (id, type = "price") => {
     setCounts((prev) => ({
       ...prev,

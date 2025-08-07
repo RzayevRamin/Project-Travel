@@ -98,6 +98,15 @@ function LocalTours({ filter, source }) {
   const [hoveredRate, setHoveredRating] = useState(null);
   const [liked, setLiked] = useState({});
 
+  useEffect(() => {
+    const favorite = JSON.parse(localStorage.getItem("selectedCardsByIds")) || [];
+    const likedMap = {};
+    favorite.forEach((id) => {
+      likedMap[id] = true;
+    });
+    setLiked(likedMap);
+  }, []);
+
   const filteredCards = filter
     ? cardsData.filter((card) => card.className === filter)
     : cardsData;
@@ -114,6 +123,24 @@ function LocalTours({ filter, source }) {
       return newRates;
     });
   }, [filteredCards]);
+
+  const toggleLike = (id) => {
+    const updatedLiked = { ...liked, [id]: !liked[id] };
+    setLiked(updatedLiked);
+
+    let favorite = JSON.parse(localStorage.getItem("selectedCardsByIds")) || [];
+
+    if (updatedLiked[id]) {
+      if (!favorite.includes(id)) {
+        favorite.push(id);
+      }
+    } else {
+      favorite = favorite.filter((favId) => favId !== id);
+    }
+
+    localStorage.setItem("selectedCardsByIds", JSON.stringify(favorite));
+  };
+
 
   const getCardsByIdRange = (startId, endId) => {
     return cardsData.filter((card) => {
@@ -181,7 +208,7 @@ function LocalTours({ filter, source }) {
       <h1>Domestic Tours</h1>
       <Slider className="localToursSlider" {...sliderSettings}>
         {selectedCards.map((card) => (
-          <div key={card.id} className="cardContainer">
+          <div key={card.id} className="localCardContainer">
             <Card
               key={card.id}
               className="localTourCard"
@@ -197,12 +224,7 @@ function LocalTours({ filter, source }) {
                   aria-label="Like minimal photography"
                   size="md"
                   variant="solid"
-                  onClick={() =>
-                    setLiked((prev) => ({
-                      ...prev,
-                      [card.id]: !prev[card.id],
-                    }))
-                  }
+                  onClick={() => toggleLike(card.id)}
                   sx={{
                     position: "absolute",
                     zIndex: 2,

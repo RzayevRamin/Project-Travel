@@ -19,6 +19,14 @@
   width: 99%;
 }
 
+.nextArrow {
+  right: -10px;
+}
+
+.prevArrow {
+  left: -25px;
+}
+
 .cardContainer {
   padding-right: 1rem;
   box-sizing: border-box;

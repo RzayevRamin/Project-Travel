@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import "./Favorites.css"
+import React, { useState, useEffect } from "react";
+import "./Favorites.css";
 import Slider from "react-slick";
 import { cardsData } from "../../Cards/cardsData";
 import "slick-carousel/slick/slick.css";
@@ -21,7 +21,6 @@ import CardOverflow from "@mui/joy/CardOverflow";
 import Divider from "@mui/joy/Divider";
 import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
-
 
 function HoverRating({ value, onChange }) {
   const [hover2, setHover2] = useState(-1);
@@ -91,8 +90,7 @@ function PrevArrow(props) {
   );
 }
 
-function Favorites({filter}) {
-
+function Favorites({ filter }) {
   const [hoveredRate, setHoveredRating] = useState(null);
   const [liked, setLiked] = useState({});
 
@@ -113,14 +111,48 @@ function Favorites({filter}) {
     });
   }, [filteredCards]);
 
-  const getCardsByIdRange = (startId, endId) => {
-    return cardsData.filter((card) => {
-      const id = parseInt(card.id, 10);
-      return id >= startId && id <= endId;
-    });
-  };
+  const [selectedCardsByIds, setSelectedCardsByIds] = useState([]);
 
-  const selectedCards = getCardsByIdRange(20, 29);
+  useEffect(() => {
+    const favoriteIds =
+      JSON.parse(localStorage.getItem("selectedCardsByIds")) || [];
+    const filteredFavorites = cardsData.filter((card) =>
+      favoriteIds.includes(card.id)
+    );
+    setSelectedCardsByIds(filteredFavorites);
+  }, []);
+
+  useEffect(() => {
+    const favorite =
+      JSON.parse(localStorage.getItem("selectedCardsByIds")) || [];
+    const likedMap = {};
+    favorite.forEach((id) => {
+      likedMap[id] = true;
+    });
+    setLiked(likedMap);
+  }, []);
+
+  const toggleLike = (id) => {
+    const updatedLiked = { ...liked, [id]: !liked[id] };
+    setLiked(updatedLiked);
+
+    let favorite = JSON.parse(localStorage.getItem("selectedCardsByIds")) || [];
+
+    if (updatedLiked[id]) {
+      if (!favorite.includes(id)) {
+        favorite.push(id);
+      }
+    } else {
+      favorite = favorite.filter((favId) => favId !== id);
+    }
+
+    localStorage.setItem("selectedCardsByIds", JSON.stringify(favorite));
+
+    const filteredFavorites = cardsData.filter((card) =>
+      favorite.includes(card.id)
+    );
+    setSelectedCardsByIds(filteredFavorites);
+  };
 
   const sliderSettings = {
     infinite: true,
@@ -158,157 +190,259 @@ function Favorites({filter}) {
         },
       },
     ],
-  };  
+  };
 
   return (
-    <div className='favoritesContainer'>
-            <h1 className='favoritesHeading'>Favorites</h1>
-            <Slider {...sliderSettings}>
-              {selectedCards.map((card) => (
-                <div key={card.id} className="cardContainer">
-                  <Card
-                    key={card.id}
-                    className={card.className}
-                    variant="outlined"
-                    sx={{ width: 320, bgcolor: "#F1FAFA" }}
+    <div className="favoritesContainer">
+      <div className="favoritesBox">
+      <h1 className="favoritesHeading">Favorites</h1>
+      {selectedCardsByIds.length < 5 ? (
+        <div className="cardsWrapper">
+          {selectedCardsByIds.map((card) => (
+            <div key={card.id} className="favCardContainer minorCardsFavBox">
+              <Card
+                key={card.id}
+                className="favCard"
+                variant="outlined"
+                sx={{ width: 320, bgcolor: "#F1FAFA" }}
+              >
+                <CardOverflow sx={{ bgcolor: "#F1FAFA" }}>
+                  <AspectRatio ratio="1.5">
+                    <img src={card.img} loading="lazy" alt={card.title} />
+                  </AspectRatio>
+                  <IconButton
+                    className="likeButton"
+                    aria-label="Like minimal photography"
+                    size="md"
+                    variant="solid"
+                    onClick={() => toggleLike(card.id)}
+                    sx={{
+                      position: "absolute",
+                      zIndex: 2,
+                      borderRadius: "50%",
+                      right: "0.5rem",
+                      top: "0.5rem",
+                      backgroundColor: "rgba(255, 255, 255, 0.71)",
+                      color: "#F60909",
+                    }}
                   >
-                    <CardOverflow sx={{ bgcolor: "#F1FAFA" }}>
-                      <AspectRatio ratio="1.5" >
-                        <img src={card.img} loading="lazy" alt={card.title}/>
-                      </AspectRatio>
-                      <IconButton
-                        className="likeButton"
-                        aria-label="Like minimal photography"
-                        size="md"
-                        variant="solid"
-                        onClick={() =>
-                          setLiked((prev) => ({
-                            ...prev,
-                            [card.id]: !prev[card.id],
-                          }))
-                        }
-                        sx={{
-                          position: "absolute",
-                          zIndex: 2,
-                          borderRadius: "50%",
-                          right: "0.5rem",
-                          top: "0.5rem",
-                          backgroundColor: "rgba(255, 255, 255, 0.71)",
-                          color: "#F60909",
-                        }}
-                      >
-                        {liked[card.id] ? <FavoriteIcon /> : <FavoriteBorderIcon />}
-                      </IconButton>
-                    </CardOverflow>
-                    <CardContent className="cardContent" sx={{ bgcolor: "#F1FAFA" }}>
-                      <div className="cardContentContainer">
-                        <div className="cardContentBox">
-                          <div className="textBox">
-                            <Typography level="body-sm">
-                              <Link href="#multiple-actions" overlay underline="none">
-                                {card.title}
-                              </Link>
-                            </Typography>
-                            <Typography level="title-md">
-                              <span
-                                className="locationPreview"
-                                style={{ position: "relative", zIndex: 1000 }}
-                              >
-                                <Link
-                                  href={card.location}
-                                  target="_blank"
-                                  rel="noopener"
-                                >
-                                  {card.cardLabel}
-                                </Link>
-                                <span
-                                  className="locationMapPreview"
-                                  style={{
-                                    position: "absolute",
-                                    top: "100%",
-                                    left: 0,
-                                    zIndex: "9999",
-                                    width: "250px",
-                                    background: "white",
-                                    boxShadow: "0 2px 8px rgba(0,0,0,0.15)",
-                                    borderRadius: "8px",
-                                    overflow: "hidden",
-                                  }}
-                                >
-                                  <iframe
-                                    width="250"
-                                    height="150"
-                                    src={`https://maps.google.com/maps?q=${encodeURIComponent(
-                                      card.cardLabel
-                                    )}&output=embed`}
-                                    title="Google Map Preview"
-                                  ></iframe>
-                                </span>
-                              </span>
-                            </Typography>
-                          </div>
-                          <div
-                            className="rateIconBox"
-                            onMouseEnter={() => setHoveredRating(card.id)}
-                            onMouseLeave={() => setHoveredRating(null)}
+                    {liked[card.id] ? <FavoriteIcon /> : <FavoriteBorderIcon />}
+                  </IconButton>
+                </CardOverflow>
+                <CardContent
+                  className="cardContent"
+                  sx={{ bgcolor: "#F1FAFA" }}
+                >
+                  <div className="cardContentContainer">
+                    <div className="cardContentBox">
+                      <div className="textBox">
+                        <Typography level="body-sm">
+                          <Link
+                            href="#multiple-actions"
+                            overlay
+                            underline="none"
                           >
-                            <IconButton>
-                              {hoveredRate === card.id ? (
-                                  <HoverRating
-                                    value={rates[card.id]}
-                                    onChange={(value) => {
-                                      setRates((prev) => ({
-                                        ...prev,
-                                        [card.id]: value,
-                                      }));
-                                    }}
-                                  />
-                              ) : (
-                                <>
-                                  <span className="ratingValue">
-                                    {rates[card.id] ?? 4.5}
-                                  </span>
-                                  <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="20"
-                                    height="19"
-                                    viewBox="0 0 20 19"
-                                    fill="none"
-                                  >
-                                    <path
-                                      d="M9.04894 0.927052C9.3483 0.00574112 10.6517 0.00573993 10.9511 0.927051L12.4697 5.60081C12.6035 6.01284 12.9875 6.2918 13.4207 6.2918H18.335C19.3037 6.2918 19.7065 7.53141 18.9228 8.10081L14.947 10.9894C14.5966 11.244 14.4499 11.6954 14.5838 12.1074L16.1024 16.7812C16.4017 17.7025 15.3472 18.4686 14.5635 17.8992L10.5878 15.0106C10.2373 14.756 9.7627 14.756 9.41221 15.0106L5.43648 17.8992C4.65276 18.4686 3.59828 17.7025 3.89763 16.7812L5.41623 12.1074C5.55011 11.6954 5.40345 11.244 5.05296 10.9894L1.07722 8.10081C0.293507 7.53141 0.696283 6.2918 1.66501 6.2918H6.57929C7.01252 6.2918 7.39647 6.01284 7.53035 5.60081L9.04894 0.927052Z"
-                                      fill="#E7E300"
-                                    />
-                                  </svg>
-                                </>
-                              )}
-                            </IconButton>
+                            {card.title}
+                          </Link>
+                        </Typography>
+                        <Typography level="title-md">
+                          <div className="locationHoverWrapper">
+                            <Link
+                            className="favCardNameLabel"
+                              href={card.location}
+                              target="_blank"
+                              rel="noopener"
+                            >
+                              {card.cardLabel}
+                            </Link>
                           </div>
-                        </div>
-                        <div className="cardButtonBox">
-                          <Button variant="contained" className="cardButton">
-                            Explore more
-                          </Button>
-                        </div>
+                        </Typography>
                       </div>
-                    </CardContent>
-                    <CardOverflow variant="soft" sx={{ bgcolor: "#F1FAFA" }}>
-                      <Divider inset="context" />
-                      <CardContent
-                        orientation="horizontal"
-                        className="cardContentFooter"
+                      <div
+                        className="rateIconBox"
+                        onMouseEnter={() => setHoveredRating(card.id)}
+                        onMouseLeave={() => setHoveredRating(null)}
                       >
-                        <Typography level="body-xs">{card.views}</Typography>
-                        <Typography level="body-xs">{card.time}</Typography>
-                      </CardContent>
-                    </CardOverflow>
-                  </Card>
-                </div>
-              ))}
-            </Slider>
-      <Link sx={{display: "block", textAlign: "center",}}>More</Link>
+                        <IconButton>
+                          {hoveredRate === card.id ? (
+                            <HoverRating
+                              value={rates[card.id]}
+                              onChange={(value) => {
+                                setRates((prev) => ({
+                                  ...prev,
+                                  [card.id]: value,
+                                }));
+                              }}
+                            />
+                          ) : (
+                            <>
+                              <span className="ratingValue">
+                                {rates[card.id] ?? 4.5}
+                              </span>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="20"
+                                height="19"
+                                viewBox="0 0 20 19"
+                                fill="none"
+                              >
+                                <path
+                                  d="M9.04894 0.927052C9.3483 0.00574112 10.6517 0.00573993 10.9511 0.927051L12.4697 5.60081C12.6035 6.01284 12.9875 6.2918 13.4207 6.2918H18.335C19.3037 6.2918 19.7065 7.53141 18.9228 8.10081L14.947 10.9894C14.5966 11.244 14.4499 11.6954 14.5838 12.1074L16.1024 16.7812C16.4017 17.7025 15.3472 18.4686 14.5635 17.8992L10.5878 15.0106C10.2373 14.756 9.7627 14.756 9.41221 15.0106L5.43648 17.8992C4.65276 18.4686 3.59828 17.7025 3.89763 16.7812L5.41623 12.1074C5.55011 11.6954 5.40345 11.244 5.05296 10.9894L1.07722 8.10081C0.293507 7.53141 0.696283 6.2918 1.66501 6.2918H6.57929C7.01252 6.2918 7.39647 6.01284 7.53035 5.60081L9.04894 0.927052Z"
+                                  fill="#E7E300"
+                                />
+                              </svg>
+                            </>
+                          )}
+                        </IconButton>
+                      </div>
+                    </div>
+                    <div className="cardButtonBox">
+                      <Button variant="contained" className="cardButton">
+                        Explore more
+                      </Button>
+                    </div>
+                  </div>
+                </CardContent>
+                <CardOverflow variant="soft" sx={{ bgcolor: "#F1FAFA" }}>
+                  <Divider inset="context" />
+                  <CardContent
+                    orientation="horizontal"
+                    className="cardContentFooter"
+                  >
+                    <Typography level="body-xs">{card.views}</Typography>
+                    <Typography level="body-xs">{card.time}</Typography>
+                  </CardContent>
+                </CardOverflow>
+              </Card>
+            </div>
+          ))}
+        </div>
+      ) : (
+        <Slider className="favSlider" {...sliderSettings}>
+          {selectedCardsByIds.map((card) => (
+            <div key={card.id} className="favCardContainer majorCardsFavBox">
+              <Card
+                key={card.id}
+                className="favCard"
+                variant="outlined"
+                sx={{ width: 320, bgcolor: "#F1FAFA" }}
+              >
+                <CardOverflow sx={{ bgcolor: "#F1FAFA" }}>
+                  <AspectRatio ratio="1.5">
+                    <img src={card.img} loading="lazy" alt={card.title} />
+                  </AspectRatio>
+                  <IconButton
+                    className="likeButton"
+                    aria-label="Like minimal photography"
+                    size="md"
+                    variant="solid"
+                    onClick={() => toggleLike(card.id)}
+                    sx={{
+                      position: "absolute",
+                      zIndex: 2,
+                      borderRadius: "50%",
+                      right: "0.5rem",
+                      top: "0.5rem",
+                      backgroundColor: "rgba(255, 255, 255, 0.71)",
+                      color: "#F60909",
+                    }}
+                  >
+                    {liked[card.id] ? <FavoriteIcon /> : <FavoriteBorderIcon />}
+                  </IconButton>
+                </CardOverflow>
+                <CardContent
+                  className="cardContent"
+                  sx={{ bgcolor: "#F1FAFA" }}
+                >
+                  <div className="cardContentContainer">
+                    <div className="cardContentBox">
+                      <div className="textBox">
+                        <Typography level="body-sm">
+                          <Link
+                            href="#multiple-actions"
+                            overlay
+                            underline="none"
+                          >
+                            {card.title}
+                          </Link>
+                        </Typography>
+                        <Typography level="title-md">
+                          <div className="locationHoverWrapper">
+                            <Link
+                            className="favCardNameLabel"
+                              href={card.location}
+                              target="_blank"
+                              rel="noopener"
+                            >
+                              {card.cardLabel}
+                            </Link>
+                          </div>
+                        </Typography>
+                      </div>
+                      <div
+                        className="rateIconBox"
+                        onMouseEnter={() => setHoveredRating(card.id)}
+                        onMouseLeave={() => setHoveredRating(null)}
+                      >
+                        <IconButton>
+                          {hoveredRate === card.id ? (
+                            <HoverRating
+                              value={rates[card.id]}
+                              onChange={(value) => {
+                                setRates((prev) => ({
+                                  ...prev,
+                                  [card.id]: value,
+                                }));
+                              }}
+                            />
+                          ) : (
+                            <>
+                              <span className="ratingValue">
+                                {rates[card.id] ?? 4.5}
+                              </span>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="20"
+                                height="19"
+                                viewBox="0 0 20 19"
+                                fill="none"
+                              >
+                                <path
+                                  d="M9.04894 0.927052C9.3483 0.00574112 10.6517 0.00573993 10.9511 0.927051L12.4697 5.60081C12.6035 6.01284 12.9875 6.2918 13.4207 6.2918H18.335C19.3037 6.2918 19.7065 7.53141 18.9228 8.10081L14.947 10.9894C14.5966 11.244 14.4499 11.6954 14.5838 12.1074L16.1024 16.7812C16.4017 17.7025 15.3472 18.4686 14.5635 17.8992L10.5878 15.0106C10.2373 14.756 9.7627 14.756 9.41221 15.0106L5.43648 17.8992C4.65276 18.4686 3.59828 17.7025 3.89763 16.7812L5.41623 12.1074C5.55011 11.6954 5.40345 11.244 5.05296 10.9894L1.07722 8.10081C0.293507 7.53141 0.696283 6.2918 1.66501 6.2918H6.57929C7.01252 6.2918 7.39647 6.01284 7.53035 5.60081L9.04894 0.927052Z"
+                                  fill="#E7E300"
+                                />
+                              </svg>
+                            </>
+                          )}
+                        </IconButton>
+                      </div>
+                    </div>
+                    <div className="cardButtonBox">
+                      <Button variant="contained" className="cardButton">
+                        Explore more
+                      </Button>
+                    </div>
+                  </div>
+                </CardContent>
+                <CardOverflow variant="soft" sx={{ bgcolor: "#F1FAFA" }}>
+                  <Divider inset="context" />
+                  <CardContent
+                    orientation="horizontal"
+                    className="cardContentFooter"
+                  >
+                    <Typography level="body-xs">{card.views}</Typography>
+                    <Typography level="body-xs">{card.time}</Typography>
+                  </CardContent>
+                </CardOverflow>
+              </Card>
+            </div>
+          ))}
+        </Slider>
+      )}
+      <Link sx={{ display: "block", textAlign: "center" }}>More</Link>
+      </div>
     </div>
-  )
+  );
 }
 
-export default Favorites
+export default Favorites;

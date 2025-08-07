@@ -90,6 +90,22 @@ function PrevArrow(props) {
 function BusCompanies({filter}) {
   const [liked, setLiked] = useState({});
 
+  const toggleLike = (id) => {
+    const updatedLiked = { ...liked, [id]: !liked[id] };
+    setLiked(updatedLiked);
+
+    let favorite = JSON.parse(localStorage.getItem("selectedCardsByIds")) || [];
+
+    if (updatedLiked[id]) {
+      if (!favorite.includes(id)) {
+        favorite.push(id);
+      }
+    } else {
+      favorite = favorite.filter((favId) => favId !== id);
+    }
+
+    localStorage.setItem("selectedCardsByIds", JSON.stringify(favorite));
+  };
 
   const filteredCards = filter
     ? cardsData.filter((card) => card.className === filter)
@@ -221,12 +237,7 @@ function BusCompanies({filter}) {
                     aria-label="Like minimal photography"
                     size="md"
                     variant="solid"
-                    onClick={() =>
-                      setLiked((prev) => ({
-                        ...prev,
-                        [card.id]: !prev[card.id],
-                      }))
-                    }
+                    onClick={() => toggleLike(card.id)}
                     sx={{
                       position: "absolute",
                       zIndex: 2,

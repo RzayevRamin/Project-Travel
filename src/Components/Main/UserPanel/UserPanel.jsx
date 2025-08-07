@@ -99,7 +99,7 @@ function UserPanel() {
                 </ListItemDecorator>
                 <span>Shopping</span>
               </ListItemButton>
-              <ListItemButton className="userPanelButton">
+              {/* <ListItemButton className="userPanelButton">
                 <ListItemDecorator>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -208,7 +208,7 @@ function UserPanel() {
                   </svg>
                 </ListItemDecorator>
                 <span>Settings</span>
-              </ListItemButton>
+              </ListItemButton> */}
               <ListItemButton className="userPanelButton" onClick={handleLogout}>
                 <ListItemDecorator>
                   <svg

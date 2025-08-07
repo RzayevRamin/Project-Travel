@@ -57,7 +57,7 @@ function ProfileDropdown({ onClose }) {
       >
         User Panel
       </button>
-      <hr style={{ margin: 0 }} />
+      {/* <hr style={{ margin: 0 }} />
       <button
         onClick={() => {
           onClose();
@@ -74,8 +74,8 @@ function ProfileDropdown({ onClose }) {
       >
         Notifications
       </button>
-      <hr style={{ margin: 0 }} />
-      <button
+      <hr style={{ margin: 0 }} /> */}
+      {/* <button
         onClick={() => {
           onClose();
           navigate("/message");
@@ -90,7 +90,7 @@ function ProfileDropdown({ onClose }) {
         }}
       >
         Messages
-      </button>
+      </button> */}
       <hr style={{ margin: 0 }} />
       <button
         onClick={() => {
