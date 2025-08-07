@@ -17,7 +17,6 @@ import { useCurrency } from "../../../CurrencyContext";
 import { currencyIcons } from "../../../currencyIcon";
 import Button from '@mui/joy/Button';
 import Add from '@mui/icons-material/Add';
-import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
 
 function ItemCard() {
   const { label } = useParams();

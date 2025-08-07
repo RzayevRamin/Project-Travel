@@ -4,6 +4,8 @@ import UserPanelStatistic from "../UserPanelStatistics/UserPanelStatistic";
 import UserPanelInfoBox from "../UserPanelInfoBox/UserPanelInfoBox";
 import Input from "@mui/joy/Input";
 import Button from "@mui/joy/Button";
+import IconButton from '@mui/joy/IconButton';
+import ArrowBackIosRoundedIcon from '@mui/icons-material/ArrowBackIosRounded';
 import { useAuth } from "../../../AuthContext/AuthContext";
 import { updateProfile } from "firebase/auth";
 import { updateEmail } from "firebase/auth";
@@ -202,7 +204,12 @@ function Profile() {
     <div className="profileContainer">
       <div className="profileInfoContainer">
         <div className="profileInfo">
+          <div className="profileBackBUttonAndHeadingBox">
+          <IconButton className="backButton" variant="outlined" sx={{borderRadius: "50%"}} onClick={() => navigate(-1)}>
+          <ArrowBackIosRoundedIcon />
+        </IconButton>
           <h1>Profile</h1>
+          </div>
           <FormLabel className="profileLabel">Name</FormLabel>
           <Input
             value={name}

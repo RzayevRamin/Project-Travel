@@ -13,60 +13,10 @@ import Link from "@mui/joy/Link";
 import Slider from "react-slick";
 import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
-import Box from "@mui/material/Box";
 import Rating from "@mui/material/Rating";
 import StarIcon from "@mui/icons-material/Star";
 import { useNavigate } from "react-router-dom";
 
-function HoverRating({ value, onChange }) {
-  const [hover, setHover] = useState(-1);
-
-  const labels = {
-    0.5: "Useless",
-    1: "Useless+",
-    1.5: "Poor",
-    2: "Poor+",
-    2.5: "Ok",
-    3: "Ok+",
-    3.5: "Good",
-    4: "Good+",
-    4.5: "Excellent",
-    5: "Excellent+",
-  };
-
-  function getLabelText(value) {
-    return `${value} Star${value !== 1 ? "s" : ""}, ${labels[value]}`;
-  }
-
-  return (
-    <Box
-      sx={{
-        width: 220,
-        display: "flex",
-        alignItems: "center",
-        borderRadius: "8px",
-        backgroundColor: "transparent",
-      }}
-    >
-      <Rating
-        name="hover-feedback"
-        value={value}
-        precision={0.5}
-        getLabelText={getLabelText}
-        onChange={(event, newValue) => {
-          onChange(newValue);
-        }}
-        onChangeActive={(event, newHover) => {
-          setHover(newHover);
-        }}
-        emptyIcon={<StarIcon style={{ opacity: 0.55 }} fontSize="inherit" />}
-      />
-      {value !== null && (
-        <Box sx={{ ml: 2 }}>{labels[hover !== -1 ? hover : value]}</Box>
-      )}
-    </Box>
-  );
-}
 
 function NextArrow(props) {
   const { onClick } = props;
@@ -86,7 +36,7 @@ function PrevArrow(props) {
   );
 }
 
-function MostPopularHotels({ filter }) {
+function MostPopularHotels() {
   const [liked, setLiked] = useState({});
 
   useEffect(() => {
@@ -115,22 +65,7 @@ function MostPopularHotels({ filter }) {
       localStorage.setItem("selectedCardsByIds", JSON.stringify(favorite));
     };
 
-  const filteredCards = filter
-    ? cardsData.filter((card) => card.className === filter)
-    : cardsData;
-
-  const [rates, setRates] = useState(Array(filteredCards.length).fill(4.5));
-
-  useEffect(() => {
-    setRates((prevRates) => {
-      const newRates = {};
-      filteredCards.forEach((card) => {
-        newRates[card.id] =
-          prevRates[card.id] !== undefined ? prevRates[card.id] : 4.5;
-      });
-      return newRates;
-    });
-  }, [filteredCards]);
+  
 
   const getCardsByIdRange = (startId, endId) => {
     return cardsData.filter((card) => {
@@ -301,20 +236,15 @@ function MostPopularHotels({ filter }) {
                         </Link>
                       </Typography>
                       {isCenter && (
-                        <Box
-                          sx={{ mt: 1, mb: 1, backgroundColor: "transparent" }}
-                        >
-                          <HoverRating
-                            sx={{ backgroundColor: "transparent" }}
-                            value={rates[card.id]}
-                            onChange={(value) => {
-                              setRates((prevRates) => ({
-                                ...prevRates,
-                                [card.id]: value,
-                              }));
-                            }}
-                          />
-                        </Box>
+              <Rating
+                name="read-only-rating"
+                value={4.5}
+                precision={0.5}
+                readOnly
+                emptyIcon={
+                  <StarIcon style={{ opacity: 0.55 }} fontSize="inherit" />
+                }
+              />
                       )}
                       {isCenter && (
                         <Typography

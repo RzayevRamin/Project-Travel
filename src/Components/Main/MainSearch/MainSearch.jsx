@@ -1,28 +1,21 @@
-import React, { useState, useEffect } from "react";
-import "./Favorites.css";
-import Slider from "react-slick";
+import React, { useState , useEffect } from "react";
+import "./MainSearch.css";
+import Select from '@mui/joy/Select';
+import Option from '@mui/joy/Option';
+import Autocomplete from '@mui/joy/Autocomplete';
+import CircularProgress from '@mui/joy/CircularProgress';
 import { cardsData } from "../../Cards/cardsData";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import Card from "@mui/joy/Card";
-import CardContent from "@mui/joy/CardContent";
-import Typography from "@mui/joy/Typography";
-import IconButton from "@mui/joy/IconButton";
-import Link from "@mui/joy/Link";
-import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
-import Rating from "@mui/material/Rating";
-import Box from "@mui/material/Box";
-import StarIcon from "@mui/icons-material/Star";
-import Button from "@mui/material/Button";
-import FavoriteIcon from "@mui/icons-material/Favorite";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import AspectRatio from "@mui/joy/AspectRatio";
-import CardOverflow from "@mui/joy/CardOverflow";
-import Divider from "@mui/joy/Divider";
-import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
-import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
+import Input from '@mui/joy/Input';
 
 
+
+function sleep(duration) {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve();
+    }, duration);
+  });
+}
 
 function NextArrow(props) {
   const { onClick } = props;
@@ -42,101 +35,186 @@ function PrevArrow(props) {
   );
 }
 
-function Favorites() {
-  const [liked, setLiked] = useState({});
+function MainSearch() {
 
-  const [selectedCardsByIds, setSelectedCardsByIds] = useState([]);
+    const [open, setOpen] = React.useState(false);
+  const [options, setOptions] = React.useState([]);
+  const loading = open && options.length === 0;
 
-  useEffect(() => {
-    const favoriteIds =
-      JSON.parse(localStorage.getItem("selectedCardsByIds")) || [];
-    const filteredFavorites = cardsData.filter((card) =>
-      favoriteIds.includes(card.id)
-    );
-    setSelectedCardsByIds(filteredFavorites);
-  }, []);
+  React.useEffect(() => {
+    let active = true;
 
-  useEffect(() => {
-    const favorite =
-      JSON.parse(localStorage.getItem("selectedCardsByIds")) || [];
-    const likedMap = {};
-    favorite.forEach((id) => {
-      likedMap[id] = true;
-    });
-    setLiked(likedMap);
-  }, []);
-
-  const toggleLike = (id) => {
-    const updatedLiked = { ...liked, [id]: !liked[id] };
-    setLiked(updatedLiked);
-
-    let favorite = JSON.parse(localStorage.getItem("selectedCardsByIds")) || [];
-
-    if (updatedLiked[id]) {
-      if (!favorite.includes(id)) {
-        favorite.push(id);
-      }
-    } else {
-      favorite = favorite.filter((favId) => favId !== id);
+    if (!loading) {
+      return undefined;
     }
 
-    localStorage.setItem("selectedCardsByIds", JSON.stringify(favorite));
+    (async () => {
+      await sleep(1e3);
 
-    const filteredFavorites = cardsData.filter((card) =>
-      favorite.includes(card.id)
-    );
-    setSelectedCardsByIds(filteredFavorites);
-  };
+      if (active) {
+        setOptions([...new Set(cardsData.flatMap((option) => option.title))]);
+      }
+    })();
 
-  const sliderSettings = {
-    infinite: true,
-    slidesToShow: 5,
-    slidesToScroll: 4,
-    nextArrow: <NextArrow />,
-    prevArrow: <PrevArrow />,
-    responsive: [
-      {
-        breakpoint: 1280,
-        settings: {
-          slidesToShow: 4,
-          slidesToScroll: 3,
+    return () => {
+      active = false;
+    };
+  }, [loading]);
+
+  React.useEffect(() => {
+    if (!open) {
+      setOptions([]);
+    }
+  }, [open]);
+
+  const [liked, setLiked] = useState({});
+  
+    const [selectedCardsByIds, setSelectedCardsByIds] = useState([]);
+  
+    useEffect(() => {
+      const favoriteIds =
+        JSON.parse(localStorage.getItem("selectedCardsByIds")) || [];
+      const filteredFavorites = cardsData.filter((card) =>
+        favoriteIds.includes(card.id)
+      );
+      setSelectedCardsByIds(filteredFavorites);
+    }, []);
+  
+    useEffect(() => {
+      const favorite =
+        JSON.parse(localStorage.getItem("selectedCardsByIds")) || [];
+      const likedMap = {};
+      favorite.forEach((id) => {
+        likedMap[id] = true;
+      });
+      setLiked(likedMap);
+    }, []);
+  
+    const toggleLike = (id) => {
+      const updatedLiked = { ...liked, [id]: !liked[id] };
+      setLiked(updatedLiked);
+  
+      let favorite = JSON.parse(localStorage.getItem("selectedCardsByIds")) || [];
+  
+      if (updatedLiked[id]) {
+        if (!favorite.includes(id)) {
+          favorite.push(id);
+        }
+      } else {
+        favorite = favorite.filter((favId) => favId !== id);
+      }
+  
+      localStorage.setItem("selectedCardsByIds", JSON.stringify(favorite));
+  
+      const filteredFavorites = cardsData.filter((card) =>
+        favorite.includes(card.id)
+      );
+      setSelectedCardsByIds(filteredFavorites);
+    };
+  
+    const sliderSettings = {
+      infinite: true,
+      slidesToShow: 5,
+      slidesToScroll: 4,
+      nextArrow: <NextArrow />,
+      prevArrow: <PrevArrow />,
+      responsive: [
+        {
+          breakpoint: 1280,
+          settings: {
+            slidesToShow: 4,
+            slidesToScroll: 3,
+          },
         },
-      },
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 2,
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 2,
+          },
         },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+          },
         },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          },
         },
-      },
-    ],
-  };
+      ],
+    };
+
 
   return (
-    <div className="favoritesContainer">
-      <div className="favoritesBox">
-        <h1 className="favoritesHeading">Favorites</h1>
-         {selectedCardsByIds.length === 0 ? (
-      <div className="emptyFavorites">
-        <Typography level="title-md" sx={{ textAlign: "center", mt: 4 }}>
-          Favorites is empty
-        </Typography>
+    <div className="mainSearchContainer">
+      <div className="searchBarContainer">
+        <div className="searchCategoryBox">
+          <h2>Category</h2>
+          <Select placeholder="Choose one…" variant="outlined">
+            <Option value="foreign">Foreign Tours</Option>
+            <Option value="domestic">Domestic Tours</Option>
+            <Option value="world">World Tours</Option>
+            <Option value="totels">Hotels</Option>
+            <Option value="transports">Transports</Option>
+            <Option value="media">Media</Option>
+          </Select>
+        </div>
+        <div className="mainSearchInputBox">
+            <h2>Search</h2>
+            <Autocomplete
+        sx={{ width: 300 }}
+        placeholder="Asynchronous"
+        open={open}
+        onOpen={() => {
+          setOpen(true);
+        }}
+        onClose={() => {
+          setOpen(false);
+        }}
+        isOptionEqualToValue={(option, value) => option.title === value.title}
+        getOptionLabel={(option) => option.title}
+        options={options}
+        loading={loading}
+        endDecorator={
+          loading ? (
+            <CircularProgress size="sm" sx={{ bgcolor: 'background.surface' }} />
+          ) : null
+        }
+      />
+        </div>
+        <div className="searchPriceBox">
+            <h2>Price</h2>
+            <div className="priceInputsBox">
+                <Input
+        type="number"
+        placeholder="Min."
+        slotProps={{
+          input: {
+            step: 0.1,
+          },
+        }}
+      />
+      <Input
+        type="number"
+        placeholder="Max."
+        slotProps={{
+          input: {
+            step: 0.1,
+          },
+        }}
+      />
+            </div>
+        </div>
+        <div className="mainSearchButtonBox"></div>
       </div>
-    ) : selectedCardsByIds.length < 5 ? (
+      <div className="mainSearchCardsContainer">
+        {selectedCardsByIds.length < 5 ? (
           <div className="cardsWrapper">
             {selectedCardsByIds.map((card) => (
               <div key={card.id} className="favCardContainer minorCardsFavBox">
@@ -321,12 +399,30 @@ function Favorites() {
             ))}
           </Slider>
         )}
-        {selectedCardsByIds.length > 5 && (
-      <Link sx={{ display: "block", textAlign: "center", marginTop: "2vw" }}>More</Link>
-    )}
+      </div>
+      <div className="searchMoreButtonBox">
+        <Button
+          className="forumMoreButton"
+          sx={{ marginBottom: "1rem", fontWeight: "100" }}
+        >
+          More
+          <svg
+            style={{ marginLeft: "0.5vw" }}
+            xmlns="http://www.w3.org/2000/svg"
+            width="21"
+            height="11"
+            viewBox="0 0 21 11"
+            fill="none"
+          >
+            <path
+              d="M18.8655 0L20.5 1.63598L11.5918 10.5468C11.449 10.6904 11.2793 10.8044 11.0923 10.8822C10.9053 10.96 10.7048 11 10.5023 11C10.2998 11 10.0993 10.96 9.91233 10.8822C9.72536 10.8044 9.55562 10.6904 9.41288 10.5468L0.5 1.63598L2.13454 0.00154209L10.5 8.36493L18.8655 0Z"
+              fill="#FDFBF8"
+            />
+          </svg>
+        </Button>
       </div>
     </div>
   );
 }
 
-export default Favorites;
+export default MainSearch;

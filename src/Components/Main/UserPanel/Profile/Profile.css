@@ -17,6 +17,7 @@
 
 .profileInfo h1 {
     font-size: 32px;
+    margin-left: 1vw;
 }
 
 .profileLabel {
@@ -33,5 +34,9 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+}
 
+.profileBackBUttonAndHeadingBox {
+    display: flex;
+    align-items: center;
 }
