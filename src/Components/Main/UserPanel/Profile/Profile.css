@@ -2,10 +2,12 @@
     display: flex;
     justify-content: space-between;
     align-items: start;
+    width: 100%;
 }
 
 .profileContainer {
-    padding: 4rem 5rem 4rem 10rem;
+    padding: 2vh 5vw;
+    width: calc(99% - 10vw);
 }
 
 .profileInfo {
@@ -25,6 +27,7 @@
 }
 
 .profileLogout {
+    margin-top: 0.5rem;
     margin-left: 0.5rem;
     color: #F60909;
 }
@@ -36,7 +39,35 @@
     align-items: center;
 }
 
-.profileBackBUttonAndHeadingBox {
+.profileBackButtonAndHeadingBox {
     display: flex;
     align-items: center;
+}
+
+.userProfileInput {
+    width: 16vw !important;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .profileInfoContainer .userPanelInfoBox .userPanelInfoBackground img {
+        width: 60vw;
+    }
+
+    .userProfileInput {
+    width: 24vw !important;
+}
+}
+
+@media (max-width: 767px) {
+    .profileInfoContainer {
+        flex-direction: column;
+    }
+
+    .userProfileInput {
+    width: 70vw !important;
+}
+
+    .profileInfo {
+        order: 2;
+    }
 }

@@ -2,11 +2,50 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 54vw;
+    width: 70vw;
 }
 
 .userPanelStatisticsContainer {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+}
+
+.userPanelStatisticCard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 20vw !important;
+}
+
+@media (max-width: 767px) {
+    .userPanelStatisticsBox {
+        width: 90vw;
+    }
+
+    .userPanelStatisticsContainer {
+        justify-content: center;
+    }
+
+    .userPanelStatisticCard {
+        width: 30vw !important;
+        gap: 0 !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .userPanelStatisticsBox {
+        flex-direction: column;
+        width: 90vw;
+    }
+
+    .userPanelStatisticCard {
+        width: 80vw !important;
+    }
+}
+
+@media (max-width: 380px) {
+    .userPanelStatisticsContainer {
+        margin-top: calc(60px - 4vw);
+    }
 }

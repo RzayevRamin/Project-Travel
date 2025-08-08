@@ -97,7 +97,7 @@
   .userPanelHeaderTopMobile {
     display: flex;
     justify-content: space-between;
-    width: 94vw;
+    width: calc(99% - 4vw);
     padding: 2vw;
 
   }
@@ -107,7 +107,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 2vw;
-    width: 94vw;
+    width: calc(99% - 4vw);
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
   }

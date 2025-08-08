@@ -16,10 +16,62 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-top: 5vh !important;
+    margin-top: 4vw !important;
 }
 
 .userPanelContent {
-    height: 60vh;
+    height: 30vw;
 }
 
+.userPanelContainer {
+    padding: 2vh 5vw;
+    width: calc(99% - 10vw);
+}
+
+.userPanelContentBox {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .userPanelContent h1 {
+        font-size: 24px;
+    }
+
+    .userPanelButton span {
+    font-size: 18px;
+    line-height: 20px;
+}
+}
+
+@media (max-width: 767px) {
+    .userPanelContentBox {
+        flex-direction: column;
+    }
+
+    .userPanelContentBox .userPanelInfoBox {
+        order: 1;
+    }
+
+    .userPanelContent {
+        order: 2;
+        margin-bottom: calc(60px - 2vw);
+    }
+
+    .userPanelContent h1 {
+        font-size: 20px;
+    }
+
+    .userPanelButton span {
+    font-size: 16px;
+    line-height: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .userPanelContent {
+        margin-bottom: calc(80px - 2vw);
+    }
+}

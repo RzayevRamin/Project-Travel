@@ -1,5 +1,5 @@
 .userPanelInfoBackground img {
-    width: 54vw;
+    width: 70vw;
     height: auto;
 }
 
@@ -9,12 +9,8 @@
     align-items: start;
 }
 
-.userPanelBox {
-    padding: 4rem 5rem 4rem 10rem;
-}
-
 .userPanelAvatar img {
-    width: 10vw;
+    width: 12vw;
     height: auto;
     border-radius: 50%;
     border: 0.6rem solid #fff;
@@ -24,10 +20,20 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 52vw;
+    width: calc(99% - 2vw);
     position: absolute;
-    bottom: -9rem;
+    bottom: -10vw;
     left: 2vw;
+}
+
+
+
+.userPanelUserInfo h2 {
+    font-size: 32px;
+}
+
+.userPanelUserInfo h3 {
+    font-size: 16px;
 }
 
 .userPanelAvatarAndInfo {
@@ -36,10 +42,35 @@
 }
 
 .userPanelUserInfo {
-    margin-left: 2rem;
+    margin-left: 2vw;
 }
 
 .userPanelInfoBox {
     position: relative;
-    margin-bottom: 10rem;
+    margin-bottom: 12vw;
+}
+
+@media (max-width: 767px) {
+    .userPanelInfoBackground img {
+    width: 90vw;
+    height: auto;
+}
+
+.userPanelInfo {
+    bottom: -12vw;
+}
+
+.userPanelUserInfo h2 {
+    font-size: 24px;
+}
+
+.userPanelUserInfo h3 {
+    font-size: 12px;
+}
+}
+
+@media (max-width: 480px) {
+    .userPanelInfo {
+    bottom: -14vw;
+}
 }

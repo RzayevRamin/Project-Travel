@@ -202,7 +202,7 @@ function Profile() {
     <div className="profileContainer">
       <div className="profileInfoContainer">
         <div className="profileInfo">
-          <div className="profileBackBUttonAndHeadingBox">
+          <div className="profileBackButtonAndHeadingBox">
             <IconButton
               className="backButton"
               variant="outlined"
@@ -215,6 +215,7 @@ function Profile() {
           </div>
           <FormLabel className="profileLabel">Name</FormLabel>
           <Input
+          className="userProfileInput"
             value={name}
             onChange={(e) => setName(e.target.value)}
             readOnly={!isEditingName}
@@ -260,6 +261,7 @@ function Profile() {
           />
           <FormLabel className="profileLabel">Last name</FormLabel>
           <Input
+          className="userProfileInput"
             value={lastName}
             onChange={(e) => setLastName(e.target.value)}
             readOnly={!isEditingLastName}
@@ -305,6 +307,7 @@ function Profile() {
           />
           <FormLabel className="profileLabel">Email</FormLabel>
           <Input
+          className="userProfileInput"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             readOnly={!isEditingEmail}
@@ -350,6 +353,7 @@ function Profile() {
           />
           <FormLabel className="profileLabel">Location</FormLabel>
           <Input
+          className="userProfileInput"
             value={location}
             onChange={(e) => setLocation(e.target.value)}
             readOnly={!isEditingLocation}
@@ -397,6 +401,7 @@ function Profile() {
             <>
               <FormLabel className="profileLabel">Password</FormLabel>
               <Input
+              className="userProfileInput"
                 type="password"
                 value={showPasswordEdition ? password : "********"}
                 readOnly={!showPasswordEdition}
@@ -433,6 +438,7 @@ function Profile() {
               <div className="passwordEdition">
                 <h2>Change password</h2>
                 <Input
+                className="userProfileInput"
                   type="password"
                   placeholder="Current password"
                   value={currentPassword}
@@ -440,6 +446,7 @@ function Profile() {
                   sx={{ width: 300, mb: 1, "& input": { fontSize: "20px" } }}
                 />
                 <Input
+                className="userProfileInput"
                   type="password"
                   placeholder="New password"
                   value={newPassword}
@@ -447,6 +454,7 @@ function Profile() {
                   sx={{ width: 300, mb: 1, "& input": { fontSize: "20px" } }}
                 />
                 <Input
+                className="userProfileInput"
                   type="password"
                   placeholder="Confirm new password"
                   value={confirmNewPassword}
