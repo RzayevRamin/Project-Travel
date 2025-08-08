@@ -10,7 +10,7 @@ function Valuta() {
   const { currency, setCurrency } = useCurrency();
 
   return (
-    <div>
+    <div className="valutaContainer">
       <Select
         value={currency}
         onChange={(event, newValue) => {

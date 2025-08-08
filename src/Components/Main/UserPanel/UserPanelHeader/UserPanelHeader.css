@@ -12,6 +12,21 @@
   color: #fff !important;
 }
 
+.userPanelNavContainer #nav-buttons .MuiButton-root {
+  color: #fff !important;
+}
+
+.userPanelHeaderRightSection .searchContainer .MuiButton-root svg {
+  color: #fff !important;
+}
+
+.userPanelHeaderRightSection .valutaContainer .MuiSelect-root .MuiSelect-startDecorator svg {
+  color: #fff !important;
+}
+
+.userPanelHeaderRightSection .valutaContainer .MuiSelect-root .MuiSelect-button {
+  color: #fff !important;
+}
 
 .userPanelHeaderContainer {
   position: relative;
@@ -126,6 +141,19 @@
   box-sizing: border-box;
 }
 
+ .userPanelMobileMenuRow .searchContainer .MuiButton-root svg {
+    color: #fff !important;
+  }
+
+  .userPanelMobileMenuRow .valutaContainer .MuiSelect-root .MuiSelect-startDecorator svg {
+  color: #fff !important;
+}
+
+  .userPanelMobileMenuRow .valutaContainer .MuiSelect-root .MuiSelect-button {
+  color: #fff !important;
+}
+
+
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -168,6 +196,23 @@
   .userPanelHeaderTabletBottom .nav {
     width: 100%;
   }
+
+  .userPanelHeaderTabletTop .searchContainer .MuiButton-root svg {
+    color: #fff !important;
+  }
+
+  .userPanelHeaderTabletTop .valutaContainer .MuiSelect-root .MuiSelect-startDecorator svg {
+  color: #fff !important;
+}
+
+  .userPanelHeaderTabletTop .valutaContainer .MuiSelect-root .MuiSelect-button {
+  color: #fff !important;
+}
+
+.userPanelHeaderTabletBottom .nav #nav-buttons .MuiButton-root {
+  color: #fff !important;
+}
+  
 }
 
 @media (max-width: 1023px) {
@@ -177,4 +222,6 @@
     background-color: #0123FF !important;
     color: #fff !important;
   }
+
+  
 }
