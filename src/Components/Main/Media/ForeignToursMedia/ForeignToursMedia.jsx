@@ -128,6 +128,7 @@ function ForeignToursMedia() {
               width: "3rem",
               height: "3rem",
               borderRadius: "50%",
+              zIndex: "9999",
             }}
             onClick={handlePrev}
           >
@@ -315,6 +316,7 @@ function ForeignToursMedia() {
               width: "3rem",
               height: "3rem",
               borderRadius: "50%",
+              zIndex: "9999",
             }}
             onClick={handleNext}
           >

@@ -7,14 +7,18 @@
   overflow-x: hidden;
 }
 
-.leftSliderButton {
-  margin-right: -10px;
+.topSlider {
+  width: 100%;
 }
 
-.rightSliderButton {
-  margin-left: -10px;
+.bottomSlider {
+  width: 100%;
+  margin-top: 1rem;
 }
 
+.doubleSlider .MuiCard-root {
+  width: calc(100% - 1rem) !important;
+}
 
 .internalToursMediaCardsBox .doubleSlider {
   width: 100%;
@@ -84,6 +88,19 @@
   margin-right: auto;
 }
 
+.internalToursMediaHeadingBox h1 {
+  margin-left: 5vw;
+  font-size: 24px;
+}
+
+.leftSliderButton {
+  margin-right: -10px;
+}
+
+.rightSliderButton {
+  margin-left: -25px;
+}
+
 @media (min-width: 768px) and (max-width: 1200px) {
 
   .topSliderCard {
@@ -109,31 +126,48 @@
 .bottomMediaCardContextTextBox {
   width: 20vw;
 }
+
+.leftSliderButton {
+  margin-right: -10px;
+}
+
+.rightSliderButton {
+  margin-left: -25px;
+}
 }
 
 @media (max-width: 767px) {
 
   .topSliderCard {
-  height: 60vw;
+  height: 70vw;
 }
 
  .mediaTopCardContentContainer {
-  height: 60vw;
+  height: 70vw;
  }
 
  .bottomSliderCard {
-  height: 30vw;
+  height: 40vw;
 }
 
 .mediaBottomCardContentContainer {
-  height: 30vw;
+  height: 40vw;
 }
 
 .mediaCardContextTextBox {
-  width: 60vw;
+  width: 70vw;
 }
 
 .bottomMediaCardContextTextBox {
-  width: 30vw;
+  width: 35vw;
+}
+
+.leftSliderButton {
+  margin-right: -10px;
+}
+
+.rightSliderButton {
+  margin-left: -25px;
+  z-index: 999;
 }
 }

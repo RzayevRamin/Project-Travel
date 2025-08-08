@@ -157,7 +157,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 
   .rentCarContainer {
     display: flex;
@@ -215,5 +215,16 @@
 
   .mainCarCardTitle {
     display: none !important;
+  }
+}
+
+@media (max-width: 479px) {
+  .mainCarCardTextBox {
+    width: 50%;
+    margin-top: 0.2rem;
+    margin-left: 0.2rem;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    padding: 0.2rem;
   }
 }

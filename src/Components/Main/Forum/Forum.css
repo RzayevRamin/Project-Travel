@@ -120,6 +120,7 @@
 }
 
 .forumMoreButton {
+  margin-top: 1rem !important;
   background-color: #0123ff !important;
 }
 
@@ -182,10 +183,42 @@
   font-size: 3vw !important;
   text-wrap: wrap !important;
 }
+
+.topicDate {
+  font-size: 3vw;
+}
+
+.topicAuthor {
+  font-size: 3vw;
+  line-height: 7vw;
+}
 }
 
 @media (max-width: 480px) {
  .forumMoreButton {
    width: 30vw !important;
  }
+
+ .forumCardAuthor {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+  padding: 0.5rem 0;
+ }
+
+ .topicAuthorBox::before {
+  border-right: 0;
+  border-left: 0;
+ }
+
+ .topicAuthorBox {
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+  width: 90%;
+ }
+
+
 }

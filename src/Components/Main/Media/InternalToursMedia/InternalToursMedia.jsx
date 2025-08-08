@@ -122,13 +122,14 @@ function InternalToursMedia() {
 
       <div className="internalToursMediaCardsBox">
         <div className="leftSliderButton">
-          <IconButton 
-          className="doubleSliderLeftButton"
+          <IconButton
+            className="doubleSliderLeftButton"
             sx={{
               backgroundColor: "rgba(217, 217, 217, 0.39);",
               width: "3rem",
               height: "3rem",
               borderRadius: "50%",
+              zIndex: "9999",
             }}
             onClick={handlePrev}
           >
@@ -175,7 +176,8 @@ function InternalToursMedia() {
                         "linear-gradient(to top, rgba(0,0,0,0.4), rgba(0,0,0,0) 200px), linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0) 300px)",
                     }}
                   />
-                  <CardContent className="mediaTopCardContentContainer"
+                  <CardContent
+                    className="mediaTopCardContentContainer"
                     sx={{
                       position: "relative",
                     }}
@@ -196,12 +198,12 @@ function InternalToursMedia() {
                         </Typography>
                       </span>
                       <IconButton
-                      className="doubleSliderCardButton"
+                        className="doubleSliderCardButton"
                         variant="solid"
                         color="primary"
                         sx={{
                           width: "3rem",
-              height: "3rem",
+                          height: "3rem",
                           borderRadius: "50%",
                         }}
                       >
@@ -270,12 +272,12 @@ function InternalToursMedia() {
                         </Typography>
                       </span>
                       <IconButton
-                      className="doubleSliderCardButton"
+                        className="doubleSliderCardButton"
                         variant="solid"
                         color="primary"
                         sx={{
                           width: "3rem",
-              height: "3rem",
+                          height: "3rem",
                           borderRadius: "50%",
                         }}
                       >
@@ -291,7 +293,7 @@ function InternalToursMedia() {
 
         <div className="rightSliderButton">
           <IconButton
-          className="doubleSliderRightButton"
+            className="doubleSliderRightButton"
             sx={{
               backgroundColor: "rgba(217, 217, 217, 0.39);",
               width: "3rem",

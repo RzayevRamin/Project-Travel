@@ -3,15 +3,13 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width: 90vw;
+  overflow-x: hidden;
 }
 
-.foreignToursMediaCardsBox {
-  width: 99%;
-}
 
 .foreignToursMediaCardsBox .doubleSlider {
-  width: 85vw;
+  width: 100%;
+  max-width: 84vw;
 }
 
 .topSliderCard {
@@ -72,10 +70,14 @@
 }
 
 .foreignToursMediaHeadingBox {
-  display: block;
-  width: 95%;
-  margin-left: 6rem;
-  margin-top: 2vw;
+  width: 98%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.foreignToursMediaHeadingBox h1 {
+  margin-left: 5vw;
+  font-size: 24px;
 }
 
 @media (min-width: 768px) and (max-width: 1200px) {
@@ -130,4 +132,6 @@
 .bottomMediaCardContextTextBox {
   width: 35vw;
 }
+
+
 }
