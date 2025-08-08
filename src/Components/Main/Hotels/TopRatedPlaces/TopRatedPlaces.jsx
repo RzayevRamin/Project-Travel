@@ -163,19 +163,6 @@ function TopRatedPlaces() {
                     <Typography level="title-lg" textColor="#fff">
                       <Link href={card.location} target="_blank" rel="noopener">
                         {card.cardLabel}
-                        <span className="locationMapPreview">
-                          <iframe
-                            src={`https://maps.google.com/maps?q=${encodeURIComponent(
-                              card.cardLabel
-                            )}&output=embed`}
-                            width="100%"
-                            height="100%"
-                            style={{ border: 0 }}
-                            loading="lazy"
-                            allowFullScreen=""
-                            title="Google Map Preview"
-                          ></iframe>
-                        </span>
                       </Link>
                     </Typography>
                     <Typography textColor="neutral.300">

@@ -196,14 +196,6 @@ function WorldTours({ source }) {
                         >
                           {card.cardLabel}
                         </Link>
-                        <span className="locationMapPreview">
-                          <iframe
-                            src={`https://maps.google.com/maps?q=${encodeURIComponent(
-                              card.cardLabel
-                            )}&output=embed`}
-                            title="Google Map Preview"
-                          ></iframe>
-                        </span>
                       </span>
                     </Typography>
                     <Typography level="title-lg" textColor="#fff">

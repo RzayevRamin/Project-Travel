@@ -186,7 +186,7 @@ function LocalTours({ source }) {
                         </Link>
                       </Typography>
                       <Typography level="title-md">
-                        <div className="locationHoverWrapper">
+                        <span className="locationHoverWrapper">
                           <Link
                             className="localToursNameLabel"
                             href={card.location}
@@ -195,7 +195,7 @@ function LocalTours({ source }) {
                           >
                             {card.cardLabel}
                           </Link>
-                        </div>
+                        </span>
                       </Typography>
                     </div>
                     <div className="rateIconBox">

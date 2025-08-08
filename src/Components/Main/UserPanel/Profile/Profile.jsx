@@ -4,8 +4,8 @@ import UserPanelStatistic from "../UserPanelStatistics/UserPanelStatistic";
 import UserPanelInfoBox from "../UserPanelInfoBox/UserPanelInfoBox";
 import Input from "@mui/joy/Input";
 import Button from "@mui/joy/Button";
-import IconButton from '@mui/joy/IconButton';
-import ArrowBackIosRoundedIcon from '@mui/icons-material/ArrowBackIosRounded';
+import IconButton from "@mui/joy/IconButton";
+import ArrowBackIosRoundedIcon from "@mui/icons-material/ArrowBackIosRounded";
 import { useAuth } from "../../../AuthContext/AuthContext";
 import { updateProfile } from "firebase/auth";
 import { updateEmail } from "firebase/auth";
@@ -69,12 +69,8 @@ function Profile() {
   }, [currentUser]);
 
   useEffect(() => {
-    setLocation(currentUser.location);
-  }, [currentUser.location]);
-
-  useEffect(() => {
-    setPassword(currentUser.password);
-  }, [currentUser.password]);
+  setLocation(currentUser?.location || "");
+}, [currentUser]);
 
   const saveName = async () => {
     const trimmedName = name.trim();
@@ -194,9 +190,11 @@ function Profile() {
   const handleLogout = async () => {
     try {
       await signOut(auth);
-      navigate("/");
+      setSnackbarMessage("You are logged out.");
+      setSnackbarOpen(true);
     } catch (error) {
-      console.error("Logout error:", error.message);
+      setSnackbarMessage("Logout error: " + error.message);
+      setSnackbarOpen(true);
     }
   };
 
@@ -205,10 +203,15 @@ function Profile() {
       <div className="profileInfoContainer">
         <div className="profileInfo">
           <div className="profileBackBUttonAndHeadingBox">
-          <IconButton className="backButton" variant="outlined" sx={{borderRadius: "50%"}} onClick={() => navigate(-1)}>
-          <ArrowBackIosRoundedIcon />
-        </IconButton>
-          <h1>Profile</h1>
+            <IconButton
+              className="backButton"
+              variant="outlined"
+              sx={{ borderRadius: "50%" }}
+              onClick={() => navigate(-1)}
+            >
+              <ArrowBackIosRoundedIcon />
+            </IconButton>
+            <h1>Profile</h1>
           </div>
           <FormLabel className="profileLabel">Name</FormLabel>
           <Input
@@ -494,7 +497,12 @@ function Profile() {
           <Snackbar
             open={snackbarOpen}
             autoHideDuration={3000}
-            onClose={() => setSnackbarOpen(false)}
+            onClose={() => {
+              setSnackbarOpen(false);
+              if (snackbarMessage === "You are logged out.") {
+                navigate("/");
+              }
+            }}
             variant="soft"
             color="success"
           >

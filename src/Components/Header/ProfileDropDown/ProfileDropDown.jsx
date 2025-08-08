@@ -1,11 +1,29 @@
-import React, { useEffect, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { signOut } from "firebase/auth";
 import { auth } from "../../../firebase-config";
+import Snackbar from "@mui/material/Snackbar";
+import Alert from "@mui/material/Alert";
+import ReactDOM from "react-dom";
+import Slide from "@mui/material/Slide";
+
+function SlideTransition(props) {
+  return <Slide {...props} direction="down" />;
+}
 
 function ProfileDropdown({ onClose }) {
   const navigate = useNavigate();
   const dropdownRef = useRef(null);
+
+  const [openSnackbar, setOpenSnackbar] = useState(false);
+  const [snackbarMessage, setSnackbarMessage] = useState("");
+  const [snackbarType, setSnackbarType] = useState("success");
+
+  const showSnackbar = (message, type = "success") => {
+    setSnackbarMessage(message);
+    setSnackbarType(type);
+    setOpenSnackbar(true);
+  };
 
   useEffect(() => {
     function handleClickOutside(event) {
@@ -19,11 +37,15 @@ function ProfileDropdown({ onClose }) {
 
   const handleLogout = async () => {
     try {
-      await signOut(auth);
-      onClose();
-      navigate("/");
+      await
+      showSnackbar("You are logged out.", "success");
+      setTimeout(() => {
+        setOpenSnackbar(false);
+        signOut(auth);
+        navigate("/");
+      }, 2000);
     } catch (error) {
-      console.error("Logout error:", error.message);
+      showSnackbar(`Logout error: ${error.message}`, "error");
     }
   };
 
@@ -57,40 +79,7 @@ function ProfileDropdown({ onClose }) {
       >
         User Panel
       </button>
-      {/* <hr style={{ margin: 0 }} />
-      <button
-        onClick={() => {
-          onClose();
-          navigate("/notification");
-        }}
-        style={{
-          width: "100%",
-          padding: "10px",
-          border: "none",
-          background: "none",
-          textAlign: "left",
-          cursor: "pointer",
-        }}
-      >
-        Notifications
-      </button>
-      <hr style={{ margin: 0 }} /> */}
-      {/* <button
-        onClick={() => {
-          onClose();
-          navigate("/message");
-        }}
-        style={{
-          width: "100%",
-          padding: "10px",
-          border: "none",
-          background: "none",
-          textAlign: "left",
-          cursor: "pointer",
-        }}
-      >
-        Messages
-      </button> */}
+
       <hr style={{ margin: 0 }} />
       <button
         onClick={() => {
@@ -141,6 +130,39 @@ function ProfileDropdown({ onClose }) {
       >
         Logout
       </button>
+
+      {ReactDOM.createPortal(
+        <Snackbar
+          open={openSnackbar}
+          onClose={() => setOpenSnackbar(false)}
+          autoHideDuration={2000}
+          anchorOrigin={{ vertical: "top", horizontal: "center" }}
+          TransitionComponent={SlideTransition}
+          sx={{
+            position: "fixed",
+            top: "10px",
+            left: "50%",
+            transform: "translateX(-50%)",
+            zIndex: 1300,
+            minWidth: "unset",
+          }}
+        >
+          <Alert
+            variant="solid"
+            color={snackbarType}
+            sx={{
+              backgroundColor:
+                snackbarType === "error" ? "#f44336" : "#4caf50",
+              color: "white",
+              fontWeight: "bold",
+              borderRadius: "0.5rem",
+            }}
+          >
+            {snackbarMessage}
+          </Alert>
+        </Snackbar>,
+        document.body
+      )}
     </div>
   );
 }

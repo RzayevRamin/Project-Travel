@@ -282,7 +282,7 @@ function Favorites() {
                             </Link>
                           </Typography>
                           <Typography level="title-md">
-                            <div className="locationHoverWrapper">
+                            <span className="locationHoverWrapper">
                               <Link
                                 className="favCardNameLabel"
                                 href={card.location}
@@ -291,7 +291,7 @@ function Favorites() {
                               >
                                 {card.cardLabel}
                               </Link>
-                            </div>
+                            </span>
                           </Typography>
                         </div>
                         <div className="rateIconBox">

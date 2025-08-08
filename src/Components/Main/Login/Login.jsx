@@ -16,6 +16,9 @@ import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
 import { Link as RouterLink } from "react-router-dom";
 import { useLocation, useNavigate } from "react-router-dom";
+import Snackbar from "@mui/joy/Snackbar";
+import Alert from "@mui/joy/Alert";
+import Slide from '@mui/material/Slide';
 import {
   auth,
   googleProvider,
@@ -28,9 +31,18 @@ import {
   createUserWithEmailAndPassword,
 } from "firebase/auth";
 
+
+
+function SlideTransition(props) {
+  return <Slide {...props} direction="down" />;
+}
+
 function Login() {
   const location = useLocation();
   const navigate = useNavigate();
+  const [openSnackbar, setOpenSnackbar] = React.useState(false);
+  const [snackbarMessage, setSnackbarMessage] = React.useState("");
+  const [snackbarType, setSnackbarType] = React.useState("success");
 
   const path = location.pathname;
 
@@ -45,10 +57,11 @@ function Login() {
     try {
       const result = await signInWithPopup(auth, googleProvider);
       const user = result.user;
-      alert("You are signed in with Google: " + user.email);
-      navigate("/");
+      showPopupAndRedirect("Signed in with Google: " + user.email, "success");
     } catch (error) {
-      console.error("Google login error:", error.message);
+      setSnackbarMessage("Google login error: " + error.message);
+      setSnackbarType("error");
+      setOpenSnackbar(true);
     }
   };
 
@@ -56,10 +69,11 @@ function Login() {
     try {
       const result = await signInWithPopup(auth, facebookProvider);
       const user = result.user;
-      alert("You are logged in with Facebook: " + user.email);
-      navigate("/");
+      showPopupAndRedirect("Signed in with Facebook: " + user.email, "success");
     } catch (error) {
-      console.error("Facebook login error: ", error.message);
+      setSnackbarMessage("Facebook login error: " + error.message);
+      setSnackbarType("error");
+      setOpenSnackbar(true);
     }
   };
 
@@ -67,11 +81,22 @@ function Login() {
     try {
       const result = await signInWithPopup(auth, appleProvider);
       const user = result.user;
-      alert("You are signed in with Apple: " + user.email);
-      navigate("/");
+      showPopupAndRedirect("Signed in with Apple: " + user.email, "success");
     } catch (error) {
-      console.error("Apple login error: ", error.message);
+      setSnackbarMessage("Apple login error: " + error.message);
+      setSnackbarType("error");
+      setOpenSnackbar(true);
     }
+  };
+
+  const showPopupAndRedirect = (message, type = "success") => {
+    setSnackbarMessage(message);
+    setSnackbarType(type);
+    setOpenSnackbar(true);
+    setTimeout(() => {
+      setOpenSnackbar(false);
+      navigate("/");
+    }, 1000);
   };
 
   const loginFormik = useFormik({
@@ -101,18 +126,19 @@ function Login() {
         );
 
         const user = userCredential.user;
-        alert("Login successful: " + user.email);
-        navigate("/");
+        showPopupAndRedirect("Login successful: " + user.email, "success");
       } catch (error) {
         if (error.code === "auth/user-not-found") {
-          alert("Such user does not exist.");
+          setSnackbarMessage("Such user does not exist.");
         } else if (error.code === "auth/wrong-password") {
-          alert("The password is incorrect.");
+          setSnackbarMessage("The password is incorrect.");
         } else if (error.code === "auth/invalid-credential") {
-          alert("Email or password is incorrect.");
+          setSnackbarMessage("Email or password is incorrect.");
         } else {
-          alert("Login error: " + error.message);
+          setSnackbarMessage("Login error: " + error.message);
         }
+        setSnackbarType("error");
+        setOpenSnackbar(true);
       }
     },
   });
@@ -155,9 +181,11 @@ function Login() {
           values.email,
           values.password
         );
-        navigate("/");
+        showPopupAndRedirect("Sign up successful!", "success");
       } catch (error) {
-        alert("Sign up failed: " + error.message);
+        setSnackbarMessage("Sign up failed: " + error.message);
+        setSnackbarType("error");
+        setOpenSnackbar(true);
       }
     },
   });
@@ -177,27 +205,30 @@ function Login() {
   const [verificationCode, setVerificationCode] = React.useState("");
 
   const handleSendVerificationCode = async () => {
-  if (!signFormik.values.email) {
-    alert("Please enter your email or phone");
-    return;
-  }
-  try {
-    const response = await fetch("https://backtest-2-pm0t.onrender.com/send-code", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ emailOrPhone: signFormik.values.email }),
-    });
-    const data = await response.json();
-    if (response.ok) {
-      alert("Verification code sent! Please check your email or phone.");
-      navigate("/login/verify");
-    } else {
-      alert(data.message || "Failed to send verification code");
+    if (!signFormik.values.email) {
+      alert("Please enter your email or phone");
+      return;
     }
-  } catch (error) {
-    alert("Network error: " + error.message);
-  }
-};
+    try {
+      const response = await fetch(
+        "https://backtest-2-pm0t.onrender.com/send-code",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ emailOrPhone: signFormik.values.email }),
+        }
+      );
+      const data = await response.json();
+      if (response.ok) {
+        alert("Verification code sent! Please check your email or phone.");
+        navigate("/login/verify");
+      } else {
+        alert(data.message || "Failed to send verification code");
+      }
+    } catch (error) {
+      alert("Network error: " + error.message);
+    }
+  };
 
   const handleVerifyCode = async () => {
     if (verificationCode.length !== 4) {
@@ -205,14 +236,17 @@ function Login() {
       return;
     }
     try {
-      const response = await fetch("https://backtest-2-pm0t.onrender.com/verify-code", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          emailOrPhone: signFormik.values.email,
-          code: verificationCode,
-        }),
-      });
+      const response = await fetch(
+        "https://backtest-2-pm0t.onrender.com/verify-code",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            emailOrPhone: signFormik.values.email,
+            code: verificationCode,
+          }),
+        }
+      );
       const data = await response.json();
       if (data.success) {
         alert("Code verified successfully!");
@@ -227,16 +261,17 @@ function Login() {
 
   const handleCreateNewPassword = async () => {
     try {
-     
-      const response = await fetch("https://backtest-2-pm0t.onrender.com/reset-password", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          emailOrPhone: signFormik.values.email,
-          password: signFormik.values.password,
-
-        }),
-      });
+      const response = await fetch(
+        "https://backtest-2-pm0t.onrender.com/reset-password",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            emailOrPhone: signFormik.values.email,
+            password: signFormik.values.password,
+          }),
+        }
+      );
       const data = await response.json();
       if (response.ok) {
         alert("Password changed successfully!");
@@ -602,10 +637,15 @@ function Login() {
                   ? `We sent a four-digit verification code to your email ${signFormik.values.email}. You can check your inbox.`
                   : "We sent a four-digit verification code to your email. You can check your inbox."}
               </FormLabel>
-              <Link className="verifyCodeAgain" onClick={() => handleSendVerificationCode()}>
+              <Link
+                className="verifyCodeAgain"
+                onClick={() => handleSendVerificationCode()}
+              >
                 I didn't receive the code? Send again
               </Link>
-              <Button className="verifyCode" onClick={handleVerifyCode} >Verify</Button>
+              <Button className="verifyCode" onClick={handleVerifyCode}>
+                Verify
+              </Button>
             </div>
           )}
           {mode === "newPassword" && (
@@ -687,6 +727,30 @@ function Login() {
             </div>
           )}
         </Sheet>
+        <Snackbar
+          open={openSnackbar}
+          onClose={() => setOpenSnackbar(false)}
+          autoHideDuration={2000}
+          anchorOrigin={{ vertical: "top", horizontal: "center" }}
+          TransitionComponent={SlideTransition}
+        >
+          <Alert
+            variant="solid"
+            color={snackbarType}
+            sx={{
+              padding: "0.5rem",
+              fontSize: "1rem",
+              fontWeight: "bold",
+              backgroundColor:
+                snackbarType === "success" ? "#4caf50" : "#f44336",
+              color: "white",
+              borderRadius: "0.5rem",
+              boxShadow: "0px 4px 10px rgba(0,0,0,0.2)",
+            }}
+          >
+            {snackbarMessage}
+          </Alert>
+        </Snackbar>
       </div>
     </div>
   );

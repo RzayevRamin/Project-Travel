@@ -8,19 +8,41 @@ import UserPanelStatistic from "./UserPanelStatistics/UserPanelStatistic";
 import { useNavigate } from "react-router-dom";
 import { signOut } from "firebase/auth";
 import { auth } from "../../../firebase-config";
+import Snackbar from "@mui/joy/Snackbar";
+import Alert from "@mui/joy/Alert";
+import Slide from "@mui/material/Slide";
+
+function SlideTransition(props) {
+  return <Slide {...props} direction="down" />;
+}
 
 function UserPanel() {
-
   const navigate = useNavigate();
 
+  const [openSnackbar, setOpenSnackbar] = React.useState(false);
+  const [snackbarMessage, setSnackbarMessage] = React.useState("");
+  const [snackbarType, setSnackbarType] = React.useState("success");
+
+  const showPopupAndRedirect = (message, type = "success") => {
+    setSnackbarMessage(message);
+    setSnackbarType(type);
+    setOpenSnackbar(true);
+    setTimeout(() => {
+      setOpenSnackbar(false);
+      navigate("/");
+    }, 2000);
+  };
+
   const handleLogout = async () => {
-      try {
-        await signOut(auth);
-        navigate("/");
-      } catch (error) {
-        console.error("Logout error:", error.message);
-      }
-    };
+    try {
+      await signOut(auth);
+      showPopupAndRedirect("You are logged out.");
+    } catch (error) {
+      setSnackbarMessage("Logout error:", error.message);
+    }
+    setSnackbarType("error");
+    setOpenSnackbar(true);
+  };
 
   return (
     <div className="userPanelContainer">
@@ -29,7 +51,10 @@ function UserPanel() {
           <div className="userPanelContent">
             <h1>User Panel</h1>
             <List className="userPanelList">
-              <ListItemButton className="userPanelButton profileButton" onClick={() => navigate("/userpanel/profile")}>
+              <ListItemButton
+                className="userPanelButton profileButton"
+                onClick={() => navigate("/userpanel/profile")}
+              >
                 <ListItemDecorator>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -52,7 +77,10 @@ function UserPanel() {
                 </ListItemDecorator>
                 <span>Profile</span>
               </ListItemButton>
-              <ListItemButton className="userPanelButton" onClick={() => navigate("/userpanel/favorites")}>
+              <ListItemButton
+                className="userPanelButton"
+                onClick={() => navigate("/userpanel/favorites")}
+              >
                 <ListItemDecorator>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -72,7 +100,10 @@ function UserPanel() {
                 </ListItemDecorator>
                 <span>Favorites</span>
               </ListItemButton>
-              <ListItemButton className="userPanelButton" onClick={() => navigate("/userpanel/shopping")}>
+              <ListItemButton
+                className="userPanelButton"
+                onClick={() => navigate("/userpanel/shopping")}
+              >
                 <ListItemDecorator>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -209,7 +240,10 @@ function UserPanel() {
                 </ListItemDecorator>
                 <span>Settings</span>
               </ListItemButton> */}
-              <ListItemButton className="userPanelButton" onClick={handleLogout}>
+              <ListItemButton
+                className="userPanelButton"
+                onClick={handleLogout}
+              >
                 <ListItemDecorator>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -235,6 +269,39 @@ function UserPanel() {
         </div>
         <UserPanelStatistic />
       </div>
+      <Snackbar
+        open={openSnackbar}
+        onClose={() => setOpenSnackbar(false)}
+        autoHideDuration={2000}
+        anchorOrigin={{ vertical: "top", horizontal: "center" }}
+        TransitionComponent={SlideTransition}
+        sx={{
+          minWidth: "unset",
+          "&.MuiSnackbar-root": {
+            minWidth: "unset",
+          },
+        }}
+      >
+        <Alert
+          variant="solid"
+          color={snackbarType}
+          sx={{
+            display: "inline-flex",
+            alignItems: "center",
+            padding: "0.5rem 1rem",
+            fontSize: "1rem",
+            fontWeight: "bold",
+            backgroundColor: "#f44336",
+            color: "white",
+            borderRadius: "0.5rem",
+            "& .MuiAlert-message": {
+              padding: 0,
+            },
+          }}
+        >
+          {snackbarMessage}
+        </Alert>
+      </Snackbar>
     </div>
   );
 }
