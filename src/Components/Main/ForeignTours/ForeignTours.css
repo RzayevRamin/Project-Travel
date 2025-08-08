@@ -41,6 +41,7 @@
   margin-bottom: 0.5rem !important;
 }
 
+
 @media (min-width: 1024px) and (max-width: 1300px) {
  
   .cardContainer {
@@ -52,6 +53,10 @@
   font-size: 2.2vw !important;
 }
 
+.foreignCardButton {
+  width: 10vw !important;
+  border-radius: 5rem !important;
+}
 }
 
 @media (min-width: 767px) and (max-width: 1023px) {

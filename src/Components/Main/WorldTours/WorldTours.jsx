@@ -203,7 +203,7 @@ function WorldTours({ source }) {
                     </Typography>
                   </div>
                   <div className="cardButtonBox">
-                    <Button variant="contained" className="cardButton" onClick={() => handleCardExplore(card)}>
+                    <Button variant="contained" className="worldCardButton" onClick={() => handleCardExplore(card)} sx={{ backgroundColor: "#0123FF" }}>
                       Explore more
                     </Button>
                   </div>

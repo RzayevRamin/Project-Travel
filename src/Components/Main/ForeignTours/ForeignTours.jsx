@@ -195,12 +195,12 @@ function ForeignTours({ source }) {
                         </Link>
                       </span>
                     </Typography>
-                    <Typography as="div" level="title-lg" textColor="#fff">
+                    <Typography as="div" level="title-lg" textColor="#fff" cla>
                       {card.title}
                     </Typography>
                   </div>
                   <div className="cardButtonBox">
-                    <Button variant="contained" className="cardButton" onClick={() => handleCardExplore(card)}>
+                    <Button variant="contained" className="foreignCardButton" onClick={() => handleCardExplore(card)} sx={{ backgroundColor: "#0123FF" }}>
                       Explore more
                     </Button>
                   </div>

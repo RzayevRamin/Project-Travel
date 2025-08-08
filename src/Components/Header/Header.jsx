@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import "./Header.css";
-import SearchDestination from "./SearchDestination/SearchDestination";
 import ModeSwitch from "./Switch/ModeSwitch";
 import Nav from "./Nav/Nav";
 import Logo from "./Logo/Logo";

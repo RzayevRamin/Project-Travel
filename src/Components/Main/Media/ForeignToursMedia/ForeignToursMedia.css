@@ -6,6 +6,16 @@
   overflow-x: hidden;
 }
 
+.topSliderCard:hover .mediaCardContextContainer {
+  position: absolute;
+  bottom: 0.75rem;
+}
+
+.bottomSliderCard:hover .mediaCardContextContainer {
+  position: absolute;
+  bottom: 0.5rem;
+}
+
 
 .foreignToursMediaCardsBox .doubleSlider {
   width: 100%;

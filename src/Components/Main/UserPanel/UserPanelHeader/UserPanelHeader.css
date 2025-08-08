@@ -1,76 +1,180 @@
-.userHeaderContent {
-      position: relative;
+
+.userPanelHeader,
+.userPanelDesktopHeader,
+.userPanelHeaderTablet,
+.userPanelHeaderMobile,
+.userPanelHeaderTopMobile {
+  background-color: #0123FF !important;
+  color: #fff !important;
+}
+
+.userPanelHeader a {
+  color: #fff !important;
+}
+
+
+.userPanelHeaderContainer {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.userPanelLogo {
+  margin: 0;
+  padding: 0;
+}
+
+.userPanelHeaderRightSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.userPanelNavContainer {
+  display: flex;
+  align-items: center;
+}
+
+.userPanelHeaderContent {
+  position: relative;
   z-index: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 99vw;
 }
 
-.userHeader {
+
+
+/* Ümumi gizli elementlər */
+
+.userPanelDesktopHeader {
   display: flex;
-  align-items: center; 
-  justify-content: space-around;
-  width: 90vw;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.2rem;
+  margin-top: 2rem;
+  border-radius: 6rem;
   height: 58px;
-  background-color: #0123FF;
-  margin-top: 23px;
-  border-radius: 26px;
+  width: 98vw;
+
 }
 
-body.dark .userHeader {
-  background-color: #0123FF;
+
+.userPanelHeaderTopMobile,
+.userPanelHeaderMobile {
+  display: none;
 }
 
-.userLogo {
-  margin: 0;
-  padding: 0;
-}
+/* Mobil görünüş üçün */
+@media (max-width: 767px) {
+  .userPanelHeaderContainer {
+    overflow: visible;
+    position: relative;
+    z-index: 1;
+    align-items: center;
+  }
+  
+  .userPanelDesktopHeader {
+    display: none;
+  }
 
-.userHeaderRightSection {
+  .userPanelHeaderTopMobile {
+    display: flex;
+    justify-content: space-between;
+    width: 94vw;
+    padding: 2vw;
+
+  }
+
+  .userPanelHeaderMobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2vw;
+    width: 94vw;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+  }
+
+  .userPanelHeaderMobile .userPanelMobileMenuRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+
+  /* Search, ModeSwitch, Language, Valuta üçün ölçü tənzimləmələri */
+  .userPanelHeaderMobile > .userPanelMobileMenuRow > *:not(.nav) {
+    flex-shrink: 0;
+  }
+
+  .userPanelHeaderTopLeft {
   display: flex;
   align-items: center;
 }
 
-.userNavContainer {
+.userPanelHeaderTopRight {
   display: flex;
   align-items: center;
 }
 
-.userLogo .logoContainer .logoText h1 {
-  color: #fff;
-  font-size: 1.5rem;
-  font-weight: bold;
+.userPanelMobileCarousel {
+  margin-top: 11vh;
+  width: 100vw;
+  box-sizing: border-box;
 }
 
-.userLogo .logoContainer .logoText h3 {
-  color: #fff;
-  font-size: 1rem;
-  font-weight: normal;
 }
 
-.userLogo .logoContainer .logoBox svg {
-  filter: invert(1) contrast(2);
+@media (min-width: 768px) and (max-width: 1023px) {
+  .userPanelDesktopHeader,
+  .userPanelHeaderTopMobile,
+  .userPanelHeaderMobile {
+    display: none;
+  }
+
+  .userPanelHeaderTablet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90vw;
+    box-sizing: border-box;
+    border-radius: 8rem;
+  }
+
+
+  .userPanelHeaderTabletTop {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .userPanelHeaderTabletTop > * {
+    flex-shrink: 0;
+    margin: 5px;
+  }
+
+  .userPanelHeaderTabletBottom {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .userPanelHeaderTabletBottom .nav {
+    width: 100%;
+  }
 }
 
-.userNavContainer .nav #nav-buttons button {
-  color: #fff;
-  text-decoration: none;
-}
-
-.userNavContainer .nav #nav-buttons button:hover {
-  color: #000;
-}
-
-.userHeaderRightSection .searchContainer .searchButton svg {
-  color: #fff !important;
-}
-
-.userHeaderRightSection .valutaSelect svg {
-  color: #fff !important;
-}
-
-.userHeaderRightSection .valutaSelect .MuiSelect-button {
-  color: #fff !important;
+@media (max-width: 1023px) {
+  .userPanelHeaderTablet,
+  .userPanelHeaderMobile,
+  .userPanelHeaderTopMobile {
+    background-color: #0123FF !important;
+    color: #fff !important;
+  }
 }

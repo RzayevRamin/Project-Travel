@@ -77,7 +77,7 @@ border: none;
     position: absolute;
     top: 50px;
     left: 0;
-    z-index: 10;
+    z-index: 999 !important;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   }
 
@@ -94,6 +94,7 @@ border: none;
     justify-content: flex-start;
     padding: 10px 0;
     border-radius: 0.25rem;
+    z-index: 999 !important;
   }
 
   #nav-buttons button :hover {
