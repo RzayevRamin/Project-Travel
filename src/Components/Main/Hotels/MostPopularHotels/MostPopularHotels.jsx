@@ -224,6 +224,7 @@ function MostPopularHotels() {
                       </Typography>
                       {isCenter && (
               <Rating
+              className='centerSlideRating'
                 name="read-only-rating"
                 value={4.5}
                 precision={0.5}
@@ -235,6 +236,7 @@ function MostPopularHotels() {
                       )}
                       {isCenter && (
                         <Typography
+                        className="centerSlideTitle"
                           textColor="neutral.300"
                           sx={{
                             fontSize: {
@@ -248,7 +250,6 @@ function MostPopularHotels() {
                         </Typography>
                       )}
                     </span>
-                    {isCenter && (
                       <Button
                         variant="solid"
                         color="primary"
@@ -272,7 +273,6 @@ function MostPopularHotels() {
                       onClick={() => handleCardExplore(card)}>
                         Book now
                       </Button>
-                    )}
                   </span>
                 </CardContent>
               </Card>

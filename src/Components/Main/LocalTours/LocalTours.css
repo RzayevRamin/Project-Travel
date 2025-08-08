@@ -24,13 +24,13 @@
 .localToursContainer .slick-list {
   padding: 0 !important;
   overflow: hidden;
+  margin-left: 0 !important;
 }
 
 
 .localToursContainer .slick-track {
   display: flex;
   align-items: stretch;
-  gap: 1rem;
 }
 
 
@@ -42,7 +42,7 @@
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
-  padding: 0.5rem;
+  padding: 0 0.5vw;
 }
 
 
@@ -51,13 +51,13 @@
   max-width: 100%;
   height: 100%;
   box-sizing: border-box;
-  padding: 1rem;
   background: white;
-  border-radius: 12px;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  border-radius: 0.75vw;
+  box-shadow: 0 0 0.75vw rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
   display: flex;
   flex-direction: column;
+  font-size: 1rem;
 }
 
 
@@ -79,7 +79,7 @@
 }
 
 .localToursContainer .nextArrow {
-  right: -30px;
+  right: -10px;
 }
 
 .localToursContainer .prevArrow {
@@ -96,40 +96,14 @@
   display: inline-block;
 }
 
-.locationMapPreview {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 250px;
-  height: 150px;
-  background: white;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-  border-radius: 8px;
-  overflow: hidden;
-  z-index: 9999;
-}
-
 .locationHoverWrapper:hover .locationMapPreview {
   display: block;
 }
 
 
-@media (min-width: 1281px) {
-  .localToursContainer .slick-slide {
-    padding: 0 0.5rem;
-  }
-
-  .localTourCard {
-    padding: 1.2rem;
-    font-size: 1rem;
-  }
-}
-
-
 @media (min-width: 1024px) and (max-width: 1280px) {
   .localToursContainer .slick-slide {
-    padding: 0 0.5rem;
+    padding: 0 0.3rem;
   }
 
   .localTourCard {
@@ -141,7 +115,7 @@
 
 @media (min-width: 768px) and (max-width: 1023px) {
   .localToursContainer .slick-slide {
-    padding: 0 0.4rem;
+    padding: 0 0.3rem;
   }
 
   .localTourCard {

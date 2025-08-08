@@ -3,10 +3,11 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  width: 90vw;
 }
 
 .foreignToursMediaCardsBox {
-  width: 100%;
+  width: 99%;
 }
 
 .foreignToursMediaCardsBox .doubleSlider {
@@ -72,7 +73,7 @@
 
 .foreignToursMediaHeadingBox {
   display: block;
-  width: 100%;
+  width: 95%;
   margin-left: 6rem;
   margin-top: 2vw;
 }

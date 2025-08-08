@@ -1,16 +1,24 @@
+
 .internalToursMediaContainer {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  overflow-x: hidden;
 }
 
-.internalToursMediaCardsBox {
-  width: 100%;
+.leftSliderButton {
+  margin-right: -10px;
 }
+
+.rightSliderButton {
+  margin-left: -10px;
+}
+
 
 .internalToursMediaCardsBox .doubleSlider {
-  width: 85vw;
+  width: 100%;
+  max-width: 84vw;
 }
 
 .topSliderCard {
@@ -71,10 +79,9 @@
 }
 
 .internalToursMediaHeadingBox {
-  display: block;
-  width: 100%;
-  margin-left: 6rem;
-
+  width: 98%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media (min-width: 768px) and (max-width: 1200px) {
@@ -107,26 +114,26 @@
 @media (max-width: 767px) {
 
   .topSliderCard {
-  height: 70vw;
+  height: 60vw;
 }
 
  .mediaTopCardContentContainer {
-  height: 70vw;
+  height: 60vw;
  }
 
  .bottomSliderCard {
-  height: 40vw;
+  height: 30vw;
 }
 
 .mediaBottomCardContentContainer {
-  height: 40vw;
+  height: 30vw;
 }
 
 .mediaCardContextTextBox {
-  width: 70vw;
+  width: 60vw;
 }
 
 .bottomMediaCardContextTextBox {
-  width: 35vw;
+  width: 30vw;
 }
 }

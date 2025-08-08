@@ -123,7 +123,7 @@ function InternalToursMedia() {
       <div className="internalToursMediaCardsBox">
         <div className="leftSliderButton">
           <IconButton 
-          className="doubleSliderButton"
+          className="doubleSliderLeftButton"
             sx={{
               backgroundColor: "rgba(217, 217, 217, 0.39);",
               width: "3rem",
@@ -230,6 +230,8 @@ function InternalToursMedia() {
                   sx={{
                     padding: 0,
                     position: "relative",
+                    display: "flex",
+                    alignItems: "center",
                   }}
                 >
                   <CardCover className="imgCover">
@@ -252,7 +254,6 @@ function InternalToursMedia() {
                   <CardContent
                     className="mediaBottomCardContentContainer"
                     sx={{
-                      justifyContent: "flex-end",
                       position: "relative",
                     }}
                   >
@@ -290,7 +291,7 @@ function InternalToursMedia() {
 
         <div className="rightSliderButton">
           <IconButton
-          className="doubleSliderButton"
+          className="doubleSliderRightButton"
             sx={{
               backgroundColor: "rgba(217, 217, 217, 0.39);",
               width: "3rem",

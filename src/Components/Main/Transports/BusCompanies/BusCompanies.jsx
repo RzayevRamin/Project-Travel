@@ -197,6 +197,7 @@ function BusCompanies() {
                       </Typography>
                       {isCenter && (
                           <Rating
+                          className='centerSlideRating'
                 name="read-only-rating"
                 value={4.5}
                 precision={0.5}
@@ -207,12 +208,11 @@ function BusCompanies() {
               />
                       )}
                       {isCenter && (
-                        <Typography textColor="neutral.300">
+                        <Typography textColor="neutral.300" className="centerSlideTitle">
                           {card.title}
                         </Typography>
                       )}
                     </span>
-                    {isCenter && (
                       <Button
                         variant="solid"
                         color="primary"
@@ -225,7 +225,6 @@ function BusCompanies() {
                       >
                         Book now
                       </Button>
-                    )}
                   </span>
                 </CardContent>
               </Card>

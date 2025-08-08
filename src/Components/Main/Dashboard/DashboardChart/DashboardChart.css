@@ -12,12 +12,33 @@ body.dark .MuiChartsAxis-tickLabel {
   font-size: 20px !important;
 }
 
+.dashChartContainer {
+    margin-top: 8rem;
+}
+
 .dashboardHeading {
     font-size: clamp(1rem, 2vw, 1.5rem);
     line-height: 24px;
     font-weight: bold;
-    margin-top: 2rem;
     margin-bottom: 0.5rem;
+}
+
+@media (min-width: 1450px) and (max-width: 1650px) {
+  .dashChartContainer {
+    margin-top: clamp(calc(8rem - 8vw), calc(8rem - 4vw), 8rem );
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1650px) {
+  .dashChartContainer {
+    margin-top: calc(8rem - 8vw);
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1999px) {
+  .dashChartContainer {
+    margin-top: calc(8rem - 12vw);
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -43,5 +64,16 @@ body.dark .MuiChartsAxis-tickLabel {
 @media (max-width: 767px) {
   .dashChartContainer{
     margin-top: 12vw;
+  }
+
+  .css-51fz6w-MuiChartsWrapper-root {
+    height: 24rem;
+    width: 28rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .dashChartContainer{
+    margin-top: 0;
   }
 }

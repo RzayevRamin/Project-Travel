@@ -63,9 +63,14 @@
   z-index: 999 !important;
 }
 
-.customArrow {
-  z-index: 9999 !important;
+.mostPopularHotelsContainer .nextArrow {
+  right: -10px;
 }
+
+.mostPopularHotelsContainer .prevArrow {
+  left: -10px;
+}
+
 
 @media (max-width: 1024px) {
   .mostPopularHotelsCardContextContainer {
@@ -176,7 +181,7 @@
 }
 
 .mostPopularHotelsContainer .MuiCard-root {
-  width: 100% !important;
+  width: 97% !important;
   max-width: 32rem; 
 }
 

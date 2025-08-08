@@ -91,6 +91,7 @@ function LocalTours({ source }) {
 
   const sliderSettings = {
     infinite: true,
+    variableWidth: false,
     slidesToShow: source === "home" ? 3 : 5,
     slidesToScroll: source === "home" ? 2 : 4,
     centerMode: false,
@@ -105,7 +106,7 @@ function LocalTours({ source }) {
         },
       },
       {
-        breakpoint: 1024,
+        breakpoint: 1124,
         settings: {
           slidesToShow: source === "home" ? 2 : 3,
           slidesToScroll: source === "home" ? 1 : 2,

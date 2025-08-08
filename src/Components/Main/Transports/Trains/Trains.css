@@ -63,11 +63,15 @@
   z-index: 999 !important;
 }
 
-.customArrow {
-  z-index: 9999 !important;
+.mostPopularRailwaysContainer .nextArrow {
+  right: -25px;
 }
 
-@media (max-width: 1024px) {
+.mostPopularRailwaysContainer .prevArrow {
+  left: -25px;
+}
+
+@media (max-width: 1023px) {
   .mostPopularRailwaysCardContextContainer {
     flex-direction: column;
     align-items: flex-start;
@@ -113,7 +117,7 @@
 
 }
 
-@media (min-width: 1025px) {
+@media (min-width: 1024px) {
   .mostPopularRailwaysContainer .slick-center .MuiCard-root {
     transform: scale(1.05);
     z-index: 2;
@@ -126,10 +130,18 @@
   }
 }
 
-@media (min-width: 900px) and (max-width: 1024px) {
+@media (min-width: 900px) and (max-width: 1023px) {
   .mostPopularRailwaysContainer .slick-slide .MuiCard-root {
     transform: scale(1) !important;
     opacity: 1 !important;
+  }
+
+  .centerSlide .centerSlideRating {
+    display: none !important;
+  }
+
+  .centerSlide .centerSlideTitle {
+    display: none !important;
   }
 }
 
@@ -137,6 +149,14 @@
   .mostPopularRailwaysContainer .slick-slide .MuiCard-root {
     transform: scale(1) !important;
     opacity: 1 !important;
+  }
+
+  .centerSlide .centerSlideRating {
+    display: none !important;
+  }
+
+  .centerSlide .centerSlideTitle {
+    display: none !important;
   }
 }
 
@@ -176,7 +196,7 @@
 }
 
 .mostPopularRailwaysContainer .MuiCard-root {
-  width: 100% !important;
+  width: 97% !important;
   max-width: 32rem; 
 }
 

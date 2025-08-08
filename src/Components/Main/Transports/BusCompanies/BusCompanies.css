@@ -63,8 +63,12 @@
   z-index: 999 !important;
 }
 
-.customArrow {
-  z-index: 9999 !important;
+.mostPopularBusContainer .nextArrow {
+  right: -25px;
+}
+
+.mostPopularBusContainer .prevArrow {
+  left: -25px;
 }
 
 @media (max-width: 1024px) {
@@ -176,7 +180,7 @@
 }
 
 .mostPopularBusContainer .MuiCard-root {
-  width: 100% !important;
+  width: 97% !important;
   max-width: 32rem; 
 }
 

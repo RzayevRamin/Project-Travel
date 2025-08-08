@@ -7,7 +7,7 @@ function Media() {
   return (
     <div className='mediaContainer'>
         <InternalToursMedia />
-        <ForeignToursMedia />
+        {/* <ForeignToursMedia /> */}
     </div>
   )
 }

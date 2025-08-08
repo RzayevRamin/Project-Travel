@@ -103,7 +103,6 @@ function ForeignTours({ source }) {
           slidesToShow: source === "home" ? 2 : 2,
           slidesToScroll: 1,
           centerMode: false,
-          centerPadding: "16.66%",
         },
       },
       {
@@ -111,7 +110,6 @@ function ForeignTours({ source }) {
         settings: {
           slidesToShow: source === "home" ? 1 : 2,
           slidesToScroll: 1,
-          centerPadding: "0px",
         },
       },
       {

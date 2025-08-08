@@ -161,3 +161,9 @@ body.dark .carousel .control-dots .dot {
   
 
 }
+
+@media (max-width: 480px) {
+ .carouselButton {
+  display: none !important;
+ }
+}

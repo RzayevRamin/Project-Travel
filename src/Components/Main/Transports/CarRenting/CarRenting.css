@@ -113,7 +113,7 @@
   }
 
   .mainRentCarBox .MuiCard-root {
-    width: 38vw;
+    width: 37vw;
     height: 100%;
     padding: 0;
   }
@@ -187,10 +187,11 @@
   flex-direction: column;
   width: 100%;
   height: 100%;
+  gap: 0.5rem;
 }
 
   .mainRentCarBox .MuiCard-root {
-    width: 100%;
+    width: 98%;
     height: 50vw;
     padding: 0;
   }

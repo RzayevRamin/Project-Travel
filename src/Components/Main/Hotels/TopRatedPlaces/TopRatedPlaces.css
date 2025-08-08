@@ -3,12 +3,29 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    padding: 0.25rem;
 }
 
 .topRatedPlacesCardsContainer:hover {
   transform: scale(1.1);
   z-index: 2;
+
+}
+
+.topRatedPlacesCardsContainer:hover .likeButton{
+  transform: translateY(-1080%);
+}
+
+.topRatedPlacesCardsContainer:hover .rateIconBox{
+  top: 2.5rem;
+}
+
+.topRatedPlacesCardsContainer:hover .ratedPlacesCardContextContainer {
+  position: absolute;
+  bottom: 2rem;
+  padding: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
 }
 
 
@@ -44,21 +61,6 @@
   cursor: pointer;
 }
 
-.locationMapPreview {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 260px;
-  height: 180px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
-  background: #fff;
-  z-index: 100;
-  margin-top: 8px;
-  overflow: hidden;
-}
 
 .ratedPlacesCardContextTextBox:hover .locationMapPreview {
   display: block;
@@ -71,7 +73,15 @@
 }
 
 .topRatedPlacesCardsContainer .MuiCard-root {
-  width: clamp(16rem, 30vw, 32rem);
+  width: clamp(10rem, 29vw, 32rem);
+}
+
+.topRatedPlaceContainer .nextArrow {
+  right: -25px;
+}
+
+.topRatedPlaceContainer .prevArrow {
+  left: -25px;
 }
 
 @media (max-width: 1024px) {
@@ -90,6 +100,6 @@
   }
 
   .topRatedPlacesCardsContainer .MuiCard-root {
-    width: clamp(9rem, 90vw, 32rem);
+    width: clamp(9rem, 85vw, 32rem);
   }
 }
