@@ -99,7 +99,7 @@ function LocalTours({ source }) {
     prevArrow: <PrevArrow />,
     responsive: [
       {
-        breakpoint: 1280,
+        breakpoint: 1400,
         settings: {
           slidesToShow: source === "home" ? 2 : 4,
           slidesToScroll: source === "home" ? 1 : 3,

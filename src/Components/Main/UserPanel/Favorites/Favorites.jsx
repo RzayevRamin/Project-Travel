@@ -22,8 +22,6 @@ import Divider from "@mui/joy/Divider";
 import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 
-
-
 function NextArrow(props) {
   const { onClick } = props;
   return (
@@ -96,14 +94,14 @@ function Favorites() {
     prevArrow: <PrevArrow />,
     responsive: [
       {
-        breakpoint: 1280,
+        breakpoint: 1400,
         settings: {
           slidesToShow: 4,
           slidesToScroll: 3,
         },
       },
       {
-        breakpoint: 1024,
+        breakpoint: 1124,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 2,
@@ -130,13 +128,13 @@ function Favorites() {
     <div className="favoritesContainer">
       <div className="favoritesBox">
         <h1 className="favoritesHeading">Favorites</h1>
-         {selectedCardsByIds.length === 0 ? (
-      <div className="emptyFavorites">
-        <Typography level="title-md" sx={{ textAlign: "center", mt: 4 }}>
-          Favorites is empty
-        </Typography>
-      </div>
-    ) : selectedCardsByIds.length < 5 ? (
+        {selectedCardsByIds.length === 0 ? (
+          <div className="emptyFavorites">
+            <Typography level="title-md" sx={{ textAlign: "center", mt: 4 }}>
+              Favorites is empty
+            </Typography>
+          </div>
+        ) : selectedCardsByIds.length < 5 ? (
           <div className="cardsWrapper">
             {selectedCardsByIds.map((card) => (
               <div key={card.id} className="favCardContainer minorCardsFavBox">
@@ -144,10 +142,10 @@ function Favorites() {
                   key={card.id}
                   className="favCard"
                   variant="outlined"
-                  sx={{ width: 320, bgcolor: "#F1FAFA" }}
+                  sx={{ bgcolor: "#F1FAFA" }}
                 >
                   <CardOverflow sx={{ bgcolor: "#F1FAFA" }}>
-                    <AspectRatio ratio="1.5">
+                    <AspectRatio ratio="1.25">
                       <img src={card.img} loading="lazy" alt={card.title} />
                     </AspectRatio>
                     <IconButton
@@ -236,10 +234,10 @@ function Favorites() {
                   key={card.id}
                   className="favCard"
                   variant="outlined"
-                  sx={{ width: 320, bgcolor: "#F1FAFA" }}
+                  sx={{ bgcolor: "#F1FAFA" }}
                 >
                   <CardOverflow sx={{ bgcolor: "#F1FAFA" }}>
-                    <AspectRatio ratio="1.5">
+                    <AspectRatio ratio="1.25">
                       <img src={card.img} loading="lazy" alt={card.title} />
                     </AspectRatio>
                     <IconButton
@@ -322,8 +320,12 @@ function Favorites() {
           </Slider>
         )}
         {selectedCardsByIds.length > 5 && (
-      <Link sx={{ display: "block", textAlign: "center", marginTop: "2vw" }}>More</Link>
-    )}
+          <Link
+            sx={{ display: "block", textAlign: "center", marginTop: "2vw" }}
+          >
+            More
+          </Link>
+        )}
       </div>
     </div>
   );
