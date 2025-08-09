@@ -144,7 +144,7 @@
 @media (min-width: 1024px) and (max-width: 1380px) {
   .cardsWrapper {
     display: grid;
-    grid-template-columns: 30vw 30vw 30vw;
+    grid-template-columns: 22vw 22vw 22vw 22vw;
     align-items: space-between;
     justify-content: space-between;
     gap: 1rem;
@@ -179,7 +179,9 @@
 
   .cardsWrapper {
     display: grid;
-    grid-template-columns: 40vw 40vw;
+    grid-template-columns: 30vw 30vw 30vw;
+    align-items: space-between;
+    justify-content: space-between;
     gap: 1rem;
   }
 }
@@ -201,7 +203,9 @@
   }
 
   .cardsWrapper {
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 40vw 40vw;
+    gap: 1rem;
   }
 
   .minorCardsFavBox {

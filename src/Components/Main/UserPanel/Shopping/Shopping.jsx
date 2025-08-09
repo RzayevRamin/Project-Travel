@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import "./Shopping.css";
 import { cardsData } from "../../Cards/cardsData";
 import AddIcon from "@mui/icons-material/Add";
@@ -6,6 +6,8 @@ import RemoveIcon from "@mui/icons-material/Remove";
 import IconButton from "@mui/material/IconButton";
 import { useCurrency } from "../../../../CurrencyContext";
 import { currencyIcons } from "../../../../currencyIcon";
+import Input from "@mui/joy/Input";
+import Button from "@mui/joy/Button";
 
 function Shopping() {
   const [selectedIds, setSelectedIds] = useState([]);
@@ -13,16 +15,13 @@ function Shopping() {
 
   const { currency, convert } = useCurrency();
 
-
   useEffect(() => {
     const cart = JSON.parse(localStorage.getItem("selectedIds")) || [];
     setSelectedIds(cart);
   }, []);
 
-
   useEffect(() => {
     setCounts((prevCounts) => {
-
       const newCounts = { ...prevCounts };
 
       selectedIds.forEach((id) => {
@@ -49,37 +48,71 @@ function Shopping() {
     selectedIds.includes(card.id)
   );
 
+  const { totalTours, totalHotels, totalTransports } = useMemo(() => {
+    let tours = 0;
+    let hotels = 0;
+    let transports = 0;
+
+    selectedCards.forEach((card) => {
+      const count = counts[card.id] || { adult: 1, child: 0, price: 1 };
+      const priceInfo = card.price;
+      let total = 0;
+
+      if (typeof priceInfo === "object" && priceInfo.adult !== undefined) {
+        total =
+          count.adult * convert(priceInfo.adult) +
+          count.child * convert(priceInfo.child);
+      } else if (typeof priceInfo === "number") {
+        total = count.price * convert(priceInfo);
+      }
+
+      if (card.id >= 1 && card.id <= 35) {
+        tours += total;
+      } else if (card.id >= 36 && card.id <= 75) {
+        hotels += total;
+      } else if (card.id >= 76 && card.id <= 120) {
+        transports += total;
+      }
+    });
+
+    return {
+      totalTours: tours,
+      totalHotels: hotels,
+      totalTransports: transports,
+    };
+  }, [selectedCards, counts, convert]);
+
   const handleDelete = (id) => {
-  setSelectedIds((prev) => {
-    const newSelected = prev.filter((itemId) => itemId !== id);
-    localStorage.setItem("selectedIds", JSON.stringify(newSelected));
-    return newSelected;
-  });
-};
+    setSelectedIds((prev) => {
+      const newSelected = prev.filter((itemId) => itemId !== id);
+      localStorage.setItem("selectedIds", JSON.stringify(newSelected));
+      return newSelected;
+    });
+  };
 
   const handleAdd = (id, type = "price") => {
-  setCounts((prev) => ({
-    ...prev,
-    [id]: {
-      adult: prev[id]?.adult ?? 1,
-      child: prev[id]?.child ?? 0,
-      price: prev[id]?.price ?? 1,
-      [type]: (prev[id]?.[type] ?? 0) + 1,
-    },
-  }));
-};
+    setCounts((prev) => ({
+      ...prev,
+      [id]: {
+        adult: prev[id]?.adult ?? 1,
+        child: prev[id]?.child ?? 0,
+        price: prev[id]?.price ?? 1,
+        [type]: (prev[id]?.[type] ?? 0) + 1,
+      },
+    }));
+  };
 
-const handleRemove = (id, type = "price") => {
-  setCounts((prev) => ({
-    ...prev,
-    [id]: {
-      adult: prev[id]?.adult ?? 1,
-      child: prev[id]?.child ?? 0,
-      price: prev[id]?.price ?? 1,
-      [type]: prev[id]?.[type] > 0 ? prev[id][type] - 1 : 0,
-    },
-  }));
-};
+  const handleRemove = (id, type = "price") => {
+    setCounts((prev) => ({
+      ...prev,
+      [id]: {
+        adult: prev[id]?.adult ?? 1,
+        child: prev[id]?.child ?? 0,
+        price: prev[id]?.price ?? 1,
+        [type]: prev[id]?.[type] > 0 ? prev[id][type] - 1 : 0,
+      },
+    }));
+  };
 
   const [hoveredId, setHoveredId] = useState(null);
 
@@ -115,16 +148,21 @@ const handleRemove = (id, type = "price") => {
                   <h2>{card.cardLabel}</h2>
                   <p>{card.title}</p>
                   <p>{card.time}</p>
-                  {priceInfo?.adult !== undefined && priceInfo?.child !== undefined ? (
+                  {priceInfo?.adult !== undefined &&
+                  priceInfo?.child !== undefined ? (
                     <>
                       <div className="cardsInfoBox adult">
                         <p>Adult:</p>
                         <div className="countingBox">
-                          <IconButton onClick={() => handleRemove(card.id, "adult")}>
+                          <IconButton
+                            onClick={() => handleRemove(card.id, "adult")}
+                          >
                             <RemoveIcon />
                           </IconButton>
                           <div className="countBox">{count.adult}</div>
-                          <IconButton onClick={() => handleAdd(card.id, "adult")}>
+                          <IconButton
+                            onClick={() => handleAdd(card.id, "adult")}
+                          >
                             <AddIcon />
                           </IconButton>
                         </div>
@@ -133,11 +171,15 @@ const handleRemove = (id, type = "price") => {
                       <div className="cardsInfoBox child">
                         <p>Child:</p>
                         <div className="countingBox">
-                          <IconButton onClick={() => handleRemove(card.id, "child")}>
+                          <IconButton
+                            onClick={() => handleRemove(card.id, "child")}
+                          >
                             <RemoveIcon />
                           </IconButton>
                           <div className="countBox">{count.child}</div>
-                          <IconButton onClick={() => handleAdd(card.id, "child")}>
+                          <IconButton
+                            onClick={() => handleAdd(card.id, "child")}
+                          >
                             <AddIcon />
                           </IconButton>
                         </div>
@@ -147,7 +189,9 @@ const handleRemove = (id, type = "price") => {
                     <div className="cardsInfoBox singlePrice">
                       <p>Price:</p>
                       <div className="countingBox">
-                        <IconButton onClick={() => handleRemove(card.id, "price")}>
+                        <IconButton
+                          onClick={() => handleRemove(card.id, "price")}
+                        >
                           <RemoveIcon />
                         </IconButton>
                         <div className="countBox">{count.price}</div>
@@ -234,7 +278,8 @@ const handleRemove = (id, type = "price") => {
                         gap: "6px",
                       }}
                     >
-                      {currencyIcons[currency.toLowerCase()] || currency.toUpperCase()}
+                      {currencyIcons[currency.toLowerCase()] ||
+                        currency.toUpperCase()}
                       <span>
                         {new Intl.NumberFormat("az-Latn-AZ", {
                           style: "decimal",
@@ -248,6 +293,57 @@ const handleRemove = (id, type = "price") => {
               </div>
             );
           })}
+        </div>
+        <div className="totalCostBox">
+          <div className="totalOrder">
+            <h2>Total order</h2>
+            {totalTours > 0 && (
+              <div className="totalTours">
+                <h3>Total tours</h3>
+                <h3 className="totalToursPrice">
+                  {currencyIcons[currency.toLowerCase()] ||
+                    currency.toUpperCase()}{" "}
+                  {totalTours.toFixed(2)}
+                </h3>
+              </div>
+            )}
+            {totalHotels > 0 && (
+              <div className="totalHotels">
+                <h3>Total hotels</h3>
+                <h3 className="totalHotelsPrice">
+                  {currencyIcons[currency.toLowerCase()] ||
+                    currency.toUpperCase()}{" "}
+                  {totalHotels.toFixed(2)}
+                </h3>
+              </div>
+            )}
+            {totalTransports > 0 && (
+              <div className="totalTransports">
+                <h3>Total transports</h3>
+                <h3 className="totalTransportsPrice">
+                  {currencyIcons[currency.toLowerCase()] ||
+                    currency.toUpperCase()}{" "}
+                  {totalTransports.toFixed(2)}
+                </h3>
+              </div>
+            )}
+          </div>
+          <div className="totalPrice">
+            <h2>Total:</h2>
+            <h2 className="summaryPrice">
+              {currencyIcons[currency.toLowerCase()] || currency.toUpperCase()}{" "}
+              {(totalTours + totalHotels + totalTransports).toFixed(2)}
+            </h2>
+          </div>
+          <div className="confirmOrderBox">
+            <Input
+            className="discountCodeInput"
+              placeholder="+ Add discount code"
+              variant="outlined"
+              color="primary"
+            />
+            <Button className="confirmOrderButton" variant="solid">Confirm the order</Button>
+          </div>
         </div>
       </div>
     </div>

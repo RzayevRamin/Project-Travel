@@ -1,10 +1,25 @@
 .shoppingContainer {
-    padding: 3rem 5rem;
+    padding: 2vh 5vw;
+}
+
+.cardItem {
+    width: 60vw;
+}
+
+.totalCostBox {
+    width: 28vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border: 2px solid #A29E9E;
+    border-radius: 0.5rem;
+    padding: 1rem;
 }
 
 .cardItem img {
     width: 21vw;
-    height: 37vh;
+    height: 21vw;
     border-radius: 0.3rem;
     object-fit: cover;
 }
@@ -12,15 +27,17 @@
 .cardItem {
     display: flex;
     justify-content: space-between;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    border-top: 2px solid;
 }
 
 .itemInfo {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    height: 37vh;
     width: 27vw;
-
+    padding: 0.5rem;
 }
 
 .countingBox {
@@ -40,5 +57,242 @@
     justify-content: space-between;
     align-items: flex-end;
     width: 8vw;
-    height: 37vh;
+}
+
+.CartBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.itemBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 90vw;
+}
+
+.itemBox .cardItem:first-child {
+   border-top: none !important;
+}
+
+.totalOrder {
+    padding: 0.5rem;
+    border-bottom: 2px solid #A29E9E;
+}
+
+.totalOrder h2 {
+    font-size: 24px;
+    line-height: 29px;
+}
+
+.totalTours h3 {
+    font-size: 20px;
+    line-height: 29px;
+}
+
+.totalTours {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.totalHotels h3 {
+    font-size: 20px;
+    line-height: 29px;
+}
+
+.totalHotels {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.totalTransports h3 {
+    font-size: 20px;
+    line-height: 29px;
+}
+
+.totalTransports {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.totalPrice {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    padding: 0.5rem;
+    border-bottom: 2px solid #A29E9E;
+    margin-top: 3rem;
+}
+
+.totalPrice h2 {
+    font-size: 24px;
+    line-height: 29px;
+    margin: 0;
+}
+
+.confirmOrderBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+.discountCodeInput {
+    margin-top: 1rem;
+    width: 20vw;
+    height: 3vw;
+}
+
+.confirmOrderButton {
+    width: 23vw;
+    height: 4vw;
+    background-color: #0123FF !important;
+    margin-top: 1rem !important;
+    font-size: 28px !important;
+}
+
+@media (min-width: 1024px) and (max-width: 1300px) {
+ .cardItem img {
+    width: 30vw;
+    height: 30vw;
+ }
+
+ .confirmOrderButton {
+    font-size: 24px !important;
+ }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .cardItem img {
+        width: 35vw;
+        height: 35vw;
+    }
+
+    .totalCostBox {
+        width: 25vw;
+    }
+
+    .totalOrder h2 {
+    font-size: 22px;
+    line-height: 24px;
+}
+
+.totalTours h3 {
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.totalHotels h3 {
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.totalTransports h3 {
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.totalPrice h2 {
+    font-size: 20px;
+    line-height: 24px;
+    margin: 0;
+}
+
+.discountCodeInput {
+    margin-top: 1rem;
+    width: 18vw;
+    height: 2vw;
+}
+
+.confirmOrderButton {
+    width: 20vw;
+    height: 6vw;
+    background-color: #0123FF !important;
+    margin-top: 1rem !important;
+    font-size: 16px !important;
+}
+
+.totalOrder {
+    padding: 0.3rem;
+}
+
+.totalPrice {
+    padding: 0.3rem;
+}
+
+.confirmOrderBox {
+    padding: 0.3rem;
+}
+}
+
+@media (max-width: 767px) {
+    .CartBox {
+flex-direction: column;
+}
+
+.cardItem {
+    width: 90vw;
+}
+
+.cardItem img {
+        width: 40vw;
+        height: 40vw;
+    }
+
+.itemInfo h2 {
+    font-size: 22px;
+    line-height: 24px;
+    margin: 0;
+}
+
+    .totalCostBox {
+        width: 80vw;
+    }
+
+   
+.discountCodeInput {
+    margin-top: 1rem;
+    width: 75vw;
+    height: 2vw;
+}
+
+.confirmOrderButton {
+    width: 80vw;
+    height: 6vw;
+    background-color: #0123FF !important;
+    margin-top: 1rem !important;
+    font-size: 16px !important;
+}
+
+}
+
+@media (max-width:  480px) {
+    .cardItem {
+        flex-direction: column;
+    }
+
+    .cardItem img {
+        width: 86vw;
+    }
+
+    .itemInfo {
+        width: 86vw;
+    }
+
+    .itemDeleteAndCost {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 86vw;
+    }
+
+    .itemDeleteButton {
+        order: 2;
+    }
 }
