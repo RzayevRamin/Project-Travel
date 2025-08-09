@@ -19,6 +19,14 @@
     margin-top: 4vw !important;
 }
 
+.userPanelLogout {
+    color: #F60909 !important;
+}
+
+body.dark .userPanelList span {
+    color: #fff;
+} 
+
 .userPanelContent {
     height: 30vw;
 }

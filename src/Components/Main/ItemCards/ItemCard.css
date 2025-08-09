@@ -4,13 +4,15 @@
 }
 
 .itemCardImgBox img {
-    width: 44vw !important;
-    height: auto;
+    width: 42vw !important;
+    height: 40vw !important;
+    object-fit: cover;
 }
 
 .itemCardImgBox .MuiAspectRatio-content {
-    width: 44vw !important;
-    height: auto;
+    width: 42vw !important;
+    height: 40vw !important;
+    padding: 0 !important;
 }
 
 .itemCardRatingBox {
@@ -19,7 +21,7 @@
     justify-content: space-between !important;
     align-items: center !important;
     width: 30vw;
-    max-height: 2.5vw !important;
+    max-height: 3vw !important;
 }
 
 .itemCardRatingBox .MuiBox-root {
@@ -29,4 +31,91 @@
     align-items: center !important;
     height: 2.5vw !important;
 
+}
+
+.itemCardContainer {
+    padding: 2vh 5vw;
+}
+
+.itemCardLabel {
+    font-size: 28px !important;
+    line-height: 32px !important;
+    margin-top: 2vw !important;
+}
+
+.itemCardTitle {
+    font-size: 20px !important;
+    line-height: 24px !important;
+    margin-top: 1vw !important;
+}
+
+.itemCardTime {
+    font-size: 18px !important;
+    line-height: 24px !important;
+    margin-top: 1vw !important;
+}
+
+.itemCardsInfoBox p {
+    font-size: 24px;
+    line-height: 28px;
+    margin: 0 !important;
+}
+
+.itemCardDataBox {
+    padding: 0.5rem !important;
+}
+
+.itemCardsInfoBox {
+    width: 20vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.itemPriceBox {
+    padding: 1rem;
+    border: 2px solid #0123FF;
+    display: flex;
+    width: 100px;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.itemAddToCartButton {
+    padding: 1rem !important;
+    margin: 0 1rem 1rem 0 !important;
+    width: calc(100% - 1rem) !important;
+    background-color: #0123FF !important;
+}
+
+.personaCardsDatas {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.personaCardsDatas h2 {
+   font-size: 24px;
+   line-height: 28px;
+}
+
+@media (max-width: 850px) {
+    .itemCardBox {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    .itemCardImgBox img {
+        width: 88vw !important;
+    }
+
+    .itemCardImgBox .MuiAspectRatio-content {
+        width: 88vw !important;
+    }
+
+    .itemCardsInfoBox p {
+        font-size: 22px;
+        height: 24px;
+    }
 }

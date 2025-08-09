@@ -8,6 +8,11 @@
   color: #fff !important;
 }
 
+.userPanelDesktopHeader {
+  overflow: visible;
+  position: relative;
+}
+
 .userPanelHeader a {
   color: #fff !important;
 }
@@ -31,7 +36,8 @@
 .userPanelHeaderContainer {
   position: relative;
   width: 100%;
-  overflow: hidden;
+  overflow: visible;
+  position: relative;
 }
 
 .userPanelLogo {

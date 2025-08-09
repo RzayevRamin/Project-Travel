@@ -50,7 +50,8 @@ function ProfileDropdown({ onClose }) {
   };
 
   return (
-    <div
+    <div 
+    className="profileDropDownBox"
       ref={dropdownRef}
       style={{
         position: "absolute",
@@ -59,7 +60,7 @@ function ProfileDropdown({ onClose }) {
         background: "white",
         boxShadow: "0 4px 8px rgba(0,0,0,0.1)",
         borderRadius: 4,
-        zIndex: 1000,
+        zIndex: 9999,
         width: 150,
       }}
     >
