@@ -38,7 +38,7 @@ function UserPanelInfoBox() {
       <div className="userPanelInfo">
         <div className="userPanelAvatarAndInfo">
           <div className="userPanelAvatar">
-            <img src={DefaultAvatar} alt="Avatar" />
+            <img src={currentUser.photoURL} alt="Avatar" />
           </div>
           <div className="userPanelUserInfo">
             <h2 className="userPaneUserName">{name + " " + lastName}</h2>
