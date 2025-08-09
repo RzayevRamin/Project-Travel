@@ -16,6 +16,10 @@
   bottom: 0.5rem;
 }
 
+.mediaCardContextTextBox .MuiTypography-root {
+  width: 60%;
+}
+
 
 .foreignToursMediaCardsBox .doubleSlider {
   width: 100%;
@@ -109,7 +113,7 @@
 }
 
 .mediaCardContextTextBox {
-  width: 35vw;
+  width: 20vw;
 }
 
 .bottomMediaCardContextTextBox {
