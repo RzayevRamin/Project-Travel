@@ -31,8 +31,8 @@ function DashboardAdd() {
             minWidth: "0",
             padding: "0",
             position: "absolute",
-            left: "8%",
-            top: "36%",
+            left: "20%",
+            bottom: "50%",
             zIndex: "99",
             "&:hover": {
               bgcolor: "#577ee9",

@@ -280,7 +280,7 @@ function ForeignToursMedia() {
                     }}
                   >
                     <span className="mediaCardContextContainer">
-                      <span className="mediaCardContextTextBox">
+                      <span className="bottomMediaCardContextTextBox">
                         <Typography level="title-lg" textColor="#fff">
                           <Link
                             href={slide.location}
