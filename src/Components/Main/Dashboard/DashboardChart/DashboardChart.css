@@ -13,7 +13,7 @@ body.dark .MuiChartsAxis-tickLabel {
 }
 
 .dashChartContainer {
-    margin-top: 8rem;
+    margin-top: 8rem !important;
 }
 
 .dashboardHeading {

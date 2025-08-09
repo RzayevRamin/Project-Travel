@@ -21,6 +21,7 @@ import CardOverflow from "@mui/joy/CardOverflow";
 import Divider from "@mui/joy/Divider";
 import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
+import { useNavigate } from "react-router-dom";
 
 function NextArrow(props) {
   const { onClick } = props;
@@ -84,6 +85,13 @@ function Favorites() {
       favorite.includes(card.id)
     );
     setSelectedCardsByIds(filteredFavorites);
+  };
+
+  const navigate = useNavigate();
+  
+    const handleCardExplore = (card) => {
+    const path = card.cardLabel.replace(/\s+/g, "-").toLowerCase();
+    navigate(`/tours/${path}`);
   };
 
   const sliderSettings = {
@@ -206,7 +214,7 @@ function Favorites() {
                         </div>
                       </div>
                       <div className="cardButtonBox">
-                        <Button variant="contained" className="cardButton">
+                        <Button variant="contained" className="cardButton" onClick={() => handleCardExplore(card)}>
                           Explore more
                         </Button>
                       </div>
